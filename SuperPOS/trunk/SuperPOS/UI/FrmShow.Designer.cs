@@ -65,7 +65,7 @@
             this.btnLogon.Location = new System.Drawing.Point(413, 341);
             this.btnLogon.Name = "btnLogon";
             this.btnLogon.Size = new System.Drawing.Size(314, 71);
-            this.btnLogon.TabIndex = 11;
+            this.btnLogon.TabIndex = 8;
             this.btnLogon.Text = "Logon to SuperPOS";
             this.btnLogon.Click += new System.EventHandler(this.btnLogon_Click);
             // 
@@ -99,7 +99,7 @@
             this.btnSoftUpgrade.Location = new System.Drawing.Point(413, 71);
             this.btnSoftUpgrade.Name = "btnSoftUpgrade";
             this.btnSoftUpgrade.Size = new System.Drawing.Size(314, 71);
-            this.btnSoftUpgrade.TabIndex = 8;
+            this.btnSoftUpgrade.TabIndex = 12;
             this.btnSoftUpgrade.Text = "Software Upgrade And Licence";
             // 
             // picImg
