@@ -142,7 +142,7 @@
             // 
             this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTime.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(206, 23);
+            this.lblTime.Location = new System.Drawing.Point(206, 29);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(102, 30);
             this.lblTime.TabIndex = 4;
@@ -162,7 +162,7 @@
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(23, 23);
+            this.labelControl3.Location = new System.Drawing.Point(23, 29);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(130, 30);
             this.labelControl3.TabIndex = 1;
