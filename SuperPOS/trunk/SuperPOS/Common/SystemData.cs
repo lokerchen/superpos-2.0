@@ -9,5 +9,7 @@ namespace SuperPOS.Common
         public SystemData() { _control = EntityControl.CreateEntityControl(); }
 
         public void GetTaShiftCodeList() { CommonData.TaShiftCodeList = _control.SelectAll<TAShiftCodeInfo>(); }
+
+        public void GetUsrBase() { CommonData.UsrBase = _control.SelectAll<UsrBaseInfo>(); }
     }
 }
