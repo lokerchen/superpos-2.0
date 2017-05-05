@@ -110,7 +110,7 @@
             this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.Appearance.Options.UseFont = true;
-            this.btn1.Location = new System.Drawing.Point(6, 7);
+            this.btn1.Location = new System.Drawing.Point(7, 15);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(60, 45);
             this.btn1.TabIndex = 0;
@@ -191,7 +191,7 @@
             this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn2.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.Appearance.Options.UseFont = true;
-            this.btn2.Location = new System.Drawing.Point(76, 7);
+            this.btn2.Location = new System.Drawing.Point(77, 15);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(60, 45);
             this.btn2.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn3.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.Appearance.Options.UseFont = true;
-            this.btn3.Location = new System.Drawing.Point(146, 7);
+            this.btn3.Location = new System.Drawing.Point(147, 15);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(60, 45);
             this.btn3.TabIndex = 2;
@@ -213,7 +213,7 @@
             this.btn6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn6.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.Appearance.Options.UseFont = true;
-            this.btn6.Location = new System.Drawing.Point(146, 62);
+            this.btn6.Location = new System.Drawing.Point(147, 70);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(60, 45);
             this.btn6.TabIndex = 5;
@@ -224,7 +224,7 @@
             this.btn5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn5.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.Appearance.Options.UseFont = true;
-            this.btn5.Location = new System.Drawing.Point(76, 62);
+            this.btn5.Location = new System.Drawing.Point(77, 70);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(60, 45);
             this.btn5.TabIndex = 4;
@@ -235,7 +235,7 @@
             this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn4.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.Appearance.Options.UseFont = true;
-            this.btn4.Location = new System.Drawing.Point(6, 62);
+            this.btn4.Location = new System.Drawing.Point(7, 70);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(60, 45);
             this.btn4.TabIndex = 3;
@@ -246,7 +246,7 @@
             this.btn9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn9.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.Appearance.Options.UseFont = true;
-            this.btn9.Location = new System.Drawing.Point(146, 117);
+            this.btn9.Location = new System.Drawing.Point(147, 125);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(60, 45);
             this.btn9.TabIndex = 8;
@@ -257,7 +257,7 @@
             this.btn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn8.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.Appearance.Options.UseFont = true;
-            this.btn8.Location = new System.Drawing.Point(76, 117);
+            this.btn8.Location = new System.Drawing.Point(77, 125);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(60, 45);
             this.btn8.TabIndex = 7;
@@ -268,7 +268,7 @@
             this.btn7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn7.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.Appearance.Options.UseFont = true;
-            this.btn7.Location = new System.Drawing.Point(6, 117);
+            this.btn7.Location = new System.Drawing.Point(7, 125);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(60, 45);
             this.btn7.TabIndex = 6;
@@ -279,7 +279,7 @@
             this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Appearance.Options.UseFont = true;
-            this.btnOK.Location = new System.Drawing.Point(216, 7);
+            this.btnOK.Location = new System.Drawing.Point(217, 15);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(110, 100);
             this.btnOK.TabIndex = 9;
@@ -290,7 +290,7 @@
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Appearance.Options.UseFont = true;
-            this.btnExit.Location = new System.Drawing.Point(216, 117);
+            this.btnExit.Location = new System.Drawing.Point(217, 125);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(110, 96);
             this.btnExit.TabIndex = 10;
@@ -301,7 +301,7 @@
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Appearance.Options.UseFont = true;
-            this.btnClear.Location = new System.Drawing.Point(113, 168);
+            this.btnClear.Location = new System.Drawing.Point(114, 176);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 45);
             this.btnClear.TabIndex = 12;
@@ -312,7 +312,7 @@
             this.btn0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn0.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.Appearance.Options.UseFont = true;
-            this.btn0.Location = new System.Drawing.Point(6, 168);
+            this.btn0.Location = new System.Drawing.Point(7, 176);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(101, 45);
             this.btn0.TabIndex = 11;
