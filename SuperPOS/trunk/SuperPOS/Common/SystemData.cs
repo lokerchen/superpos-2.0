@@ -11,5 +11,7 @@ namespace SuperPOS.Common
         public void GetTaShiftCodeList() { CommonData.TaShiftCodeList = _control.SelectAll<TAShiftCodeInfo>(); }
 
         public void GetUsrBase() { CommonData.UsrBase = _control.SelectAll<UsrBaseInfo>(); }
+
+        public void GetUsrAuthority() { CommonData.UsrAuthority = _control.SelectAll<UsrAuthorityInfo>(); }
     }
 }
