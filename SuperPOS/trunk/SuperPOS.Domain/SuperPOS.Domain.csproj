@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\TAShiftCodeInfo.cs" />
+    <Compile Include="Entities\UsrAuthorityInfo.cs" />
     <Compile Include="Entities\UsrBaseInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\UsrBaseInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
