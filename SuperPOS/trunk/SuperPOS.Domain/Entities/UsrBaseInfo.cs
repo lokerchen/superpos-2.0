@@ -24,6 +24,14 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "UsrPwd")]
         public virtual string UsrPwd { get; set; }
 
+        //创建者
+        [XmlElement(ElementName = "CreateBy")]
+        public virtual string CreateBy { get; set; }
+
+        //创建时间
+        [XmlElement(ElementName = "CreateTime")]
+        public virtual string CreateTime { get; set; }
+
         //备注
         [XmlElement(ElementName = "UsrRmk")]
         public virtual string UsrRmk { get; set; }
