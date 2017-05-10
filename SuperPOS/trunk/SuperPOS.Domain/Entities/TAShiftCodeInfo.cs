@@ -5,8 +5,8 @@ namespace SuperPOS.Domain.Entities
 {
     public class TAShiftCodeInfo
     {
-        [XmlElement(ElementName = "SystemKey")]
-        public virtual Guid SystemKey { get; set; }
+        [XmlElement(ElementName = "ID")]
+        public virtual int ID { get; set; }
 
         //时段编号
         [XmlElement(ElementName = "ShiftCode")]
