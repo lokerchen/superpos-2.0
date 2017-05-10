@@ -40,7 +40,13 @@
     <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.2" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.2" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Iesi.Collections.dll</HintPath>
@@ -75,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Common\CommonDAL.cs" />
     <Compile Include="Common\CommonData.cs" />
+    <Compile Include="Common\CommonTool.cs" />
     <Compile Include="Common\EntityControl.cs" />
     <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\PubComm.cs" />
@@ -100,6 +107,24 @@
     <Compile Include="UI\FrmShow.Designer.cs">
       <DependentUpon>FrmShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FrmTaAdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmTaAdminMain.Designer.cs">
+      <DependentUpon>FrmTaAdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sys\FrmShiftCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmShiftCode.Designer.cs">
+      <DependentUpon>FrmShiftCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Sys\FrmShiftCodeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmShiftCodeDetail.Designer.cs">
+      <DependentUpon>FrmShiftCodeDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\FrmInit.resx">
       <DependentUpon>FrmInit.cs</DependentUpon>
@@ -118,6 +143,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmShow.resx">
       <DependentUpon>FrmShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmTaAdminMain.resx">
+      <DependentUpon>FrmTaAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmShiftCode.resx">
+      <DependentUpon>FrmShiftCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmShiftCodeDetail.resx">
+      <DependentUpon>FrmShiftCodeDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinqToDB.Templates\!ReadMe.LinqToDB.md" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
@@ -162,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
+    <Folder Include="UI\TA\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperPOS.Domain\SuperPOS.Domain.csproj">
