@@ -10,6 +10,8 @@
     <property name="UsrID" column="UsrID" type="System.String" />
     <property name="UsrName" column="UsrName" type="System.String" />
     <property name="UsrPwd" column="UsrPwd" type="System.String" />
+    <property name="CreateBy" column="CreateBy" type="System.String" />
+    <property name="CreateTime" column="CreateTime" type="System.String" />
     <property name="UsrRmk" column="UsrRmk" type="System.String" />
   </class>
 
