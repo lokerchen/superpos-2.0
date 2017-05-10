@@ -37,7 +37,7 @@
             this.lblSession = new DevExpress.XtraEditors.LabelControl();
             this.lblTime = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.lblDate = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn2 = new DevExpress.XtraEditors.SimpleButton();
@@ -64,7 +64,7 @@
             // txtPwd
             // 
             this.txtPwd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPwd.EditValue = "PASSWORD";
+            this.txtPwd.EditValue = "";
             this.txtPwd.Location = new System.Drawing.Point(478, 166);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,7 +122,7 @@
             this.groupControl1.Controls.Add(this.lblSession);
             this.groupControl1.Controls.Add(this.lblTime);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.lblDate);
             this.groupControl1.Location = new System.Drawing.Point(367, 22);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(336, 133);
@@ -158,15 +158,15 @@
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Session:";
             // 
-            // labelControl3
+            // lblDate
             // 
-            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(23, 29);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(130, 30);
-            this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "2017-05-05";
+            this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDate.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(23, 29);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(130, 30);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "2017-05-05";
             // 
             // pictureBox2
             // 
@@ -284,6 +284,7 @@
             this.btnOK.Size = new System.Drawing.Size(110, 100);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnExit
             // 
@@ -295,6 +296,7 @@
             this.btnExit.Size = new System.Drawing.Size(110, 96);
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "EXIT";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnClear
             // 
@@ -306,6 +308,7 @@
             this.btnClear.Size = new System.Drawing.Size(93, 45);
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "C";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btn0
             // 
@@ -322,6 +325,7 @@
             // 
             this.tTimer.Enabled = true;
             this.tTimer.Interval = 1000;
+            this.tTimer.Tick += new System.EventHandler(this.tTimer_Tick);
             // 
             // FrmLogon
             // 
@@ -359,7 +363,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl lblDate;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.SimpleButton btn1;
