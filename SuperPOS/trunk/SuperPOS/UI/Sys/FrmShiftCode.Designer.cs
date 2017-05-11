@@ -65,6 +65,7 @@
             this.SpecialContent,
             this.ID});
             this.gvShiftCode.GridControl = this.gcShiftCode;
+            this.gvShiftCode.IndicatorWidth = 50;
             this.gvShiftCode.Name = "gvShiftCode";
             this.gvShiftCode.OptionsBehavior.Editable = false;
             this.gvShiftCode.OptionsMenu.EnableColumnMenu = false;
@@ -72,6 +73,7 @@
             this.gvShiftCode.OptionsView.EnableAppearanceEvenRow = true;
             this.gvShiftCode.OptionsView.EnableAppearanceOddRow = true;
             this.gvShiftCode.OptionsView.ShowGroupPanel = false;
+            this.gvShiftCode.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvShiftCode_CustomDrawRowIndicator);
             // 
             // ShiftCode
             // 
