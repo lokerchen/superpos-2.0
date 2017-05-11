@@ -12,10 +12,6 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "ID")]
         public virtual int ID { get; set; }
 
-        //用户编号
-        [XmlElement(ElementName = "UsrID")]
-        public virtual string UsrID { get; set; }
-
         //用户名
         [XmlElement(ElementName = "UsrName")]
         public virtual string UsrName { get; set; }
