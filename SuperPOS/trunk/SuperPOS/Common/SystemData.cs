@@ -12,6 +12,12 @@ namespace SuperPOS.Common
 
         public void GetUsrBase() { CommonData.UsrBase = _control.SelectAll<UsrBaseInfo>(); }
 
-        public void GetUsrAuthority() { CommonData.UsrAuthority = _control.SelectAll<UsrAuthorityInfo>(); }
+        public void GetUsrAuthAccess() { CommonData.UsrAuthAccess = _control.SelectAll<UsrAuthAccessInfo>(); }
+
+        public void GetUsrAuthDetail() { CommonData.UsrAuthDetail = _control.SelectAll<UsrAuthDetailInfo>(); }
+
+        public void GetUsrAuthGroup() { CommonData.UsrAuthGroup = _control.SelectAll<UsrAuthGroupInfo>(); }
+
+        public void GetUsrAuthRule() { CommonData.UsrAuthRule = _control.SelectAll<UsrAuthRuleInfo>(); }
     }
 }
