@@ -8,7 +8,6 @@ namespace SuperPOS.Common
     public class CommonDAL
     {
         #region 加载系统数据
-
         /// <summary>
         /// 加载系统数据
         /// </summary>
@@ -20,9 +19,11 @@ namespace SuperPOS.Common
             //用户列表
             systemData.GetUsrBase();
             //用户权限
-            systemData.GetUsrAuthority();
+            systemData.GetUsrAuthAccess();
+            systemData.GetUsrAuthDetail();
+            systemData.GetUsrAuthGroup();
+            systemData.GetUsrAuthRule();
         }
-
         #endregion
 
         #region 获取Session

@@ -9,6 +9,12 @@ namespace SuperPOS.Common
 
         public static IList<UsrBaseInfo> UsrBase { get; set; } 
 
-        public static IList<UsrAuthorityInfo> UsrAuthority { get; set; }
+        public static IList<UsrAuthAccessInfo> UsrAuthAccess { get; set; }
+
+        public static IList<UsrAuthDetailInfo> UsrAuthDetail { get; set; } 
+
+        public static IList<UsrAuthGroupInfo> UsrAuthGroup { get; set; } 
+
+        public static IList<UsrAuthRuleInfo> UsrAuthRule { get; set; } 
     }
 }
