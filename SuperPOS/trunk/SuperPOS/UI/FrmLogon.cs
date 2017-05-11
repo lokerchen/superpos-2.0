@@ -43,7 +43,7 @@ namespace SuperPOS.UI
             lblSession.Text = CommonDAL.GetSession();
         }
 
-        #region Timer空间
+        #region Timer控件
         private void tTimer_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
@@ -75,6 +75,7 @@ namespace SuperPOS.UI
         }
         #endregion
 
+        #region 确认按钮点击事件
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (CommonDAL.IsUsr(txtPwd.Text))
@@ -99,5 +100,6 @@ namespace SuperPOS.UI
                 txtPwd.Text = "";
             }
         }
+        #endregion
     }
 }
