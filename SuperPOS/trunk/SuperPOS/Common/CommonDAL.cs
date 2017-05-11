@@ -55,5 +55,58 @@ namespace SuperPOS.Common
             return true;
         }
         #endregion
+
+        #region 判断用户权限
+        /// <summary>
+        /// 判断用户权限
+        /// </summary>
+        /// <param name="sID">用户ID</param>
+        /// <returns></returns>
+        public static bool IsUsrAuth(string sID)
+        {
+            new SystemData().GetUsrAuthAccess();
+
+            var lst = from aa in CommonData.UsrAuthAccess
+                      join ag in CommonData.UsrAuthGroup
+                      on aa.AuthGrpID equals ag.ID.ToString()
+                      where aa.UsrID.Equals(sID)
+                      select new
+                      {
+                          ID = aa.ID
+                      };
+
+            return lst.Any();
+        }
+        #endregion
+
+        #region 用户登录判断
+        /// <summary>
+        /// 用户登录判断
+        /// </summary>
+        /// <param name="strPwd">用户密码</param>
+        /// <returns></returns>
+        public static bool IsUsr(string strPwd)
+        {
+            new SystemData().GetUsrBase();
+
+            var lstUsr = CommonData.UsrBase.Where(s => s.UsrPwd.Equals(strPwd));
+
+            return lstUsr.Any();
+        }
+        #endregion
+
+        #region 获得用户ID
+        /// <summary>
+        /// 获得用户ID
+        /// </summary>
+        /// <param name="strPwd">用户密码</param>
+        /// <returns></returns>
+        public static int GetUsrID(string strPwd)
+        {
+            var lstUsrID = CommonData.UsrBase.Where(s => s.UsrPwd.Equals(strPwd));
+
+            return lstUsrID.Any() ? lstUsrID.FirstOrDefault().ID : 0;
+        }
+        #endregion
     }
 }

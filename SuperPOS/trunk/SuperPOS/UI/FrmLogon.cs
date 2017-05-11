@@ -77,12 +77,27 @@ namespace SuperPOS.UI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            FrmTaAdminMain frmTaAdminMain = new FrmTaAdminMain();
-            frmTaAdminMain.ShowDialog();
-            //if (CommonDAL.IsUser(txtPwd.EditValue.ToString()))
-            //{
-            //    //登录成功，打开软件
-            //}
+            if (CommonDAL.IsUsr(txtPwd.Text))
+            {
+                int id = CommonDAL.GetUsrID(txtPwd.Text);
+
+                if (id == 0)
+                {
+                    CommonTool.ShowMessage("Log in failure!");
+                    txtPwd.Text = "";
+                }
+                else
+                {
+                    txtPwd.Text = "";
+                    FrmTaAdminMain frmTaAdminMain = new FrmTaAdminMain(id);
+                    frmTaAdminMain.ShowDialog();
+                }
+            }
+            else
+            {
+                CommonTool.ShowMessage("Log in failure!");
+                txtPwd.Text = "";
+            }
         }
     }
 }
