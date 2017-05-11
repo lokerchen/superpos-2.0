@@ -77,7 +77,9 @@
     <EmbeddedResource Include="Mappings\TAShiftCodeInfo.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappings\UsrBaseInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\UsrBaseInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />

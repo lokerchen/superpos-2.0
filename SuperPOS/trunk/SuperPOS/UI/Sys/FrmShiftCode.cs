@@ -56,5 +56,15 @@ namespace SuperPOS.UI.Sys
             gcShiftCode.DataSource = CommonData.TaShiftCodeList;
         }
         #endregion
+
+        #region 显示Grid行号
+        private void gvShiftCode_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle > -1)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+            }
+        }
+        #endregion
     }
 }
