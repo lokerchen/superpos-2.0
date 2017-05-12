@@ -75,5 +75,22 @@ namespace SuperPOS.UI.TA
             }
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
         }
+
+        private void CompAdd_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraTabPage page = new XtraTabPage();
+            page.Name = "CompAddr"; //窗口名字
+            page.Text = "Computer Address";//窗口标题
+            if (!xtraTabControl1.TabPages.Any(s => s.Text.Equals(page.Text)))
+            {
+
+                FrmCompAddr frmUsrSet = new FrmCompAddr(usrID, usrName);
+                frmUsrSet.TopLevel = false;
+                frmUsrSet.Show();
+                page.Controls.Add(frmUsrSet);
+                this.xtraTabControl1.TabPages.Add(page);
+            }
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
+        }
     }
 }
