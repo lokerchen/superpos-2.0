@@ -8,8 +8,8 @@
       <generator class="native" />
     </id>
 
-    <property name="GrpID" column="GrpID" type="System.String" />
-    <property name="AuthID" column="AuthID" type="System.String" />
+    <property name="GrpID" column="GrpID" type="System.Int32" />
+    <property name="AuthID" column="AuthID" type="System.Int32" />
   </class>
 
 </hibernate-mapping>

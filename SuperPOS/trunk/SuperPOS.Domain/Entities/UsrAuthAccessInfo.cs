@@ -15,11 +15,11 @@ namespace SuperPOS.Domain.Entities
 
         //用户编号
         [XmlElement(ElementName = "UsrID")]
-        public virtual string UsrID { get; set; }
+        public virtual int UsrID { get; set; }
 
         //用户名
         [XmlElement(ElementName = "AuthGrpID")]
-        public virtual string AuthGrpID { get; set; }
+        public virtual int AuthGrpID { get; set; }
 
         //创建者
         [XmlElement(ElementName = "CreateBy")]

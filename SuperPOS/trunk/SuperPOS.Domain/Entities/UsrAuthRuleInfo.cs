@@ -15,10 +15,10 @@ namespace SuperPOS.Domain.Entities
 
         //权限组ID
         [XmlElement(ElementName = "GrpID")]
-        public virtual string GrpID { get; set; }
+        public virtual int GrpID { get; set; }
 
         //权限细节ID
         [XmlElement(ElementName = "AuthID")]
-        public virtual string AuthID { get; set; }
+        public virtual int AuthID { get; set; }
     }
 }

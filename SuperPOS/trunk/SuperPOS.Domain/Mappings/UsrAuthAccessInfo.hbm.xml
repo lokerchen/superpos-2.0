@@ -8,8 +8,8 @@
       <generator class="native" />
     </id>
 
-    <property name="UsrID" column="UsrID" type="System.String" />
-    <property name="AuthGrpID" column="AuthGrpID" type="System.String" />
+    <property name="UsrID" column="UsrID" type="System.Int32" />
+    <property name="AuthGrpID" column="AuthGrpID" type="System.Int32" />
     <property name="CreateBy" column="CreateBy" type="System.String" />
     <property name="CreateTime" column="CreateTime" type="System.String" />
   </class>
