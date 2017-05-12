@@ -19,5 +19,7 @@ namespace SuperPOS.Common
         public void GetUsrAuthGroup() { CommonData.UsrAuthGroup = _control.SelectAll<UsrAuthGroupInfo>(); }
 
         public void GetUsrAuthRule() { CommonData.UsrAuthRule = _control.SelectAll<UsrAuthRuleInfo>(); }
+
+        public void GetCompAddr() { CommonData.CompAddr = _control.SelectAll<CompAddrInfo>(); }
     }
 }

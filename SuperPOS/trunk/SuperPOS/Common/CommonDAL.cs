@@ -23,6 +23,8 @@ namespace SuperPOS.Common
             systemData.GetUsrAuthDetail();
             systemData.GetUsrAuthGroup();
             systemData.GetUsrAuthRule();
+            //Computer Address
+            systemData.GetCompAddr();
         }
         #endregion
 

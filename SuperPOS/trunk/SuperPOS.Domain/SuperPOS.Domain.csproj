@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\CompAddrInfo.cs" />
     <Compile Include="Entities\TAShiftCodeInfo.cs" />
     <Compile Include="Entities\UsrAuthDetailInfo.cs" />
     <Compile Include="Entities\UsrAuthRuleInfo.cs" />
@@ -90,6 +91,7 @@
     <EmbeddedResource Include="Mappings\UsrAuthRuleInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\UsrAuthAccessInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\UsrAuthGroupInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CompAddrInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
