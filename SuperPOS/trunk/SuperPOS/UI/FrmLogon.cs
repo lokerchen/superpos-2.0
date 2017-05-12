@@ -90,7 +90,7 @@ namespace SuperPOS.UI
                 else
                 {
                     txtPwd.Text = "";
-                    FrmTaAdminMain frmTaAdminMain = new FrmTaAdminMain(id);
+                    FrmTaAdminMain frmTaAdminMain = new FrmTaAdminMain(id, CommonDAL.GetUsrName(id));
                     frmTaAdminMain.ShowDialog();
                 }
             }
