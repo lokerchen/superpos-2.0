@@ -125,6 +125,12 @@
     <Compile Include="UI\Sys\FrmShiftCodeDetail.Designer.cs">
       <DependentUpon>FrmShiftCodeDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sys\FrmUsrSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmUsrSet.Designer.cs">
+      <DependentUpon>FrmUsrSet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\FrmInit.resx">
       <DependentUpon>FrmInit.cs</DependentUpon>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmShiftCodeDetail.resx">
       <DependentUpon>FrmShiftCodeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
+      <DependentUpon>FrmUsrSet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinqToDB.Templates\!ReadMe.LinqToDB.md" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
