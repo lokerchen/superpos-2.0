@@ -62,14 +62,14 @@ namespace SuperPOS.Common
         /// </summary>
         /// <param name="sID">用户ID</param>
         /// <returns></returns>
-        public static bool IsUsrAuth(string sID)
+        public static bool IsUsrAuth(int sID)
         {
             new SystemData().GetUsrAuthAccess();
 
             var lst = from aa in CommonData.UsrAuthAccess
                       join ag in CommonData.UsrAuthGroup
-                      on aa.AuthGrpID equals ag.ID.ToString()
-                      where aa.UsrID.Equals(sID)
+                      on aa.AuthGrpID equals ag.ID
+                      where aa.UsrID == sID
                       select new
                       {
                           ID = aa.ID
@@ -106,6 +106,16 @@ namespace SuperPOS.Common
             var lstUsrID = CommonData.UsrBase.Where(s => s.UsrPwd.Equals(strPwd));
 
             return lstUsrID.Any() ? lstUsrID.FirstOrDefault().ID : 0;
+        }
+        #endregion
+
+        #region 获得用户名
+
+        public static string GetUsrName(int id)
+        {
+            new SystemData().GetUsrBase();
+
+            return CommonData.UsrBase.FirstOrDefault(s => s.ID == id).UsrName;
         }
         #endregion
     }
