@@ -33,13 +33,16 @@
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.UsrAuth = new DevExpress.XtraNavBar.NavBarGroup();
+            this.UsrSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.UsrAuthGroup = new DevExpress.XtraNavBar.NavBarItem();
+            this.UsrAuthRule = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.SetSys = new DevExpress.XtraNavBar.NavBarGroup();
             this.SysConf = new DevExpress.XtraNavBar.NavBarItem();
-            this.UsrSet = new DevExpress.XtraNavBar.NavBarItem();
             this.CompAdd = new DevExpress.XtraNavBar.NavBarItem();
             this.ShiftCode = new DevExpress.XtraNavBar.NavBarItem();
             this.SysExit = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.SetTa = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
@@ -47,18 +50,18 @@
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.UsrAuth = new DevExpress.XtraNavBar.NavBarGroup();
-            this.UsrAuthGroup = new DevExpress.XtraNavBar.NavBarItem();
-            this.UsrAuthRule = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.ShopDetail = new DevExpress.XtraNavBar.NavBarItem();
+            this.GenSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.KeypatSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.PrtSet = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -107,7 +110,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.UsrAuth;
+            this.navBarControl1.ActiveGroup = this.SetSys;
             this.navBarControl1.Appearance.Button.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBarControl1.Appearance.Button.Options.UseFont = true;
             this.navBarControl1.Appearance.ItemActive.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,9 +138,12 @@
             this.UsrAuthGroup,
             this.UsrAuthRule,
             this.navBarSeparatorItem2,
-            this.navBarSeparatorItem3,
             this.navBarItem1,
-            this.navBarSeparatorItem1});
+            this.navBarSeparatorItem1,
+            this.ShopDetail,
+            this.GenSet,
+            this.KeypatSet,
+            this.PrtSet});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 332;
@@ -146,6 +152,71 @@
             this.navBarControl1.TabIndex = 2;
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinExplorerBarViewInfoRegistrator("Summer 2008");
+            // 
+            // UsrAuth
+            // 
+            this.UsrAuth.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuth.Appearance.Options.UseFont = true;
+            this.UsrAuth.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuth.AppearanceHotTracked.Options.UseFont = true;
+            this.UsrAuth.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuth.AppearancePressed.Options.UseFont = true;
+            this.UsrAuth.Caption = "User Authorization";
+            this.UsrAuth.Expanded = true;
+            this.UsrAuth.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.UsrSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.UsrAuthGroup),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.UsrAuthRule),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1)});
+            this.UsrAuth.Name = "UsrAuth";
+            this.UsrAuth.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // UsrSet
+            // 
+            this.UsrSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrSet.Appearance.Options.UseFont = true;
+            this.UsrSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrSet.AppearanceHotTracked.Options.UseFont = true;
+            this.UsrSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrSet.AppearancePressed.Options.UseFont = true;
+            this.UsrSet.Caption = "User Setting";
+            this.UsrSet.Name = "UsrSet";
+            this.UsrSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.UsrSet_LinkClicked);
+            // 
+            // UsrAuthGroup
+            // 
+            this.UsrAuthGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthGroup.Appearance.Options.UseFont = true;
+            this.UsrAuthGroup.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthGroup.AppearanceDisabled.Options.UseFont = true;
+            this.UsrAuthGroup.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthGroup.AppearanceHotTracked.Options.UseFont = true;
+            this.UsrAuthGroup.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthGroup.AppearancePressed.Options.UseFont = true;
+            this.UsrAuthGroup.Caption = "Authority Group";
+            this.UsrAuthGroup.Name = "UsrAuthGroup";
+            // 
+            // UsrAuthRule
+            // 
+            this.UsrAuthRule.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthRule.Appearance.Options.UseFont = true;
+            this.UsrAuthRule.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthRule.AppearanceHotTracked.Options.UseFont = true;
+            this.UsrAuthRule.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrAuthRule.AppearancePressed.Options.UseFont = true;
+            this.UsrAuthRule.Caption = "Authority Rule";
+            this.UsrAuthRule.Name = "UsrAuthRule";
+            // 
+            // navBarSeparatorItem1
+            // 
+            this.navBarSeparatorItem1.CanDrag = false;
+            this.navBarSeparatorItem1.Enabled = false;
+            this.navBarSeparatorItem1.Hint = null;
+            this.navBarSeparatorItem1.LargeImageIndex = 0;
+            this.navBarSeparatorItem1.LargeImageSize = new System.Drawing.Size(0, 0);
+            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
+            this.navBarSeparatorItem1.SmallImageIndex = 0;
+            this.navBarSeparatorItem1.SmallImageSize = new System.Drawing.Size(0, 0);
             // 
             // SetSys
             // 
@@ -157,8 +228,11 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysConf),
             new DevExpress.XtraNavBar.NavBarItemLink(this.CompAdd),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShiftCode),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.SysExit),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ShopDetail),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.GenSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.KeypatSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.PrtSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.SysExit)});
             this.SetSys.Name = "SetSys";
             this.SetSys.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
             // 
@@ -174,18 +248,6 @@
             this.SysConf.AppearancePressed.Options.UseFont = true;
             this.SysConf.Caption = "System Configuration";
             this.SysConf.Name = "SysConf";
-            // 
-            // UsrSet
-            // 
-            this.UsrSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrSet.Appearance.Options.UseFont = true;
-            this.UsrSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrSet.AppearanceHotTracked.Options.UseFont = true;
-            this.UsrSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrSet.AppearancePressed.Options.UseFont = true;
-            this.UsrSet.Caption = "User Setting";
-            this.UsrSet.Name = "UsrSet";
-            this.UsrSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.UsrSet_LinkClicked);
             // 
             // CompAdd
             // 
@@ -221,17 +283,6 @@
             this.SysExit.Caption = "Exit";
             this.SysExit.Name = "SysExit";
             this.SysExit.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.SysExit_LinkClicked);
-            // 
-            // navBarSeparatorItem3
-            // 
-            this.navBarSeparatorItem3.CanDrag = false;
-            this.navBarSeparatorItem3.Enabled = false;
-            this.navBarSeparatorItem3.Hint = null;
-            this.navBarSeparatorItem3.LargeImageIndex = 0;
-            this.navBarSeparatorItem3.LargeImageSize = new System.Drawing.Size(0, 0);
-            this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
-            this.navBarSeparatorItem3.SmallImageIndex = 0;
-            this.navBarSeparatorItem3.SmallImageSize = new System.Drawing.Size(0, 0);
             // 
             // SetTa
             // 
@@ -285,48 +336,6 @@
             this.navBarSeparatorItem2.SmallImageIndex = 0;
             this.navBarSeparatorItem2.SmallImageSize = new System.Drawing.Size(0, 0);
             // 
-            // UsrAuth
-            // 
-            this.UsrAuth.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuth.Appearance.Options.UseFont = true;
-            this.UsrAuth.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuth.AppearanceHotTracked.Options.UseFont = true;
-            this.UsrAuth.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuth.AppearancePressed.Options.UseFont = true;
-            this.UsrAuth.Caption = "User Authorization";
-            this.UsrAuth.Expanded = true;
-            this.UsrAuth.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.UsrSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.UsrAuthGroup),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.UsrAuthRule),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1)});
-            this.UsrAuth.Name = "UsrAuth";
-            this.UsrAuth.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // UsrAuthGroup
-            // 
-            this.UsrAuthGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthGroup.Appearance.Options.UseFont = true;
-            this.UsrAuthGroup.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthGroup.AppearanceDisabled.Options.UseFont = true;
-            this.UsrAuthGroup.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthGroup.AppearanceHotTracked.Options.UseFont = true;
-            this.UsrAuthGroup.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthGroup.AppearancePressed.Options.UseFont = true;
-            this.UsrAuthGroup.Caption = "Authority Group";
-            this.UsrAuthGroup.Name = "UsrAuthGroup";
-            // 
-            // UsrAuthRule
-            // 
-            this.UsrAuthRule.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthRule.Appearance.Options.UseFont = true;
-            this.UsrAuthRule.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthRule.AppearanceHotTracked.Options.UseFont = true;
-            this.UsrAuthRule.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrAuthRule.AppearancePressed.Options.UseFont = true;
-            this.UsrAuthRule.Caption = "Authority Rule";
-            this.UsrAuthRule.Name = "UsrAuthRule";
-            // 
             // navBarItem5
             // 
             this.navBarItem5.Caption = "navBarItem5";
@@ -346,6 +355,11 @@
             // 
             this.navBarItem8.Caption = "navBarItem8";
             this.navBarItem8.Name = "navBarItem8";
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "User Setting";
+            this.navBarItem1.Name = "navBarItem1";
             // 
             // xtraTabControl1
             // 
@@ -369,21 +383,51 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(997, 615);
             // 
-            // navBarItem1
+            // ShopDetail
             // 
-            this.navBarItem1.Caption = "User Setting";
-            this.navBarItem1.Name = "navBarItem1";
+            this.ShopDetail.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShopDetail.Appearance.Options.UseFont = true;
+            this.ShopDetail.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShopDetail.AppearanceDisabled.Options.UseFont = true;
+            this.ShopDetail.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShopDetail.AppearanceHotTracked.Options.UseFont = true;
+            this.ShopDetail.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShopDetail.AppearancePressed.Options.UseFont = true;
+            this.ShopDetail.Caption = "Shop Detail";
+            this.ShopDetail.Name = "ShopDetail";
             // 
-            // navBarSeparatorItem1
+            // GenSet
             // 
-            this.navBarSeparatorItem1.CanDrag = false;
-            this.navBarSeparatorItem1.Enabled = false;
-            this.navBarSeparatorItem1.Hint = null;
-            this.navBarSeparatorItem1.LargeImageIndex = 0;
-            this.navBarSeparatorItem1.LargeImageSize = new System.Drawing.Size(0, 0);
-            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
-            this.navBarSeparatorItem1.SmallImageIndex = 0;
-            this.navBarSeparatorItem1.SmallImageSize = new System.Drawing.Size(0, 0);
+            this.GenSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenSet.Appearance.Options.UseFont = true;
+            this.GenSet.Caption = "General Setting";
+            this.GenSet.Name = "GenSet";
+            // 
+            // KeypatSet
+            // 
+            this.KeypatSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypatSet.Appearance.Options.UseFont = true;
+            this.KeypatSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypatSet.AppearanceDisabled.Options.UseFont = true;
+            this.KeypatSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypatSet.AppearanceHotTracked.Options.UseFont = true;
+            this.KeypatSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypatSet.AppearancePressed.Options.UseFont = true;
+            this.KeypatSet.Caption = "Keypat Setting";
+            this.KeypatSet.Name = "KeypatSet";
+            // 
+            // PrtSet
+            // 
+            this.PrtSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrtSet.Appearance.Options.UseFont = true;
+            this.PrtSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrtSet.AppearanceDisabled.Options.UseFont = true;
+            this.PrtSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrtSet.AppearanceHotTracked.Options.UseFont = true;
+            this.PrtSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrtSet.AppearancePressed.Options.UseFont = true;
+            this.PrtSet.Caption = "Print Options";
+            this.PrtSet.Name = "PrtSet";
             // 
             // FrmTaAdminMain
             // 
@@ -435,9 +479,12 @@
         private DevExpress.XtraNavBar.NavBarGroup UsrAuth;
         private DevExpress.XtraNavBar.NavBarItem UsrAuthGroup;
         private DevExpress.XtraNavBar.NavBarItem UsrAuthRule;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem ShopDetail;
+        private DevExpress.XtraNavBar.NavBarItem GenSet;
+        private DevExpress.XtraNavBar.NavBarItem KeypatSet;
+        private DevExpress.XtraNavBar.NavBarItem PrtSet;
     }
 }
