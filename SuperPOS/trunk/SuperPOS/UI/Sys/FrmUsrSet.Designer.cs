@@ -200,9 +200,9 @@
             this.panelControl2.Controls.Add(this.btnAdd);
             this.panelControl2.Controls.Add(this.btnSave);
             this.panelControl2.Controls.Add(this.btnDelete);
-            this.panelControl2.Location = new System.Drawing.Point(425, 5);
+            this.panelControl2.Location = new System.Drawing.Point(377, 5);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(104, 116);
+            this.panelControl2.Size = new System.Drawing.Size(92, 116);
             this.panelControl2.TabIndex = 6;
             // 
             // btnAdd
