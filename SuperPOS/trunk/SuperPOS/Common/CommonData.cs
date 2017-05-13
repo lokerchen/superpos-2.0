@@ -20,5 +20,9 @@ namespace SuperPOS.Common
         public static IList<CompAddrInfo> CompAddr { get; set; } 
 
         public static IList<ShopDetailInfo> ShopDetail { get; set; }
+
+        public static IList<GenSetInfo> GenSet { get; set; } 
+
+        public static IList<KeypadInfo> Keypad { get; set; }
     }
 }

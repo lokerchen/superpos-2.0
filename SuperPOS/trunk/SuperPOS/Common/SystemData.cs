@@ -23,5 +23,9 @@ namespace SuperPOS.Common
         public void GetCompAddr() { CommonData.CompAddr = _control.SelectAll<CompAddrInfo>(); }
 
         public void GetShopDetail() { CommonData.ShopDetail = _control.SelectAll<ShopDetailInfo>(); }
+
+        public void GenSet() { CommonData.GenSet = _control.SelectAll<GenSetInfo>(); }
+
+        public void GetKeypadList() { CommonData.Keypad = _control.SelectAll<KeypadInfo>(); }
     }
 }

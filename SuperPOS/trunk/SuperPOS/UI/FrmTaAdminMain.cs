@@ -37,45 +37,23 @@ namespace SuperPOS.UI.TA
             //treeMenu.ExpandAll();
         }
 
+        #region Shift Code
         private void ShiftCode_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //XtraTabPage page = new XtraTabPage();
-            //page.Name = "SysShiftCode"; //窗口名字
-            //page.Text = "Shift Code";//窗口标题
-            //if (!xtraTabControl1.TabPages.Any(s => s.Text.Equals(page.Text)))
-            //{
-
-            //    FrmShiftCode frmShiftCode = new FrmShiftCode();
-            //    frmShiftCode.TopLevel = false;
-            //    frmShiftCode.Show();
-            //    page.Controls.Add(frmShiftCode);
-            //    this.xtraTabControl1.TabPages.Add(page);
-            //}
-            //xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
             ShowXtraTabPage("SysShiftCode", "Shift Code", new FrmShiftCode(usrID, usrName));
         }
+        #endregion
 
+        #region Exit
         private void SysExit_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             this.Close();
         }
+        #endregion
 
         #region User Setting
         private void UsrSet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //XtraTabPage page = new XtraTabPage();
-            //page.Name = "UsrSet"; //窗口名字
-            //page.Text = "User Setting";//窗口标题
-            //if (!xtraTabControl1.TabPages.Any(s => s.Text.Equals(page.Text)))
-            //{
-
-            //    FrmUsrSet frmUsrSet = new FrmUsrSet(usrID, usrName);
-            //    frmUsrSet.TopLevel = false;
-            //    frmUsrSet.Show();
-            //    page.Controls.Add(frmUsrSet);
-            //    this.xtraTabControl1.TabPages.Add(page);
-            //}
-            //xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
             ShowXtraTabPage("UsrSet", "User Setting", new FrmUsrSet(usrID, usrName));
         }
         #endregion
@@ -83,19 +61,6 @@ namespace SuperPOS.UI.TA
         #region Computer Address
         private void CompAdd_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //XtraTabPage page = new XtraTabPage();
-            //page.Name = "CompAddr"; //窗口名字
-            //page.Text = "Computer Address";//窗口标题
-            //if (!xtraTabControl1.TabPages.Any(s => s.Text.Equals(page.Text)))
-            //{
-
-            //    FrmCompAddr frmUsrSet = new FrmCompAddr(usrID, usrName);
-            //    frmUsrSet.TopLevel = false;
-            //    frmUsrSet.Show();
-            //    page.Controls.Add(frmUsrSet);
-            //    this.xtraTabControl1.TabPages.Add(page);
-            //}
-            //xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
             ShowXtraTabPage("CompAddr", "Computer Address", new FrmCompAddr(usrID, usrName));
         }
         #endregion
@@ -103,19 +68,6 @@ namespace SuperPOS.UI.TA
         #region Shop Details
         private void ShopDetail_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //XtraTabPage page = new XtraTabPage();
-            //page.Name = "ShopDetail"; //窗口名字
-            //page.Text = "Shop Details";//窗口标题
-            //if (!xtraTabControl1.TabPages.Any(s => s.Text.Equals(page.Text)))
-            //{
-
-            //    FrmShopDetail frmShopDetail = new FrmShopDetail(usrID, usrName);
-            //    frmShopDetail.TopLevel = false;
-            //    frmShopDetail.Show();
-            //    page.Controls.Add(frmShopDetail);
-            //    this.xtraTabControl1.TabPages.Add(page);
-            //}
-            //xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
             ShowXtraTabPage("ShopDetail", "Shop Details", new FrmShopDetail(usrID, usrName));
         }
         #endregion
@@ -142,6 +94,20 @@ namespace SuperPOS.UI.TA
                 this.xtraTabControl1.TabPages.Add(page);
             }
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
+        }
+        #endregion
+
+        #region General Setting
+        private void GenSet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("GenSet", "General Setting", new FrmGenSet(usrID, usrName));
+        }
+        #endregion
+
+        #region Keypad Setting
+        private void KeypadSet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("KeypadSet", "Keypad Setting", new FrmKeyPadSet(usrID, usrName));
         }
         #endregion
     }
