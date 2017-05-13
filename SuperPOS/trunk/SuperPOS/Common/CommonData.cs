@@ -18,5 +18,7 @@ namespace SuperPOS.Common
         public static IList<UsrAuthRuleInfo> UsrAuthRule { get; set; } 
 
         public static IList<CompAddrInfo> CompAddr { get; set; } 
+
+        public static IList<ShopDetailInfo> ShopDetail { get; set; }
     }
 }

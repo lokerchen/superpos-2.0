@@ -92,5 +92,22 @@ namespace SuperPOS.UI.TA
             }
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
         }
+
+        private void ShopDetail_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraTabPage page = new XtraTabPage();
+            page.Name = "ShopDetail"; //窗口名字
+            page.Text = "Shop Details";//窗口标题
+            if (!xtraTabControl1.TabPages.Any(s => s.Text.Equals(page.Text)))
+            {
+
+                FrmShopDetail frmShopDetail = new FrmShopDetail(usrID, usrName);
+                frmShopDetail.TopLevel = false;
+                frmShopDetail.Show();
+                page.Controls.Add(frmShopDetail);
+                this.xtraTabControl1.TabPages.Add(page);
+            }
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages.FirstOrDefault(s => s.Text.Equals(page.Text));
+        }
     }
 }

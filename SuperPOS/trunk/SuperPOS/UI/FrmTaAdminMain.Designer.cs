@@ -221,6 +221,7 @@
             this.ShopDetail.AppearancePressed.Options.UseFont = true;
             this.ShopDetail.Caption = "Shop Detail";
             this.ShopDetail.Name = "ShopDetail";
+            this.ShopDetail.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ShopDetail_LinkClicked);
             // 
             // GenSet
             // 
