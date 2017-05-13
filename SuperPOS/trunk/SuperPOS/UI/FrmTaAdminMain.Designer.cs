@@ -39,7 +39,7 @@
             this.ShiftCode = new DevExpress.XtraNavBar.NavBarItem();
             this.ShopDetail = new DevExpress.XtraNavBar.NavBarItem();
             this.GenSet = new DevExpress.XtraNavBar.NavBarItem();
-            this.KeypatSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.KeypadSet = new DevExpress.XtraNavBar.NavBarItem();
             this.PrtSet = new DevExpress.XtraNavBar.NavBarItem();
             this.SysExit = new DevExpress.XtraNavBar.NavBarItem();
             this.SetTa = new DevExpress.XtraNavBar.NavBarGroup();
@@ -142,7 +142,7 @@
             this.navBarSeparatorItem1,
             this.ShopDetail,
             this.GenSet,
-            this.KeypatSet,
+            this.KeypadSet,
             this.PrtSet});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
@@ -165,7 +165,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShiftCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShopDetail),
             new DevExpress.XtraNavBar.NavBarItemLink(this.GenSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.KeypatSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.KeypadSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.PrtSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysExit)});
             this.SetSys.Name = "SetSys";
@@ -235,19 +235,21 @@
             this.GenSet.AppearancePressed.Options.UseFont = true;
             this.GenSet.Caption = "General Setting";
             this.GenSet.Name = "GenSet";
+            this.GenSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.GenSet_LinkClicked);
             // 
-            // KeypatSet
+            // KeypadSet
             // 
-            this.KeypatSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KeypatSet.Appearance.Options.UseFont = true;
-            this.KeypatSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KeypatSet.AppearanceDisabled.Options.UseFont = true;
-            this.KeypatSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KeypatSet.AppearanceHotTracked.Options.UseFont = true;
-            this.KeypatSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KeypatSet.AppearancePressed.Options.UseFont = true;
-            this.KeypatSet.Caption = "Keypat Setting";
-            this.KeypatSet.Name = "KeypatSet";
+            this.KeypadSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypadSet.Appearance.Options.UseFont = true;
+            this.KeypadSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypadSet.AppearanceDisabled.Options.UseFont = true;
+            this.KeypadSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypadSet.AppearanceHotTracked.Options.UseFont = true;
+            this.KeypadSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeypadSet.AppearancePressed.Options.UseFont = true;
+            this.KeypadSet.Caption = "Keypad Setting";
+            this.KeypadSet.Name = "KeypadSet";
+            this.KeypadSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.KeypadSet_LinkClicked);
             // 
             // PrtSet
             // 
@@ -493,7 +495,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
         private DevExpress.XtraNavBar.NavBarItem ShopDetail;
         private DevExpress.XtraNavBar.NavBarItem GenSet;
-        private DevExpress.XtraNavBar.NavBarItem KeypatSet;
+        private DevExpress.XtraNavBar.NavBarItem KeypadSet;
         private DevExpress.XtraNavBar.NavBarItem PrtSet;
     }
 }

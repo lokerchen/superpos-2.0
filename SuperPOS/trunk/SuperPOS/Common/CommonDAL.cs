@@ -27,6 +27,10 @@ namespace SuperPOS.Common
             systemData.GetCompAddr();
             //店铺详情
             systemData.GetShopDetail();
+            //General设定
+            systemData.GenSet();
+            //Keypad设定
+            systemData.GetKeypadList();
         }
         #endregion
 
