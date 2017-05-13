@@ -192,6 +192,7 @@ namespace SuperPOS.UI.Sys
                 {
                     _control.DeleteEntity(CommonData.UsrBase.FirstOrDefault(s => s.ID == Convert.ToInt32(gvUsrSet.GetRowCellValue(gvUsrSet.FocusedRowHandle, "ID"))));
                     _control.DeleteEntity(CommonData.UsrAuthAccess.FirstOrDefault(s => s.ID == Convert.ToInt32(gvUsrSet.GetRowCellValue(gvUsrSet.FocusedRowHandle, "UsrAccID"))));
+                    CommonTool.ShowMessage("Delete successful!");
                     BindData();
                 }
                 catch (Exception ex) { LogHelper.Error(this.Name, ex); }
