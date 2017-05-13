@@ -37,7 +37,10 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v15.2" />
     <Reference Include="DevExpress.Data.v15.2" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v15.2" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core" />
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -46,6 +49,7 @@
     <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -131,6 +135,12 @@
     <Compile Include="UI\Sys\FrmShiftCodeDetail.Designer.cs">
       <DependentUpon>FrmShiftCodeDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sys\FrmShopDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmShopDetail.Designer.cs">
+      <DependentUpon>FrmShopDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sys\FrmUsrSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmShiftCodeDetail.resx">
       <DependentUpon>FrmShiftCodeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmShopDetail.resx">
+      <DependentUpon>FrmShopDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>

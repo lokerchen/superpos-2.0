@@ -25,6 +25,8 @@ namespace SuperPOS.Common
             systemData.GetUsrAuthRule();
             //Computer Address
             systemData.GetCompAddr();
+            //店铺详情
+            systemData.GetShopDetail();
         }
         #endregion
 

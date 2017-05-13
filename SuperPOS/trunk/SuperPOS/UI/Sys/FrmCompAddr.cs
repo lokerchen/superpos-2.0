@@ -91,6 +91,8 @@ namespace SuperPOS.UI.Sys
             BindData();
 
             isAdd = false;
+
+            CommonTool.ShowMessage("Save successful!");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
