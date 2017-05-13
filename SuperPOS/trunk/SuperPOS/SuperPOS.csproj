@@ -159,6 +159,12 @@
     <Compile Include="UI\Sys\FrmShopDetail.Designer.cs">
       <DependentUpon>FrmShopDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sys\FrmTaDeptCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmTaDeptCode.Designer.cs">
+      <DependentUpon>FrmTaDeptCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sys\FrmUsrSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmShopDetail.resx">
       <DependentUpon>FrmShopDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmTaDeptCode.resx">
+      <DependentUpon>FrmTaDeptCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>

@@ -25,6 +25,8 @@ namespace SuperPOS.Common
 
         public static IList<KeypadInfo> Keypad { get; set; }
 
-        public static IList<SysPrtSetInfo>  SysPrt { get; set; }
+        public static IList<SysPrtSetInfo> SysPrt { get; set; }
+
+        public static IList<TaDeptCodeInfo> TaDeptCode { get; set; } 
     }
 }

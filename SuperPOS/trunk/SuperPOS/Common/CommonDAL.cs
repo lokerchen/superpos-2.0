@@ -33,6 +33,11 @@ namespace SuperPOS.Common
             systemData.GetKeypadList();
             //打印机列表
             systemData.GetSysPrtList();
+
+            #region Takeaway
+            //Department Code
+            systemData.GetTaDeptCode();
+            #endregion
         }
         #endregion
 

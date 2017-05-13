@@ -29,5 +29,7 @@ namespace SuperPOS.Common
         public void GetKeypadList() { CommonData.Keypad = _control.SelectAll<KeypadInfo>(); }
 
         public void GetSysPrtList() { CommonData.SysPrt = _control.SelectAll<SysPrtSetInfo>(); }
+
+        public void GetTaDeptCode() { CommonData.TaDeptCode = _control.SelectAll<TaDeptCodeInfo>(); }
     }
 }
