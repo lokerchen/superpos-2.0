@@ -24,5 +24,7 @@ namespace SuperPOS.Common
         public static IList<GenSetInfo> GenSet { get; set; } 
 
         public static IList<KeypadInfo> Keypad { get; set; }
+
+        public static IList<SysPrtSetInfo>  SysPrt { get; set; }
     }
 }

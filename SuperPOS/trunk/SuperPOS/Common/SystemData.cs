@@ -27,5 +27,7 @@ namespace SuperPOS.Common
         public void GenSet() { CommonData.GenSet = _control.SelectAll<GenSetInfo>(); }
 
         public void GetKeypadList() { CommonData.Keypad = _control.SelectAll<KeypadInfo>(); }
+
+        public void GetSysPrtList() { CommonData.SysPrt = _control.SelectAll<SysPrtSetInfo>(); }
     }
 }

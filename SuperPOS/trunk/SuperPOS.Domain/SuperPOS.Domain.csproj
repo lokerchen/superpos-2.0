@@ -50,6 +50,7 @@
     <Compile Include="Entities\GenSetInfo.cs" />
     <Compile Include="Entities\KeypadInfo.cs" />
     <Compile Include="Entities\ShopDetailInfo.cs" />
+    <Compile Include="Entities\SysPrtSetInfo.cs" />
     <Compile Include="Entities\TAShiftCodeInfo.cs" />
     <Compile Include="Entities\UsrAuthDetailInfo.cs" />
     <Compile Include="Entities\UsrAuthRuleInfo.cs" />
@@ -98,6 +99,7 @@
     <EmbeddedResource Include="Mappings\ShopDetailInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\GenSetInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\KeypadInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SysPrtSetInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
