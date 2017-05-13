@@ -15,9 +15,21 @@ namespace SuperPOS.UI.Sys
 {
     public partial class FrmShiftCode : DevExpress.XtraEditors.XtraForm
     {
+        //用户ID
+        public int usrID = 0;
+        //用户姓名
+        public string usrName = "";
+
         public FrmShiftCode()
         {
             InitializeComponent();
+        }
+
+        public FrmShiftCode(int id, string name)
+        {
+            InitializeComponent();
+            usrID = id;
+            usrName = name;
         }
 
         private void FrmShiftCode_Load(object sender, EventArgs e)
