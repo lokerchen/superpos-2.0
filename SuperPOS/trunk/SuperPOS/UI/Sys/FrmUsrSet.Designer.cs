@@ -79,6 +79,8 @@
             // 
             this.gvUsrSet.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gvUsrSet.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvUsrSet.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gvUsrSet.Appearance.OddRow.Options.UseBackColor = true;
             this.gvUsrSet.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.UsrID,
             this.UsrName,
