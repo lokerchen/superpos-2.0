@@ -135,6 +135,12 @@
     <Compile Include="UI\Sys\FrmKeyPadSet.Designer.cs">
       <DependentUpon>FrmKeyPadSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sys\FrmPrtSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmPrtSet.Designer.cs">
+      <DependentUpon>FrmPrtSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sys\FrmShiftCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmKeyPadSet.resx">
       <DependentUpon>FrmKeyPadSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmPrtSet.resx">
+      <DependentUpon>FrmPrtSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmShiftCode.resx">
       <DependentUpon>FrmShiftCode.cs</DependentUpon>

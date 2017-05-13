@@ -31,6 +31,8 @@ namespace SuperPOS.Common
             systemData.GenSet();
             //Keypad设定
             systemData.GetKeypadList();
+            //打印机列表
+            systemData.GetSysPrtList();
         }
         #endregion
 

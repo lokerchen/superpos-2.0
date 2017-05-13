@@ -110,5 +110,13 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("KeypadSet", "Keypad Setting", new FrmKeyPadSet(usrID, usrName));
         }
         #endregion
+
+        #region Printer Setting
+        private void SysPrt_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("SysPrt", "Printer Setting", new FrmPrtSet(usrID, usrName));
+        }
+        #endregion
+
     }
 }
