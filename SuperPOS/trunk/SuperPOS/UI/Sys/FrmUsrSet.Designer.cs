@@ -98,7 +98,6 @@
             this.gvUsrSet.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvUsrSet.OptionsView.EnableAppearanceEvenRow = true;
             this.gvUsrSet.OptionsView.EnableAppearanceOddRow = true;
-            this.gvUsrSet.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gvUsrSet.OptionsView.ShowGroupPanel = false;
             this.gvUsrSet.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvUsrSet_CustomDrawRowIndicator);
             this.gvUsrSet.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvUsrSet_FocusedRowChanged);
