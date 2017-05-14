@@ -52,6 +52,7 @@
     <Compile Include="Entities\ShopDetailInfo.cs" />
     <Compile Include="Entities\SysPrtSetInfo.cs" />
     <Compile Include="Entities\TaDeptCodeInfo.cs" />
+    <Compile Include="Entities\TaMenuCateInfo.cs" />
     <Compile Include="Entities\TaMenuSetInfo.cs" />
     <Compile Include="Entities\TAShiftCodeInfo.cs" />
     <Compile Include="Entities\UsrAuthDetailInfo.cs" />
@@ -104,6 +105,7 @@
     <EmbeddedResource Include="Mappings\SysPrtSetInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaDeptCodeInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaMenuSetInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaMenuCateInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
