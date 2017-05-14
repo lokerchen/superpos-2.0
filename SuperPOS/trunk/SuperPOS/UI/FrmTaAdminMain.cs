@@ -121,10 +121,18 @@ namespace SuperPOS.UI.TA
         #region Takeaway
         #region Department Code
         private void TADeptCode_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {ShowXtraTabPage("TADeptCode", "Department Code", new FrmTaDeptCode(usrID, usrName));
+        {
+            ShowXtraTabPage("TADeptCode", "Department Code", new FrmTaDeptCode(usrID, usrName));
         }
         #endregion
+
         #endregion
 
+        #region TA MenuSet
+        private void TAMenuSet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TAMenuSet", "Menu Set", new FrmTaMenuSet(usrID, usrName));
+        }
+        #endregion
     }
 }

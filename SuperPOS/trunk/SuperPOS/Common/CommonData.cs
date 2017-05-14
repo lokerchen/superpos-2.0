@@ -28,5 +28,7 @@ namespace SuperPOS.Common
         public static IList<SysPrtSetInfo> SysPrt { get; set; }
 
         public static IList<TaDeptCodeInfo> TaDeptCode { get; set; } 
+
+        public static IList<TaMenuSetInfo> TaMenuSet { get; set; } 
     }
 }
