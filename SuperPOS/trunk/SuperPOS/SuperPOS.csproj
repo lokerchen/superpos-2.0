@@ -171,6 +171,12 @@
     <Compile Include="UI\Sys\FrmUsrSet.Designer.cs">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaMenuCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaMenuCate.Designer.cs">
+      <DependentUpon>FrmTaMenuCate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaMenuSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaMenuCate.resx">
+      <DependentUpon>FrmTaMenuCate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaMenuSet.resx">
       <DependentUpon>FrmTaMenuSet.cs</DependentUpon>

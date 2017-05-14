@@ -308,6 +308,7 @@
             this.TAMenuCat.AppearancePressed.Options.UseFont = true;
             this.TAMenuCat.Caption = "Menu Category";
             this.TAMenuCat.Name = "TAMenuCat";
+            this.TAMenuCat.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuCat_LinkClicked);
             // 
             // TAMenuItem
             // 
