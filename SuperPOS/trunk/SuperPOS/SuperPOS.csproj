@@ -159,10 +159,10 @@
     <Compile Include="UI\Sys\FrmShopDetail.Designer.cs">
       <DependentUpon>FrmShopDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Sys\FrmTaDeptCode.cs">
+    <Compile Include="UI\TA\FrmTaDeptCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Sys\FrmTaDeptCode.Designer.cs">
+    <Compile Include="UI\TA\FrmTaDeptCode.Designer.cs">
       <DependentUpon>FrmTaDeptCode.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Sys\FrmUsrSet.cs">
@@ -214,7 +214,7 @@
     <EmbeddedResource Include="UI\Sys\FrmShopDetail.resx">
       <DependentUpon>FrmShopDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Sys\FrmTaDeptCode.resx">
+    <EmbeddedResource Include="UI\TA\FrmTaDeptCode.resx">
       <DependentUpon>FrmTaDeptCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
@@ -263,7 +263,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
-    <Folder Include="UI\TA\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperPOS.Domain\SuperPOS.Domain.csproj">
