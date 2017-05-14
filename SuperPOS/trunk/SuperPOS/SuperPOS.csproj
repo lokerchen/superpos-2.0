@@ -171,6 +171,12 @@
     <Compile Include="UI\Sys\FrmUsrSet.Designer.cs">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaMenuSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaMenuSet.Designer.cs">
+      <DependentUpon>FrmTaMenuSet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\FrmInit.resx">
       <DependentUpon>FrmInit.cs</DependentUpon>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaMenuSet.resx">
+      <DependentUpon>FrmTaMenuSet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinqToDB.Templates\!ReadMe.LinqToDB.md" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />

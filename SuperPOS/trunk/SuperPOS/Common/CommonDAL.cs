@@ -37,6 +37,8 @@ namespace SuperPOS.Common
             #region Takeaway
             //Department Code
             systemData.GetTaDeptCode();
+            //Menu Set
+            systemData.GetTaMenuSet();
             #endregion
         }
         #endregion
