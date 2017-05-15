@@ -12,5 +12,8 @@ namespace SuperPOS.Common
 
         //NHibernate配置文件
         public static string NHIBERNATE_CONFIG_FILE_NAME = @"hibernate.cfg.xml";
+
+        //星期
+        public static string[] WORD_DAY = new string[] { "Monday", "Tuesday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
     }
 }
