@@ -41,6 +41,8 @@ namespace SuperPOS.Common
             systemData.GetTaMenuSet();
             //Menu Category
             systemData.GetTaMenuCate();
+            //Menu Item
+            systemData.GetTaMenuItem();
             #endregion
         }
         #endregion

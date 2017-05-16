@@ -35,5 +35,7 @@ namespace SuperPOS.Common
         public void GetTaMenuSet() { CommonData.TaMenuSet = _control.SelectAll<TaMenuSetInfo>(); }
 
         public void GetTaMenuCate() { CommonData.TaMenuCate = _control.SelectAll<TaMenuCateInfo>(); }
+
+        public void GetTaMenuItem() { CommonData.TaMenuItem = _control.SelectAll<TaMenuItemInfo>(); }
     }
 }

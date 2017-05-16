@@ -16,12 +16,12 @@ namespace SuperPOS
         [STAThread]
         static void Main()
         {
-            bool IsNewApp;
+            //bool IsNewApp;
 
-            using (new Mutex(true, Application.ProductName, out IsNewApp))
-            {
-                if (IsNewApp)
-                {
+            //using (new Mutex(true, Application.ProductName, out IsNewApp))
+            //{
+            //    if (IsNewApp)
+            //    {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     BonusSkins.Register();
@@ -39,12 +39,12 @@ namespace SuperPOS
                         LogHelper.Error("Init Error", ex);
                         throw;
                     }
-                }
-                else
-                {
-                    MessageBox.Show(PubComm.START_ONLY_ONE_APP);
-                }
-            }
+                //}
+                //else
+                //{
+                //    MessageBox.Show(PubComm.START_ONLY_ONE_APP);
+                //}
+            //}
             //Application.Run(new FrmInit());
         }
     }
