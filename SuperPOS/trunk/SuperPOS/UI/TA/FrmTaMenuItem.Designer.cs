@@ -196,6 +196,7 @@
             this.gvMenuItem.OptionsView.ShowGroupPanel = false;
             this.gvMenuItem.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvMenuItem_CustomDrawRowIndicator);
             this.gvMenuItem.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvMenuItem_FocusedRowChanged);
+            this.gvMenuItem.DoubleClick += new System.EventHandler(this.gvMenuItem_DoubleClick);
             // 
             // ID
             // 
