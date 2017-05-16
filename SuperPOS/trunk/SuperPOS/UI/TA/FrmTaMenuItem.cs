@@ -230,11 +230,6 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(chkComboMenuCate.EditValue.ToString());
-        }
-
         #region Add按钮事件
         private void btnAdd_Click(object sender, EventArgs e)
         {
