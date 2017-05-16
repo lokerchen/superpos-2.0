@@ -52,20 +52,23 @@
             this.MiMenuSetID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MiMenuSet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MiRmk = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MiMenuCateID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lueMenuSet = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.chkComboOtherSet = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.chkComboWorkDay = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.lueSuppleShift = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.chkComboMenuCate = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.luePrtOrder = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.luePrtName = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.lueSuppleShift = new DevExpress.XtraEditors.LookUpEdit();
+            this.chkComboMenuCate = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtSpecailRegularPrice = new DevExpress.XtraEditors.TextEdit();
+            this.luePrtOrder = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtRegularPrice = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
@@ -77,10 +80,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtDishCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.lueMenuSet = new DevExpress.XtraEditors.LookUpEdit();
-            this.MiMenuCateID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -89,19 +88,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvMenuItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMenuSet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkComboOtherSet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkComboWorkDay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePrtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueSuppleShift.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkComboMenuCate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luePrtOrder.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luePrtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSpecailRegularPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePrtOrder.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegularPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOtherName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEngName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDispPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDishCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueMenuSet.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -326,6 +325,12 @@
             this.MiRmk.Name = "MiRmk";
             this.MiRmk.Width = 253;
             // 
+            // MiMenuCateID
+            // 
+            this.MiMenuCateID.Caption = "MiMenuCateID";
+            this.MiMenuCateID.FieldName = "MiMenuCateID";
+            this.MiMenuCateID.Name = "MiMenuCateID";
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.labelControl4);
@@ -358,6 +363,25 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(621, 247);
             this.panelControl2.TabIndex = 0;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(381, 12);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(67, 18);
+            this.labelControl4.TabIndex = 23;
+            this.labelControl4.Text = "Menu Set:";
+            // 
+            // lueMenuSet
+            // 
+            this.lueMenuSet.Location = new System.Drawing.Point(454, 9);
+            this.lueMenuSet.Name = "lueMenuSet";
+            this.lueMenuSet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMenuSet.Properties.NullText = "[Please select...]";
+            this.lueMenuSet.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.lueMenuSet.Size = new System.Drawing.Size(139, 24);
+            this.lueMenuSet.TabIndex = 24;
             // 
             // labelControl12
             // 
@@ -403,54 +427,6 @@
             this.chkComboWorkDay.Size = new System.Drawing.Size(139, 24);
             this.chkComboWorkDay.TabIndex = 19;
             // 
-            // lueSuppleShift
-            // 
-            this.lueSuppleShift.Location = new System.Drawing.Point(454, 41);
-            this.lueSuppleShift.Name = "lueSuppleShift";
-            this.lueSuppleShift.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueSuppleShift.Properties.NullText = "[Please select...]";
-            this.lueSuppleShift.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.lueSuppleShift.Size = new System.Drawing.Size(139, 24);
-            this.lueSuppleShift.TabIndex = 12;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(343, 186);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(105, 18);
-            this.labelControl10.TabIndex = 18;
-            this.labelControl10.Text = "Menu Category:";
-            // 
-            // chkComboMenuCate
-            // 
-            this.chkComboMenuCate.Location = new System.Drawing.Point(454, 180);
-            this.chkComboMenuCate.Name = "chkComboMenuCate";
-            this.chkComboMenuCate.Properties.AllowMultiSelect = true;
-            this.chkComboMenuCate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.chkComboMenuCate.Size = new System.Drawing.Size(139, 24);
-            this.chkComboMenuCate.TabIndex = 17;
-            // 
-            // luePrtOrder
-            // 
-            this.luePrtOrder.Location = new System.Drawing.Point(454, 111);
-            this.luePrtOrder.Name = "luePrtOrder";
-            this.luePrtOrder.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luePrtOrder.Properties.NullText = "[Please select...]";
-            this.luePrtOrder.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.luePrtOrder.Size = new System.Drawing.Size(139, 24);
-            this.luePrtOrder.TabIndex = 16;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(373, 117);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(75, 18);
-            this.labelControl9.TabIndex = 15;
-            this.labelControl9.Text = "Print Order:";
-            // 
             // luePrtName
             // 
             this.luePrtName.Location = new System.Drawing.Point(454, 76);
@@ -470,6 +446,43 @@
             this.labelControl8.TabIndex = 13;
             this.labelControl8.Text = "Print Name:";
             // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(343, 186);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(105, 18);
+            this.labelControl10.TabIndex = 18;
+            this.labelControl10.Text = "Menu Category:";
+            // 
+            // lueSuppleShift
+            // 
+            this.lueSuppleShift.Location = new System.Drawing.Point(454, 41);
+            this.lueSuppleShift.Name = "lueSuppleShift";
+            this.lueSuppleShift.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueSuppleShift.Properties.NullText = "[Please select...]";
+            this.lueSuppleShift.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.lueSuppleShift.Size = new System.Drawing.Size(139, 24);
+            this.lueSuppleShift.TabIndex = 12;
+            // 
+            // chkComboMenuCate
+            // 
+            this.chkComboMenuCate.Location = new System.Drawing.Point(454, 180);
+            this.chkComboMenuCate.Name = "chkComboMenuCate";
+            this.chkComboMenuCate.Properties.AllowMultiSelect = true;
+            this.chkComboMenuCate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.chkComboMenuCate.Size = new System.Drawing.Size(139, 24);
+            this.chkComboMenuCate.TabIndex = 17;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(373, 117);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(75, 18);
+            this.labelControl9.TabIndex = 15;
+            this.labelControl9.Text = "Print Order:";
+            // 
             // txtSpecailRegularPrice
             // 
             this.txtSpecailRegularPrice.Location = new System.Drawing.Point(154, 180);
@@ -478,6 +491,17 @@
             this.txtSpecailRegularPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSpecailRegularPrice.Size = new System.Drawing.Size(147, 24);
             this.txtSpecailRegularPrice.TabIndex = 11;
+            // 
+            // luePrtOrder
+            // 
+            this.luePrtOrder.Location = new System.Drawing.Point(454, 111);
+            this.luePrtOrder.Name = "luePrtOrder";
+            this.luePrtOrder.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luePrtOrder.Properties.NullText = "[Please select...]";
+            this.luePrtOrder.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
+            this.luePrtOrder.Size = new System.Drawing.Size(139, 24);
+            this.luePrtOrder.TabIndex = 16;
             // 
             // labelControl15
             // 
@@ -568,46 +592,11 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Dish Code:";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(672, 42);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(381, 12);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(67, 18);
-            this.labelControl4.TabIndex = 23;
-            this.labelControl4.Text = "Menu Set:";
-            // 
-            // lueMenuSet
-            // 
-            this.lueMenuSet.Location = new System.Drawing.Point(454, 9);
-            this.lueMenuSet.Name = "lueMenuSet";
-            this.lueMenuSet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueMenuSet.Properties.NullText = "[Please select...]";
-            this.lueMenuSet.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.lueMenuSet.Size = new System.Drawing.Size(139, 24);
-            this.lueMenuSet.TabIndex = 24;
-            // 
-            // MiMenuCateID
-            // 
-            this.MiMenuCateID.Caption = "MiMenuCateID";
-            this.MiMenuCateID.FieldName = "MiMenuCateID";
-            this.MiMenuCateID.Name = "MiMenuCateID";
-            // 
             // FrmTaMenuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 615);
-            this.Controls.Add(this.simpleButton1);
+            this.ClientSize = new System.Drawing.Size(655, 615);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaMenuItem";
@@ -623,19 +612,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMenuSet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkComboOtherSet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkComboWorkDay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePrtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueSuppleShift.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkComboMenuCate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luePrtOrder.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luePrtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSpecailRegularPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePrtOrder.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRegularPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOtherName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEngName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDispPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDishCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueMenuSet.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,7 +680,6 @@
         private DevExpress.XtraEditors.SimpleButton btnDel;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LookUpEdit lueMenuSet;
         private DevExpress.XtraGrid.Columns.GridColumn MiMenuCateID;
