@@ -139,5 +139,10 @@ namespace SuperPOS.UI.TA
         {
             ShowXtraTabPage("MenuCate", "Menu Category", new FrmTaMenuCate(usrID, usrName));
         }
+
+        private void TAMenuItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("MenuItem", "Menu Item", new FrmTaMenuItem(usrID, usrName));
+        }
     }
 }

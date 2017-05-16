@@ -322,6 +322,7 @@
             this.TAMenuItem.AppearancePressed.Options.UseFont = true;
             this.TAMenuItem.Caption = "Menu Item";
             this.TAMenuItem.Name = "TAMenuItem";
+            this.TAMenuItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuItem_LinkClicked);
             // 
             // TAMenuSet
             // 

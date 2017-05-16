@@ -32,5 +32,7 @@ namespace SuperPOS.Common
         public static IList<TaMenuSetInfo> TaMenuSet { get; set; } 
 
         public static IList<TaMenuCateInfo> TaMenuCate { get; set; } 
+
+        public static IList<TaMenuItemInfo> TaMenuItem { get; set; } 
     }
 }

@@ -15,5 +15,8 @@ namespace SuperPOS.Common
 
         //星期
         public static string[] WORD_DAY = new string[] { "Monday", "Tuesday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+        //Menu Item中的其他属性
+        public static string[] MENUITEM_OTHER_SET = new[] {"Unavailable", "Negative Price", "Discountable", "Without VAT", "Inventory Check"};
     }
 }
