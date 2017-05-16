@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using SuperPOS.Common;
 using SuperPOS.Domain.Entities;
+using SuperPOS.UI.Sys;
 
 namespace SuperPOS.UI.TA
 {
@@ -348,5 +350,28 @@ namespace SuperPOS.UI.TA
             chkComboOtherSet.EditValue = gvMenuItem.GetRowCellValue(gvMenuItem.FocusedRowHandle, "MiRmk");
             chkComboOtherSet.Text = gvMenuItem.GetRowCellValue(gvMenuItem.FocusedRowHandle, "MiRmk").ToString();
         }
+
+        #region Grid单元格双击事件
+        private void gvMenuItem_DoubleClick(object sender, EventArgs e)
+        {
+            MouseEventArgs arg = e as MouseEventArgs;
+
+            if (arg == null) return;
+
+            //获取鼠标坐标
+            GridHitInfo hitInfo = gvMenuItem.CalcHitInfo(new Point(arg.X, arg.Y));
+
+            if (hitInfo.RowHandle >= 0)
+            {
+                //FrmShiftCodeDetail frmShiftCodeDetail = new FrmShiftCodeDetail(Convert.ToInt32(gvShiftCode.GetRowCellValue(gvShiftCode.FocusedRowHandle, "ID")));
+                //frmShiftCodeDetail.ShowDialog();
+
+                FrmTaMenuItemDetail frmTaMenuItemDetail = new FrmTaMenuItemDetail(Convert.ToInt32(gvMenuItem.GetRowCellValue(gvMenuItem.FocusedRowHandle, "ID")));
+                frmTaMenuItemDetail.ShowDialog();
+
+                BindGridData();
+            }
+        }
+        #endregion
     }
 }
