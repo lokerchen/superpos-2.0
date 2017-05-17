@@ -134,6 +134,38 @@ namespace SuperPOS.UI.TA
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            #region 空值判断
+            if (string.IsNullOrEmpty(txtEngName.Text))
+            {
+                CommonTool.ShowMessage("English Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtOtherName.Text))
+            {
+                CommonTool.ShowMessage("Other Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtPosition.Text))
+            {
+                CommonTool.ShowMessage("Display Position is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(lueDeptCode.EditValue.ToString()))
+            {
+                CommonTool.ShowMessage("Please select Department Code!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(lueMenuSet.EditValue.ToString()))
+            {
+                CommonTool.ShowMessage("Please select Menu Set!");
+                return;
+            }
+            #endregion
+
             new SystemData().GetTaMenuCate();
 
             TaMenuCateInfo taMenuCateInfo = new TaMenuCateInfo();

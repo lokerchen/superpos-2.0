@@ -132,6 +132,24 @@ namespace SuperPOS.UI.Sys
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtUsrName.Text))
+            {
+                CommonTool.ShowMessage("User Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtUsrName.Text))
+            {
+                CommonTool.ShowMessage("User Password is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(lueUsrAuthGrp.EditValue.ToString()))
+            {
+                CommonTool.ShowMessage("Please select User Authority Group!");
+                return;
+            }
+
             new SystemData().GetUsrAuthAccess();
 
             UsrAuthAccessInfo usrAuthAccessInfo = new UsrAuthAccessInfo();

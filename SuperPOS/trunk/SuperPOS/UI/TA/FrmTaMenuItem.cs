@@ -257,6 +257,43 @@ namespace SuperPOS.UI.TA
         #region Save按钮事件
         private void btnSave_Click(object sender, EventArgs e)
         {
+            #region 判断空值
+            if (string.IsNullOrEmpty(txtDishCode.Text))
+            {
+                CommonTool.ShowMessage("Dish Code is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtDispPosition.Text))
+            {
+                CommonTool.ShowMessage("Display Position is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtEngName.Text))
+            {
+                CommonTool.ShowMessage("English Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtOtherName.Text))
+            {
+                CommonTool.ShowMessage("Other Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtRegularPrice.Text))
+            {
+                CommonTool.ShowMessage("Regular Price is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtSpecailRegularPrice.Text))
+            {
+                CommonTool.ShowMessage("Specail Regular Price is empty,please enter!");
+                return;
+            }
+            #endregion
             new SystemData().GetTaMenuItem();
 
             TaMenuItemInfo taMenuItemInfo = new TaMenuItemInfo();

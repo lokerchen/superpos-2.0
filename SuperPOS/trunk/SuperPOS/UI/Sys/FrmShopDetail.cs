@@ -37,6 +37,18 @@ namespace SuperPOS.UI.Sys
         #region 保存按钮
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtShopName.Text))
+            {
+                CommonTool.ShowMessage("Shift Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtShopAddr.Text))
+            {
+                CommonTool.ShowMessage("Shift Addr is empty,please enter!");
+                return;
+            }
+
             try
             {
                 ShopDetailInfo shopDetailInfo = new ShopDetailInfo();
