@@ -55,6 +55,8 @@
             // 
             // gvShiftCode
             // 
+            this.gvShiftCode.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gvShiftCode.Appearance.EvenRow.Options.UseBackColor = true;
             this.gvShiftCode.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ShiftCode,
             this.ShiftName,
