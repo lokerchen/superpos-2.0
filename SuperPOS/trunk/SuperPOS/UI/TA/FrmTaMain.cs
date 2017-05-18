@@ -139,7 +139,7 @@ namespace SuperPOS.UI.TA
 
             for (int i = 0; i < 42; i++)
             {
-                btnMc[i].Click += btnMenuCate_Click;
+                btnMenuCate[i].Click += btnMenuCate_Click;
             }
         }
         #endregion
