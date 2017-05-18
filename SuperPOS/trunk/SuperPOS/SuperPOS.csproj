@@ -123,6 +123,8 @@
     <Compile Include="UI\FrmTaAdminMain.Designer.cs">
       <DependentUpon>FrmTaAdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Phone\brichiperr.cs" />
+    <Compile Include="UI\Phone\BriSDKLib.cs" />
     <Compile Include="UI\Sys\FrmCompAddr.cs">
       <SubType>Form</SubType>
     </Compile>

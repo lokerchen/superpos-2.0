@@ -161,6 +161,7 @@
             "2",
             "200.00"}, -1);
             this.treeListOrder.EndUnboundLoad();
+            this.treeListOrder.OptionsBehavior.Editable = false;
             this.treeListOrder.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
             this.treeListOrder.OptionsClipboard.CopyNodeHierarchy = DevExpress.Utils.DefaultBoolean.True;
             this.treeListOrder.RowHeight = 30;
@@ -179,7 +180,7 @@
             this.miDishName.OptionsFilter.AllowAutoFilter = false;
             this.miDishName.Visible = true;
             this.miDishName.VisibleIndex = 0;
-            this.miDishName.Width = 259;
+            this.miDishName.Width = 252;
             // 
             // miQty
             // 
@@ -192,7 +193,7 @@
             this.miQty.OptionsFilter.AllowFilter = false;
             this.miQty.Visible = true;
             this.miQty.VisibleIndex = 1;
-            this.miQty.Width = 39;
+            this.miQty.Width = 44;
             // 
             // miPrice
             // 
@@ -205,7 +206,7 @@
             this.miPrice.OptionsFilter.AllowFilter = false;
             this.miPrice.Visible = true;
             this.miPrice.VisibleIndex = 2;
-            this.miPrice.Width = 72;
+            this.miPrice.Width = 74;
             // 
             // panelControl1
             // 
@@ -317,7 +318,6 @@
             this.btnMi14.Name = "btnMi14";
             this.btnMi14.Size = new System.Drawing.Size(160, 55);
             this.btnMi14.TabIndex = 34;
-            this.btnMi14.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi12
             // 
@@ -329,7 +329,6 @@
             this.btnMi12.Name = "btnMi12";
             this.btnMi12.Size = new System.Drawing.Size(160, 55);
             this.btnMi12.TabIndex = 32;
-            this.btnMi12.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi13
             // 
@@ -341,7 +340,6 @@
             this.btnMi13.Name = "btnMi13";
             this.btnMi13.Size = new System.Drawing.Size(160, 55);
             this.btnMi13.TabIndex = 33;
-            this.btnMi13.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi15
             // 
@@ -353,7 +351,6 @@
             this.btnMi15.Name = "btnMi15";
             this.btnMi15.Size = new System.Drawing.Size(160, 55);
             this.btnMi15.TabIndex = 35;
-            this.btnMi15.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi7
             // 
@@ -365,7 +362,6 @@
             this.btnMi7.Name = "btnMi7";
             this.btnMi7.Size = new System.Drawing.Size(160, 55);
             this.btnMi7.TabIndex = 31;
-            this.btnMi7.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi3
             // 
@@ -377,7 +373,6 @@
             this.btnMi3.Name = "btnMi3";
             this.btnMi3.Size = new System.Drawing.Size(160, 55);
             this.btnMi3.TabIndex = 31;
-            this.btnMi3.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi6
             // 
@@ -389,7 +384,6 @@
             this.btnMi6.Name = "btnMi6";
             this.btnMi6.Size = new System.Drawing.Size(160, 55);
             this.btnMi6.TabIndex = 30;
-            this.btnMi6.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMiRight
             // 
@@ -411,7 +405,6 @@
             this.btnMi5.Name = "btnMi5";
             this.btnMi5.Size = new System.Drawing.Size(160, 55);
             this.btnMi5.TabIndex = 29;
-            this.btnMi5.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi4
             // 
@@ -423,7 +416,6 @@
             this.btnMi4.Name = "btnMi4";
             this.btnMi4.Size = new System.Drawing.Size(160, 55);
             this.btnMi4.TabIndex = 28;
-            this.btnMi4.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi2
             // 
@@ -435,7 +427,6 @@
             this.btnMi2.Name = "btnMi2";
             this.btnMi2.Size = new System.Drawing.Size(160, 55);
             this.btnMi2.TabIndex = 30;
-            this.btnMi2.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMiLeft
             // 
@@ -457,7 +448,6 @@
             this.btnMi1.Name = "btnMi1";
             this.btnMi1.Size = new System.Drawing.Size(160, 55);
             this.btnMi1.TabIndex = 29;
-            this.btnMi1.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi0
             // 
@@ -469,7 +459,6 @@
             this.btnMi0.Name = "btnMi0";
             this.btnMi0.Size = new System.Drawing.Size(160, 55);
             this.btnMi0.TabIndex = 28;
-            this.btnMi0.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi10
             // 
@@ -481,7 +470,6 @@
             this.btnMi10.Name = "btnMi10";
             this.btnMi10.Size = new System.Drawing.Size(160, 55);
             this.btnMi10.TabIndex = 10;
-            this.btnMi10.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi8
             // 
@@ -493,7 +481,6 @@
             this.btnMi8.Name = "btnMi8";
             this.btnMi8.Size = new System.Drawing.Size(160, 55);
             this.btnMi8.TabIndex = 3;
-            this.btnMi8.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi9
             // 
@@ -505,7 +492,6 @@
             this.btnMi9.Name = "btnMi9";
             this.btnMi9.Size = new System.Drawing.Size(160, 55);
             this.btnMi9.TabIndex = 9;
-            this.btnMi9.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // btnMi11
             // 
@@ -517,7 +503,6 @@
             this.btnMi11.Name = "btnMi11";
             this.btnMi11.Size = new System.Drawing.Size(160, 55);
             this.btnMi11.TabIndex = 11;
-            this.btnMi11.Text = "(6)abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstu";
             // 
             // panelControl4
             // 
@@ -570,6 +555,7 @@
             this.btnCancel.Size = new System.Drawing.Size(111, 42);
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnKeypad
             // 
@@ -751,7 +737,6 @@
             this.btnMc41.Name = "btnMc41";
             this.btnMc41.Size = new System.Drawing.Size(105, 50);
             this.btnMc41.TabIndex = 57;
-            this.btnMc41.Text = "Aromatic Duck";
             // 
             // btnMc40
             // 
@@ -761,7 +746,6 @@
             this.btnMc40.Name = "btnMc40";
             this.btnMc40.Size = new System.Drawing.Size(105, 50);
             this.btnMc40.TabIndex = 56;
-            this.btnMc40.Text = "Aromatic Duck";
             // 
             // btnMc39
             // 
@@ -771,7 +755,6 @@
             this.btnMc39.Name = "btnMc39";
             this.btnMc39.Size = new System.Drawing.Size(105, 50);
             this.btnMc39.TabIndex = 55;
-            this.btnMc39.Text = "Aromatic Duck";
             // 
             // btnMc38
             // 
@@ -781,7 +764,6 @@
             this.btnMc38.Name = "btnMc38";
             this.btnMc38.Size = new System.Drawing.Size(105, 50);
             this.btnMc38.TabIndex = 54;
-            this.btnMc38.Text = "Aromatic Duck";
             // 
             // btnMc37
             // 
@@ -791,7 +773,6 @@
             this.btnMc37.Name = "btnMc37";
             this.btnMc37.Size = new System.Drawing.Size(105, 50);
             this.btnMc37.TabIndex = 53;
-            this.btnMc37.Text = "Aromatic Duck";
             // 
             // btnMc36
             // 
@@ -801,7 +782,6 @@
             this.btnMc36.Name = "btnMc36";
             this.btnMc36.Size = new System.Drawing.Size(105, 50);
             this.btnMc36.TabIndex = 52;
-            this.btnMc36.Text = "Aromatic Duck";
             // 
             // btnMc35
             // 
@@ -811,7 +791,6 @@
             this.btnMc35.Name = "btnMc35";
             this.btnMc35.Size = new System.Drawing.Size(105, 50);
             this.btnMc35.TabIndex = 51;
-            this.btnMc35.Text = "Aromatic Duck";
             // 
             // btnMc34
             // 
@@ -821,7 +800,6 @@
             this.btnMc34.Name = "btnMc34";
             this.btnMc34.Size = new System.Drawing.Size(105, 50);
             this.btnMc34.TabIndex = 50;
-            this.btnMc34.Text = "Aromatic Duck";
             // 
             // btnMc33
             // 
@@ -831,7 +809,6 @@
             this.btnMc33.Name = "btnMc33";
             this.btnMc33.Size = new System.Drawing.Size(105, 50);
             this.btnMc33.TabIndex = 49;
-            this.btnMc33.Text = "Aromatic Duck";
             // 
             // btnMc32
             // 
@@ -841,7 +818,6 @@
             this.btnMc32.Name = "btnMc32";
             this.btnMc32.Size = new System.Drawing.Size(105, 50);
             this.btnMc32.TabIndex = 48;
-            this.btnMc32.Text = "Aromatic Duck";
             // 
             // btnMc31
             // 
@@ -851,7 +827,6 @@
             this.btnMc31.Name = "btnMc31";
             this.btnMc31.Size = new System.Drawing.Size(105, 50);
             this.btnMc31.TabIndex = 47;
-            this.btnMc31.Text = "Aromatic Duck";
             // 
             // btnMc30
             // 
@@ -861,7 +836,6 @@
             this.btnMc30.Name = "btnMc30";
             this.btnMc30.Size = new System.Drawing.Size(105, 50);
             this.btnMc30.TabIndex = 46;
-            this.btnMc30.Text = "Aromatic Duck";
             // 
             // btnMc29
             // 
@@ -871,7 +845,6 @@
             this.btnMc29.Name = "btnMc29";
             this.btnMc29.Size = new System.Drawing.Size(105, 50);
             this.btnMc29.TabIndex = 45;
-            this.btnMc29.Text = "Aromatic Duck";
             // 
             // btnMc28
             // 
@@ -881,7 +854,6 @@
             this.btnMc28.Name = "btnMc28";
             this.btnMc28.Size = new System.Drawing.Size(105, 50);
             this.btnMc28.TabIndex = 44;
-            this.btnMc28.Text = "Aromatic Duck";
             // 
             // btnMc27
             // 
@@ -891,7 +863,6 @@
             this.btnMc27.Name = "btnMc27";
             this.btnMc27.Size = new System.Drawing.Size(105, 50);
             this.btnMc27.TabIndex = 43;
-            this.btnMc27.Text = "Aromatic Duck";
             // 
             // btnMc26
             // 
@@ -901,7 +872,6 @@
             this.btnMc26.Name = "btnMc26";
             this.btnMc26.Size = new System.Drawing.Size(105, 50);
             this.btnMc26.TabIndex = 42;
-            this.btnMc26.Text = "Aromatic Duck";
             // 
             // btnMc25
             // 
@@ -911,7 +881,6 @@
             this.btnMc25.Name = "btnMc25";
             this.btnMc25.Size = new System.Drawing.Size(105, 50);
             this.btnMc25.TabIndex = 41;
-            this.btnMc25.Text = "Aromatic Duck";
             // 
             // btnMc24
             // 
@@ -921,7 +890,6 @@
             this.btnMc24.Name = "btnMc24";
             this.btnMc24.Size = new System.Drawing.Size(105, 50);
             this.btnMc24.TabIndex = 40;
-            this.btnMc24.Text = "Aromatic Duck";
             // 
             // btnMc23
             // 
@@ -931,7 +899,6 @@
             this.btnMc23.Name = "btnMc23";
             this.btnMc23.Size = new System.Drawing.Size(105, 50);
             this.btnMc23.TabIndex = 39;
-            this.btnMc23.Text = "Aromatic Duck";
             // 
             // btnMc22
             // 
@@ -941,7 +908,6 @@
             this.btnMc22.Name = "btnMc22";
             this.btnMc22.Size = new System.Drawing.Size(105, 50);
             this.btnMc22.TabIndex = 38;
-            this.btnMc22.Text = "Aromatic Duck";
             // 
             // btnMc21
             // 
@@ -951,7 +917,6 @@
             this.btnMc21.Name = "btnMc21";
             this.btnMc21.Size = new System.Drawing.Size(105, 50);
             this.btnMc21.TabIndex = 37;
-            this.btnMc21.Text = "Aromatic Duck";
             // 
             // btnMc20
             // 
@@ -961,7 +926,6 @@
             this.btnMc20.Name = "btnMc20";
             this.btnMc20.Size = new System.Drawing.Size(105, 50);
             this.btnMc20.TabIndex = 36;
-            this.btnMc20.Text = "Aromatic Duck";
             // 
             // btnMc19
             // 
@@ -971,7 +935,6 @@
             this.btnMc19.Name = "btnMc19";
             this.btnMc19.Size = new System.Drawing.Size(105, 50);
             this.btnMc19.TabIndex = 35;
-            this.btnMc19.Text = "Aromatic Duck";
             // 
             // btnMc18
             // 
@@ -981,7 +944,6 @@
             this.btnMc18.Name = "btnMc18";
             this.btnMc18.Size = new System.Drawing.Size(105, 50);
             this.btnMc18.TabIndex = 34;
-            this.btnMc18.Text = "Aromatic Duck";
             // 
             // btnMc17
             // 
@@ -991,7 +953,6 @@
             this.btnMc17.Name = "btnMc17";
             this.btnMc17.Size = new System.Drawing.Size(105, 50);
             this.btnMc17.TabIndex = 33;
-            this.btnMc17.Text = "Aromatic Duck";
             // 
             // btnMc16
             // 
@@ -1001,7 +962,6 @@
             this.btnMc16.Name = "btnMc16";
             this.btnMc16.Size = new System.Drawing.Size(105, 50);
             this.btnMc16.TabIndex = 32;
-            this.btnMc16.Text = "Aromatic Duck";
             // 
             // btnMc15
             // 
@@ -1011,7 +971,6 @@
             this.btnMc15.Name = "btnMc15";
             this.btnMc15.Size = new System.Drawing.Size(105, 50);
             this.btnMc15.TabIndex = 31;
-            this.btnMc15.Text = "Aromatic Duck";
             // 
             // btnMc14
             // 
@@ -1021,7 +980,6 @@
             this.btnMc14.Name = "btnMc14";
             this.btnMc14.Size = new System.Drawing.Size(105, 50);
             this.btnMc14.TabIndex = 30;
-            this.btnMc14.Text = "Aromatic Duck";
             // 
             // btnMc13
             // 
@@ -1031,7 +989,6 @@
             this.btnMc13.Name = "btnMc13";
             this.btnMc13.Size = new System.Drawing.Size(105, 50);
             this.btnMc13.TabIndex = 29;
-            this.btnMc13.Text = "Aromatic Duck";
             // 
             // btnMc12
             // 
@@ -1041,7 +998,6 @@
             this.btnMc12.Name = "btnMc12";
             this.btnMc12.Size = new System.Drawing.Size(105, 50);
             this.btnMc12.TabIndex = 28;
-            this.btnMc12.Text = "Aromatic Duck";
             // 
             // btnMc11
             // 
@@ -1051,7 +1007,6 @@
             this.btnMc11.Name = "btnMc11";
             this.btnMc11.Size = new System.Drawing.Size(105, 50);
             this.btnMc11.TabIndex = 27;
-            this.btnMc11.Text = "Aromatic Duck";
             // 
             // btnMc10
             // 
@@ -1061,7 +1016,6 @@
             this.btnMc10.Name = "btnMc10";
             this.btnMc10.Size = new System.Drawing.Size(105, 50);
             this.btnMc10.TabIndex = 26;
-            this.btnMc10.Text = "Aromatic Duck";
             // 
             // btnMc9
             // 
@@ -1071,7 +1025,6 @@
             this.btnMc9.Name = "btnMc9";
             this.btnMc9.Size = new System.Drawing.Size(105, 50);
             this.btnMc9.TabIndex = 25;
-            this.btnMc9.Text = "Aromatic Duck";
             // 
             // btnMc8
             // 
@@ -1081,7 +1034,6 @@
             this.btnMc8.Name = "btnMc8";
             this.btnMc8.Size = new System.Drawing.Size(105, 50);
             this.btnMc8.TabIndex = 24;
-            this.btnMc8.Text = "Aromatic Duck";
             // 
             // btnMc7
             // 
@@ -1091,7 +1043,6 @@
             this.btnMc7.Name = "btnMc7";
             this.btnMc7.Size = new System.Drawing.Size(105, 50);
             this.btnMc7.TabIndex = 23;
-            this.btnMc7.Text = "Aromatic Duck";
             // 
             // btnMc6
             // 
@@ -1101,7 +1052,6 @@
             this.btnMc6.Name = "btnMc6";
             this.btnMc6.Size = new System.Drawing.Size(105, 50);
             this.btnMc6.TabIndex = 22;
-            this.btnMc6.Text = "Aromatic Duck";
             // 
             // btnMcRight
             // 
@@ -1135,7 +1085,6 @@
             this.btnMc5.Name = "btnMc5";
             this.btnMc5.Size = new System.Drawing.Size(105, 50);
             this.btnMc5.TabIndex = 21;
-            this.btnMc5.Text = "Aromatic Duck";
             // 
             // btnMc4
             // 
@@ -1145,7 +1094,6 @@
             this.btnMc4.Name = "btnMc4";
             this.btnMc4.Size = new System.Drawing.Size(105, 50);
             this.btnMc4.TabIndex = 20;
-            this.btnMc4.Text = "Aromatic Duck";
             // 
             // btnMc3
             // 
@@ -1155,7 +1103,6 @@
             this.btnMc3.Name = "btnMc3";
             this.btnMc3.Size = new System.Drawing.Size(105, 50);
             this.btnMc3.TabIndex = 19;
-            this.btnMc3.Text = "Aromatic Duck";
             // 
             // btnMc2
             // 
@@ -1165,7 +1112,6 @@
             this.btnMc2.Name = "btnMc2";
             this.btnMc2.Size = new System.Drawing.Size(105, 50);
             this.btnMc2.TabIndex = 18;
-            this.btnMc2.Text = "Aromatic Duck";
             // 
             // btnMc1
             // 
@@ -1175,7 +1121,6 @@
             this.btnMc1.Name = "btnMc1";
             this.btnMc1.Size = new System.Drawing.Size(105, 50);
             this.btnMc1.TabIndex = 17;
-            this.btnMc1.Text = "Aromatic Duck";
             // 
             // btnMc0
             // 
@@ -1185,7 +1130,6 @@
             this.btnMc0.Name = "btnMc0";
             this.btnMc0.Size = new System.Drawing.Size(105, 50);
             this.btnMc0.TabIndex = 16;
-            this.btnMc0.Text = "Aromatic Duck";
             // 
             // FrmTaMain
             // 
@@ -1197,6 +1141,7 @@
             this.Name = "FrmTaMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTaMain";
+            this.Load += new System.EventHandler(this.FrmTaMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
