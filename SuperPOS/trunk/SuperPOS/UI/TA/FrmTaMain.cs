@@ -17,9 +17,9 @@ namespace SuperPOS.UI.TA
         private int usrID;
 
         //MenuItem按钮
-        private SimpleButton[] btnMi = new SimpleButton[32];
+        private SimpleButton[] btnMenuItem = new SimpleButton[32];
         //ManuCate按钮
-        private SimpleButton[] btnMc = new SimpleButton[12];
+        private SimpleButton[] btnMenuCate = new SimpleButton[12];
 
         public FrmTaMain()
         {
@@ -32,7 +32,7 @@ namespace SuperPOS.UI.TA
             usrID = id;
         }
 
-        #region 显示行号
+        #region 显示TreeList行号
         private void treeListOrder_CustomDrawNodeIndicator(object sender, DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventArgs e)
         {
             DevExpress.XtraTreeList.TreeList tmpTree = sender as DevExpress.XtraTreeList.TreeList;
@@ -52,42 +52,26 @@ namespace SuperPOS.UI.TA
         /// </summary>
         private void SetMiBtn()
         {
-            btnMi[0] = btnMi0;
-            btnMi[1] = btnMi1;
-            btnMi[2] = btnMi2;
-            btnMi[3] = btnMi3;
-            btnMi[4] = btnMi4;
-            btnMi[5] = btnMi5;
-            btnMi[6] = btnMi6;
-            btnMi[7] = btnMi7;
-            btnMi[8] = btnMi8;
-            btnMi[9] = btnMi9;
-            btnMi[10] = btnMi10;
-            btnMi[11] = btnMi11;
-            btnMi[12] = btnMi12;
-            btnMi[13] = btnMi13;
-            btnMi[14] = btnMi14;
-            btnMi[15] = btnMi15;
-            btnMi[16] = btnMi16;
-            btnMi[17] = btnMi17;
-            btnMi[18] = btnMi18;
-            btnMi[19] = btnMi19;
-            btnMi[20] = btnMi20;
-            btnMi[21] = btnMi21;
-            btnMi[22] = btnMi22;
-            btnMi[23] = btnMi23;
-            btnMi[24] = btnMi24;
-            btnMi[25] = btnMi25;
-            btnMi[26] = btnMi26;
-            btnMi[27] = btnMi27;
-            btnMi[28] = btnMi28;
-            btnMi[29] = btnMi29;
-            btnMi[30] = btnMi30;
-            btnMi[31] = btnMi31;
+            btnMenuItem[0] = btnMi0;
+            btnMenuItem[1] = btnMi1;
+            btnMenuItem[2] = btnMi2;
+            btnMenuItem[3] = btnMi3;
+            btnMenuItem[4] = btnMi4;
+            btnMenuItem[5] = btnMi5;
+            btnMenuItem[6] = btnMi6;
+            btnMenuItem[7] = btnMi7;
+            btnMenuItem[8] = btnMi8;
+            btnMenuItem[9] = btnMi9;
+            btnMenuItem[10] = btnMi10;
+            btnMenuItem[11] = btnMi11;
+            btnMenuItem[12] = btnMi12;
+            btnMenuItem[13] = btnMi13;
+            btnMenuItem[14] = btnMi14;
+            btnMenuItem[15] = btnMi15;
 
-            for (int i = 0; i < 32; i++)
+            for (int i = 0; i < 16; i++)
             {
-                btnMi[i].Click += btnMi_Click;
+                btnMenuItem[i].Click += btnMenuItem_Click;
             }
         }
         #endregion
@@ -98,7 +82,7 @@ namespace SuperPOS.UI.TA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnMi_Click(object sender, EventArgs e)
+        private void btnMenuItem_Click(object sender, EventArgs e)
         {
             
         }
@@ -108,24 +92,54 @@ namespace SuperPOS.UI.TA
         /// <summary>
         /// 设置MenuCate按钮
         /// </summary>
-        private void SetMcBtn()
+        private void SetMenuCateBtn()
         {
-            btnMc[0] = btnMc0;
-            btnMc[1] = btnMc1;
-            btnMc[2] = btnMc2;
-            btnMc[3] = btnMc3;
-            btnMc[4] = btnMc4;
-            btnMc[5] = btnMc5;
-            btnMc[6] = btnMc6;
-            btnMc[7] = btnMc7;
-            btnMc[8] = btnMc8;
-            btnMc[9] = btnMc9;
-            btnMc[10] = btnMc10;
-            btnMc[11] = btnMc11;
+            btnMenuCate[0] = btnMc0;
+            btnMenuCate[1] = btnMc1;
+            btnMenuCate[2] = btnMc2;
+            btnMenuCate[3] = btnMc3;
+            btnMenuCate[4] = btnMc4;
+            btnMenuCate[5] = btnMc5;
+            btnMenuCate[6] = btnMc6;
+            btnMenuCate[7] = btnMc7;
+            btnMenuCate[8] = btnMc9;
+            btnMenuCate[9] = btnMc10;
+            btnMenuCate[10] = btnMc10;
+            btnMenuCate[11] = btnMc11;
+            btnMenuCate[12] = btnMc12;
+            btnMenuCate[13] = btnMc13;
+            btnMenuCate[14] = btnMc14;
+            btnMenuCate[15] = btnMc15;
+            btnMenuCate[16] = btnMc16;
+            btnMenuCate[17] = btnMc17;
+            btnMenuCate[18] = btnMc18;
+            btnMenuCate[19] = btnMc19;
+            btnMenuCate[20] = btnMc20;
+            btnMenuCate[21] = btnMc21;
+            btnMenuCate[22] = btnMc22;
+            btnMenuCate[23] = btnMc23;
+            btnMenuCate[24] = btnMc24;
+            btnMenuCate[25] = btnMc25;
+            btnMenuCate[26] = btnMc26;
+            btnMenuCate[27] = btnMc27;
+            btnMenuCate[28] = btnMc28;
+            btnMenuCate[29] = btnMc29;
+            btnMenuCate[30] = btnMc30;
+            btnMenuCate[31] = btnMc31;
+            btnMenuCate[32] = btnMc32;
+            btnMenuCate[33] = btnMc33;
+            btnMenuCate[34] = btnMc34;
+            btnMenuCate[35] = btnMc35;
+            btnMenuCate[36] = btnMc36;
+            btnMenuCate[37] = btnMc37;
+            btnMenuCate[38] = btnMc38;
+            btnMenuCate[39] = btnMc39;
+            btnMenuCate[40] = btnMc40;
+            btnMenuCate[41] = btnMc41;
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 42; i++)
             {
-                btnMc[i].Click += btnMc_Click;
+                btnMc[i].Click += btnMenuCate_Click;
             }
         }
         #endregion
@@ -136,7 +150,7 @@ namespace SuperPOS.UI.TA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnMc_Click(object sender, EventArgs e)
+        private void btnMenuCate_Click(object sender, EventArgs e)
         {
             
         }
