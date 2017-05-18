@@ -21,14 +21,25 @@ namespace SuperPOS.Common
         }
         #endregion
 
-        #region 提示对话框
+        #region 提示删除对话框
         /// <summary>
-        /// 提示对话框
+        /// 提示删除对话框
         /// </summary>
         /// <returns></returns>
         public static DialogResult ConfirmDelete()
         {
             return XtraMessageBox.Show("Are you sure delete this record?", "Infomation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+        }
+        #endregion
+
+        #region 提示对话框
+        /// <summary>
+        /// 提示对话框
+        /// </summary>
+        /// <returns></returns>
+        public static DialogResult ConfirmMessage(string msg)
+        {
+            return XtraMessageBox.Show(msg, "Infomation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
         }
         #endregion
     }
