@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using SuperPOS.Domain.Entities;
 
@@ -7,6 +8,15 @@ namespace SuperPOS.Common
 {
     public class CommonDAL
     {
+        //Menu Item每页大小
+        public static int PAGESIZE_MENUITEM = 16;
+
+        //Menu Category每页大小
+        public static int PAGESIZE_MENUCATE = 42;
+
+        //页码
+        private static int PAGE_NUM = 0;
+
         #region 加载系统数据
         /// <summary>
         /// 加载系统数据
@@ -140,6 +150,81 @@ namespace SuperPOS.Common
 
             return CommonData.UsrBase.FirstOrDefault(s => s.ID == id).UsrName;
         }
+        #endregion
+
+        #region 是否需要在TaMain按钮中展示Menu Item Code
+        /// <summary>
+        /// 是否需要在TaMain按钮中展示Menu Item Code
+        /// </summary>
+        /// <returns></returns>
+        public static bool IsShowMenuItemCode()
+        {
+            new SystemData().GenSet();
+
+            return CommonData.GenSet.Any() && CommonData.GenSet.FirstOrDefault().IsShowItemCode.Equals("Y");
+        }
+        #endregion
+
+        #region 获得MenuItem分页
+        /// <summary>
+        /// 获得MenuItem分页
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <param name="iMenuCateId">MenuCate ID</param>
+        /// <param name="iMenuSetId">MenuSet ID</param>
+        /// <returns></returns>
+        public static List<TaMenuItemInfo> GetListQueryPageMenuItem(int iPageNum, int iMenuCateId, int iMenuSetId)
+        {
+            new SystemData().GetTaMenuItem();
+
+            if (iMenuSetId == 0)
+            {
+                if (iMenuCateId == 0)
+                {
+                    return CommonData.TaMenuItem.Skip(PAGESIZE_MENUITEM*(iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM).ToList();
+                }
+                else
+                {
+                    return CommonData.TaMenuItem.Where(s => s.MiMenuCateID.Contains(iMenuCateId.ToString()))
+                           .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                           .Take(PAGESIZE_MENUITEM).ToList();
+                }
+            }
+            else
+            {
+                if (iMenuCateId == 0)
+                {
+                    return CommonData.TaMenuItem.Where(s => s.MiMenuSetID == iMenuSetId)
+                                         .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                                         .Take(PAGESIZE_MENUITEM).ToList();
+                }
+                else
+                {
+                    return CommonData.TaMenuItem.Where(s => s.MiMenuSetID == iMenuSetId && s.MiMenuCateID.Contains(iMenuCateId.ToString()))
+                                         .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                                         .Take(PAGESIZE_MENUITEM).ToList();
+                }
+            }
+        }
+        #endregion
+
+        #region 获得MenuCate分页
+        /// <summary>
+        /// 获得MenuCate分页
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <param name="id">MenuSet ID</param>
+        /// <returns></returns>
+        public static List<TaMenuCateInfo> GetListQueryPageMenuCate(int iPageNum, int msId)
+        {
+            new SystemData().GetTaMenuCate();
+
+            return msId == 0
+                ? CommonData.TaMenuCate.Skip(PAGESIZE_MENUCATE*(iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList()
+                : CommonData.TaMenuCate.Where(s => s.MenuSetID == msId).Skip(PAGESIZE_MENUCATE*(iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+        }
+
         #endregion
     }
 }

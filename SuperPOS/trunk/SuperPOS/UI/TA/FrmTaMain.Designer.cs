@@ -394,6 +394,7 @@
             this.btnMiRight.Size = new System.Drawing.Size(40, 112);
             this.btnMiRight.TabIndex = 14;
             this.btnMiRight.Text = ">>";
+            this.btnMiRight.Click += new System.EventHandler(this.btnMiRight_Click);
             // 
             // btnMi5
             // 
@@ -437,6 +438,7 @@
             this.btnMiLeft.Size = new System.Drawing.Size(40, 114);
             this.btnMiLeft.TabIndex = 15;
             this.btnMiLeft.Text = "<<";
+            this.btnMiLeft.Click += new System.EventHandler(this.btnMiLeft_Click);
             // 
             // btnMi1
             // 
@@ -586,6 +588,7 @@
             this.btnLanguage.Size = new System.Drawing.Size(111, 42);
             this.btnLanguage.TabIndex = 25;
             this.btnLanguage.Text = "LANGUAGE";
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 
             // btnSearchMeal
             // 
@@ -1064,6 +1067,7 @@
             this.btnMcRight.Size = new System.Drawing.Size(44, 184);
             this.btnMcRight.TabIndex = 18;
             this.btnMcRight.Text = ">>";
+            this.btnMcRight.Click += new System.EventHandler(this.btnMcRight_Click);
             // 
             // btnMcLeft
             // 
@@ -1076,6 +1080,7 @@
             this.btnMcLeft.Size = new System.Drawing.Size(44, 174);
             this.btnMcLeft.TabIndex = 17;
             this.btnMcLeft.Text = "<<";
+            this.btnMcLeft.Click += new System.EventHandler(this.btnMcLeft_Click);
             // 
             // btnMc5
             // 

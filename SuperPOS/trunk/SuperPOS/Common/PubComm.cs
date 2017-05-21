@@ -18,5 +18,11 @@ namespace SuperPOS.Common
 
         //Menu Item中的其他属性
         public static string[] MENUITEM_OTHER_SET = new[] {"Unavailable", "Negative Price", "Discountable", "Without VAT", "Inventory Check"};
+
+        //语言状态位
+        //默认为1，即：英文
+        public static int MENU_LANG_DEFAULT = 1;
+        //其他语言
+        public static int MENU_LANG_OTHER = 2;
     }
 }
