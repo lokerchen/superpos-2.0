@@ -19,14 +19,24 @@ namespace SuperPOS.UI.TA
         private int usrID;
 
         //MenuItem按钮
-        private SimpleButton[] btnMenuItem = new SimpleButton[32];
+        private SimpleButton[] btnMenuItem = new SimpleButton[16];
         //ManuCate按钮
-        private SimpleButton[] btnMenuCate = new SimpleButton[12];
+        private SimpleButton[] btnMenuCate = new SimpleButton[42];
         //来电显示号码
         private string CallerID = "";
         //账单号
         private int checkID;
-        
+        //默认语言标识状态位
+        private int iLangStatusId = PubComm.MENU_LANG_DEFAULT;
+        //菜谱ID
+        private int iMenuSetId = 0;
+        //MenuCate ID
+        private int iMenuCateId = 0;
+        //默认菜谱页码 iPageNum = 1;
+        private int iPageNum = 1;
+        //默认MenuCate iCatePageNum = 1;
+        private int iCatePageNum = 1;
+
         #region 来电显示相关
         [StructLayout(LayoutKind.Sequential)]
         public struct tag_pstn_Data
@@ -50,6 +60,8 @@ namespace SuperPOS.UI.TA
             usrID = id;
         }
 
+        #region 事件
+       
         #region 显示TreeList行号
         private void treeListOrder_CustomDrawNodeIndicator(object sender, DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventArgs e)
         {
@@ -84,6 +96,14 @@ namespace SuperPOS.UI.TA
             //展开所有TreeList
             treeListOrder.ExpandAll();
 
+            SetMenuItemBtn();
+            SetMenuCateBtn();
+
+            //加载MenuCate
+            SetMenuCate(iCatePageNum, iMenuSetId);
+            //加载MenuItem
+            SetMenuItem(iCatePageNum, iMenuCateId, iMenuSetId);
+
             #region 提示打开来电设备失败
             if (!openDev())
             {
@@ -97,13 +117,65 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region Language按钮
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            iLangStatusId = iLangStatusId == PubComm.MENU_LANG_DEFAULT 
+                            ? PubComm.MENU_LANG_OTHER 
+                            : PubComm.MENU_LANG_DEFAULT;
+
+            SetMenuCate(iCatePageNum, iMenuSetId);
+            SetMenuItem(iPageNum, iMenuCateId, iMenuSetId);
+        }
+        #endregion
+
+        #region MenuItem Right翻页
+        private void btnMiRight_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(btnMenuItem[0].Text) && !string.IsNullOrEmpty(btnMenuItem[15].Text))
+                iPageNum = iPageNum + 1;
+
+            SetMenuItem(iPageNum, iMenuCateId, iMenuSetId);
+        }
+        #endregion
+
+        #region MenuItem Left翻页
+        private void btnMiLeft_Click(object sender, EventArgs e)
+        {
+            iPageNum = iPageNum <= 1 ? 1 : (iPageNum <= 1 ? 1 : iPageNum - 1);
+
+            SetMenuItem(iPageNum, iMenuCateId, iMenuSetId);
+        }
+        #endregion
+
+        #region MenuCate Right翻页
+        private void btnMcRight_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(btnMenuCate[0].Text) && !string.IsNullOrEmpty(btnMenuCate[41].Text))
+                iCatePageNum = iCatePageNum + 1;
+
+            SetMenuItem(iPageNum, iCatePageNum, iMenuSetId);
+        }
+        #endregion
+
+        #region MenuCate Left翻页
+        private void btnMcLeft_Click(object sender, EventArgs e)
+        {
+            iCatePageNum = iCatePageNum <= 1 ? 1 : (iCatePageNum <= 1 ? 1 : iCatePageNum - 1);
+
+            SetMenuItem(iPageNum, iCatePageNum, iMenuSetId);
+        }
+        #endregion
+
+        #endregion
+
         #region 方法
 
         #region 设置MenuItem按钮
         /// <summary>
         /// 设置MenuItem按钮
         /// </summary>
-        private void SetMiBtn()
+        private void SetMenuItemBtn()
         {
             btnMenuItem[0] = btnMi0;
             btnMenuItem[1] = btnMi1;
@@ -205,7 +277,78 @@ namespace SuperPOS.UI.TA
         /// <param name="e"></param>
         private void btnMenuCate_Click(object sender, EventArgs e)
         {
+            SimpleButton btn = sender as SimpleButton;
 
+            var lstMc = CommonData.TaMenuCate;
+
+            lstMc = iLangStatusId == PubComm.MENU_LANG_OTHER 
+                    ? CommonData.TaMenuCate.Where(s => s.CateOtherName.Equals(btn.Text)).ToList() 
+                    : CommonData.TaMenuCate.Where(s => s.CateEngName.Equals(btn.Text)).ToList();
+
+            if (lstMc.Any())
+            {
+                iMenuCateId = lstMc.FirstOrDefault().ID;
+            }
+
+            iPageNum = 1;
+            SetMenuItem(iPageNum, iMenuCateId, iMenuSetId);
+        }
+        #endregion
+
+        #region 设置MenuItem按钮显示
+        /// <summary>
+        /// 设置MenuItem按钮显示
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <param name="mcId">MenuCate ID</param>
+        /// <param name="msId">MenuSet ID</param>
+        private void SetMenuItem(int iPageNum, int mcId, int msId)
+        {
+            bool status = CommonDAL.IsShowMenuItemCode();
+
+            int i = 0;
+            foreach (var taMenuItemInfo in CommonDAL.GetListQueryPageMenuItem(iPageNum, iMenuCateId, iMenuSetId))
+            {
+                btnMenuItem[i].Text = status
+                    ? "(" + taMenuItemInfo.MiDishCode + ")" +
+                      (iLangStatusId == PubComm.MENU_LANG_DEFAULT
+                          ? taMenuItemInfo.MiEngName
+                          : taMenuItemInfo.MiOtherName)
+                    : (iLangStatusId == PubComm.MENU_LANG_DEFAULT
+                        ? taMenuItemInfo.MiEngName
+                        : taMenuItemInfo.MiOtherName);
+                i++;
+            }
+
+            for (int j = i; j < 16; j++)
+            {
+                btnMenuItem[j].Text = "";
+            }
+        }
+        #endregion
+
+        #region 设置MenuCate按钮显示
+        /// <summary>
+        /// 设置MenuCate按钮显示
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <param name="msId">MenuSet ID</param>
+        private void SetMenuCate(int iPageNum, int msId)
+        {
+            int i = 0;
+
+            foreach (var taMenuCateInfo in CommonDAL.GetListQueryPageMenuCate(iPageNum, msId))
+            {
+                btnMenuCate[i].Text = iLangStatusId == PubComm.MENU_LANG_DEFAULT
+                    ? taMenuCateInfo.CateEngName
+                    : taMenuCateInfo.CateOtherName;
+                i++;
+            }
+
+            for (int j = i; j < 42; j++)
+            {
+                btnMenuCate[j].Text = "";
+            }
         }
         #endregion
 
@@ -349,12 +492,11 @@ namespace SuperPOS.UI.TA
             //AppendStatus("打开设备成功");
             return true;
         }
-        #endregion
 
         #endregion
 
         #endregion
 
-        
+        #endregion
     }
 }
