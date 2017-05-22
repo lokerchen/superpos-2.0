@@ -43,5 +43,7 @@ namespace SuperPOS.Common
         public void GetTaOrderItem() { CommonData.TaOrderItem = _control.SelectAll<TaOrderItemInfo>(); }
 
         public void GetTaCheckOrder() { CommonData.TaCheckOrder = _control.SelectAll<TaCheckOrderInfo>(); }
+
+        public void GetSysValue() { CommonData.SysValue = _control.SelectAll<SysValueInfo>(); }
     }
 }

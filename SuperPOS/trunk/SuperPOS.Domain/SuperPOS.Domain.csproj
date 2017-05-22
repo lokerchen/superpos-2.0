@@ -51,6 +51,7 @@
     <Compile Include="Entities\KeypadInfo.cs" />
     <Compile Include="Entities\ShopDetailInfo.cs" />
     <Compile Include="Entities\SysPrtSetInfo.cs" />
+    <Compile Include="Entities\SysValueInfo.cs" />
     <Compile Include="Entities\TaCheckOrderInfo.cs" />
     <Compile Include="Entities\TaDeptCodeInfo.cs" />
     <Compile Include="Entities\TaMenuCateInfo.cs" />
@@ -114,6 +115,7 @@
     <EmbeddedResource Include="Mappings\TaMenuItemOtherChoiceInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaCheckOrderInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaOrderItemInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SysValueInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

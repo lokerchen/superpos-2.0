@@ -40,5 +40,7 @@ namespace SuperPOS.Common
         public static IList<TaOrderItemInfo> TaOrderItem { get; set; } 
 
         public static IList<TaCheckOrderInfo> TaCheckOrder { get; set; }
+
+        public static IList<SysValueInfo> SysValue { get; set; } 
     }
 }

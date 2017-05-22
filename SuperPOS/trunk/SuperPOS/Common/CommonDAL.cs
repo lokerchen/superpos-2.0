@@ -17,6 +17,8 @@ namespace SuperPOS.Common
         //页码
         private static int PAGE_NUM = 0;
 
+        private static EntityControl _control = new EntityControl();
+
         #region 加载系统数据
         /// <summary>
         /// 加载系统数据
@@ -59,6 +61,8 @@ namespace SuperPOS.Common
             systemData.GetTaOrderItem();
             //Check Order
             systemData.GetTaCheckOrder();
+            //系统常用值
+            systemData.GetSysValue();
             #endregion
         }
         #endregion
@@ -229,6 +233,44 @@ namespace SuperPOS.Common
                 : CommonData.TaMenuCate.Where(s => s.MenuSetID == msId).Skip(PAGESIZE_MENUCATE*(iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
         }
 
+        #endregion
+
+        #region 获得账单号
+        /// <summary>
+        /// 获得账单号
+        /// </summary>
+        /// <returns></returns>
+        public static string GetCheckCode()
+        {
+            new SystemData().GetSysValue();
+
+            var lstValue = CommonData.SysValue.Where(s => s.ValueID.Equals(PubComm.SYS_VALUE_CHECK_CODE));
+
+            return lstValue.Any() ? lstValue.FirstOrDefault().ValueResult : "1";
+        }
+        #endregion
+
+        #region 更新账单号
+        /// <summary>
+        /// 更新账单号
+        /// </summary>
+        /// <param name="checkCode">原账单号</param>
+        public static void UpdateCheckCode(string checkCode)
+        {
+            new SystemData().GetSysValue();
+
+            var lstValue = CommonData.SysValue.Where(s => s.ValueID.Equals(PubComm.SYS_VALUE_CHECK_CODE));
+
+            if (lstValue.Any())
+            {
+                SysValueInfo sysValueInfo = new SysValueInfo();
+                sysValueInfo.ValueID = lstValue.FirstOrDefault().ValueID;
+                sysValueInfo.ValueDesc = lstValue.FirstOrDefault().ValueDesc;
+                sysValueInfo.ValueResult = (Convert.ToInt32(checkCode) + 1).ToString();
+
+                _control.UpdateEntity(sysValueInfo);
+            }
+        }
         #endregion
     }
 }
