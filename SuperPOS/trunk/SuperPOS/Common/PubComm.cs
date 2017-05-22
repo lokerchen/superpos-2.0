@@ -24,5 +24,11 @@ namespace SuperPOS.Common
         public static int MENU_LANG_DEFAULT = 1;
         //其他语言
         public static int MENU_LANG_OTHER = 2;
+
+        #region 系统常量
+        //账单
+        public static string SYS_VALUE_CHECK_CODE = "1001";
+
+        #endregion
     }
 }
