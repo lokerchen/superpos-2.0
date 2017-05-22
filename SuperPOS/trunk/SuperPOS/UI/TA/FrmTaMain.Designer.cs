@@ -29,9 +29,18 @@
         private void InitializeComponent()
         {
             this.treeListOrder = new DevExpress.XtraTreeList.TreeList();
-            this.miDishName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.miQty = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.miPrice = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemDishName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemDishOtherName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemQty = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemPrice = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemTotalPrice = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.CheckCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemType = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemParent = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.OrderTime = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.OrderStaff = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblCheck = new DevExpress.XtraEditors.LabelControl();
             this.lblType = new DevExpress.XtraEditors.LabelControl();
@@ -136,9 +145,18 @@
             // treeListOrder
             // 
             this.treeListOrder.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.miDishName,
-            this.miQty,
-            this.miPrice});
+            this.ID,
+            this.ItemCode,
+            this.ItemDishName,
+            this.ItemDishOtherName,
+            this.ItemQty,
+            this.ItemPrice,
+            this.ItemTotalPrice,
+            this.CheckCode,
+            this.ItemType,
+            this.ItemParent,
+            this.OrderTime,
+            this.OrderStaff});
             this.treeListOrder.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeListOrder.IndicatorWidth = 30;
             this.treeListOrder.Location = new System.Drawing.Point(5, 44);
@@ -147,19 +165,55 @@
             this.treeListOrder.AppendNode(new object[] {
             "Mixed platter",
             "1",
-            "27.50"}, -1);
+            "Test Mi1",
+            null,
+            "1",
+            null,
+            "10.00",
+            null,
+            null,
+            null,
+            null,
+            null}, -1);
             this.treeListOrder.AppendNode(new object[] {
             "Mixed platter Childe 1",
             "1",
-            "0.00"}, 0);
+            "Test Mod1",
+            null,
+            "1",
+            null,
+            "0.00",
+            null,
+            null,
+            null,
+            null,
+            null}, 0);
             this.treeListOrder.AppendNode(new object[] {
             "Mixed platter Childe 2",
+            null,
+            "Test Mod2",
+            null,
+            "1",
+            null,
+            "0.00",
+            null,
+            null,
+            null,
             null,
             null}, 0);
             this.treeListOrder.AppendNode(new object[] {
             "Smoked shredded chicken",
             "2",
-            "200.00"}, -1);
+            "Test Mi2",
+            null,
+            "1",
+            null,
+            "200.00",
+            null,
+            null,
+            null,
+            null,
+            null}, -1);
             this.treeListOrder.EndUnboundLoad();
             this.treeListOrder.OptionsBehavior.Editable = false;
             this.treeListOrder.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
@@ -169,44 +223,98 @@
             this.treeListOrder.TabIndex = 0;
             this.treeListOrder.CustomDrawNodeIndicator += new DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventHandler(this.treeListOrder_CustomDrawNodeIndicator);
             // 
-            // miDishName
+            // ID
             // 
-            this.miDishName.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.miDishName.AppearanceCell.Options.UseFont = true;
-            this.miDishName.Caption = "Dish Name";
-            this.miDishName.FieldName = "miDishName";
-            this.miDishName.MinWidth = 52;
-            this.miDishName.Name = "miDishName";
-            this.miDishName.OptionsFilter.AllowAutoFilter = false;
-            this.miDishName.Visible = true;
-            this.miDishName.VisibleIndex = 0;
-            this.miDishName.Width = 252;
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
             // 
-            // miQty
+            // ItemCode
             // 
-            this.miQty.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.miQty.AppearanceCell.Options.UseFont = true;
-            this.miQty.Caption = "Qty";
-            this.miQty.FieldName = "miQty";
-            this.miQty.Name = "miQty";
-            this.miQty.OptionsFilter.AllowAutoFilter = false;
-            this.miQty.OptionsFilter.AllowFilter = false;
-            this.miQty.Visible = true;
-            this.miQty.VisibleIndex = 1;
-            this.miQty.Width = 44;
+            this.ItemCode.Caption = "ItemCode";
+            this.ItemCode.FieldName = "ItemCode";
+            this.ItemCode.Name = "ItemCode";
             // 
-            // miPrice
+            // ItemDishName
             // 
-            this.miPrice.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.miPrice.AppearanceCell.Options.UseFont = true;
-            this.miPrice.Caption = "Price";
-            this.miPrice.FieldName = "miPrice";
-            this.miPrice.Name = "miPrice";
-            this.miPrice.OptionsFilter.AllowAutoFilter = false;
-            this.miPrice.OptionsFilter.AllowFilter = false;
-            this.miPrice.Visible = true;
-            this.miPrice.VisibleIndex = 2;
-            this.miPrice.Width = 74;
+            this.ItemDishName.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemDishName.AppearanceCell.Options.UseFont = true;
+            this.ItemDishName.Caption = "Dish Name";
+            this.ItemDishName.FieldName = "ItemDishName";
+            this.ItemDishName.MinWidth = 52;
+            this.ItemDishName.Name = "ItemDishName";
+            this.ItemDishName.OptionsFilter.AllowAutoFilter = false;
+            this.ItemDishName.Visible = true;
+            this.ItemDishName.VisibleIndex = 0;
+            this.ItemDishName.Width = 252;
+            // 
+            // ItemDishOtherName
+            // 
+            this.ItemDishOtherName.Caption = "ItemDishOtherName";
+            this.ItemDishOtherName.FieldName = "ItemDishOtherName";
+            this.ItemDishOtherName.Name = "ItemDishOtherName";
+            // 
+            // ItemQty
+            // 
+            this.ItemQty.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemQty.AppearanceCell.Options.UseFont = true;
+            this.ItemQty.Caption = "Qty";
+            this.ItemQty.FieldName = "ItemQty";
+            this.ItemQty.Name = "ItemQty";
+            this.ItemQty.OptionsFilter.AllowAutoFilter = false;
+            this.ItemQty.OptionsFilter.AllowFilter = false;
+            this.ItemQty.Visible = true;
+            this.ItemQty.VisibleIndex = 1;
+            this.ItemQty.Width = 44;
+            // 
+            // ItemPrice
+            // 
+            this.ItemPrice.Caption = "ItemPrice";
+            this.ItemPrice.FieldName = "ItemPrice";
+            this.ItemPrice.Name = "ItemPrice";
+            // 
+            // ItemTotalPrice
+            // 
+            this.ItemTotalPrice.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemTotalPrice.AppearanceCell.Options.UseFont = true;
+            this.ItemTotalPrice.Caption = "Price";
+            this.ItemTotalPrice.FieldName = "ItemTotalPrice";
+            this.ItemTotalPrice.Name = "ItemTotalPrice";
+            this.ItemTotalPrice.OptionsFilter.AllowAutoFilter = false;
+            this.ItemTotalPrice.OptionsFilter.AllowFilter = false;
+            this.ItemTotalPrice.Visible = true;
+            this.ItemTotalPrice.VisibleIndex = 2;
+            this.ItemTotalPrice.Width = 74;
+            // 
+            // CheckCode
+            // 
+            this.CheckCode.Caption = "CheckCode";
+            this.CheckCode.FieldName = "CheckCode";
+            this.CheckCode.Name = "CheckCode";
+            // 
+            // ItemType
+            // 
+            this.ItemType.Caption = "ItemType";
+            this.ItemType.FieldName = "ItemType";
+            this.ItemType.Name = "ItemType";
+            // 
+            // ItemParent
+            // 
+            this.ItemParent.Caption = "ItemParent";
+            this.ItemParent.FieldName = "ItemParent";
+            this.ItemParent.Name = "ItemParent";
+            // 
+            // OrderTime
+            // 
+            this.OrderTime.Caption = "OrderTime";
+            this.OrderTime.FieldName = "OrderTime";
+            this.OrderTime.Name = "OrderTime";
+            // 
+            // OrderStaff
+            // 
+            this.OrderStaff.Caption = "OrderStaff";
+            this.OrderStaff.FieldName = "OrderStaff";
+            this.OrderStaff.Name = "OrderStaff";
             // 
             // panelControl1
             // 
@@ -1166,9 +1274,9 @@
         #endregion
 
         private DevExpress.XtraTreeList.TreeList treeListOrder;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn miDishName;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn miQty;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn miPrice;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemDishName;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemQty;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemTotalPrice;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnDel;
         private DevExpress.XtraEditors.SimpleButton btnReduce;
@@ -1257,5 +1365,14 @@
         private DevExpress.XtraEditors.SimpleButton btnMc2;
         private DevExpress.XtraEditors.SimpleButton btnMc1;
         private DevExpress.XtraEditors.SimpleButton btnMc0;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ID;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemCode;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemDishOtherName;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemPrice;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn CheckCode;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemType;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemParent;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn OrderTime;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn OrderStaff;
     }
 }

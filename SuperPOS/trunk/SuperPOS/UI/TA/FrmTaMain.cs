@@ -9,7 +9,9 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraTreeList.Nodes;
 using SuperPOS.Common;
+using SuperPOS.Domain.Entities;
 
 namespace SuperPOS.UI.TA
 {
@@ -25,7 +27,7 @@ namespace SuperPOS.UI.TA
         //来电显示号码
         private string CallerID = "";
         //账单号
-        private int checkID;
+        private string checkID;
         //默认语言标识状态位
         private int iLangStatusId = PubComm.MENU_LANG_DEFAULT;
         //菜谱ID
@@ -103,6 +105,14 @@ namespace SuperPOS.UI.TA
             SetMenuCate(iCatePageNum, iMenuSetId);
             //加载MenuItem
             SetMenuItem(iCatePageNum, iMenuCateId, iMenuSetId);
+
+            //获得账单号
+            checkID = CommonDAL.GetCheckCode();
+
+            lblCheck.Text = checkID;
+
+            //加载TreeList
+            //BindData();
 
             #region 提示打开来电设备失败
             if (!openDev())
@@ -209,7 +219,28 @@ namespace SuperPOS.UI.TA
         /// <param name="e"></param>
         private void btnMenuItem_Click(object sender, EventArgs e)
         {
+            SimpleButton btn = sender as SimpleButton;
 
+            TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(btn.Text, iMenuCateId, iMenuSetId);
+
+            if (taMenuItemInfo != null)
+            {
+                int iQty = 1;
+                TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
+                taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
+                taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
+                taOrderItemInfo.ItemQty = iQty.ToString();
+                taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
+                taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
+                taOrderItemInfo.CheckCode = checkID;
+                taOrderItemInfo.ItemType = 1;
+                taOrderItemInfo.ItemParent = 0;
+                taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                taOrderItemInfo.OrderStaff = usrID.ToString();
+
+                AddTreeListNode(taOrderItemInfo);
+            }
         }
         #endregion
 
@@ -348,6 +379,99 @@ namespace SuperPOS.UI.TA
             for (int j = i; j < 42; j++)
             {
                 btnMenuCate[j].Text = "";
+            }
+        }
+        #endregion
+
+        #region 绑定TreeList数据
+
+        private void BindData()
+        {
+            new SystemData().GetTaOrderItem();
+
+            treeListOrder.DataSource = CommonData.TaOrderItem.ToList();
+
+            //treeListOrder.ParentFieldName = "ItemParent";
+        }
+        #endregion
+
+        #region 增加TreeList节点
+
+        private void AddTreeListNode(TaOrderItemInfo taOrderItemInfo)
+        {
+            treeListOrder.BeginUnboundLoad();
+
+            treeListOrder.AppendNode(new object[]
+            {
+                taOrderItemInfo.ID,
+                taOrderItemInfo.ItemCode,
+                taOrderItemInfo.ItemDishName,
+                taOrderItemInfo.ItemDishOtherName,
+                taOrderItemInfo.ItemQty,
+                taOrderItemInfo.ItemPrice,
+                taOrderItemInfo.ItemTotalPrice,
+                taOrderItemInfo.CheckCode,
+                taOrderItemInfo.ItemType,
+                taOrderItemInfo.ItemParent,
+                taOrderItemInfo.OrderTime,
+                taOrderItemInfo.OrderStaff
+            }, -1);
+
+            treeListOrder.EndUnboundLoad();
+
+            //node.SetValue(treeListOrder.Columns[0], taOrderItemInfo.ID);
+            //node.SetValue(treeListOrder.Columns[1], taOrderItemInfo.ItemCode);
+            //node.SetValue(treeListOrder.Columns[2], taOrderItemInfo.ItemDishName);
+            //node.SetValue(treeListOrder.Columns[3], taOrderItemInfo.ItemDishOtherName);
+            //node.SetValue(treeListOrder.Columns[4], taOrderItemInfo.ItemQty);
+            //node.SetValue(treeListOrder.Columns[5], taOrderItemInfo.ItemPrice);
+            //node.SetValue(treeListOrder.Columns[6], taOrderItemInfo.ItemTotalPrice);
+            //node.SetValue(treeListOrder.Columns[7], taOrderItemInfo.CheckCode);
+            //node.SetValue(treeListOrder.Columns[8], taOrderItemInfo.ItemType);
+            //node.SetValue(treeListOrder.Columns[9], taOrderItemInfo.ItemParent);
+            //node.SetValue(treeListOrder.Columns[10], taOrderItemInfo.OrderTime);
+            //node.SetValue(treeListOrder.Columns[11], taOrderItemInfo.OrderStaff);
+        }
+        #endregion
+
+        #region 获得按钮信息
+        /// <summary>
+        /// 获得按钮信息
+        /// </summary>
+        /// <param name="name">MenuItem名字</param>
+        /// <param name="mcId">MenuCate ID</param>
+        /// <param name="msId">MenuSet ID</param>
+        /// <returns></returns>
+        private TaMenuItemInfo GetMenuItemInfo(string name, int mcId, int msId)
+        {
+            var lstMc = CommonData.TaMenuItem;
+
+            if (CommonDAL.IsShowMenuItemCode())
+            {
+                name = name.Substring(name.IndexOf(")") + 1);
+            }
+
+            lstMc = iLangStatusId == PubComm.MENU_LANG_DEFAULT
+                    ? CommonData.TaMenuItem.Where(s => s.MiEngName.Equals(name)).ToList()
+                    : CommonData.TaMenuItem.Where(s => s.MiOtherName.Equals(name)).ToList();
+
+            if (msId == 0)
+            {
+                return mcId == 0
+                    ? (lstMc.Any() ? lstMc.FirstOrDefault() : null)
+                    : (lstMc.Any(s => s.MiMenuCateID.Contains(mcId.ToString()))
+                        ? lstMc.FirstOrDefault(s => s.MiMenuCateID.Contains(mcId.ToString()))
+                        : null);
+            }
+            else
+            {
+                return mcId == 0
+                    ? (lstMc.Any(s => s.MiMenuSetID == msId)
+                        ? lstMc.FirstOrDefault(s => s.MiMenuSetID == msId)
+                        : null)
+                    : (lstMc.Any(s => s.MiMenuCateID.Contains(mcId.ToString()) && s.MiMenuSetID == msId)
+                        ? lstMc.FirstOrDefault(s => s.MiMenuCateID.Contains(mcId.ToString()) && s.MiMenuSetID == msId)
+                        : null);
             }
         }
         #endregion
