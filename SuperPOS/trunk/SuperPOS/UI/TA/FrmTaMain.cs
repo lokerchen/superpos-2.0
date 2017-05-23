@@ -27,7 +27,7 @@ namespace SuperPOS.UI.TA
         //来电显示号码
         private string CallerID = "";
         //账单号
-        private string checkID;
+        private string checkID = "";
         //默认语言标识状态位
         private int iLangStatusId = PubComm.MENU_LANG_DEFAULT;
         //菜谱ID
@@ -62,8 +62,14 @@ namespace SuperPOS.UI.TA
             usrID = id;
         }
 
+        public FrmTaMain(string cId)
+        {
+            InitializeComponent();
+            checkID = cId;
+        }
+
         #region 事件
-       
+
         #region 显示TreeList行号
         private void treeListOrder_CustomDrawNodeIndicator(object sender, DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventArgs e)
         {
@@ -106,10 +112,18 @@ namespace SuperPOS.UI.TA
             //加载MenuItem
             SetMenuItem(iCatePageNum, iMenuCateId, iMenuSetId);
 
-            //获得账单号
-            checkID = CommonDAL.GetCheckCode();
+            if (string.IsNullOrEmpty(checkID))
+            {
+                //获得账单号
+                checkID = CommonDAL.GetCheckCode();
 
-            lblCheck.Text = checkID;
+                lblCheck.Text = checkID;
+            }
+            else
+            {
+                //TO DO something
+            }
+            
 
             //加载TreeList
             //BindData();
