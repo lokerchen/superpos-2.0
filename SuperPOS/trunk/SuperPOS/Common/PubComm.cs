@@ -25,6 +25,15 @@ namespace SuperPOS.Common
         //其他语言
         public static int MENU_LANG_OTHER = 2;
 
+        //菜品类型
+        //主菜品
+        public static int MENU_ITEM_MAIN = 1;
+        //子菜品
+        public static int MENU_ITEM_CHILD = 2;
+        //改码
+        public static int MENU_ITEM_APPEND = 3;
+
+
         #region 系统常量
         //账单
         public static string SYS_VALUE_CHECK_CODE = "1001";

@@ -112,6 +112,9 @@ namespace SuperPOS.UI.TA
             //加载MenuItem
             SetMenuItem(iCatePageNum, iMenuCateId, iMenuSetId);
 
+            treeListOrder.KeyFieldName = "ID";
+            treeListOrder.ParentFieldName = "ItemParent";
+
             if (string.IsNullOrEmpty(checkID))
             {
                 //获得账单号
@@ -248,12 +251,33 @@ namespace SuperPOS.UI.TA
                 taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
                 taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
                 taOrderItemInfo.CheckCode = checkID;
-                taOrderItemInfo.ItemType = 1;
-                taOrderItemInfo.ItemParent = 0;
+                taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
+                taOrderItemInfo.ItemParent = -1;
                 taOrderItemInfo.OrderTime = DateTime.Now.ToString();
                 taOrderItemInfo.OrderStaff = usrID.ToString();
 
-                AddTreeListNode(taOrderItemInfo);
+                TreeListNode node = AddTreeListNode(taOrderItemInfo);
+
+                //Second/Third Choices
+                SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, node);
+
+
+                //TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                //taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
+                //taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
+                //taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
+                //taOrderItemInfo.ItemQty = iQty.ToString();
+                //taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
+                //taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
+                //taOrderItemInfo.CheckCode = checkID;
+                //taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
+                ////DataRowView drView = treeListOrder.GetDataRecordByNode();
+                ////taOrderItemInfo.ItemParent = treeListOrder.FocusedNode.Id;
+                //taOrderItemInfo.ItemParent = taMenuItemInfo.ID;
+                //taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                //taOrderItemInfo.OrderStaff = usrID.ToString();
+
+                //AddTreeListChild(taOrderItemInfo, treeListOrder.FocusedNode);
             }
         }
         #endregion
@@ -405,17 +429,22 @@ namespace SuperPOS.UI.TA
 
             treeListOrder.DataSource = CommonData.TaOrderItem.ToList();
 
-            //treeListOrder.ParentFieldName = "ItemParent";
+            treeListOrder.KeyFieldName = "ID";
+            treeListOrder.ParentFieldName = "ItemParent";
+
+            //展开所有TreeList
+            treeListOrder.ExpandAll();
         }
         #endregion
 
         #region 增加TreeList节点
 
-        private void AddTreeListNode(TaOrderItemInfo taOrderItemInfo)
+        private TreeListNode AddTreeListNode(TaOrderItemInfo taOrderItemInfo)
         {
             treeListOrder.BeginUnboundLoad();
 
-            treeListOrder.AppendNode(new object[]
+            //treeListOrder.AppendNode(new object[]
+            TreeListNode node = treeListOrder.AppendNode(new object[]
             {
                 taOrderItemInfo.ID,
                 taOrderItemInfo.ItemCode,
@@ -433,6 +462,10 @@ namespace SuperPOS.UI.TA
 
             treeListOrder.EndUnboundLoad();
 
+            treeListOrder.ExpandAll();
+
+            return node;
+
             //node.SetValue(treeListOrder.Columns[0], taOrderItemInfo.ID);
             //node.SetValue(treeListOrder.Columns[1], taOrderItemInfo.ItemCode);
             //node.SetValue(treeListOrder.Columns[2], taOrderItemInfo.ItemDishName);
@@ -445,6 +478,38 @@ namespace SuperPOS.UI.TA
             //node.SetValue(treeListOrder.Columns[9], taOrderItemInfo.ItemParent);
             //node.SetValue(treeListOrder.Columns[10], taOrderItemInfo.OrderTime);
             //node.SetValue(treeListOrder.Columns[11], taOrderItemInfo.OrderStaff);
+        }
+        #endregion
+
+        #region 增加TreeList子节点
+        /// <summary>
+        /// 增加TreeList子节点
+        /// </summary>
+        /// <param name="taOrderItemInfo">OrderItem信息</param>
+        /// <param name="node">父节点</param>
+        private void AddTreeListChild(TaOrderItemInfo taOrderItemInfo, TreeListNode node)
+        {
+            treeListOrder.BeginUnboundLoad();
+
+            treeListOrder.AppendNode(new object[]
+            {
+                taOrderItemInfo.ID,
+                taOrderItemInfo.ItemCode,
+                taOrderItemInfo.ItemDishName,
+                taOrderItemInfo.ItemDishOtherName,
+                taOrderItemInfo.ItemQty,
+                taOrderItemInfo.ItemPrice,
+                taOrderItemInfo.ItemTotalPrice,
+                taOrderItemInfo.CheckCode,
+                taOrderItemInfo.ItemType,
+                taOrderItemInfo.ItemParent,
+                taOrderItemInfo.OrderTime,
+                taOrderItemInfo.OrderStaff
+            }, node);
+
+            treeListOrder.EndUnboundLoad();
+
+            treeListOrder.ExpandAll();
         }
         #endregion
 
@@ -487,6 +552,84 @@ namespace SuperPOS.UI.TA
                         ? lstMc.FirstOrDefault(s => s.MiMenuCateID.Contains(mcId.ToString()) && s.MiMenuSetID == msId)
                         : null);
             }
+        }
+        #endregion
+
+        #region MenuItem Second/Third Choices自动增加获取
+        /// <summary>
+        /// MenuItem Second/Third Choices自动增加获取
+        /// </summary>
+        /// <param name="miId">MenuItem ID</param>
+        /// <param name="miQty">MenuItem Qty</param>
+        /// <param name="miCheckCode">账单号</param>
+        /// <returns></returns>
+        private void GetAppendOtherChoice(int miId, string miQty, string miCheckCode, TreeListNode miNode)
+        {
+            new SystemData().GetTaMenuItemOtherChoice();
+
+            List<TaOrderItemInfo> lstMi = new List<TaOrderItemInfo>();
+
+            var lstOther = CommonData.TaMenuItemOtherChoice.Where(s => s.MiID == miId && s.IsAutoAppend.Equals("Y") && s.IsEnableChoice.Equals("Y"));
+
+            if (lstOther.Any())
+            {
+                foreach (var taMenuItemOtherChoiceInfo in lstOther)
+                {
+                    TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                    taOrderItemInfo.ItemCode = taMenuItemOtherChoiceInfo.ID.ToString();
+                    taOrderItemInfo.ItemDishName = taMenuItemOtherChoiceInfo.MiEngName;
+                    taOrderItemInfo.ItemDishOtherName = taMenuItemOtherChoiceInfo.MiOtherName;
+                    taOrderItemInfo.ItemQty = miQty;
+                    taOrderItemInfo.ItemPrice = taMenuItemOtherChoiceInfo.MiPrice;
+                    taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(miQty) * Convert.ToDecimal(taMenuItemOtherChoiceInfo.MiPrice)).ToString();
+                    taOrderItemInfo.CheckCode = miCheckCode;
+                    taOrderItemInfo.ItemType = PubComm.MENU_ITEM_CHILD;
+                    taOrderItemInfo.ItemParent = miId;
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                    taOrderItemInfo.OrderStaff = usrID.ToString();
+
+                    lstMi.Add(taOrderItemInfo);
+                }
+            }
+
+            if (lstMi.Any())
+            {
+                foreach (var orderItemInfo in lstMi) { AddTreeListChild(orderItemInfo, miNode); }
+            }
+        }
+        #endregion
+
+        #region MenuItem Second/Third Choices用户选择增加
+
+        /// <summary>
+        ///  MenuItem Second/Third Choices用户选择增加
+        /// </summary>
+        /// <param name="miId"></param>
+        /// <param name="miQty"></param>
+        /// <param name="miCheckCode"></param>
+        /// <param name="node"></param>
+        private void GetNotAppendOtherChoice(int mId, string mQty, string mCheckCode, TreeListNode mNode)
+        {
+            new SystemData().GetTaMenuItemOtherChoice();
+
+            var lstOther = CommonData.TaMenuItemOtherChoice.Where(s => s.MiID == mId && s.IsAutoAppend.Equals("N") && s.IsEnableChoice.Equals("Y"));
+
+            if (lstOther.Any())
+            {
+                //弹出用户选择窗口
+            }
+        }
+
+        #endregion
+
+        #region MenuItem Second/Third Choices设置
+
+        private void SetAllOtherChoice(int miId, string miQty, string miCheckCode, TreeListNode node)
+        {
+            //Second/Third Choices自动增加
+            GetAppendOtherChoice(miId, miQty, miCheckCode, node);
+            //Second/Third Choices用户选择增加
+            GetNotAppendOtherChoice(miId, miQty, miCheckCode, node);
         }
         #endregion
 

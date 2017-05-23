@@ -38,7 +38,6 @@
             this.ItemTotalPrice = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.CheckCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ItemType = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.ItemParent = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.OrderTime = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.OrderStaff = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -154,7 +153,6 @@
             this.ItemTotalPrice,
             this.CheckCode,
             this.ItemType,
-            this.ItemParent,
             this.OrderTime,
             this.OrderStaff});
             this.treeListOrder.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,7 +171,6 @@
             null,
             null,
             null,
-            null,
             null}, -1);
             this.treeListOrder.AppendNode(new object[] {
             "Mixed platter Childe 1",
@@ -183,7 +180,6 @@
             "1",
             null,
             "0.00",
-            null,
             null,
             null,
             null,
@@ -199,7 +195,6 @@
             null,
             null,
             null,
-            null,
             null}, 0);
             this.treeListOrder.AppendNode(new object[] {
             "Smoked shredded chicken",
@@ -212,12 +207,13 @@
             null,
             null,
             null,
-            null,
             null}, -1);
             this.treeListOrder.EndUnboundLoad();
             this.treeListOrder.OptionsBehavior.Editable = false;
+            this.treeListOrder.OptionsBehavior.PopulateServiceColumns = true;
             this.treeListOrder.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
             this.treeListOrder.OptionsClipboard.CopyNodeHierarchy = DevExpress.Utils.DefaultBoolean.True;
+            this.treeListOrder.ParentFieldName = "ItemParent";
             this.treeListOrder.RowHeight = 30;
             this.treeListOrder.Size = new System.Drawing.Size(402, 557);
             this.treeListOrder.TabIndex = 0;
@@ -297,12 +293,6 @@
             this.ItemType.Caption = "ItemType";
             this.ItemType.FieldName = "ItemType";
             this.ItemType.Name = "ItemType";
-            // 
-            // ItemParent
-            // 
-            this.ItemParent.Caption = "ItemParent";
-            this.ItemParent.FieldName = "ItemParent";
-            this.ItemParent.Name = "ItemParent";
             // 
             // OrderTime
             // 
@@ -1371,7 +1361,6 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn ItemPrice;
         private DevExpress.XtraTreeList.Columns.TreeListColumn CheckCode;
         private DevExpress.XtraTreeList.Columns.TreeListColumn ItemType;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemParent;
         private DevExpress.XtraTreeList.Columns.TreeListColumn OrderTime;
         private DevExpress.XtraTreeList.Columns.TreeListColumn OrderStaff;
     }
