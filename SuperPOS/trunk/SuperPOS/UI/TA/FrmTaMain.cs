@@ -194,6 +194,52 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region TreeList向上移动
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            //此为控制节点向上移动，打乱显示格局
+            //treeListOrder.BeginUpdate();
+
+            //treeListOrder.SetNodeIndex(treeListOrder.FocusedNode, treeListOrder.GetNodeIndex(treeListOrder.FocusedNode.PrevNode));
+
+            //treeListOrder.EndUpdate();
+            treeListOrder.SetFocusedNode(treeListOrder.GetNodeIndex(treeListOrder.FocusedNode) - 1 >= 0
+                ? treeListOrder.Nodes[treeListOrder.GetNodeIndex(treeListOrder.FocusedNode) - 1]
+                : treeListOrder.Nodes[0]);
+        }
+
+        #endregion
+
+        #region TreeList向下移动
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            treeListOrder.SetFocusedNode(treeListOrder.GetNodeIndex(treeListOrder.FocusedNode) - treeListOrder.Nodes.Count < 1
+                ? treeListOrder.Nodes[treeListOrder.Nodes.Count - 1]
+                : treeListOrder.Nodes[treeListOrder.GetNodeIndex(treeListOrder.FocusedNode) + 1]);
+        }
+        #endregion
+
+        #region TreeList增加Qty数量
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+        
+        #region TreeList减少Qty数量
+        private void btnReduce_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+        
+        #region TreeList删除节点
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
         #endregion
 
         #region 方法

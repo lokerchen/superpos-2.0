@@ -348,6 +348,7 @@
             this.btnDel.Size = new System.Drawing.Size(76, 45);
             this.btnDel.TabIndex = 5;
             this.btnDel.Text = "X";
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnReduce
             // 
@@ -356,6 +357,7 @@
             this.btnReduce.Size = new System.Drawing.Size(76, 45);
             this.btnReduce.TabIndex = 4;
             this.btnReduce.Text = "-";
+            this.btnReduce.Click += new System.EventHandler(this.btnReduce_Click);
             // 
             // btnAdd
             // 
@@ -364,6 +366,7 @@
             this.btnAdd.Size = new System.Drawing.Size(76, 45);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "+";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDown
             // 
@@ -372,6 +375,7 @@
             this.btnDown.Size = new System.Drawing.Size(76, 45);
             this.btnDown.TabIndex = 2;
             this.btnDown.Text = "↓";
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // btnUp
             // 
@@ -380,6 +384,7 @@
             this.btnUp.Size = new System.Drawing.Size(76, 45);
             this.btnUp.TabIndex = 1;
             this.btnUp.Text = "↑";
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // panelControl2
             // 
