@@ -222,13 +222,51 @@ namespace SuperPOS.UI.TA
         #region TreeList增加Qty数量
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (treeListOrder.FocusedNode != null)
+            {
+                treeListOrder.BeginUpdate();
+                decimal dQty = Convert.ToDecimal(treeListOrder.FocusedNode["ItemQty"]);
+                decimal dPrice = Convert.ToDecimal(treeListOrder.FocusedNode["ItemTotalPrice"]);
 
+                if (dQty > 1)
+                {
+                    treeListOrder.FocusedNode["ItemQty"] = (dQty + 1).ToString();
+                    treeListOrder.FocusedNode["ItemTotalPrice"] = ((dPrice / dQty) * (dQty + 1)).ToString();
+                }
+                else
+                {
+                    treeListOrder.FocusedNode["ItemQty"] = (dQty + 1).ToString();
+                    treeListOrder.FocusedNode["ItemTotalPrice"] = (dPrice * 2.0m).ToString();
+                }
+                treeListOrder.EndUpdate();
+
+                treeListOrder.ExpandAll();
+            }
         }
         #endregion
         
         #region TreeList减少Qty数量
         private void btnReduce_Click(object sender, EventArgs e)
         {
+            if (treeListOrder.FocusedNode != null)
+            {
+                treeListOrder.BeginUpdate();
+                decimal dQty = Convert.ToDecimal(treeListOrder.FocusedNode["ItemQty"]);
+                decimal dPrice = Convert.ToDecimal(treeListOrder.FocusedNode["ItemTotalPrice"]);
+
+                if (dQty > 1.0m)
+                {
+                    treeListOrder.FocusedNode["ItemQty"] = (dQty - 1).ToString();
+                    treeListOrder.FocusedNode["ItemTotalPrice"] = ((dPrice/dQty)*(dQty - 1)).ToString();
+                }
+                else
+                {
+                    treeListOrder.DeleteNode(treeListOrder.FocusedNode);
+                }
+                treeListOrder.EndUpdate();
+
+                treeListOrder.ExpandAll();
+            }
 
         }
         #endregion
@@ -236,7 +274,10 @@ namespace SuperPOS.UI.TA
         #region TreeList删除节点
         private void btnDel_Click(object sender, EventArgs e)
         {
-
+            if (treeListOrder.FocusedNode != null)
+            {
+                treeListOrder.DeleteNode(treeListOrder.FocusedNode);
+            }
         }
         #endregion
 
