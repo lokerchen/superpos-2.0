@@ -128,6 +128,7 @@
             this.btnMc2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc0 = new DevExpress.XtraEditors.SimpleButton();
+            this.ItemParent = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -153,66 +154,18 @@
             this.ItemTotalPrice,
             this.CheckCode,
             this.ItemType,
+            this.ItemParent,
             this.OrderTime,
             this.OrderStaff});
             this.treeListOrder.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeListOrder.IndicatorWidth = 30;
+            this.treeListOrder.IndicatorWidth = 40;
             this.treeListOrder.Location = new System.Drawing.Point(5, 44);
             this.treeListOrder.Name = "treeListOrder";
-            this.treeListOrder.BeginUnboundLoad();
-            this.treeListOrder.AppendNode(new object[] {
-            "Mixed platter",
-            "1",
-            "Test Mi1",
-            null,
-            "1",
-            null,
-            "10.00",
-            null,
-            null,
-            null,
-            null}, -1);
-            this.treeListOrder.AppendNode(new object[] {
-            "Mixed platter Childe 1",
-            "1",
-            "Test Mod1",
-            null,
-            "1",
-            null,
-            "0.00",
-            null,
-            null,
-            null,
-            null}, 0);
-            this.treeListOrder.AppendNode(new object[] {
-            "Mixed platter Childe 2",
-            null,
-            "Test Mod2",
-            null,
-            "1",
-            null,
-            "0.00",
-            null,
-            null,
-            null,
-            null}, 0);
-            this.treeListOrder.AppendNode(new object[] {
-            "Smoked shredded chicken",
-            "2",
-            "Test Mi2",
-            null,
-            "1",
-            null,
-            "200.00",
-            null,
-            null,
-            null,
-            null}, -1);
-            this.treeListOrder.EndUnboundLoad();
             this.treeListOrder.OptionsBehavior.Editable = false;
             this.treeListOrder.OptionsBehavior.PopulateServiceColumns = true;
             this.treeListOrder.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
             this.treeListOrder.OptionsClipboard.CopyNodeHierarchy = DevExpress.Utils.DefaultBoolean.True;
+            this.treeListOrder.OptionsView.ShowSummaryFooter = true;
             this.treeListOrder.ParentFieldName = "ItemParent";
             this.treeListOrder.RowHeight = 30;
             this.treeListOrder.Size = new System.Drawing.Size(402, 557);
@@ -259,9 +212,10 @@
             this.ItemQty.Name = "ItemQty";
             this.ItemQty.OptionsFilter.AllowAutoFilter = false;
             this.ItemQty.OptionsFilter.AllowFilter = false;
+            this.ItemQty.SummaryFooter = DevExpress.XtraTreeList.SummaryItemType.Sum;
             this.ItemQty.Visible = true;
             this.ItemQty.VisibleIndex = 1;
-            this.ItemQty.Width = 44;
+            this.ItemQty.Width = 37;
             // 
             // ItemPrice
             // 
@@ -278,9 +232,11 @@
             this.ItemTotalPrice.Name = "ItemTotalPrice";
             this.ItemTotalPrice.OptionsFilter.AllowAutoFilter = false;
             this.ItemTotalPrice.OptionsFilter.AllowFilter = false;
+            this.ItemTotalPrice.SummaryFooter = DevExpress.XtraTreeList.SummaryItemType.Sum;
+            this.ItemTotalPrice.SummaryFooterStrFormat = "{0:f2}";
             this.ItemTotalPrice.Visible = true;
             this.ItemTotalPrice.VisibleIndex = 2;
-            this.ItemTotalPrice.Width = 74;
+            this.ItemTotalPrice.Width = 76;
             // 
             // CheckCode
             // 
@@ -1239,6 +1195,12 @@
             this.btnMc0.Size = new System.Drawing.Size(105, 50);
             this.btnMc0.TabIndex = 16;
             // 
+            // ItemParent
+            // 
+            this.ItemParent.Caption = "ItemParent";
+            this.ItemParent.FieldName = "ItemParent";
+            this.ItemParent.Name = "ItemParent";
+            // 
             // FrmTaMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1368,5 +1330,6 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn ItemType;
         private DevExpress.XtraTreeList.Columns.TreeListColumn OrderTime;
         private DevExpress.XtraTreeList.Columns.TreeListColumn OrderStaff;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemParent;
     }
 }
