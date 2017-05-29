@@ -701,9 +701,58 @@ namespace SuperPOS.UI.TA
 
             var lstOther = CommonData.TaMenuItemOtherChoice.Where(s => s.MiID == mId && s.IsAutoAppend.Equals("N") && s.IsEnableChoice.Equals("Y"));
 
+            List<TaOrderItemInfo> lstMi = new List<TaOrderItemInfo>();
+
+            List<TaMenuItemOtherChoiceInfo> lstResult = new List<TaMenuItemOtherChoiceInfo>();
+
             if (lstOther.Any())
             {
                 //弹出用户选择窗口
+                if (lstOther.Any(s => s.MiType == 2)) //存在Second Choices
+                {
+                    //弹出窗口选择
+                    FrmTAOtherChoice frmTaOtherChoice1 = new FrmTAOtherChoice(2, mId, lstOther.Where(s => s.MiType == 2).ToList());
+                    if (frmTaOtherChoice1.ShowDialog() == DialogResult.OK)
+                    {
+                        lstResult = frmTaOtherChoice1.lstReturnChoice;
+
+                        if (lstResult.Any())
+                        {
+                            if (lstOther.Any(s => s.MiType == 3))
+                            {
+                                //弹出窗口选择
+                                FrmTAOtherChoice frmTaOtherChoice2 = new FrmTAOtherChoice(3, mId, lstOther.Where(s => s.MiType == 3).ToList());
+                                if (frmTaOtherChoice2.ShowDialog() == DialogResult.OK)
+                                {
+                                    if (frmTaOtherChoice2.lstReturnChoice.Any()) lstResult.AddRange(frmTaOtherChoice2.lstReturnChoice);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (var taMenuItemOtherChoiceInfo in lstResult)
+            {
+                TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                taOrderItemInfo.ItemCode = taMenuItemOtherChoiceInfo.ID.ToString();
+                taOrderItemInfo.ItemDishName = taMenuItemOtherChoiceInfo.MiEngName;
+                taOrderItemInfo.ItemDishOtherName = taMenuItemOtherChoiceInfo.MiOtherName;
+                taOrderItemInfo.ItemQty = mQty;
+                taOrderItemInfo.ItemPrice = taMenuItemOtherChoiceInfo.MiPrice;
+                taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(mQty) * Convert.ToDecimal(taMenuItemOtherChoiceInfo.MiPrice)).ToString();
+                taOrderItemInfo.CheckCode = mCheckCode;
+                taOrderItemInfo.ItemType = PubComm.MENU_ITEM_CHILD;
+                taOrderItemInfo.ItemParent = mId;
+                taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                taOrderItemInfo.OrderStaff = usrID.ToString();
+
+                lstMi.Add(taOrderItemInfo);
+            }
+
+            if (lstMi.Any())
+            {
+                foreach (var orderItemInfo in lstMi) { AddTreeListChild(orderItemInfo, mNode); }
             }
         }
 
