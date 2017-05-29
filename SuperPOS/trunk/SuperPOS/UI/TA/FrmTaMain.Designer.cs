@@ -38,6 +38,7 @@
             this.ItemTotalPrice = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.CheckCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ItemType = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemParent = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.OrderTime = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.OrderStaff = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -128,7 +129,6 @@
             this.btnMc2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc0 = new DevExpress.XtraEditors.SimpleButton();
-            this.ItemParent = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -225,6 +225,7 @@
             // 
             // ItemTotalPrice
             // 
+            this.ItemTotalPrice.AllNodesSummary = true;
             this.ItemTotalPrice.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemTotalPrice.AppearanceCell.Options.UseFont = true;
             this.ItemTotalPrice.Caption = "Price";
@@ -249,6 +250,12 @@
             this.ItemType.Caption = "ItemType";
             this.ItemType.FieldName = "ItemType";
             this.ItemType.Name = "ItemType";
+            // 
+            // ItemParent
+            // 
+            this.ItemParent.Caption = "ItemParent";
+            this.ItemParent.FieldName = "ItemParent";
+            this.ItemParent.Name = "ItemParent";
             // 
             // OrderTime
             // 
@@ -1194,12 +1201,6 @@
             this.btnMc0.Name = "btnMc0";
             this.btnMc0.Size = new System.Drawing.Size(105, 50);
             this.btnMc0.TabIndex = 16;
-            // 
-            // ItemParent
-            // 
-            this.ItemParent.Caption = "ItemParent";
-            this.ItemParent.FieldName = "ItemParent";
-            this.ItemParent.Name = "ItemParent";
             // 
             // FrmTaMain
             // 

@@ -209,6 +209,12 @@
     <Compile Include="UI\TA\FrmTaMenuSet.Designer.cs">
       <DependentUpon>FrmTaMenuSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTAOtherChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTAOtherChoice.Designer.cs">
+      <DependentUpon>FrmTAOtherChoice.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\FrmDesktopArea.resx">
       <DependentUpon>FrmDesktopArea.cs</DependentUpon>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaMenuSet.resx">
       <DependentUpon>FrmTaMenuSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTAOtherChoice.resx">
+      <DependentUpon>FrmTAOtherChoice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinqToDB.Templates\!ReadMe.LinqToDB.md" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
