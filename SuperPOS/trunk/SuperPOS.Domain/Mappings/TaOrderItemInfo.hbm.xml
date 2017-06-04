@@ -9,6 +9,7 @@
     </id>
 
     <property name="ItemCode" column="ItemCode" type="System.String" />
+    <property name="ItemID" column="ItemID" type="System.String" />
     <property name="ItemDishName" column="ItemDishName" type="System.String" />
     <property name="ItemDishOtherName" column="ItemDishOtherName" type="System.String" />
     <property name="ItemQty" column="ItemQty" type="System.String" />
@@ -16,9 +17,9 @@
     <property name="ItemTotalPrice" column="ItemTotalPrice" type="System.String" />
     <property name="CheckCode" column="CheckCode" type="System.String" />
     <property name="ItemType" column="ItemType" type="System.Int32" />
-    <property name="ItemParent" column="ItemParent" type="System.Int32" />
+    <property name="ItemParent" column="ItemParent" type="System.String" />
     <property name="OrderTime" column="OrderTime" type="System.String" />
-    <property name="OrderStaff" column="OrderStaff" type="System.String" />
+    <property name="OrderStaff" column="OrderStaff" type="System.Int32" />
   </class>
 
 </hibernate-mapping>

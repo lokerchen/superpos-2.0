@@ -39,6 +39,11 @@ namespace SuperPOS.UI.TA
         //默认MenuCate iCatePageNum = 1;
         private int iCatePageNum = 1;
 
+        private readonly EntityControl _control = new EntityControl();
+
+        //是否为新单
+        private bool isNew = true;
+
         #region 来电显示相关
         [StructLayout(LayoutKind.Sequential)]
         public struct tag_pstn_Data
@@ -87,7 +92,23 @@ namespace SuperPOS.UI.TA
         #region Save Order
         private void btnSaveOrder_Click(object sender, EventArgs e)
         {
+            List<TaOrderItemInfo> lstTaOI = new List<TaOrderItemInfo>();
 
+            lstTaOI = TreeListToOrderItem(isNew);
+
+            foreach (var taOrderItemInfo in lstTaOI)
+            {
+                new SystemData().GetTaOrderItem();
+
+                if (CommonData.TaOrderItem.Any(s => s.ID == taOrderItemInfo.ID))
+                {
+                    _control.UpdateEntity(taOrderItemInfo);
+                }
+                else
+                {
+                    _control.AddEntity(taOrderItemInfo); 
+                }
+            }
         }
         #endregion
 
@@ -118,7 +139,7 @@ namespace SuperPOS.UI.TA
             if (string.IsNullOrEmpty(checkID))
             {
                 //获得账单号
-                checkID = CommonDAL.GetCheckCode();
+                checkID = CommonDAL.GetCheckCode(true);
 
                 lblCheck.Text = checkID;
             }
@@ -331,6 +352,7 @@ namespace SuperPOS.UI.TA
             {
                 int iQty = 1;
                 TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
                 taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
                 taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
                 taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
@@ -339,14 +361,15 @@ namespace SuperPOS.UI.TA
                 taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
                 taOrderItemInfo.CheckCode = checkID;
                 taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
-                taOrderItemInfo.ItemParent = -1;
+                taOrderItemInfo.ItemParent = "0";
+                //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
                 taOrderItemInfo.OrderTime = DateTime.Now.ToString();
-                taOrderItemInfo.OrderStaff = usrID.ToString();
+                taOrderItemInfo.OrderStaff = usrID;
 
                 TreeListNode node = AddTreeListNode(taOrderItemInfo);
 
                 //Second/Third Choices
-                SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, node);
+                SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, taOrderItemInfo.ItemID, node);
 
 
                 //TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
@@ -534,6 +557,7 @@ namespace SuperPOS.UI.TA
             TreeListNode node = treeListOrder.AppendNode(new object[]
             {
                 taOrderItemInfo.ID,
+                taOrderItemInfo.ItemID,
                 taOrderItemInfo.ItemCode,
                 taOrderItemInfo.ItemDishName,
                 taOrderItemInfo.ItemDishOtherName,
@@ -578,9 +602,10 @@ namespace SuperPOS.UI.TA
         {
             treeListOrder.BeginUnboundLoad();
 
-            treeListOrder.AppendNode(new object[]
+            TreeListNode node1 = treeListOrder.AppendNode(new object[]
             {
                 taOrderItemInfo.ID,
+                taOrderItemInfo.ItemID,
                 taOrderItemInfo.ItemCode,
                 taOrderItemInfo.ItemDishName,
                 taOrderItemInfo.ItemDishOtherName,
@@ -593,6 +618,8 @@ namespace SuperPOS.UI.TA
                 taOrderItemInfo.OrderTime,
                 taOrderItemInfo.OrderStaff
             }, node);
+
+            Console.WriteLine(node1["ItemParent"].ToString());
 
             treeListOrder.EndUnboundLoad();
 
@@ -650,7 +677,7 @@ namespace SuperPOS.UI.TA
         /// <param name="miQty">MenuItem Qty</param>
         /// <param name="miCheckCode">账单号</param>
         /// <returns></returns>
-        private void GetAppendOtherChoice(int miId, string miQty, string miCheckCode, TreeListNode miNode)
+        private void GetAppendOtherChoice(int miId, string miQty, string miCheckCode, string itemId, TreeListNode miNode)
         {
             new SystemData().GetTaMenuItemOtherChoice();
 
@@ -671,9 +698,9 @@ namespace SuperPOS.UI.TA
                     taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(miQty) * Convert.ToDecimal(taMenuItemOtherChoiceInfo.MiPrice)).ToString();
                     taOrderItemInfo.CheckCode = miCheckCode;
                     taOrderItemInfo.ItemType = PubComm.MENU_ITEM_CHILD;
-                    taOrderItemInfo.ItemParent = miId;
+                    taOrderItemInfo.ItemParent = itemId;
                     taOrderItemInfo.OrderTime = DateTime.Now.ToString();
-                    taOrderItemInfo.OrderStaff = usrID.ToString();
+                    taOrderItemInfo.OrderStaff = usrID;
 
                     lstMi.Add(taOrderItemInfo);
                 }
@@ -695,7 +722,7 @@ namespace SuperPOS.UI.TA
         /// <param name="miQty"></param>
         /// <param name="miCheckCode"></param>
         /// <param name="node"></param>
-        private void GetNotAppendOtherChoice(int mId, string mQty, string mCheckCode, TreeListNode mNode)
+        private void GetNotAppendOtherChoice(int mId, string mQty, string mCheckCode, string itemId, TreeListNode mNode)
         {
             new SystemData().GetTaMenuItemOtherChoice();
 
@@ -735,6 +762,7 @@ namespace SuperPOS.UI.TA
             foreach (var taMenuItemOtherChoiceInfo in lstResult)
             {
                 TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                taOrderItemInfo.ItemID = "0";
                 taOrderItemInfo.ItemCode = taMenuItemOtherChoiceInfo.ID.ToString();
                 taOrderItemInfo.ItemDishName = taMenuItemOtherChoiceInfo.MiEngName;
                 taOrderItemInfo.ItemDishOtherName = taMenuItemOtherChoiceInfo.MiOtherName;
@@ -743,9 +771,9 @@ namespace SuperPOS.UI.TA
                 taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(mQty) * Convert.ToDecimal(taMenuItemOtherChoiceInfo.MiPrice)).ToString();
                 taOrderItemInfo.CheckCode = mCheckCode;
                 taOrderItemInfo.ItemType = PubComm.MENU_ITEM_CHILD;
-                taOrderItemInfo.ItemParent = mId;
+                taOrderItemInfo.ItemParent = itemId;
                 taOrderItemInfo.OrderTime = DateTime.Now.ToString();
-                taOrderItemInfo.OrderStaff = usrID.ToString();
+                taOrderItemInfo.OrderStaff = usrID;
 
                 lstMi.Add(taOrderItemInfo);
             }
@@ -760,13 +788,96 @@ namespace SuperPOS.UI.TA
 
         #region MenuItem Second/Third Choices设置
 
-        private void SetAllOtherChoice(int miId, string miQty, string miCheckCode, TreeListNode node)
+        private void SetAllOtherChoice(int miId, string miQty, string miCheckCode, string itemId, TreeListNode node)
         {
             //Second/Third Choices自动增加
-            GetAppendOtherChoice(miId, miQty, miCheckCode, node);
+            GetAppendOtherChoice(miId, miQty, miCheckCode, itemId, node);
             //Second/Third Choices用户选择增加
-            GetNotAppendOtherChoice(miId, miQty, miCheckCode, node);
+            GetNotAppendOtherChoice(miId, miQty, miCheckCode, itemId, node);
         }
+        #endregion
+
+        #region TreeList转为OrderItem
+
+        private List<TaOrderItemInfo> TreeListToOrderItem(bool isAdd)
+        {
+            List<TaOrderItemInfo> lstTaOI = new List<TaOrderItemInfo>();
+
+            try
+            {
+                foreach (TreeListNode node in treeListOrder.Nodes)
+                {
+                    TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+
+                    if (!isNew) taOrderItemInfo.ID = Convert.ToInt32(node["ID"]);
+
+                    taOrderItemInfo.ItemID = node["ItemID"].ToString();
+                    taOrderItemInfo.ItemCode = node["ItemCode"].ToString();
+                    taOrderItemInfo.ItemDishName = node["ItemDishName"].ToString();
+                    taOrderItemInfo.ItemDishOtherName = node["ItemDishOtherName"].ToString();
+                    taOrderItemInfo.ItemQty = node["ItemQty"].ToString();
+                    taOrderItemInfo.ItemPrice = node["ItemPrice"].ToString();
+                    taOrderItemInfo.ItemTotalPrice = node["ItemTotalPrice"].ToString();
+                    taOrderItemInfo.CheckCode = node["CheckCode"].ToString();
+                    taOrderItemInfo.ItemType = Convert.ToInt32(node["ItemType"]);
+                    taOrderItemInfo.ItemParent = "0";
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                    taOrderItemInfo.OrderStaff = usrID;
+
+                    lstTaOI.Add(taOrderItemInfo);
+
+                    if (node.HasChildren)
+                    {
+                        lstTaOI.AddRange(GetTreeListChild(isAdd, node["ItemID"].ToString(), node));
+                    }
+                }
+            }
+            catch (Exception ex) { LogHelper.Error(this.Name, ex); }
+
+            return lstTaOI;
+        }
+        #endregion
+
+        #region TreeList子节点转为OrderItem
+        /// <summary>
+        /// TreeList子节点转为OrderItem
+        /// </summary>
+        /// <param name="isAdd"></param>
+        /// <param name="parentID"></param>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        private List<TaOrderItemInfo> GetTreeListChild(bool isAdd, string parentID, TreeListNode node)
+        {
+            List<TaOrderItemInfo> lstTaOI = new List<TaOrderItemInfo>();
+
+            try
+            {
+                foreach (TreeListNode childNode in node.Nodes)
+                {
+                    TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+
+                    if (!isNew) taOrderItemInfo.ID = Convert.ToInt32(childNode["ID"]);
+
+                    taOrderItemInfo.ItemID = "0";
+                    taOrderItemInfo.ItemCode = childNode["ItemCode"].ToString();
+                    taOrderItemInfo.ItemDishName = childNode["ItemDishName"].ToString();
+                    taOrderItemInfo.ItemDishOtherName = childNode["ItemDishOtherName"].ToString();
+                    taOrderItemInfo.ItemQty = childNode["ItemQty"].ToString();
+                    taOrderItemInfo.ItemPrice = childNode["ItemPrice"].ToString();
+                    taOrderItemInfo.ItemTotalPrice = childNode["ItemTotalPrice"].ToString();
+                    taOrderItemInfo.CheckCode = childNode["CheckCode"].ToString();
+                    taOrderItemInfo.ItemType = Convert.ToInt32(childNode["ItemType"]);
+                    taOrderItemInfo.ItemParent = parentID;
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                    taOrderItemInfo.OrderStaff = usrID;
+
+                    lstTaOI.Add(taOrderItemInfo);
+                }
+            }
+            catch (Exception ex) { LogHelper.Error(this.Name, ex); }
+
+            return lstTaOI;
+        } 
         #endregion
 
         #region 来电显示相关

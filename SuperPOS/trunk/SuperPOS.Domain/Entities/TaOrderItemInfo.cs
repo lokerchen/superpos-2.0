@@ -11,6 +11,10 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "ItemCode")]
         public virtual string ItemCode { get; set; }
 
+        //菜品父ID，主要用来关联ItemParent
+        [XmlElement(ElementName = "ItemID")]
+        public virtual string ItemID { get; set; }
+
         //菜品名称
         [XmlElement(ElementName = "ItemDishName")]
         public virtual string ItemDishName { get; set; }
@@ -41,7 +45,7 @@ namespace SuperPOS.Domain.Entities
 
         //菜品父ID
         [XmlElement(ElementName = "ItemParent")]
-        public virtual int ItemParent { get; set; }
+        public virtual string ItemParent { get; set; }
 
         //菜品下单时间
         [XmlElement(ElementName = "OrderTime")]
@@ -49,6 +53,6 @@ namespace SuperPOS.Domain.Entities
 
         //菜品下单员工
         [XmlElement(ElementName = "OrderStaff")]
-        public virtual string OrderStaff { get; set; }
+        public virtual int OrderStaff { get; set; }
     }
 }
