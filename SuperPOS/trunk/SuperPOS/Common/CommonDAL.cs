@@ -45,6 +45,8 @@ namespace SuperPOS.Common
             systemData.GetKeypadList();
             //打印机列表
             systemData.GetSysPrtList();
+            //改码
+            systemData.GetTaExtraMenu();
 
             #region Takeaway
             //Department Code
@@ -240,13 +242,30 @@ namespace SuperPOS.Common
         /// 获得账单号
         /// </summary>
         /// <returns></returns>
-        public static string GetCheckCode()
+        public static string GetCheckCode(bool isUpdate)
         {
             new SystemData().GetSysValue();
 
             var lstValue = CommonData.SysValue.Where(s => s.ValueID.Equals(PubComm.SYS_VALUE_CHECK_CODE));
 
-            return lstValue.Any() ? lstValue.FirstOrDefault().ValueResult : "1";
+            SysValueInfo sysValueInfo = new SysValueInfo();
+            //return lstValue.Any() ? lstValue.FirstOrDefault().ValueResult : "1";
+            if (lstValue.Any())
+            {
+                sysValueInfo = lstValue.FirstOrDefault();
+                string sc = sysValueInfo.ValueResult;
+                if (isUpdate) sysValueInfo.ValueResult = (Convert.ToInt32(sysValueInfo.ValueResult) + 1).ToString();
+                else sysValueInfo.ValueResult = (Convert.ToInt32(sysValueInfo.ValueResult) - 1).ToString();
+                _control.UpdateEntity(sysValueInfo);
+                return sc;
+            }
+            else
+            {
+                sysValueInfo.ValueID = PubComm.SYS_VALUE_CHECK_CODE;
+                sysValueInfo.ValueDesc = "CHECKCODE";
+                sysValueInfo.ValueResult = "1";
+                return "1";
+            }
         }
         #endregion
 

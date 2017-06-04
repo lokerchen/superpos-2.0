@@ -129,6 +129,7 @@
             this.btnMc2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc0 = new DevExpress.XtraEditors.SimpleButton();
+            this.ItemID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -146,6 +147,7 @@
             // 
             this.treeListOrder.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.ID,
+            this.ItemID,
             this.ItemCode,
             this.ItemDishName,
             this.ItemDishOtherName,
@@ -1202,6 +1204,12 @@
             this.btnMc0.Size = new System.Drawing.Size(105, 50);
             this.btnMc0.TabIndex = 16;
             // 
+            // ItemID
+            // 
+            this.ItemID.Caption = "ItemID";
+            this.ItemID.FieldName = "ItemID";
+            this.ItemID.Name = "ItemID";
+            // 
             // FrmTaMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1332,5 +1340,6 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn OrderTime;
         private DevExpress.XtraTreeList.Columns.TreeListColumn OrderStaff;
         private DevExpress.XtraTreeList.Columns.TreeListColumn ItemParent;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn ItemID;
     }
 }
