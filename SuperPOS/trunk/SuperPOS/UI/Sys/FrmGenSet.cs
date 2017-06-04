@@ -54,6 +54,24 @@ namespace SuperPOS.UI.Sys
                 {
                     _control.AddEntity(genSetInfo);
                 }
+
+                new SystemData().GetSysValue();
+                var lstValue = CommonData.SysValue.Where(s => s.ValueID.Equals(PubComm.SYS_VALUE_CHECK_CODE));
+                SysValueInfo sysValueInfo = new SysValueInfo();
+
+                if (lstValue.Any())
+                {
+                    sysValueInfo = lstValue.FirstOrDefault();
+                    sysValueInfo.ValueResult = txtTillNum.Text;
+                    _control.UpdateEntity(sysValueInfo);
+                }
+                else
+                {
+                    sysValueInfo.ValueID = PubComm.SYS_VALUE_CHECK_CODE;
+                    sysValueInfo.ValueDesc = "CHECKCODE";
+                    sysValueInfo.ValueResult = txtTillNum.Text;
+                    _control.AddEntity(sysValueInfo);
+                }
             }
             catch (Exception ex) { LogHelper.Error(this.Name, ex); }
 
