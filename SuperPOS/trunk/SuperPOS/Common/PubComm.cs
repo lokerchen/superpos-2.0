@@ -38,6 +38,11 @@ namespace SuperPOS.Common
         //改码Btn类型
         public static string[] EXTRA_MENU_BTN_TYPE = new[] {"Taste Item", "Drink Item"};
 
+        //订单类型
+        public static string ORDER_TYPE_SHOP = "SHOP";
+        public static string ORDER_TYPE_COLLECTION = "COLLECTION";
+        public static string ORDER_TYPE_DELIVERY = "DELIVERY";
+
         #region 系统常量
         //账单
         public static string SYS_VALUE_CHECK_CODE = "1001";
