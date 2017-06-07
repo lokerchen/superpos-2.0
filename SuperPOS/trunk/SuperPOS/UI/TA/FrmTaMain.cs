@@ -44,6 +44,9 @@ namespace SuperPOS.UI.TA
         //是否为新单
         private bool isNew = true;
 
+        //订单类型
+        private string ORDER_TYPE = PubComm.ORDER_TYPE_SHOP;
+
         #region 来电显示相关
         [StructLayout(LayoutKind.Sequential)]
         public struct tag_pstn_Data
@@ -92,30 +95,75 @@ namespace SuperPOS.UI.TA
         #region Save Order
         private void btnSaveOrder_Click(object sender, EventArgs e)
         {
-            List<TaOrderItemInfo> lstTaOI = new List<TaOrderItemInfo>();
-
-            lstTaOI = TreeListToOrderItem(isNew);
-
-            foreach (var taOrderItemInfo in lstTaOI)
+            try
             {
-                new SystemData().GetTaOrderItem();
+                #region 保存TreeList
+                List<TaOrderItemInfo> lstTaOI = new List<TaOrderItemInfo>();
 
-                if (CommonData.TaOrderItem.Any(s => s.ID == taOrderItemInfo.ID))
+                lstTaOI = TreeListToOrderItem(isNew);
+
+                foreach (var taOrderItemInfo in lstTaOI)
                 {
-                    _control.UpdateEntity(taOrderItemInfo);
+                    new SystemData().GetTaOrderItem();
+
+                    if (CommonData.TaOrderItem.Any(s => s.ID == taOrderItemInfo.ID))
+                    {
+                        _control.UpdateEntity(taOrderItemInfo);
+                    }
+                    else
+                    {
+                        _control.AddEntity(taOrderItemInfo);
+                    }
+                }
+                #endregion
+
+                #region 保存账单
+                //Console.WriteLine(treeListOrder.Columns["ItemTotalPrice"].SummaryFooter.ToString());
+                TaCheckOrderInfo taCheckOrderInfo = new TaCheckOrderInfo();
+                var lstChk = CommonData.TaCheckOrder.Where(s => s.ChkCode.Equals(checkID) && s.IsPaid.Equals("N"));
+                if (lstChk.Any())
+                {
+                    taCheckOrderInfo = lstChk.FirstOrDefault();
+                    taCheckOrderInfo.ChkType = ORDER_TYPE;
+                    taCheckOrderInfo.ChkAmount = lstTaOI.Sum(s => Convert.ToDecimal(s.ItemTotalPrice)).ToString();
+                    _control.UpdateEntity(taCheckOrderInfo);
                 }
                 else
                 {
-                    _control.AddEntity(taOrderItemInfo); 
+                    taCheckOrderInfo.ChkCode = checkID;
+                    taCheckOrderInfo.ChkType = ORDER_TYPE;
+                    taCheckOrderInfo.PaidAmount = "0.00";
+                    taCheckOrderInfo.PaidType = "";
+                    taCheckOrderInfo.ChkAmount = lstTaOI.Sum(s => Convert.ToDecimal(s.ItemTotalPrice)).ToString();
+                    taCheckOrderInfo.IsPaid = "N";
+                    taCheckOrderInfo.OrderTime = DateTime.Now.ToString();
+                    taCheckOrderInfo.StaffID = usrID;
+
+                    _control.AddEntity(taCheckOrderInfo);
                 }
+                #endregion
+
+                treeListOrder.Nodes.Clear();
+
+                checkID = CommonDAL.GetCheckCode(true);
+                lblCheck.Text = checkID;
             }
+            catch (Exception ex) { LogHelper.Error(this.Name, ex); }
         }
         #endregion
 
         #region Cancel按钮点击
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            if (treeListOrder.AllNodesCount > 0)
+            {
+                if (CommonTool.ConfirmMessage("Are you sure you want to cancel the order?") == DialogResult.OK)
+                {
+                    treeListOrder.Nodes.Clear();
+                }
+            }
 
+            Close();
         }
         #endregion
 
@@ -151,6 +199,9 @@ namespace SuperPOS.UI.TA
 
             //加载TreeList
             //BindData();
+
+            //默认订单类型
+            lblType.Text = PubComm.ORDER_TYPE_SHOP;
 
             #region 提示打开来电设备失败
             if (!openDev())
