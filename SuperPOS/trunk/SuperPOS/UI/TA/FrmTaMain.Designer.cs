@@ -30,6 +30,7 @@
         {
             this.treeListOrder = new DevExpress.XtraTreeList.TreeList();
             this.ID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.ItemID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ItemCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ItemDishName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ItemDishOtherName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
@@ -129,7 +130,6 @@
             this.btnMc2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc0 = new DevExpress.XtraEditors.SimpleButton();
-            this.ItemID = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -180,6 +180,12 @@
             this.ID.FieldName = "ID";
             this.ID.Name = "ID";
             // 
+            // ItemID
+            // 
+            this.ItemID.Caption = "ItemID";
+            this.ItemID.FieldName = "ItemID";
+            this.ItemID.Name = "ItemID";
+            // 
             // ItemCode
             // 
             this.ItemCode.Caption = "ItemCode";
@@ -197,7 +203,7 @@
             this.ItemDishName.OptionsFilter.AllowAutoFilter = false;
             this.ItemDishName.Visible = true;
             this.ItemDishName.VisibleIndex = 0;
-            this.ItemDishName.Width = 252;
+            this.ItemDishName.Width = 232;
             // 
             // ItemDishOtherName
             // 
@@ -217,7 +223,7 @@
             this.ItemQty.SummaryFooter = DevExpress.XtraTreeList.SummaryItemType.Sum;
             this.ItemQty.Visible = true;
             this.ItemQty.VisibleIndex = 1;
-            this.ItemQty.Width = 37;
+            this.ItemQty.Width = 49;
             // 
             // ItemPrice
             // 
@@ -239,7 +245,7 @@
             this.ItemTotalPrice.SummaryFooterStrFormat = "{0:f2}";
             this.ItemTotalPrice.Visible = true;
             this.ItemTotalPrice.VisibleIndex = 2;
-            this.ItemTotalPrice.Width = 76;
+            this.ItemTotalPrice.Width = 79;
             // 
             // CheckCode
             // 
@@ -1203,12 +1209,6 @@
             this.btnMc0.Name = "btnMc0";
             this.btnMc0.Size = new System.Drawing.Size(105, 50);
             this.btnMc0.TabIndex = 16;
-            // 
-            // ItemID
-            // 
-            this.ItemID.Caption = "ItemID";
-            this.ItemID.FieldName = "ItemID";
-            this.ItemID.Name = "ItemID";
             // 
             // FrmTaMain
             // 
