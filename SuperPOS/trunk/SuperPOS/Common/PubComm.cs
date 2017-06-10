@@ -37,6 +37,10 @@ namespace SuperPOS.Common
         public static string[] EXTRA_MENU_EDIT_TYPE = new[] {"Vegetable", "Vegetable2", "Bean", "Meat", "Seafood", "Sauce", "Taste", "Fruit", "Cooking", "Others"};
         //改码Btn类型
         public static string[] EXTRA_MENU_BTN_TYPE = new[] {"Taste Item", "Drink Item"};
+        //前端改码类型
+        public static string[] FORM_BTN_TYPE = new[] {"LESS(-)", "ADD(+)", "MORE(++)", "WITHOUT(X)", "CHANGE(/)"};
+        //前端实际使用类型
+        public static string[] FORM_USE_TYPE = new[] {"-", "+", "++", "X", "/"};
 
         //订单类型
         public static string ORDER_TYPE_SHOP = "SHOP";
