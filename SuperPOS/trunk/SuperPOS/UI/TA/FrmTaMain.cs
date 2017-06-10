@@ -452,6 +452,18 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region 更改订单类型
+        private void btnOrderType_Click(object sender, EventArgs e)
+        {
+            FrmTaChangeOrderType frmTaChangeOrderType = new FrmTaChangeOrderType();
+
+            if (frmTaChangeOrderType.ShowDialog() == DialogResult.OK)
+            {
+                lblType.Text = frmTaChangeOrderType.OrderType;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region 方法
