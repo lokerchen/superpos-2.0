@@ -652,6 +652,7 @@
             this.btnOrderType.Size = new System.Drawing.Size(111, 42);
             this.btnOrderType.TabIndex = 26;
             this.btnOrderType.Text = "Order Type";
+            this.btnOrderType.Click += new System.EventHandler(this.btnOrderType_Click);
             // 
             // btnLanguage
             // 
