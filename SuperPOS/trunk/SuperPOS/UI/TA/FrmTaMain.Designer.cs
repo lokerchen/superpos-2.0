@@ -723,6 +723,7 @@
             this.btnAppend.Size = new System.Drawing.Size(111, 42);
             this.btnAppend.TabIndex = 19;
             this.btnAppend.Text = "+/-";
+            this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
             // 
             // btnCid
             // 

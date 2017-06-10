@@ -353,6 +353,60 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region 增加改码
+        private void btnAppend_Click(object sender, EventArgs e)
+        {
+            if (treeListOrder.FocusedNode != null)
+            {
+                string sQty = treeListOrder.FocusedNode["ItemQty"].ToString();
+
+                //只允许菜品有改码
+                if (treeListOrder.FocusedNode["ItemType"].ToString().Equals("1"))
+                {
+                    string sParentID = treeListOrder.FocusedNode["ItemID"].ToString();
+
+                    List<TaOrderItemInfo> lstMi = new List<TaOrderItemInfo>();
+
+                    FrmTaAppendItem frmTaAppendItem = new FrmTaAppendItem();
+
+                    if (frmTaAppendItem.ShowDialog() == DialogResult.OK)
+                    {
+                        List<TaExtraResult> lstAppend = new List<TaExtraResult>();
+                        lstAppend = frmTaAppendItem.LstResults;
+
+                        if (lstAppend.Any())
+                        {
+                            foreach (var taExtraResult in lstAppend)
+                            {
+                                TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                                taOrderItemInfo.ItemID = "0";
+                                taOrderItemInfo.ItemCode = taExtraResult.rID.ToString();
+                                taOrderItemInfo.ItemDishName = taExtraResult.rType + " " + taExtraResult.rItemName;
+                                taOrderItemInfo.ItemDishOtherName = taExtraResult.rItemName;
+                                taOrderItemInfo.ItemQty = sQty;
+                                taOrderItemInfo.ItemPrice = taExtraResult.rPrice;
+                                taOrderItemInfo.ItemTotalPrice = (Convert.ToDecimal(sQty) * Convert.ToDecimal(taExtraResult.rPrice)).ToString();
+                                taOrderItemInfo.CheckCode = checkID;
+                                taOrderItemInfo.ItemType = PubComm.MENU_ITEM_APPEND;
+                                taOrderItemInfo.ItemParent = sParentID;
+                                //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
+                                taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                                taOrderItemInfo.OrderStaff = usrID;
+
+                                lstMi.Add(taOrderItemInfo);
+                            }
+                        }
+
+                        if (lstMi.Any())
+                        {
+                            foreach (var orderItemInfo in lstMi) { AddTreeListChild(orderItemInfo, treeListOrder.FocusedNode); }
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
+
         #endregion
 
         #region 方法
