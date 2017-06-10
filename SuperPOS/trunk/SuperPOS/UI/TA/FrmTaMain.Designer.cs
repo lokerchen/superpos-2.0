@@ -683,6 +683,7 @@
             this.btnMenu.Size = new System.Drawing.Size(111, 42);
             this.btnMenu.TabIndex = 23;
             this.btnMenu.Text = "Menu";
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnPendOrder
             // 

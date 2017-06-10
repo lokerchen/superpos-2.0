@@ -435,6 +435,23 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region Menu Set选择
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            FrmTaMenuSelect frmTaMenuSelect = new FrmTaMenuSelect();
+
+            if (frmTaMenuSelect.ShowDialog() == DialogResult.OK)
+            {
+                iMenuSetId = frmTaMenuSelect.MenuSetId;
+
+                //加载MenuCate
+                SetMenuCate(iCatePageNum, iMenuSetId);
+                //加载MenuItem
+                SetMenuItem(iCatePageNum, iMenuCateId, iMenuSetId);
+            }
+        }
+        #endregion
+
         #endregion
 
         #region 方法
