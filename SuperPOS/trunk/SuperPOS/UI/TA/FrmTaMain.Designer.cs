@@ -703,6 +703,7 @@
             this.btnIngredMode.Size = new System.Drawing.Size(111, 42);
             this.btnIngredMode.TabIndex = 21;
             this.btnIngredMode.Text = "Ingred Mode";
+            this.btnIngredMode.Click += new System.EventHandler(this.btnIngredMode_Click);
             // 
             // btnHome
             // 
