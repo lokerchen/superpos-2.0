@@ -41,6 +41,11 @@ namespace SuperPOS.UI.TA
 
         private readonly EntityControl _control = new EntityControl();
 
+        //是否为Ingred Mode
+        private bool isIngredMode = false;
+        //Ingred Mode 返回值
+        private string sModeValue = "";
+
         //是否为新单
         private bool isNew = true;
 
@@ -407,6 +412,29 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region Ingred Mode
+        private void btnIngredMode_Click(object sender, EventArgs e)
+        {
+            if (treeListOrder.FocusedNode != null)
+            {
+                //只允许菜品
+                if (treeListOrder.FocusedNode["ItemType"].ToString().Equals("1"))
+                {
+                    isIngredMode = true;
+
+                    FrmTaIngredMode frmTaIngredMode = new FrmTaIngredMode();
+
+                    if (frmTaIngredMode.ShowDialog() == DialogResult.OK)
+                    {
+                        sModeValue = frmTaIngredMode.modeValue;
+
+                        if (string.IsNullOrEmpty(sModeValue)) isIngredMode = false;
+                    }
+                }
+            }
+        }
+        #endregion
+
         #endregion
 
         #region 方法
@@ -455,44 +483,58 @@ namespace SuperPOS.UI.TA
 
             if (taMenuItemInfo != null)
             {
-                int iQty = 1;
-                TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
-                taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
-                taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
-                taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
-                taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
-                taOrderItemInfo.ItemQty = iQty.ToString();
-                taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
-                taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
-                taOrderItemInfo.CheckCode = checkID;
-                taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
-                taOrderItemInfo.ItemParent = "0";
-                //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
-                taOrderItemInfo.OrderTime = DateTime.Now.ToString();
-                taOrderItemInfo.OrderStaff = usrID;
+                if (isIngredMode)
+                {
+                    TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
 
-                TreeListNode node = AddTreeListNode(taOrderItemInfo);
+                    if (treeListOrder.FocusedNode != null)
+                    {
+                        int sQty = Convert.ToInt32(treeListOrder.FocusedNode["ItemQty"].ToString());
 
-                //Second/Third Choices
-                SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, taOrderItemInfo.ItemID, node);
+                        //只允许菜品
+                        if (treeListOrder.FocusedNode["ItemType"].ToString().Equals("1"))
+                        {
+                            taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
+                            taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
+                            taOrderItemInfo.ItemDishName = sModeValue + " " + taMenuItemInfo.MiEngName;
+                            taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
+                            taOrderItemInfo.ItemQty = sQty.ToString();
+                            taOrderItemInfo.ItemPrice = "0.00";
+                            taOrderItemInfo.ItemTotalPrice = "0.00";
+                            taOrderItemInfo.CheckCode = checkID;
+                            taOrderItemInfo.ItemType = PubComm.MENU_ITEM_APPEND;
+                            taOrderItemInfo.ItemParent = treeListOrder.FocusedNode["ItemID"].ToString();
+                            //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
+                            taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                            taOrderItemInfo.OrderStaff = usrID;
 
+                            AddTreeListChild(taOrderItemInfo, treeListOrder.FocusedNode);
+                        }
+                    }
+                }
+                else
+                {
+                    int iQty = 1;
+                    TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                    taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
+                    taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
+                    taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
+                    taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
+                    taOrderItemInfo.ItemQty = iQty.ToString();
+                    taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
+                    taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
+                    taOrderItemInfo.CheckCode = checkID;
+                    taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
+                    taOrderItemInfo.ItemParent = "0";
+                    //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                    taOrderItemInfo.OrderStaff = usrID;
 
-                //TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
-                //taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
-                //taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
-                //taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
-                //taOrderItemInfo.ItemQty = iQty.ToString();
-                //taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
-                //taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
-                //taOrderItemInfo.CheckCode = checkID;
-                //taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
-                ////DataRowView drView = treeListOrder.GetDataRecordByNode();
-                ////taOrderItemInfo.ItemParent = treeListOrder.FocusedNode.Id;
-                //taOrderItemInfo.ItemParent = taMenuItemInfo.ID;
-                //taOrderItemInfo.OrderTime = DateTime.Now.ToString();
-                //taOrderItemInfo.OrderStaff = usrID.ToString();
+                    TreeListNode node = AddTreeListNode(taOrderItemInfo);
 
-                //AddTreeListChild(taOrderItemInfo, treeListOrder.FocusedNode);
+                    //Second/Third Choices
+                    SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, taOrderItemInfo.ItemID, node);
+                }
             }
         }
         #endregion
