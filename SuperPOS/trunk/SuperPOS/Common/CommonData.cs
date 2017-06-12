@@ -44,5 +44,9 @@ namespace SuperPOS.Common
         public static IList<SysValueInfo> SysValue { get; set; } 
 
         public static IList<TaExtraMenuInfo> TaExtraMenu { get; set; } 
+         
+        public static IList<TaPaymentTypeInfo> TaPaymentType { get; set; }
+
+        public static IList<TaDiscountInfo> TaDiscount { get; set; }
     }
 }

@@ -65,6 +65,10 @@ namespace SuperPOS.Common
             systemData.GetTaCheckOrder();
             //系统常用值
             systemData.GetSysValue();
+            //付款类型
+            systemData.GetTaPaymentType();
+            //折扣
+            systemData.GetTaDiscount();
             #endregion
         }
         #endregion
