@@ -135,19 +135,40 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region Menu Cate
         private void TAMenuCat_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             ShowXtraTabPage("MenuCate", "Menu Category", new FrmTaMenuCate(usrID, usrName));
         }
+        #endregion
 
+        #region Menu Item
         private void TAMenuItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             ShowXtraTabPage("MenuItem", "Menu Item", new FrmTaMenuItem(usrID, usrName));
         }
+        #endregion
 
+        #region Extra Menu
         private void ExtraMenu_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             ShowXtraTabPage("ExtraMenu", "Extra Menu", new FrmTaExtraMenuEdit(usrID, usrName));
         }
+        #endregion
+
+        #region Payment Type
+        private void TAPaymentType_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TaPaymentType", "Payment Type", new FrmTaPaymentType(usrID, usrName));
+        }
+        #endregion
+
+        #region Discount
+        private void TaDiscount_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TaDiscount", "Discount", new FrmTaDiscount(usrID, usrName));
+        }
+        #endregion
+
     }
 }

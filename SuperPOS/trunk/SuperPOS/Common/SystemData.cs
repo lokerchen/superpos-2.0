@@ -47,5 +47,9 @@ namespace SuperPOS.Common
         public void GetSysValue() { CommonData.SysValue = _control.SelectAll<SysValueInfo>(); }
 
         public void GetTaExtraMenu() { CommonData.TaExtraMenu = _control.SelectAll<TaExtraMenuInfo>(); }
+
+        public void GetTaPaymentType() { CommonData.TaPaymentType = _control.SelectAll<TaPaymentTypeInfo>(); }
+
+        public void GetTaDiscount() { CommonData.TaDiscount = _control.SelectAll<TaDiscountInfo>(); }
     }
 }

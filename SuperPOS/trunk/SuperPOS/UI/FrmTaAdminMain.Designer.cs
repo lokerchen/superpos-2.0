@@ -46,11 +46,12 @@
             this.TAMenuCat = new DevExpress.XtraNavBar.NavBarItem();
             this.TAMenuItem = new DevExpress.XtraNavBar.NavBarItem();
             this.TAMenuSet = new DevExpress.XtraNavBar.NavBarItem();
-            this.TAExtraMenu = new DevExpress.XtraNavBar.NavBarItem();
+            this.TAPaymentType = new DevExpress.XtraNavBar.NavBarItem();
             this.TADeptCode = new DevExpress.XtraNavBar.NavBarItem();
             this.TAPrtInfoSet = new DevExpress.XtraNavBar.NavBarItem();
             this.TADriverSet = new DevExpress.XtraNavBar.NavBarItem();
             this.ExtraMenu = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaDiscount = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuth = new DevExpress.XtraNavBar.NavBarGroup();
             this.UsrSet = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuthGroup = new DevExpress.XtraNavBar.NavBarItem();
@@ -134,7 +135,7 @@
             this.TAMenuCat,
             this.TAMenuItem,
             this.TAMenuSet,
-            this.TAExtraMenu,
+            this.TAPaymentType,
             this.TADeptCode,
             this.SysExit,
             this.UsrAuthGroup,
@@ -147,7 +148,8 @@
             this.TAPrtInfoSet,
             this.TADriverSet,
             this.SysPrt,
-            this.ExtraMenu});
+            this.ExtraMenu,
+            this.TaDiscount});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 332;
@@ -291,11 +293,12 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuCat),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TAExtraMenu),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TAPaymentType),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TADeptCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAPrtInfoSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TADriverSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ExtraMenu)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ExtraMenu),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaDiscount)});
             this.SetTa.Name = "SetTa";
             this.SetTa.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
             // 
@@ -341,18 +344,19 @@
             this.TAMenuSet.Name = "TAMenuSet";
             this.TAMenuSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuSet_LinkClicked);
             // 
-            // TAExtraMenu
+            // TAPaymentType
             // 
-            this.TAExtraMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAExtraMenu.Appearance.Options.UseFont = true;
-            this.TAExtraMenu.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAExtraMenu.AppearanceDisabled.Options.UseFont = true;
-            this.TAExtraMenu.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAExtraMenu.AppearanceHotTracked.Options.UseFont = true;
-            this.TAExtraMenu.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAExtraMenu.AppearancePressed.Options.UseFont = true;
-            this.TAExtraMenu.Caption = "Extra Menu";
-            this.TAExtraMenu.Name = "TAExtraMenu";
+            this.TAPaymentType.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPaymentType.Appearance.Options.UseFont = true;
+            this.TAPaymentType.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPaymentType.AppearanceDisabled.Options.UseFont = true;
+            this.TAPaymentType.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPaymentType.AppearanceHotTracked.Options.UseFont = true;
+            this.TAPaymentType.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPaymentType.AppearancePressed.Options.UseFont = true;
+            this.TAPaymentType.Caption = "Payment Type";
+            this.TAPaymentType.Name = "TAPaymentType";
+            this.TAPaymentType.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAPaymentType_LinkClicked);
             // 
             // TADeptCode
             // 
@@ -407,6 +411,20 @@
             this.ExtraMenu.Caption = "Extra Menu Edit";
             this.ExtraMenu.Name = "ExtraMenu";
             this.ExtraMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ExtraMenu_LinkClicked);
+            // 
+            // TaDiscount
+            // 
+            this.TaDiscount.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDiscount.Appearance.Options.UseFont = true;
+            this.TaDiscount.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDiscount.AppearanceDisabled.Options.UseFont = true;
+            this.TaDiscount.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDiscount.AppearanceHotTracked.Options.UseFont = true;
+            this.TaDiscount.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDiscount.AppearancePressed.Options.UseFont = true;
+            this.TaDiscount.Caption = "Discount";
+            this.TaDiscount.Name = "TaDiscount";
+            this.TaDiscount.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaDiscount_LinkClicked);
             // 
             // UsrAuth
             // 
@@ -561,7 +579,7 @@
         private DevExpress.XtraNavBar.NavBarItem TAMenuCat;
         private DevExpress.XtraNavBar.NavBarItem TAMenuItem;
         private DevExpress.XtraNavBar.NavBarItem TAMenuSet;
-        private DevExpress.XtraNavBar.NavBarItem TAExtraMenu;
+        private DevExpress.XtraNavBar.NavBarItem TAPaymentType;
         private DevExpress.XtraNavBar.NavBarItem TADeptCode;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
@@ -579,5 +597,6 @@
         private DevExpress.XtraNavBar.NavBarItem TADriverSet;
         private DevExpress.XtraNavBar.NavBarItem SysPrt;
         private DevExpress.XtraNavBar.NavBarItem ExtraMenu;
+        private DevExpress.XtraNavBar.NavBarItem TaDiscount;
     }
 }
