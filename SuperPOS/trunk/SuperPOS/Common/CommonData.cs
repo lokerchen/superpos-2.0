@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using SuperPOS.Domain.Entities;
+using SuperPOS.UI.TA;
 
 namespace SuperPOS.Common
 {
@@ -48,5 +49,7 @@ namespace SuperPOS.Common
         public static IList<TaPaymentTypeInfo> TaPaymentType { get; set; }
 
         public static IList<TaDiscountInfo> TaDiscount { get; set; }
+
+        public static IList<TaDeliveryNoteInfo> TaDeliveryNote { get; set; }
     }
 }
