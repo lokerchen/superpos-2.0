@@ -176,5 +176,10 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("TaDeliveryNote", "Pre-defined Delivery Notes", new FrmTaDeliveryNote(usrID, usrName));
         }
         #endregion
+
+        private void TaDriver_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TaDriver", "Driver Set up", new FrmTaDriver(usrID, usrName));
+        }
     }
 }
