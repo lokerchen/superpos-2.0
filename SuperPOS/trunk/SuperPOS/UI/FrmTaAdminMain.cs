@@ -170,5 +170,11 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region Delivery Note
+        private void TaDeliveryNote_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TaDeliveryNote", "Pre-defined Delivery Notes", new FrmTaDeliveryNote(usrID, usrName));
+        }
+        #endregion
     }
 }

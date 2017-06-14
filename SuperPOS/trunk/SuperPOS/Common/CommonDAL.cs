@@ -69,6 +69,8 @@ namespace SuperPOS.Common
             systemData.GetTaPaymentType();
             //折扣
             systemData.GetTaDiscount();
+            //Delivery Note
+            systemData.GetTaDeliveryNote();
             #endregion
         }
         #endregion

@@ -52,6 +52,7 @@
             this.TADriverSet = new DevExpress.XtraNavBar.NavBarItem();
             this.ExtraMenu = new DevExpress.XtraNavBar.NavBarItem();
             this.TaDiscount = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaDeliveryNote = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuth = new DevExpress.XtraNavBar.NavBarGroup();
             this.UsrSet = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuthGroup = new DevExpress.XtraNavBar.NavBarItem();
@@ -149,7 +150,8 @@
             this.TADriverSet,
             this.SysPrt,
             this.ExtraMenu,
-            this.TaDiscount});
+            this.TaDiscount,
+            this.TaDeliveryNote});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 332;
@@ -298,7 +300,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAPrtInfoSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TADriverSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ExtraMenu),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TaDiscount)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaDiscount),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaDeliveryNote)});
             this.SetTa.Name = "SetTa";
             this.SetTa.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
             // 
@@ -425,6 +428,20 @@
             this.TaDiscount.Caption = "Discount";
             this.TaDiscount.Name = "TaDiscount";
             this.TaDiscount.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaDiscount_LinkClicked);
+            // 
+            // TaDeliveryNote
+            // 
+            this.TaDeliveryNote.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliveryNote.Appearance.Options.UseFont = true;
+            this.TaDeliveryNote.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliveryNote.AppearanceDisabled.Options.UseFont = true;
+            this.TaDeliveryNote.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliveryNote.AppearanceHotTracked.Options.UseFont = true;
+            this.TaDeliveryNote.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliveryNote.AppearancePressed.Options.UseFont = true;
+            this.TaDeliveryNote.Caption = "Delivery Notes";
+            this.TaDeliveryNote.Name = "TaDeliveryNote";
+            this.TaDeliveryNote.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaDeliveryNote_LinkClicked);
             // 
             // UsrAuth
             // 
@@ -598,5 +615,6 @@
         private DevExpress.XtraNavBar.NavBarItem SysPrt;
         private DevExpress.XtraNavBar.NavBarItem ExtraMenu;
         private DevExpress.XtraNavBar.NavBarItem TaDiscount;
+        private DevExpress.XtraNavBar.NavBarItem TaDeliveryNote;
     }
 }

@@ -51,5 +51,7 @@ namespace SuperPOS.Common
         public void GetTaPaymentType() { CommonData.TaPaymentType = _control.SelectAll<TaPaymentTypeInfo>(); }
 
         public void GetTaDiscount() { CommonData.TaDiscount = _control.SelectAll<TaDiscountInfo>(); }
+
+        public void GetTaDeliveryNote() { CommonData.TaDeliveryNote = _control.SelectAll<TaDeliveryNoteInfo>(); }
     }
 }
