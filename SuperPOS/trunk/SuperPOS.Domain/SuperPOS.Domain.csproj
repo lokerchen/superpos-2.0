@@ -56,6 +56,7 @@
     <Compile Include="Entities\TaDeliveryNoteInfo.cs" />
     <Compile Include="Entities\TaDeptCodeInfo.cs" />
     <Compile Include="Entities\TaDiscountInfo.cs" />
+    <Compile Include="Entities\TaDriverInfo.cs" />
     <Compile Include="Entities\TaExtraMenuInfo.cs" />
     <Compile Include="Entities\TaExtraResult.cs" />
     <Compile Include="Entities\TaMenuCateInfo.cs" />
@@ -127,6 +128,7 @@
     <EmbeddedResource Include="Mappings\TaPaymentTypeInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaDiscountInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaDeliveryNoteInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaDriverInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

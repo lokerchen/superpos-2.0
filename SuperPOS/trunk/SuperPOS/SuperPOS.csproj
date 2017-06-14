@@ -191,6 +191,12 @@
     <Compile Include="UI\TA\FrmTaDiscount.Designer.cs">
       <DependentUpon>FrmTaDiscount.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaDriver.Designer.cs">
+      <DependentUpon>FrmTaDriver.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaExtraMenuEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaDiscount.resx">
       <DependentUpon>FrmTaDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaDriver.resx">
+      <DependentUpon>FrmTaDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaExtraMenuEdit.resx">
       <DependentUpon>FrmTaExtraMenuEdit.cs</DependentUpon>

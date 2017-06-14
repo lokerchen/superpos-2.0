@@ -71,6 +71,8 @@ namespace SuperPOS.Common
             systemData.GetTaDiscount();
             //Delivery Note
             systemData.GetTaDeliveryNote();
+            //Driver Set Up
+            systemData.GetTaDriver();
             #endregion
         }
         #endregion
