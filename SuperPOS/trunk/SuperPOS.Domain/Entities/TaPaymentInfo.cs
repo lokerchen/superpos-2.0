@@ -2,7 +2,7 @@
 
 namespace SuperPOS.Domain.Entities
 {
-    public class TaCheckOrderInfo
+    public class TaPaymentInfo
     {
         [XmlElement(ElementName = "ID")]
         public virtual int ID { get; set; }
@@ -23,17 +23,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "PayDiscount")]
         public virtual string PayDiscount { get; set; }
 
-        //菜品总额
-        [XmlElement(ElementName = "MenuAmount")]
-        public virtual string MenuAmount { get; set; }
-
-        //需要付款
-        [XmlElement(ElementName = "TotalAmount")]
-        public virtual string TotalAmount { get; set; }
-
-        //已付金额
-        [XmlElement(ElementName = "Paid")]
-        public virtual string Paid { get; set; }
+        //账单总额
+        [XmlElement(ElementName = "PayAmout")]
+        public virtual string PayAmout { get; set; }
 
         //是否已付完款
         [XmlElement(ElementName = "IsPaid")]

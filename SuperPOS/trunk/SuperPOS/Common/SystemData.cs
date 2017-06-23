@@ -55,5 +55,11 @@ namespace SuperPOS.Common
         public void GetTaDeliveryNote() { CommonData.TaDeliveryNote = _control.SelectAll<TaDeliveryNoteInfo>(); }
 
         public void GetTaDriver() { CommonData.TaDriver = _control.SelectAll<TaDriverInfo>(); }
+
+        public void GetTaCustomer() { CommonData.TaCustomer = _control.SelectAll<TaCustomerInfo>(); }
+
+        public void GetTaPayment() { CommonData.TaPayment = _control.SelectAll<TaPaymentInfo>(); }
+
+        public void GetTaPaymentDetail() { CommonData.TaPaymentDetail = _control.SelectAll<TaPaymentDetailInfo>(); }
     }
 }

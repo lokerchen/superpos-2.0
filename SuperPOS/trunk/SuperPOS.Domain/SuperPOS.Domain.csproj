@@ -53,6 +53,7 @@
     <Compile Include="Entities\SysPrtSetInfo.cs" />
     <Compile Include="Entities\SysValueInfo.cs" />
     <Compile Include="Entities\TaCheckOrderInfo.cs" />
+    <Compile Include="Entities\TaCustomerInfo.cs" />
     <Compile Include="Entities\TaDeliveryNoteInfo.cs" />
     <Compile Include="Entities\TaDeptCodeInfo.cs" />
     <Compile Include="Entities\TaDiscountInfo.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="Entities\TaMenuItemInfo.cs" />
     <Compile Include="Entities\TaMenuItemOtherChoiceInfo.cs" />
     <Compile Include="Entities\TaMenuSetInfo.cs" />
+    <Compile Include="Entities\TaPaymentDetailInfo.cs" />
+    <Compile Include="Entities\TaPaymentInfo.cs" />
     <Compile Include="Entities\TaPaymentTypeInfo.cs" />
     <Compile Include="Entities\TAShiftCodeInfo.cs" />
     <Compile Include="Entities\TaOrderItemInfo.cs" />
@@ -129,6 +132,9 @@
     <EmbeddedResource Include="Mappings\TaDiscountInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaDeliveryNoteInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaDriverInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaCustomerInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaPaymentDetailInfo.hbm.xml" />
+    <Content Include="Mappings\TaPaymentInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

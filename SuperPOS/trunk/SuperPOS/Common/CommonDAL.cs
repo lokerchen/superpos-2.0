@@ -73,6 +73,12 @@ namespace SuperPOS.Common
             systemData.GetTaDeliveryNote();
             //Driver Set Up
             systemData.GetTaDriver();
+            //客户信息
+            systemData.GetTaCustomer();
+            //账单信息
+            systemData.GetTaPayment();
+            //付款信息
+            systemData.GetTaPaymentDetail();
             #endregion
         }
         #endregion
@@ -298,6 +304,42 @@ namespace SuperPOS.Common
                 _control.UpdateEntity(sysValueInfo);
             }
         }
+        #endregion
+
+        #region 获得折扣
+
+        public static decimal GetTaDiscount(string sType, decimal MenuAmount)
+        {
+            new SystemData().GetTaDiscount();
+
+            var lstDiscount = CommonData.TaDiscount.Where(s => s.TaType.Equals(sType.ToUpper()));
+
+            return lstDiscount.Any()
+                ? (MenuAmount >= Convert.ToDecimal(lstDiscount.FirstOrDefault().TaDiscThre)
+                    ? 1 - Convert.ToDecimal(lstDiscount.FirstOrDefault().TaDiscount) / 100
+                    : 0.00m)
+                : 0.00m;
+        }
+        #endregion
+
+        #region 获得具体折扣值
+
+        public static decimal GetTaDiscountAmount(string sType, decimal MenuAmount)
+        {
+            decimal dis = GetTaDiscount(sType, MenuAmount);
+
+            //return dis <= 0.00m ? Math.Round(MenuAmount, 2) : Math.Round(MenuAmount*(1 - dis), 2);
+            return dis <= 0.00m ? 0.00m : Math.Round(MenuAmount * (1 - dis), 2);
+        }
+
+        #endregion
+
+        #region 获得总单价格
+        public static decimal GetTotalAmount(decimal menuAmount, decimal dDiscount)
+        {
+            return dDiscount <= 0.00m ? Math.Round(menuAmount, 2)  : Math.Round(menuAmount * dDiscount, 2);
+        }
+
         #endregion
     }
 }
