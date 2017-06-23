@@ -621,6 +621,7 @@
             this.btnPay.Size = new System.Drawing.Size(111, 42);
             this.btnPay.TabIndex = 29;
             this.btnPay.Text = "PAY";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnCancel
             // 
