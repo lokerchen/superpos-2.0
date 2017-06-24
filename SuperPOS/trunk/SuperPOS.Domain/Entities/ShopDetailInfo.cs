@@ -20,5 +20,13 @@ namespace SuperPOS.Domain.Entities
         //店铺地址
         [XmlElement(ElementName = "ShopAddr")]
         public virtual string ShopAddr { get; set; }
+
+        //店铺电话
+        [XmlElement(ElementName = "ShopTelNo")]
+        public virtual string ShopTelNo { get; set; }
+
+        //VAT
+        [XmlElement(ElementName = "ShopVATNo")]
+        public virtual string ShopVATNo { get; set; }
     }
 }

@@ -49,11 +49,25 @@ namespace SuperPOS.UI.Sys
                 return;
             }
 
+            if (string.IsNullOrEmpty(txtTelNo.Text))
+            {
+                CommonTool.ShowMessage("Telephone No. is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtVatNo.Text))
+            {
+                CommonTool.ShowMessage("VAT No. is empty,please enter!");
+                return;
+            }
+
             try
             {
                 ShopDetailInfo shopDetailInfo = new ShopDetailInfo();
                 shopDetailInfo.ShopName = txtShopName.Text;
                 shopDetailInfo.ShopAddr = txtShopAddr.Text;
+                shopDetailInfo.ShopTelNo = txtTelNo.Text;
+                shopDetailInfo.ShopVATNo = txtVatNo.Text;
 
                 if (CommonData.ShopDetail.Any())
                 {
@@ -84,11 +98,15 @@ namespace SuperPOS.UI.Sys
                     shopDetailInfo = CommonData.ShopDetail.FirstOrDefault();
                     txtShopName.Text = shopDetailInfo.ShopName;
                     txtShopAddr.Text = shopDetailInfo.ShopAddr;
+                    txtTelNo.Text = shopDetailInfo.ShopTelNo;
+                    txtVatNo.Text = shopDetailInfo.ShopVATNo;
                 }
                 else
                 {
                     txtShopName.Text = "";
                     txtShopAddr.Text = "";
+                    txtTelNo.Text = "";
+                    txtVatNo.Text = "";
                 }
             }
             catch (Exception ex)
