@@ -10,6 +10,8 @@
 
     <property name="ShopName" column="ShopName" type="System.String" />
     <property name="ShopAddr" column="ShopAddr" type="System.String" />
+    <property name="ShopTelNo" column="ShopTelNo" type="System.String" />
+    <property name="ShopVATNo" column="ShopVATNo" type="System.String" />
   </class>
 
 </hibernate-mapping>
