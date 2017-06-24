@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,8 @@ namespace SuperPOS.UI.TA
 
         private readonly EntityControl _control = new EntityControl();
 
+        private Hashtable htDetail = new Hashtable();
+
         //是否已经付完款
         public bool returnPaid = false;
 
@@ -39,13 +42,14 @@ namespace SuperPOS.UI.TA
             InitializeComponent();
         }
 
-        public FrmTaPayment(int id, string chkId, string type, string caller)
+        public FrmTaPayment(int id, string chkId, string type, string caller, Hashtable ht)
         {
             InitializeComponent();
             usrID = id;
             checkID = chkId;
             orderType = type;
             callerID = caller;
+            htDetail = ht;
         }
         #endregion
 
