@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -471,7 +472,7 @@ namespace SuperPOS.UI.TA
             SaveCheckOrder(lstTaOI);
             #endregion
 
-            FrmTaPayment frmTaPayment = new FrmTaPayment(usrID, checkID, ORDER_TYPE, CallerID);
+            FrmTaPayment frmTaPayment = new FrmTaPayment(usrID, checkID, ORDER_TYPE, CallerID, SetPrtInfo(lstTaOI));
 
             if (frmTaPayment.ShowDialog() == DialogResult.OK)
             {
@@ -1254,6 +1255,24 @@ namespace SuperPOS.UI.TA
 
                 _control.AddEntity(taCheckOrderInfo);
             }
+        }
+        #endregion
+
+        #region 设置打印相关信息
+
+        private Hashtable SetPrtInfo(List<TaOrderItemInfo> lstOi)
+        {
+            Hashtable htDetail = new Hashtable();
+
+            new SystemData().GetUsrBase();
+
+            htDetail["Staff"] = CommonData.UsrBase.Any(s => s.ID == usrID) ? CommonData.UsrBase.FirstOrDefault(s => s.ID == usrID).UsrName : "";
+
+            htDetail["ItemQty"] = treeListOrder.Nodes.Count;
+            htDetail["SubTotal"] = lstOi.Sum(s => Convert.ToDecimal(s.ItemTotalPrice)).ToString();
+            htDetail["Total"] = lstOi.Sum(s => Convert.ToDecimal(s.ItemTotalPrice)).ToString();
+
+            return htDetail;
         }
         #endregion
 
