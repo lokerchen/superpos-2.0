@@ -43,6 +43,8 @@
             this.chkDriver2 = new DevExpress.XtraEditors.CheckEdit();
             this.chkDriver1 = new DevExpress.XtraEditors.CheckEdit();
             this.panelPay = new DevExpress.XtraEditors.PanelControl();
+            this.txtPaid = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.gridControlTaPayDetail = new DevExpress.XtraGrid.GridControl();
@@ -104,13 +106,11 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtPhone = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton13 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton14 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton15 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton16 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrtAll = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrtAllReceipt = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrtBillOnly = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrtKitOnly = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
-            this.txtPaid = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelDriver)).BeginInit();
@@ -129,6 +129,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkDriver1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelPay)).BeginInit();
             this.panelPay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTaPayDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTaPayDetail)).BeginInit();
@@ -158,7 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHouseNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPaid.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -330,6 +330,28 @@
             this.panelPay.Name = "panelPay";
             this.panelPay.Size = new System.Drawing.Size(544, 478);
             this.panelPay.TabIndex = 1;
+            // 
+            // txtPaid
+            // 
+            this.txtPaid.EditValue = "0.00";
+            this.txtPaid.Enabled = false;
+            this.txtPaid.Location = new System.Drawing.Point(97, 152);
+            this.txtPaid.Name = "txtPaid";
+            this.txtPaid.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtPaid.Properties.Appearance.Options.UseFont = true;
+            this.txtPaid.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPaid.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtPaid.Size = new System.Drawing.Size(118, 30);
+            this.txtPaid.TabIndex = 40;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl17.Location = new System.Drawing.Point(46, 155);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(45, 24);
+            this.labelControl17.TabIndex = 39;
+            this.labelControl17.Text = "Paid:";
             // 
             // txtTotal
             // 
@@ -946,37 +968,41 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Phone #1:";
             // 
-            // simpleButton13
+            // btnPrtAll
             // 
-            this.simpleButton13.Location = new System.Drawing.Point(45, 517);
-            this.simpleButton13.Name = "simpleButton13";
-            this.simpleButton13.Size = new System.Drawing.Size(151, 48);
-            this.simpleButton13.TabIndex = 9;
-            this.simpleButton13.Text = "Print All";
+            this.btnPrtAll.Location = new System.Drawing.Point(45, 517);
+            this.btnPrtAll.Name = "btnPrtAll";
+            this.btnPrtAll.Size = new System.Drawing.Size(151, 48);
+            this.btnPrtAll.TabIndex = 9;
+            this.btnPrtAll.Text = "Print All";
+            this.btnPrtAll.Click += new System.EventHandler(this.btnPrtAll_Click);
             // 
-            // simpleButton14
+            // btnPrtAllReceipt
             // 
-            this.simpleButton14.Location = new System.Drawing.Point(245, 517);
-            this.simpleButton14.Name = "simpleButton14";
-            this.simpleButton14.Size = new System.Drawing.Size(151, 48);
-            this.simpleButton14.TabIndex = 37;
-            this.simpleButton14.Text = "Print All And Receipt";
+            this.btnPrtAllReceipt.Location = new System.Drawing.Point(245, 517);
+            this.btnPrtAllReceipt.Name = "btnPrtAllReceipt";
+            this.btnPrtAllReceipt.Size = new System.Drawing.Size(151, 48);
+            this.btnPrtAllReceipt.TabIndex = 37;
+            this.btnPrtAllReceipt.Text = "Print All And Receipt";
+            this.btnPrtAllReceipt.Click += new System.EventHandler(this.btnPrtAllReceipt_Click);
             // 
-            // simpleButton15
+            // btnPrtBillOnly
             // 
-            this.simpleButton15.Location = new System.Drawing.Point(440, 517);
-            this.simpleButton15.Name = "simpleButton15";
-            this.simpleButton15.Size = new System.Drawing.Size(151, 48);
-            this.simpleButton15.TabIndex = 38;
-            this.simpleButton15.Text = "Print Bill Only";
+            this.btnPrtBillOnly.Location = new System.Drawing.Point(440, 517);
+            this.btnPrtBillOnly.Name = "btnPrtBillOnly";
+            this.btnPrtBillOnly.Size = new System.Drawing.Size(151, 48);
+            this.btnPrtBillOnly.TabIndex = 38;
+            this.btnPrtBillOnly.Text = "Print Bill Only";
+            this.btnPrtBillOnly.Click += new System.EventHandler(this.btnPrtBillOnly_Click);
             // 
-            // simpleButton16
+            // btnPrtKitOnly
             // 
-            this.simpleButton16.Location = new System.Drawing.Point(633, 517);
-            this.simpleButton16.Name = "simpleButton16";
-            this.simpleButton16.Size = new System.Drawing.Size(151, 48);
-            this.simpleButton16.TabIndex = 39;
-            this.simpleButton16.Text = "Print Kitchen Only";
+            this.btnPrtKitOnly.Location = new System.Drawing.Point(633, 517);
+            this.btnPrtKitOnly.Name = "btnPrtKitOnly";
+            this.btnPrtKitOnly.Size = new System.Drawing.Size(151, 48);
+            this.btnPrtKitOnly.TabIndex = 39;
+            this.btnPrtKitOnly.Text = "Print Kitchen Only";
+            this.btnPrtKitOnly.Click += new System.EventHandler(this.btnPrtKitOnly_Click);
             // 
             // btnExit
             // 
@@ -987,39 +1013,17 @@
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // txtPaid
-            // 
-            this.txtPaid.EditValue = "0.00";
-            this.txtPaid.Enabled = false;
-            this.txtPaid.Location = new System.Drawing.Point(97, 152);
-            this.txtPaid.Name = "txtPaid";
-            this.txtPaid.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.txtPaid.Properties.Appearance.Options.UseFont = true;
-            this.txtPaid.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtPaid.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtPaid.Size = new System.Drawing.Size(118, 30);
-            this.txtPaid.TabIndex = 40;
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl17.Location = new System.Drawing.Point(46, 155);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(45, 24);
-            this.labelControl17.TabIndex = 39;
-            this.labelControl17.Text = "Paid:";
-            // 
             // FrmTaPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 574);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.simpleButton16);
+            this.Controls.Add(this.btnPrtKitOnly);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.simpleButton15);
-            this.Controls.Add(this.simpleButton13);
-            this.Controls.Add(this.simpleButton14);
+            this.Controls.Add(this.btnPrtBillOnly);
+            this.Controls.Add(this.btnPrtAll);
+            this.Controls.Add(this.btnPrtAllReceipt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -1044,6 +1048,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelPay)).EndInit();
             this.panelPay.ResumeLayout(false);
             this.panelPay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTaPayDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTaPayDetail)).EndInit();
@@ -1074,7 +1079,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtHouseNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPaid.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1141,10 +1145,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn PayType;
         private DevExpress.XtraGrid.Columns.GridColumn PayAmount;
-        private DevExpress.XtraEditors.SimpleButton simpleButton16;
-        private DevExpress.XtraEditors.SimpleButton simpleButton15;
-        private DevExpress.XtraEditors.SimpleButton simpleButton14;
-        private DevExpress.XtraEditors.SimpleButton simpleButton13;
+        private DevExpress.XtraEditors.SimpleButton btnPrtKitOnly;
+        private DevExpress.XtraEditors.SimpleButton btnPrtBillOnly;
+        private DevExpress.XtraEditors.SimpleButton btnPrtAllReceipt;
+        private DevExpress.XtraEditors.SimpleButton btnPrtAll;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.CheckEdit chkDriver0;
         private DevExpress.XtraEditors.CheckEdit chkDriver11;
