@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using SuperPOS.Common;
 using SuperPOS.Domain.Entities;
+using SuperPOS.Print;
 
 namespace SuperPOS.UI.TA
 {
@@ -35,6 +36,8 @@ namespace SuperPOS.UI.TA
 
         //是否已经付完款
         public bool returnPaid = false;
+
+        private decimal dToPay = 0.00m;
 
         #region 构造函数
         public FrmTaPayment()
@@ -268,82 +271,136 @@ namespace SuperPOS.UI.TA
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDecimal(txtPay.Text) <= 0m) return;
-
-            #region 是否选中付款类型
-            //付款必选
-            bool isSelectPayType = chkPayType.Any(t => t.Checked);
-
-            int iPT = 0;
-            for (int i = 0; i < chkPayType.Length; i++)
-            {
-                if (chkPayType[i].Checked)
-                {
-                    iPT = i;
-                    break;
-                }
-            }
-            #endregion
-
-            #region 是否选中司机
-            //司机必选
-            bool isSelectDriver = chkDriver.Any(t => t.Checked);
-            int iDriver = 0;
-            for (int i = 0; i < chkDriver.Length; i++)
-            {
-                if (chkDriver[i].Checked)
-                {
-                    iDriver = i;
-                    break;
-                }
-            }
-            #endregion
-
-            if (orderType.Equals(PubComm.ORDER_TYPE_SHOP))
-            {
-                if (!isSelectPayType)
-                { 
-                    CommonTool.ShowMessage("Please select a payment type!");
-                    return;
-                }
-
-                SaveOrder(iPT, 0);
-            }
-            else if (orderType.Equals(PubComm.ORDER_TYPE_COLLECTION))
-            {
-                if (!isSelectPayType)
-                {
-                    CommonTool.ShowMessage("Please select a payment type!");
-                    return;
-                }
-
-                SaveOrder(iPT, 0);
-            }
-            else if (orderType.Equals(PubComm.ORDER_TYPE_DELIVERY))
-            {
-                //未选择付款方式
-                //提示选择付款方式  
-                //未选择司机
-                //提示选择司机
-
-                if (!isSelectPayType)
-                {
-                    CommonTool.ShowMessage("Please select a payment type!");
-                    return;
-                }
-
-                if (!isSelectDriver)
-                {
-                    CommonTool.ShowMessage("Please select a Driver!");
-                    return;
-                }
-
-                SaveOrder(iPT, iDriver);
-            }
-
-
+            
         }
 
+        #endregion
+
+        #region Print All
+        private void btnPrtAll_Click(object sender, EventArgs e)
+        {
+            SaveAllInfo();
+
+            if (returnPaid)
+            {
+                htDetail["Tendered"] = txtPaid.Text;
+                htDetail["Change"] = dToPay.ToString();
+
+                new SystemData().GetTaOrderItem();
+
+                var lstOI = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList();
+
+                PrtPrint.PrtBillBilingual(lstOI, htDetail);
+
+                htDetail["ChkNum"] = checkID;
+                PrtPrint.PrtKitchen(lstOI, htDetail);
+            }
+        }
+        #endregion
+
+        #region Print All and Receipte
+        private void btnPrtAllReceipt_Click(object sender, EventArgs e)
+        {
+            SaveAllInfo();
+
+            if (returnPaid)
+            {
+                htDetail["Tendered"] = txtPaid.Text;
+                htDetail["Change"] = dToPay.ToString();
+
+                #region VAT计算
+                if (CommonData.GenSet.Any())
+                {
+                    htDetail["Rate1"] = CommonData.GenSet.FirstOrDefault().VATPer + @"%";
+
+                    var lstVAT = from oi in CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID))
+                                 join mi in CommonData.TaMenuItem on oi.ItemCode equals mi.MiDishCode
+                                 where !string.IsNullOrEmpty(mi.MiRmk) && mi.MiRmk.Contains(@"Without VAT")
+                                 select new
+                                 {
+                                     itemTotalPrice = oi.ItemTotalPrice
+                                 };
+
+                    decimal dTotal = 0;
+                    decimal dVatTmp = 0;
+                    decimal dVat = 0;
+
+                    if (lstVAT.Any())
+                    {
+                        dTotal = lstVAT.ToList().Sum(vat => Convert.ToDecimal(vat.itemTotalPrice));
+                        //交税
+                        dVatTmp = (Convert.ToDecimal(CommonData.GenSet.FirstOrDefault().VATPer) / 100) * dTotal;
+
+                        dVat = Math.Round(dVatTmp, 2, MidpointRounding.AwayFromZero);
+                    }
+
+                    htDetail["VAT-A"] = dVat.ToString();
+                    //税前
+                    htDetail["Net1"] = dTotal.ToString();
+                    //总价
+                    htDetail["Gross1"] = (dTotal - dVat).ToString();
+                    htDetail["Rate2"] = "0.00%";
+                    htDetail["Net2"] = (Convert.ToDecimal(txtTotal.Text) - dTotal).ToString();
+                    htDetail["VAT-B"] = "0.00";
+                    htDetail["Gross2"] = (Convert.ToDecimal(txtTotal.Text) - dTotal).ToString();
+                }
+                else
+                {
+                    htDetail["Rate1"] = "0.00%";
+                    htDetail["Net1"] = "0.00";
+                    htDetail["VAT-A"] = "0.00";
+                    htDetail["Gross1"] = "0.00";
+                    htDetail["Rate2"] = "0.00%";
+                    htDetail["Net2"] = "0.00";
+                    htDetail["VAT-B"] = "0.00";
+                    htDetail["Gross2"] = "0.00";
+                }
+                #endregion
+
+                new SystemData().GetTaOrderItem();
+                var lstOI = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList();
+
+                PrtPrint.PrtBillBilingual(lstOI, htDetail);
+
+                htDetail["ChkNum"] = checkID;
+                PrtPrint.PrtKitchen(lstOI, htDetail);
+            }
+        }
+        #endregion
+
+        #region Print Bill
+        private void btnPrtBillOnly_Click(object sender, EventArgs e)
+        {
+            SaveAllInfo();
+
+            if (returnPaid)
+            {
+                htDetail["Tendered"] = txtPaid.Text;
+                htDetail["Change"] = dToPay.ToString();
+
+                new SystemData().GetTaOrderItem();
+                var lstOI = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList();
+
+                PrtPrint.PrtBillBilingual(lstOI, htDetail);
+            }
+        }
+        #endregion
+
+        #region Print Kitchen
+        private void btnPrtKitOnly_Click(object sender, EventArgs e)
+        {
+            SaveAllInfo();
+
+            if (returnPaid)
+            {
+                new SystemData().GetTaOrderItem();
+                var lstOI = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList();
+
+                //打印厨房单
+                htDetail["ChkNum"] = checkID;
+                PrtPrint.PrtKitchen(lstOI, htDetail);
+            }
+        }
         #endregion
 
         #region 方法
@@ -635,7 +692,7 @@ namespace SuperPOS.UI.TA
 
             txtPay.Text = "0.00";
 
-            decimal dToPay = Convert.ToDecimal(txtTotal.Text) - Convert.ToDecimal(txtPaid.Text);
+            dToPay = Convert.ToDecimal(txtTotal.Text) - Convert.ToDecimal(txtPaid.Text);
 
             //判断是否已经超过需付款值
             if (dToPay <= 0.00m)
@@ -673,6 +730,79 @@ namespace SuperPOS.UI.TA
             else
             {
                 txtToPay.Text = dToPay.ToString("0.00");
+            }
+        }
+        #endregion
+
+        #region 保存所有信息
+        private void SaveAllInfo()
+        {
+            if (Convert.ToDecimal(txtPay.Text) <= 0m) return;
+
+            #region 是否选中付款类型
+            //付款必选
+            bool isSelectPayType = chkPayType.Any(t => t.Checked);
+
+            int iPT = 0;
+            for (int i = 0; i < chkPayType.Length; i++)
+            {
+                if (chkPayType[i].Checked)
+                {
+                    iPT = i;
+                    break;
+                }
+            }
+            #endregion
+
+            #region 是否选中司机
+            //司机必选
+            bool isSelectDriver = chkDriver.Any(t => t.Checked);
+            int iDriver = 0;
+            for (int i = 0; i < chkDriver.Length; i++)
+            {
+                if (chkDriver[i].Checked)
+                {
+                    iDriver = i;
+                    break;
+                }
+            }
+            #endregion
+
+            if (orderType.Equals(PubComm.ORDER_TYPE_SHOP))
+            {
+                if (!isSelectPayType)
+                {
+                    CommonTool.ShowMessage("Please select a payment type!");
+                    return;
+                }
+
+                SaveOrder(iPT, 0);
+            }
+            else if (orderType.Equals(PubComm.ORDER_TYPE_COLLECTION))
+            {
+                if (!isSelectPayType)
+                {
+                    CommonTool.ShowMessage("Please select a payment type!");
+                    return;
+                }
+
+                SaveOrder(iPT, 0);
+            }
+            else if (orderType.Equals(PubComm.ORDER_TYPE_DELIVERY))
+            {
+                if (!isSelectPayType)
+                {
+                    CommonTool.ShowMessage("Please select a payment type!");
+                    return;
+                }
+
+                if (!isSelectDriver)
+                {
+                    CommonTool.ShowMessage("Please select a Driver!");
+                    return;
+                }
+
+                SaveOrder(iPT, iDriver);
             }
         }
         #endregion
