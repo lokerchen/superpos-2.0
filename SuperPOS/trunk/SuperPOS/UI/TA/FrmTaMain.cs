@@ -1152,7 +1152,16 @@ namespace SuperPOS.UI.TA
                                     //strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到来电号码 " + FromASCIIByteArray(EventData.szData);
 
                                     //MessageBox.Show(strValue);
-                                    CallerID = FromASCIIByteArray(EventData.szData);
+                                    string CallerPhone = FromASCIIByteArray(EventData.szData);
+
+                                    if (string.IsNullOrEmpty(CallerPhone))
+                                    {
+                                        //新客户
+                                    }
+                                    else
+                                    {
+                                        //老客户
+                                    }
                                 }
                                 break;
                             case BriSDKLib.BriEvent_StopCallIn:
