@@ -170,7 +170,7 @@
             this.treeListOrder.OptionsView.ShowSummaryFooter = true;
             this.treeListOrder.ParentFieldName = "ItemParent";
             this.treeListOrder.RowHeight = 30;
-            this.treeListOrder.Size = new System.Drawing.Size(402, 557);
+            this.treeListOrder.Size = new System.Drawing.Size(390, 584);
             this.treeListOrder.TabIndex = 0;
             this.treeListOrder.CustomDrawNodeIndicator += new DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventHandler(this.treeListOrder_CustomDrawNodeIndicator);
             // 
@@ -203,7 +203,7 @@
             this.ItemDishName.OptionsFilter.AllowAutoFilter = false;
             this.ItemDishName.Visible = true;
             this.ItemDishName.VisibleIndex = 0;
-            this.ItemDishName.Width = 232;
+            this.ItemDishName.Width = 216;
             // 
             // ItemDishOtherName
             // 
@@ -223,7 +223,7 @@
             this.ItemQty.SummaryFooter = DevExpress.XtraTreeList.SummaryItemType.Sum;
             this.ItemQty.Visible = true;
             this.ItemQty.VisibleIndex = 1;
-            this.ItemQty.Width = 49;
+            this.ItemQty.Width = 56;
             // 
             // ItemPrice
             // 
@@ -245,7 +245,7 @@
             this.ItemTotalPrice.SummaryFooterStrFormat = "{0:f2}";
             this.ItemTotalPrice.Visible = true;
             this.ItemTotalPrice.VisibleIndex = 2;
-            this.ItemTotalPrice.Width = 79;
+            this.ItemTotalPrice.Width = 76;
             // 
             // CheckCode
             // 
@@ -289,7 +289,7 @@
             this.panelControl1.Controls.Add(this.treeListOrder);
             this.panelControl1.Location = new System.Drawing.Point(5, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(412, 659);
+            this.panelControl1.Size = new System.Drawing.Size(400, 684);
             this.panelControl1.TabIndex = 1;
             // 
             // lblCheck
@@ -297,7 +297,7 @@
             this.lblCheck.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCheck.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblCheck.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCheck.Location = new System.Drawing.Point(292, 8);
+            this.lblCheck.Location = new System.Drawing.Point(283, 9);
             this.lblCheck.Name = "lblCheck";
             this.lblCheck.Size = new System.Drawing.Size(112, 30);
             this.lblCheck.TabIndex = 7;
@@ -314,45 +314,55 @@
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(328, 607);
+            this.btnDel.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Appearance.Options.UseFont = true;
+            this.btnDel.Location = new System.Drawing.Point(328, 634);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(76, 45);
+            this.btnDel.Size = new System.Drawing.Size(68, 45);
             this.btnDel.TabIndex = 5;
             this.btnDel.Text = "X";
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnReduce
             // 
-            this.btnReduce.Location = new System.Drawing.Point(248, 607);
+            this.btnReduce.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReduce.Appearance.Options.UseFont = true;
+            this.btnReduce.Location = new System.Drawing.Point(248, 634);
             this.btnReduce.Name = "btnReduce";
-            this.btnReduce.Size = new System.Drawing.Size(76, 45);
+            this.btnReduce.Size = new System.Drawing.Size(68, 45);
             this.btnReduce.TabIndex = 4;
             this.btnReduce.Text = "-";
             this.btnReduce.Click += new System.EventHandler(this.btnReduce_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(168, 607);
+            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Appearance.Options.UseFont = true;
+            this.btnAdd.Location = new System.Drawing.Point(168, 634);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(76, 45);
+            this.btnAdd.Size = new System.Drawing.Size(68, 45);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "+";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(88, 607);
+            this.btnDown.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDown.Appearance.Options.UseFont = true;
+            this.btnDown.Location = new System.Drawing.Point(88, 634);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(76, 45);
+            this.btnDown.Size = new System.Drawing.Size(68, 45);
             this.btnDown.TabIndex = 2;
             this.btnDown.Text = "↓";
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(8, 607);
+            this.btnUp.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.Appearance.Options.UseFont = true;
+            this.btnUp.Location = new System.Drawing.Point(8, 634);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(76, 45);
+            this.btnUp.Size = new System.Drawing.Size(68, 45);
             this.btnUp.TabIndex = 1;
             this.btnUp.Text = "↑";
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
@@ -377,9 +387,9 @@
             this.panelControl2.Controls.Add(this.btnMi8);
             this.panelControl2.Controls.Add(this.btnMi9);
             this.panelControl2.Controls.Add(this.btnMi11);
-            this.panelControl2.Location = new System.Drawing.Point(542, 5);
+            this.panelControl2.Location = new System.Drawing.Point(537, 5);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(717, 247);
+            this.panelControl2.Size = new System.Drawing.Size(623, 247);
             this.panelControl2.TabIndex = 3;
             // 
             // btnMi14
@@ -388,9 +398,9 @@
             this.btnMi14.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi14.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi14.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi14.Location = new System.Drawing.Point(335, 185);
+            this.btnMi14.Location = new System.Drawing.Point(295, 185);
             this.btnMi14.Name = "btnMi14";
-            this.btnMi14.Size = new System.Drawing.Size(160, 55);
+            this.btnMi14.Size = new System.Drawing.Size(142, 55);
             this.btnMi14.TabIndex = 34;
             // 
             // btnMi12
@@ -399,9 +409,9 @@
             this.btnMi12.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi12.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi12.Location = new System.Drawing.Point(7, 185);
+            this.btnMi12.Location = new System.Drawing.Point(5, 185);
             this.btnMi12.Name = "btnMi12";
-            this.btnMi12.Size = new System.Drawing.Size(160, 55);
+            this.btnMi12.Size = new System.Drawing.Size(142, 55);
             this.btnMi12.TabIndex = 32;
             // 
             // btnMi13
@@ -410,9 +420,9 @@
             this.btnMi13.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi13.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi13.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi13.Location = new System.Drawing.Point(171, 185);
+            this.btnMi13.Location = new System.Drawing.Point(150, 185);
             this.btnMi13.Name = "btnMi13";
-            this.btnMi13.Size = new System.Drawing.Size(160, 55);
+            this.btnMi13.Size = new System.Drawing.Size(142, 55);
             this.btnMi13.TabIndex = 33;
             // 
             // btnMi15
@@ -421,9 +431,9 @@
             this.btnMi15.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi15.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi15.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi15.Location = new System.Drawing.Point(499, 185);
+            this.btnMi15.Location = new System.Drawing.Point(440, 185);
             this.btnMi15.Name = "btnMi15";
-            this.btnMi15.Size = new System.Drawing.Size(160, 55);
+            this.btnMi15.Size = new System.Drawing.Size(142, 55);
             this.btnMi15.TabIndex = 35;
             // 
             // btnMi7
@@ -432,9 +442,9 @@
             this.btnMi7.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi7.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi7.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi7.Location = new System.Drawing.Point(499, 67);
+            this.btnMi7.Location = new System.Drawing.Point(440, 67);
             this.btnMi7.Name = "btnMi7";
-            this.btnMi7.Size = new System.Drawing.Size(160, 55);
+            this.btnMi7.Size = new System.Drawing.Size(142, 55);
             this.btnMi7.TabIndex = 31;
             // 
             // btnMi3
@@ -443,9 +453,9 @@
             this.btnMi3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi3.Location = new System.Drawing.Point(499, 8);
+            this.btnMi3.Location = new System.Drawing.Point(440, 8);
             this.btnMi3.Name = "btnMi3";
-            this.btnMi3.Size = new System.Drawing.Size(160, 55);
+            this.btnMi3.Size = new System.Drawing.Size(142, 55);
             this.btnMi3.TabIndex = 31;
             // 
             // btnMi6
@@ -454,18 +464,18 @@
             this.btnMi6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi6.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi6.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi6.Location = new System.Drawing.Point(335, 67);
+            this.btnMi6.Location = new System.Drawing.Point(295, 67);
             this.btnMi6.Name = "btnMi6";
-            this.btnMi6.Size = new System.Drawing.Size(160, 55);
+            this.btnMi6.Size = new System.Drawing.Size(142, 55);
             this.btnMi6.TabIndex = 30;
             // 
             // btnMiRight
             // 
             this.btnMiRight.Appearance.Options.UseTextOptions = true;
             this.btnMiRight.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMiRight.Location = new System.Drawing.Point(665, 7);
+            this.btnMiRight.Location = new System.Drawing.Point(585, 8);
             this.btnMiRight.Name = "btnMiRight";
-            this.btnMiRight.Size = new System.Drawing.Size(40, 112);
+            this.btnMiRight.Size = new System.Drawing.Size(34, 112);
             this.btnMiRight.TabIndex = 14;
             this.btnMiRight.Text = ">>";
             this.btnMiRight.Click += new System.EventHandler(this.btnMiRight_Click);
@@ -476,9 +486,9 @@
             this.btnMi5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi5.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi5.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi5.Location = new System.Drawing.Point(171, 67);
+            this.btnMi5.Location = new System.Drawing.Point(150, 67);
             this.btnMi5.Name = "btnMi5";
-            this.btnMi5.Size = new System.Drawing.Size(160, 55);
+            this.btnMi5.Size = new System.Drawing.Size(142, 55);
             this.btnMi5.TabIndex = 29;
             // 
             // btnMi4
@@ -487,9 +497,9 @@
             this.btnMi4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi4.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi4.Location = new System.Drawing.Point(7, 67);
+            this.btnMi4.Location = new System.Drawing.Point(5, 67);
             this.btnMi4.Name = "btnMi4";
-            this.btnMi4.Size = new System.Drawing.Size(160, 55);
+            this.btnMi4.Size = new System.Drawing.Size(142, 55);
             this.btnMi4.TabIndex = 28;
             // 
             // btnMi2
@@ -498,18 +508,18 @@
             this.btnMi2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi2.Location = new System.Drawing.Point(335, 8);
+            this.btnMi2.Location = new System.Drawing.Point(295, 8);
             this.btnMi2.Name = "btnMi2";
-            this.btnMi2.Size = new System.Drawing.Size(160, 55);
+            this.btnMi2.Size = new System.Drawing.Size(142, 55);
             this.btnMi2.TabIndex = 30;
             // 
             // btnMiLeft
             // 
             this.btnMiLeft.Appearance.Options.UseTextOptions = true;
             this.btnMiLeft.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMiLeft.Location = new System.Drawing.Point(665, 123);
+            this.btnMiLeft.Location = new System.Drawing.Point(585, 126);
             this.btnMiLeft.Name = "btnMiLeft";
-            this.btnMiLeft.Size = new System.Drawing.Size(40, 114);
+            this.btnMiLeft.Size = new System.Drawing.Size(34, 114);
             this.btnMiLeft.TabIndex = 15;
             this.btnMiLeft.Text = "<<";
             this.btnMiLeft.Click += new System.EventHandler(this.btnMiLeft_Click);
@@ -520,9 +530,9 @@
             this.btnMi1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi1.Location = new System.Drawing.Point(171, 8);
+            this.btnMi1.Location = new System.Drawing.Point(150, 8);
             this.btnMi1.Name = "btnMi1";
-            this.btnMi1.Size = new System.Drawing.Size(160, 55);
+            this.btnMi1.Size = new System.Drawing.Size(142, 55);
             this.btnMi1.TabIndex = 29;
             // 
             // btnMi0
@@ -531,9 +541,9 @@
             this.btnMi0.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi0.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi0.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi0.Location = new System.Drawing.Point(7, 8);
+            this.btnMi0.Location = new System.Drawing.Point(5, 8);
             this.btnMi0.Name = "btnMi0";
-            this.btnMi0.Size = new System.Drawing.Size(160, 55);
+            this.btnMi0.Size = new System.Drawing.Size(142, 55);
             this.btnMi0.TabIndex = 28;
             // 
             // btnMi10
@@ -542,9 +552,9 @@
             this.btnMi10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi10.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi10.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi10.Location = new System.Drawing.Point(335, 126);
+            this.btnMi10.Location = new System.Drawing.Point(295, 126);
             this.btnMi10.Name = "btnMi10";
-            this.btnMi10.Size = new System.Drawing.Size(160, 55);
+            this.btnMi10.Size = new System.Drawing.Size(142, 55);
             this.btnMi10.TabIndex = 10;
             // 
             // btnMi8
@@ -553,9 +563,9 @@
             this.btnMi8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi8.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi8.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi8.Location = new System.Drawing.Point(7, 126);
+            this.btnMi8.Location = new System.Drawing.Point(5, 126);
             this.btnMi8.Name = "btnMi8";
-            this.btnMi8.Size = new System.Drawing.Size(160, 55);
+            this.btnMi8.Size = new System.Drawing.Size(142, 55);
             this.btnMi8.TabIndex = 3;
             // 
             // btnMi9
@@ -564,9 +574,9 @@
             this.btnMi9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi9.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi9.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi9.Location = new System.Drawing.Point(171, 126);
+            this.btnMi9.Location = new System.Drawing.Point(150, 126);
             this.btnMi9.Name = "btnMi9";
-            this.btnMi9.Size = new System.Drawing.Size(160, 55);
+            this.btnMi9.Size = new System.Drawing.Size(142, 55);
             this.btnMi9.TabIndex = 9;
             // 
             // btnMi11
@@ -575,20 +585,24 @@
             this.btnMi11.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMi11.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMi11.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMi11.Location = new System.Drawing.Point(499, 126);
+            this.btnMi11.Location = new System.Drawing.Point(440, 126);
             this.btnMi11.Name = "btnMi11";
-            this.btnMi11.Size = new System.Drawing.Size(160, 55);
+            this.btnMi11.Size = new System.Drawing.Size(142, 55);
             this.btnMi11.TabIndex = 11;
             // 
             // panelControl4
             // 
+            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl4.AutoSize = true;
             this.panelControl4.Controls.Add(this.panelControl5);
             this.panelControl4.Controls.Add(this.panelControl1);
             this.panelControl4.Controls.Add(this.panelControl3);
             this.panelControl4.Controls.Add(this.panelControl2);
             this.panelControl4.Location = new System.Drawing.Point(1, 3);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1268, 669);
+            this.panelControl4.Size = new System.Drawing.Size(1167, 698);
             this.panelControl4.TabIndex = 5;
             // 
             // panelControl5
@@ -607,16 +621,18 @@
             this.panelControl5.Controls.Add(this.btnCid);
             this.panelControl5.Controls.Add(this.btnCustInfo);
             this.panelControl5.Controls.Add(this.btnSaveOrder);
-            this.panelControl5.Location = new System.Drawing.Point(418, 5);
+            this.panelControl5.Location = new System.Drawing.Point(409, 5);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(123, 659);
+            this.panelControl5.Size = new System.Drawing.Size(123, 686);
             this.panelControl5.TabIndex = 5;
             // 
             // btnPay
             // 
+            this.btnPay.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.Appearance.Options.UseFont = true;
             this.btnPay.Appearance.Options.UseTextOptions = true;
             this.btnPay.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnPay.Location = new System.Drawing.Point(8, 605);
+            this.btnPay.Location = new System.Drawing.Point(6, 642);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(111, 42);
             this.btnPay.TabIndex = 29;
@@ -625,9 +641,11 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.Appearance.Options.UseTextOptions = true;
             this.btnCancel.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnCancel.Location = new System.Drawing.Point(7, 559);
+            this.btnCancel.Location = new System.Drawing.Point(6, 596);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(111, 42);
             this.btnCancel.TabIndex = 28;
@@ -636,9 +654,11 @@
             // 
             // btnKeypad
             // 
+            this.btnKeypad.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeypad.Appearance.Options.UseFont = true;
             this.btnKeypad.Appearance.Options.UseTextOptions = true;
             this.btnKeypad.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnKeypad.Location = new System.Drawing.Point(9, 513);
+            this.btnKeypad.Location = new System.Drawing.Point(6, 547);
             this.btnKeypad.Name = "btnKeypad";
             this.btnKeypad.Size = new System.Drawing.Size(111, 42);
             this.btnKeypad.TabIndex = 27;
@@ -646,9 +666,11 @@
             // 
             // btnOrderType
             // 
+            this.btnOrderType.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderType.Appearance.Options.UseFont = true;
             this.btnOrderType.Appearance.Options.UseTextOptions = true;
             this.btnOrderType.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnOrderType.Location = new System.Drawing.Point(8, 467);
+            this.btnOrderType.Location = new System.Drawing.Point(6, 498);
             this.btnOrderType.Name = "btnOrderType";
             this.btnOrderType.Size = new System.Drawing.Size(111, 42);
             this.btnOrderType.TabIndex = 26;
@@ -657,9 +679,11 @@
             // 
             // btnLanguage
             // 
+            this.btnLanguage.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Appearance.Options.UseFont = true;
             this.btnLanguage.Appearance.Options.UseTextOptions = true;
             this.btnLanguage.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnLanguage.Location = new System.Drawing.Point(8, 421);
+            this.btnLanguage.Location = new System.Drawing.Point(6, 449);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(111, 42);
             this.btnLanguage.TabIndex = 25;
@@ -668,9 +692,11 @@
             // 
             // btnSearchMeal
             // 
+            this.btnSearchMeal.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchMeal.Appearance.Options.UseFont = true;
             this.btnSearchMeal.Appearance.Options.UseTextOptions = true;
             this.btnSearchMeal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnSearchMeal.Location = new System.Drawing.Point(7, 375);
+            this.btnSearchMeal.Location = new System.Drawing.Point(6, 400);
             this.btnSearchMeal.Name = "btnSearchMeal";
             this.btnSearchMeal.Size = new System.Drawing.Size(111, 42);
             this.btnSearchMeal.TabIndex = 24;
@@ -678,9 +704,11 @@
             // 
             // btnMenu
             // 
+            this.btnMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Appearance.Options.UseFont = true;
             this.btnMenu.Appearance.Options.UseTextOptions = true;
             this.btnMenu.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMenu.Location = new System.Drawing.Point(7, 329);
+            this.btnMenu.Location = new System.Drawing.Point(6, 351);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(111, 42);
             this.btnMenu.TabIndex = 23;
@@ -691,7 +719,7 @@
             // 
             this.btnPendOrder.Appearance.Options.UseTextOptions = true;
             this.btnPendOrder.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnPendOrder.Location = new System.Drawing.Point(6, 283);
+            this.btnPendOrder.Location = new System.Drawing.Point(6, 302);
             this.btnPendOrder.Name = "btnPendOrder";
             this.btnPendOrder.Size = new System.Drawing.Size(111, 42);
             this.btnPendOrder.TabIndex = 22;
@@ -699,9 +727,11 @@
             // 
             // btnIngredMode
             // 
+            this.btnIngredMode.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnIngredMode.Appearance.Options.UseFont = true;
             this.btnIngredMode.Appearance.Options.UseTextOptions = true;
             this.btnIngredMode.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnIngredMode.Location = new System.Drawing.Point(7, 237);
+            this.btnIngredMode.Location = new System.Drawing.Point(6, 253);
             this.btnIngredMode.Name = "btnIngredMode";
             this.btnIngredMode.Size = new System.Drawing.Size(111, 42);
             this.btnIngredMode.TabIndex = 21;
@@ -710,9 +740,11 @@
             // 
             // btnHome
             // 
+            this.btnHome.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Appearance.Options.UseFont = true;
             this.btnHome.Appearance.Options.UseTextOptions = true;
             this.btnHome.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnHome.Location = new System.Drawing.Point(6, 191);
+            this.btnHome.Location = new System.Drawing.Point(6, 203);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(111, 42);
             this.btnHome.TabIndex = 20;
@@ -720,9 +752,11 @@
             // 
             // btnAppend
             // 
+            this.btnAppend.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppend.Appearance.Options.UseFont = true;
             this.btnAppend.Appearance.Options.UseTextOptions = true;
             this.btnAppend.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnAppend.Location = new System.Drawing.Point(7, 145);
+            this.btnAppend.Location = new System.Drawing.Point(6, 154);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(111, 42);
             this.btnAppend.TabIndex = 19;
@@ -731,9 +765,11 @@
             // 
             // btnCid
             // 
+            this.btnCid.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCid.Appearance.Options.UseFont = true;
             this.btnCid.Appearance.Options.UseTextOptions = true;
             this.btnCid.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnCid.Location = new System.Drawing.Point(6, 99);
+            this.btnCid.Location = new System.Drawing.Point(6, 105);
             this.btnCid.Name = "btnCid";
             this.btnCid.Size = new System.Drawing.Size(111, 42);
             this.btnCid.TabIndex = 18;
@@ -741,9 +777,11 @@
             // 
             // btnCustInfo
             // 
+            this.btnCustInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustInfo.Appearance.Options.UseFont = true;
             this.btnCustInfo.Appearance.Options.UseTextOptions = true;
             this.btnCustInfo.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnCustInfo.Location = new System.Drawing.Point(7, 53);
+            this.btnCustInfo.Location = new System.Drawing.Point(6, 56);
             this.btnCustInfo.Name = "btnCustInfo";
             this.btnCustInfo.Size = new System.Drawing.Size(111, 42);
             this.btnCustInfo.TabIndex = 17;
@@ -751,6 +789,8 @@
             // 
             // btnSaveOrder
             // 
+            this.btnSaveOrder.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveOrder.Appearance.Options.UseFont = true;
             this.btnSaveOrder.Appearance.Options.UseTextOptions = true;
             this.btnSaveOrder.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.btnSaveOrder.Location = new System.Drawing.Point(6, 7);
@@ -806,333 +846,333 @@
             this.panelControl3.Controls.Add(this.btnMc2);
             this.panelControl3.Controls.Add(this.btnMc1);
             this.panelControl3.Controls.Add(this.btnMc0);
-            this.panelControl3.Location = new System.Drawing.Point(542, 269);
+            this.panelControl3.Location = new System.Drawing.Point(538, 256);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(717, 395);
+            this.panelControl3.Size = new System.Drawing.Size(622, 433);
             this.panelControl3.TabIndex = 4;
             // 
             // btnMc41
             // 
             this.btnMc41.Appearance.Options.UseTextOptions = true;
             this.btnMc41.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc41.Location = new System.Drawing.Point(551, 336);
+            this.btnMc41.Location = new System.Drawing.Point(514, 330);
             this.btnMc41.Name = "btnMc41";
-            this.btnMc41.Size = new System.Drawing.Size(105, 50);
+            this.btnMc41.Size = new System.Drawing.Size(100, 50);
             this.btnMc41.TabIndex = 57;
             // 
             // btnMc40
             // 
             this.btnMc40.Appearance.Options.UseTextOptions = true;
             this.btnMc40.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc40.Location = new System.Drawing.Point(442, 336);
+            this.btnMc40.Location = new System.Drawing.Point(412, 330);
             this.btnMc40.Name = "btnMc40";
-            this.btnMc40.Size = new System.Drawing.Size(105, 50);
+            this.btnMc40.Size = new System.Drawing.Size(100, 50);
             this.btnMc40.TabIndex = 56;
             // 
             // btnMc39
             // 
             this.btnMc39.Appearance.Options.UseTextOptions = true;
             this.btnMc39.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc39.Location = new System.Drawing.Point(333, 336);
+            this.btnMc39.Location = new System.Drawing.Point(310, 330);
             this.btnMc39.Name = "btnMc39";
-            this.btnMc39.Size = new System.Drawing.Size(105, 50);
+            this.btnMc39.Size = new System.Drawing.Size(100, 50);
             this.btnMc39.TabIndex = 55;
             // 
             // btnMc38
             // 
             this.btnMc38.Appearance.Options.UseTextOptions = true;
             this.btnMc38.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc38.Location = new System.Drawing.Point(224, 336);
+            this.btnMc38.Location = new System.Drawing.Point(208, 330);
             this.btnMc38.Name = "btnMc38";
-            this.btnMc38.Size = new System.Drawing.Size(105, 50);
+            this.btnMc38.Size = new System.Drawing.Size(100, 50);
             this.btnMc38.TabIndex = 54;
             // 
             // btnMc37
             // 
             this.btnMc37.Appearance.Options.UseTextOptions = true;
             this.btnMc37.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc37.Location = new System.Drawing.Point(115, 336);
+            this.btnMc37.Location = new System.Drawing.Point(106, 330);
             this.btnMc37.Name = "btnMc37";
-            this.btnMc37.Size = new System.Drawing.Size(105, 50);
+            this.btnMc37.Size = new System.Drawing.Size(100, 50);
             this.btnMc37.TabIndex = 53;
             // 
             // btnMc36
             // 
             this.btnMc36.Appearance.Options.UseTextOptions = true;
             this.btnMc36.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc36.Location = new System.Drawing.Point(6, 336);
+            this.btnMc36.Location = new System.Drawing.Point(4, 330);
             this.btnMc36.Name = "btnMc36";
-            this.btnMc36.Size = new System.Drawing.Size(105, 50);
+            this.btnMc36.Size = new System.Drawing.Size(100, 50);
             this.btnMc36.TabIndex = 52;
             // 
             // btnMc35
             // 
             this.btnMc35.Appearance.Options.UseTextOptions = true;
             this.btnMc35.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc35.Location = new System.Drawing.Point(551, 282);
+            this.btnMc35.Location = new System.Drawing.Point(514, 276);
             this.btnMc35.Name = "btnMc35";
-            this.btnMc35.Size = new System.Drawing.Size(105, 50);
+            this.btnMc35.Size = new System.Drawing.Size(100, 50);
             this.btnMc35.TabIndex = 51;
             // 
             // btnMc34
             // 
             this.btnMc34.Appearance.Options.UseTextOptions = true;
             this.btnMc34.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc34.Location = new System.Drawing.Point(442, 282);
+            this.btnMc34.Location = new System.Drawing.Point(412, 276);
             this.btnMc34.Name = "btnMc34";
-            this.btnMc34.Size = new System.Drawing.Size(105, 50);
+            this.btnMc34.Size = new System.Drawing.Size(100, 50);
             this.btnMc34.TabIndex = 50;
             // 
             // btnMc33
             // 
             this.btnMc33.Appearance.Options.UseTextOptions = true;
             this.btnMc33.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc33.Location = new System.Drawing.Point(333, 282);
+            this.btnMc33.Location = new System.Drawing.Point(310, 276);
             this.btnMc33.Name = "btnMc33";
-            this.btnMc33.Size = new System.Drawing.Size(105, 50);
+            this.btnMc33.Size = new System.Drawing.Size(100, 50);
             this.btnMc33.TabIndex = 49;
             // 
             // btnMc32
             // 
             this.btnMc32.Appearance.Options.UseTextOptions = true;
             this.btnMc32.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc32.Location = new System.Drawing.Point(224, 282);
+            this.btnMc32.Location = new System.Drawing.Point(208, 276);
             this.btnMc32.Name = "btnMc32";
-            this.btnMc32.Size = new System.Drawing.Size(105, 50);
+            this.btnMc32.Size = new System.Drawing.Size(100, 50);
             this.btnMc32.TabIndex = 48;
             // 
             // btnMc31
             // 
             this.btnMc31.Appearance.Options.UseTextOptions = true;
             this.btnMc31.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc31.Location = new System.Drawing.Point(115, 282);
+            this.btnMc31.Location = new System.Drawing.Point(106, 276);
             this.btnMc31.Name = "btnMc31";
-            this.btnMc31.Size = new System.Drawing.Size(105, 50);
+            this.btnMc31.Size = new System.Drawing.Size(100, 50);
             this.btnMc31.TabIndex = 47;
             // 
             // btnMc30
             // 
             this.btnMc30.Appearance.Options.UseTextOptions = true;
             this.btnMc30.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc30.Location = new System.Drawing.Point(6, 282);
+            this.btnMc30.Location = new System.Drawing.Point(4, 276);
             this.btnMc30.Name = "btnMc30";
-            this.btnMc30.Size = new System.Drawing.Size(105, 50);
+            this.btnMc30.Size = new System.Drawing.Size(100, 50);
             this.btnMc30.TabIndex = 46;
             // 
             // btnMc29
             // 
             this.btnMc29.Appearance.Options.UseTextOptions = true;
             this.btnMc29.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc29.Location = new System.Drawing.Point(551, 228);
+            this.btnMc29.Location = new System.Drawing.Point(514, 222);
             this.btnMc29.Name = "btnMc29";
-            this.btnMc29.Size = new System.Drawing.Size(105, 50);
+            this.btnMc29.Size = new System.Drawing.Size(100, 50);
             this.btnMc29.TabIndex = 45;
             // 
             // btnMc28
             // 
             this.btnMc28.Appearance.Options.UseTextOptions = true;
             this.btnMc28.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc28.Location = new System.Drawing.Point(442, 228);
+            this.btnMc28.Location = new System.Drawing.Point(412, 222);
             this.btnMc28.Name = "btnMc28";
-            this.btnMc28.Size = new System.Drawing.Size(105, 50);
+            this.btnMc28.Size = new System.Drawing.Size(100, 50);
             this.btnMc28.TabIndex = 44;
             // 
             // btnMc27
             // 
             this.btnMc27.Appearance.Options.UseTextOptions = true;
             this.btnMc27.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc27.Location = new System.Drawing.Point(333, 228);
+            this.btnMc27.Location = new System.Drawing.Point(310, 222);
             this.btnMc27.Name = "btnMc27";
-            this.btnMc27.Size = new System.Drawing.Size(105, 50);
+            this.btnMc27.Size = new System.Drawing.Size(100, 50);
             this.btnMc27.TabIndex = 43;
             // 
             // btnMc26
             // 
             this.btnMc26.Appearance.Options.UseTextOptions = true;
             this.btnMc26.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc26.Location = new System.Drawing.Point(224, 228);
+            this.btnMc26.Location = new System.Drawing.Point(208, 222);
             this.btnMc26.Name = "btnMc26";
-            this.btnMc26.Size = new System.Drawing.Size(105, 50);
+            this.btnMc26.Size = new System.Drawing.Size(100, 50);
             this.btnMc26.TabIndex = 42;
             // 
             // btnMc25
             // 
             this.btnMc25.Appearance.Options.UseTextOptions = true;
             this.btnMc25.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc25.Location = new System.Drawing.Point(115, 228);
+            this.btnMc25.Location = new System.Drawing.Point(106, 222);
             this.btnMc25.Name = "btnMc25";
-            this.btnMc25.Size = new System.Drawing.Size(105, 50);
+            this.btnMc25.Size = new System.Drawing.Size(100, 50);
             this.btnMc25.TabIndex = 41;
             // 
             // btnMc24
             // 
             this.btnMc24.Appearance.Options.UseTextOptions = true;
             this.btnMc24.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc24.Location = new System.Drawing.Point(6, 228);
+            this.btnMc24.Location = new System.Drawing.Point(4, 222);
             this.btnMc24.Name = "btnMc24";
-            this.btnMc24.Size = new System.Drawing.Size(105, 50);
+            this.btnMc24.Size = new System.Drawing.Size(100, 50);
             this.btnMc24.TabIndex = 40;
             // 
             // btnMc23
             // 
             this.btnMc23.Appearance.Options.UseTextOptions = true;
             this.btnMc23.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc23.Location = new System.Drawing.Point(551, 174);
+            this.btnMc23.Location = new System.Drawing.Point(514, 168);
             this.btnMc23.Name = "btnMc23";
-            this.btnMc23.Size = new System.Drawing.Size(105, 50);
+            this.btnMc23.Size = new System.Drawing.Size(100, 50);
             this.btnMc23.TabIndex = 39;
             // 
             // btnMc22
             // 
             this.btnMc22.Appearance.Options.UseTextOptions = true;
             this.btnMc22.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc22.Location = new System.Drawing.Point(442, 174);
+            this.btnMc22.Location = new System.Drawing.Point(412, 168);
             this.btnMc22.Name = "btnMc22";
-            this.btnMc22.Size = new System.Drawing.Size(105, 50);
+            this.btnMc22.Size = new System.Drawing.Size(100, 50);
             this.btnMc22.TabIndex = 38;
             // 
             // btnMc21
             // 
             this.btnMc21.Appearance.Options.UseTextOptions = true;
             this.btnMc21.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc21.Location = new System.Drawing.Point(333, 174);
+            this.btnMc21.Location = new System.Drawing.Point(310, 168);
             this.btnMc21.Name = "btnMc21";
-            this.btnMc21.Size = new System.Drawing.Size(105, 50);
+            this.btnMc21.Size = new System.Drawing.Size(100, 50);
             this.btnMc21.TabIndex = 37;
             // 
             // btnMc20
             // 
             this.btnMc20.Appearance.Options.UseTextOptions = true;
             this.btnMc20.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc20.Location = new System.Drawing.Point(224, 174);
+            this.btnMc20.Location = new System.Drawing.Point(208, 168);
             this.btnMc20.Name = "btnMc20";
-            this.btnMc20.Size = new System.Drawing.Size(105, 50);
+            this.btnMc20.Size = new System.Drawing.Size(100, 50);
             this.btnMc20.TabIndex = 36;
             // 
             // btnMc19
             // 
             this.btnMc19.Appearance.Options.UseTextOptions = true;
             this.btnMc19.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc19.Location = new System.Drawing.Point(115, 174);
+            this.btnMc19.Location = new System.Drawing.Point(106, 168);
             this.btnMc19.Name = "btnMc19";
-            this.btnMc19.Size = new System.Drawing.Size(105, 50);
+            this.btnMc19.Size = new System.Drawing.Size(100, 50);
             this.btnMc19.TabIndex = 35;
             // 
             // btnMc18
             // 
             this.btnMc18.Appearance.Options.UseTextOptions = true;
             this.btnMc18.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc18.Location = new System.Drawing.Point(6, 174);
+            this.btnMc18.Location = new System.Drawing.Point(4, 168);
             this.btnMc18.Name = "btnMc18";
-            this.btnMc18.Size = new System.Drawing.Size(105, 50);
+            this.btnMc18.Size = new System.Drawing.Size(100, 50);
             this.btnMc18.TabIndex = 34;
             // 
             // btnMc17
             // 
             this.btnMc17.Appearance.Options.UseTextOptions = true;
             this.btnMc17.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc17.Location = new System.Drawing.Point(551, 120);
+            this.btnMc17.Location = new System.Drawing.Point(514, 114);
             this.btnMc17.Name = "btnMc17";
-            this.btnMc17.Size = new System.Drawing.Size(105, 50);
+            this.btnMc17.Size = new System.Drawing.Size(100, 50);
             this.btnMc17.TabIndex = 33;
             // 
             // btnMc16
             // 
             this.btnMc16.Appearance.Options.UseTextOptions = true;
             this.btnMc16.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc16.Location = new System.Drawing.Point(442, 120);
+            this.btnMc16.Location = new System.Drawing.Point(412, 114);
             this.btnMc16.Name = "btnMc16";
-            this.btnMc16.Size = new System.Drawing.Size(105, 50);
+            this.btnMc16.Size = new System.Drawing.Size(100, 50);
             this.btnMc16.TabIndex = 32;
             // 
             // btnMc15
             // 
             this.btnMc15.Appearance.Options.UseTextOptions = true;
             this.btnMc15.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc15.Location = new System.Drawing.Point(333, 120);
+            this.btnMc15.Location = new System.Drawing.Point(310, 114);
             this.btnMc15.Name = "btnMc15";
-            this.btnMc15.Size = new System.Drawing.Size(105, 50);
+            this.btnMc15.Size = new System.Drawing.Size(100, 50);
             this.btnMc15.TabIndex = 31;
             // 
             // btnMc14
             // 
             this.btnMc14.Appearance.Options.UseTextOptions = true;
             this.btnMc14.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc14.Location = new System.Drawing.Point(224, 120);
+            this.btnMc14.Location = new System.Drawing.Point(208, 114);
             this.btnMc14.Name = "btnMc14";
-            this.btnMc14.Size = new System.Drawing.Size(105, 50);
+            this.btnMc14.Size = new System.Drawing.Size(100, 50);
             this.btnMc14.TabIndex = 30;
             // 
             // btnMc13
             // 
             this.btnMc13.Appearance.Options.UseTextOptions = true;
             this.btnMc13.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc13.Location = new System.Drawing.Point(115, 120);
+            this.btnMc13.Location = new System.Drawing.Point(106, 114);
             this.btnMc13.Name = "btnMc13";
-            this.btnMc13.Size = new System.Drawing.Size(105, 50);
+            this.btnMc13.Size = new System.Drawing.Size(100, 50);
             this.btnMc13.TabIndex = 29;
             // 
             // btnMc12
             // 
             this.btnMc12.Appearance.Options.UseTextOptions = true;
             this.btnMc12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc12.Location = new System.Drawing.Point(6, 120);
+            this.btnMc12.Location = new System.Drawing.Point(4, 114);
             this.btnMc12.Name = "btnMc12";
-            this.btnMc12.Size = new System.Drawing.Size(105, 50);
+            this.btnMc12.Size = new System.Drawing.Size(100, 50);
             this.btnMc12.TabIndex = 28;
             // 
             // btnMc11
             // 
             this.btnMc11.Appearance.Options.UseTextOptions = true;
             this.btnMc11.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc11.Location = new System.Drawing.Point(551, 66);
+            this.btnMc11.Location = new System.Drawing.Point(514, 60);
             this.btnMc11.Name = "btnMc11";
-            this.btnMc11.Size = new System.Drawing.Size(105, 50);
+            this.btnMc11.Size = new System.Drawing.Size(100, 50);
             this.btnMc11.TabIndex = 27;
             // 
             // btnMc10
             // 
             this.btnMc10.Appearance.Options.UseTextOptions = true;
             this.btnMc10.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc10.Location = new System.Drawing.Point(442, 66);
+            this.btnMc10.Location = new System.Drawing.Point(412, 60);
             this.btnMc10.Name = "btnMc10";
-            this.btnMc10.Size = new System.Drawing.Size(105, 50);
+            this.btnMc10.Size = new System.Drawing.Size(100, 50);
             this.btnMc10.TabIndex = 26;
             // 
             // btnMc9
             // 
             this.btnMc9.Appearance.Options.UseTextOptions = true;
             this.btnMc9.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc9.Location = new System.Drawing.Point(333, 66);
+            this.btnMc9.Location = new System.Drawing.Point(310, 60);
             this.btnMc9.Name = "btnMc9";
-            this.btnMc9.Size = new System.Drawing.Size(105, 50);
+            this.btnMc9.Size = new System.Drawing.Size(100, 50);
             this.btnMc9.TabIndex = 25;
             // 
             // btnMc8
             // 
             this.btnMc8.Appearance.Options.UseTextOptions = true;
             this.btnMc8.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc8.Location = new System.Drawing.Point(224, 66);
+            this.btnMc8.Location = new System.Drawing.Point(208, 60);
             this.btnMc8.Name = "btnMc8";
-            this.btnMc8.Size = new System.Drawing.Size(105, 50);
+            this.btnMc8.Size = new System.Drawing.Size(100, 50);
             this.btnMc8.TabIndex = 24;
             // 
             // btnMc7
             // 
             this.btnMc7.Appearance.Options.UseTextOptions = true;
             this.btnMc7.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc7.Location = new System.Drawing.Point(115, 66);
+            this.btnMc7.Location = new System.Drawing.Point(106, 60);
             this.btnMc7.Name = "btnMc7";
-            this.btnMc7.Size = new System.Drawing.Size(105, 50);
+            this.btnMc7.Size = new System.Drawing.Size(100, 50);
             this.btnMc7.TabIndex = 23;
             // 
             // btnMc6
             // 
             this.btnMc6.Appearance.Options.UseTextOptions = true;
             this.btnMc6.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc6.Location = new System.Drawing.Point(6, 66);
+            this.btnMc6.Location = new System.Drawing.Point(4, 60);
             this.btnMc6.Name = "btnMc6";
-            this.btnMc6.Size = new System.Drawing.Size(105, 50);
+            this.btnMc6.Size = new System.Drawing.Size(100, 50);
             this.btnMc6.TabIndex = 22;
             // 
             // btnMcRight
@@ -1141,9 +1181,9 @@
             this.btnMcRight.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMcRight.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMcRight.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMcRight.Location = new System.Drawing.Point(664, 5);
+            this.btnMcRight.Location = new System.Drawing.Point(314, 386);
             this.btnMcRight.Name = "btnMcRight";
-            this.btnMcRight.Size = new System.Drawing.Size(44, 184);
+            this.btnMcRight.Size = new System.Drawing.Size(200, 35);
             this.btnMcRight.TabIndex = 18;
             this.btnMcRight.Text = ">>";
             this.btnMcRight.Click += new System.EventHandler(this.btnMcRight_Click);
@@ -1154,9 +1194,9 @@
             this.btnMcLeft.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnMcLeft.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.btnMcLeft.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMcLeft.Location = new System.Drawing.Point(664, 205);
+            this.btnMcLeft.Location = new System.Drawing.Point(108, 386);
             this.btnMcLeft.Name = "btnMcLeft";
-            this.btnMcLeft.Size = new System.Drawing.Size(44, 174);
+            this.btnMcLeft.Size = new System.Drawing.Size(200, 35);
             this.btnMcLeft.TabIndex = 17;
             this.btnMcLeft.Text = "<<";
             this.btnMcLeft.Click += new System.EventHandler(this.btnMcLeft_Click);
@@ -1165,66 +1205,67 @@
             // 
             this.btnMc5.Appearance.Options.UseTextOptions = true;
             this.btnMc5.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc5.Location = new System.Drawing.Point(551, 12);
+            this.btnMc5.Location = new System.Drawing.Point(514, 6);
             this.btnMc5.Name = "btnMc5";
-            this.btnMc5.Size = new System.Drawing.Size(105, 50);
+            this.btnMc5.Size = new System.Drawing.Size(100, 50);
             this.btnMc5.TabIndex = 21;
             // 
             // btnMc4
             // 
             this.btnMc4.Appearance.Options.UseTextOptions = true;
             this.btnMc4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc4.Location = new System.Drawing.Point(442, 12);
+            this.btnMc4.Location = new System.Drawing.Point(412, 6);
             this.btnMc4.Name = "btnMc4";
-            this.btnMc4.Size = new System.Drawing.Size(105, 50);
+            this.btnMc4.Size = new System.Drawing.Size(100, 50);
             this.btnMc4.TabIndex = 20;
             // 
             // btnMc3
             // 
             this.btnMc3.Appearance.Options.UseTextOptions = true;
             this.btnMc3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc3.Location = new System.Drawing.Point(333, 12);
+            this.btnMc3.Location = new System.Drawing.Point(310, 6);
             this.btnMc3.Name = "btnMc3";
-            this.btnMc3.Size = new System.Drawing.Size(105, 50);
+            this.btnMc3.Size = new System.Drawing.Size(100, 50);
             this.btnMc3.TabIndex = 19;
             // 
             // btnMc2
             // 
             this.btnMc2.Appearance.Options.UseTextOptions = true;
             this.btnMc2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc2.Location = new System.Drawing.Point(224, 12);
+            this.btnMc2.Location = new System.Drawing.Point(208, 6);
             this.btnMc2.Name = "btnMc2";
-            this.btnMc2.Size = new System.Drawing.Size(105, 50);
+            this.btnMc2.Size = new System.Drawing.Size(100, 50);
             this.btnMc2.TabIndex = 18;
             // 
             // btnMc1
             // 
             this.btnMc1.Appearance.Options.UseTextOptions = true;
             this.btnMc1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc1.Location = new System.Drawing.Point(115, 12);
+            this.btnMc1.Location = new System.Drawing.Point(106, 6);
             this.btnMc1.Name = "btnMc1";
-            this.btnMc1.Size = new System.Drawing.Size(105, 50);
+            this.btnMc1.Size = new System.Drawing.Size(100, 50);
             this.btnMc1.TabIndex = 17;
             // 
             // btnMc0
             // 
             this.btnMc0.Appearance.Options.UseTextOptions = true;
             this.btnMc0.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnMc0.Location = new System.Drawing.Point(6, 12);
+            this.btnMc0.Location = new System.Drawing.Point(4, 6);
             this.btnMc0.Name = "btnMc0";
-            this.btnMc0.Size = new System.Drawing.Size(105, 50);
+            this.btnMc0.Size = new System.Drawing.Size(100, 50);
             this.btnMc0.TabIndex = 16;
             // 
             // FrmTaMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 678);
+            this.ClientSize = new System.Drawing.Size(1174, 701);
             this.Controls.Add(this.panelControl4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTaMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTaMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -1239,6 +1280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
