@@ -39,6 +39,8 @@ namespace SuperPOS.UI.TA
 
         private decimal dToPay = 0.00m;
 
+        private string payType = "";
+
         #region 构造函数
         public FrmTaPayment()
         {
@@ -286,13 +288,18 @@ namespace SuperPOS.UI.TA
                 htDetail["Tendered"] = txtPaid.Text;
                 htDetail["Change"] = dToPay.ToString();
 
+                htDetail["OrderNo"] = checkID;
+                htDetail["ChkNum"] = checkID;
+                htDetail["PayType"] = payType;
+                htDetail["SubTotal"] = txtTotal.Text;
+                htDetail["Total"] = txtTotal.Text;
+
                 new SystemData().GetTaOrderItem();
 
                 var lstOI = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList();
 
                 PrtPrint.PrtBillBilingual(lstOI, htDetail);
 
-                htDetail["ChkNum"] = checkID;
                 PrtPrint.PrtKitchen(lstOI, htDetail);
             }
         }
@@ -307,6 +314,12 @@ namespace SuperPOS.UI.TA
             {
                 htDetail["Tendered"] = txtPaid.Text;
                 htDetail["Change"] = dToPay.ToString();
+
+                htDetail["OrderNo"] = checkID;
+                htDetail["ChkNum"] = checkID;
+                htDetail["PayType"] = payType;
+                htDetail["SubTotal"] = txtTotal.Text;
+                htDetail["Total"] = txtTotal.Text;
 
                 #region VAT计算
                 if (CommonData.GenSet.Any())
@@ -362,7 +375,6 @@ namespace SuperPOS.UI.TA
 
                 PrtPrint.PrtBillBilingual(lstOI, htDetail);
 
-                htDetail["ChkNum"] = checkID;
                 PrtPrint.PrtKitchen(lstOI, htDetail);
             }
         }
@@ -377,6 +389,11 @@ namespace SuperPOS.UI.TA
             {
                 htDetail["Tendered"] = txtPaid.Text;
                 htDetail["Change"] = dToPay.ToString();
+
+                htDetail["OrderNo"] = checkID;
+                htDetail["PayType"] = payType;
+                htDetail["SubTotal"] = txtTotal.Text;
+                htDetail["Total"] = txtTotal.Text;
 
                 new SystemData().GetTaOrderItem();
                 var lstOI = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList();
@@ -398,6 +415,11 @@ namespace SuperPOS.UI.TA
 
                 //打印厨房单
                 htDetail["ChkNum"] = checkID;
+                htDetail["OrderNo"] = checkID;
+                htDetail["PayType"] = payType;
+                htDetail["SubTotal"] = txtTotal.Text;
+                htDetail["Total"] = txtTotal.Text;
+
                 PrtPrint.PrtKitchen(lstOI, htDetail);
             }
         }
@@ -679,7 +701,7 @@ namespace SuperPOS.UI.TA
         {
             TaPaymentDetailInfo taPaymentDetailInfo = new TaPaymentDetailInfo();
             taPaymentDetailInfo.CheckOrder = checkID;
-            taPaymentDetailInfo.PayType = chkPayType[pt].Text;
+            taPaymentDetailInfo.PayType = payType = chkPayType[pt].Text;
             taPaymentDetailInfo.PayAmount = txtPay.Text;
             taPaymentDetailInfo.StaffID = usrID;
             taPaymentDetailInfo.PayTime = DateTime.Now.ToString();
