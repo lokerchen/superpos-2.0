@@ -478,7 +478,7 @@ namespace SuperPOS.Print
 
             sb.Append(L);
             sb.Append(Environment.NewLine);
-            sb.Append(PrtCommon.GetItemTotal((string)ht["ItemQty"], (string)ht["SubTotal"]));
+            sb.Append(PrtCommon.GetItemTotal((ht["ItemQty"]).ToString(), (ht["SubTotal"]).ToString()));
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
