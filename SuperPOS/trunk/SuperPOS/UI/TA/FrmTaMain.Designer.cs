@@ -724,6 +724,7 @@
             this.btnPendOrder.Size = new System.Drawing.Size(111, 42);
             this.btnPendOrder.TabIndex = 22;
             this.btnPendOrder.Text = "Pending Orders";
+            this.btnPendOrder.Click += new System.EventHandler(this.btnPendOrder_Click);
             // 
             // btnIngredMode
             // 

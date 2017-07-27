@@ -1286,5 +1286,12 @@ namespace SuperPOS.UI.TA
         #endregion
 
         #endregion
+
+        private void btnPendOrder_Click(object sender, EventArgs e)
+        {
+            FrmTaPendOrder frmTaPendOrder = new FrmTaPendOrder(usrID);
+            this.Hide();
+            frmTaPendOrder.ShowDialog();
+        }
     }
 }
