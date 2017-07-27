@@ -57,6 +57,7 @@ namespace SuperPOS.UI.TA
                     on check.CustomerID equals cust.ID.ToString()
                 join user in CommonData.UsrBase
                     on check.StaffID equals user.ID
+                where !check.IsPaid.Equals("Y")
                 select new
                 {
                     ID = check.ID,
@@ -94,6 +95,7 @@ namespace SuperPOS.UI.TA
 
         private void gvTaPendOrder_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            if (gvTaPendOrder.FocusedRowHandle <= 0) return;
             //账单ID
             checkID = Convert.ToInt32(gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "ID").ToString());
             //账单号
@@ -120,7 +122,7 @@ namespace SuperPOS.UI.TA
 
             if (frmTaPayment.ShowDialog() == DialogResult.OK)
             {
-                if (frmTaPayment.returnPaid) GetBindData("ALL");
+                if (frmTaPayment.returnPaid) GetBindData("");
             }
         }
 
@@ -171,9 +173,7 @@ namespace SuperPOS.UI.TA
             Hashtable ht = SetPrtInfo();
             ht["Tendered"] = checkPaid;
 
-            ht["Change"] = Convert.ToDecimal(checkTotalAmount) - Convert.ToDecimal(checkPaid) >= 0.0m
-                ? (Convert.ToDecimal(checkTotalAmount) - Convert.ToDecimal(checkPaid)).ToString()
-                : (Convert.ToDecimal(checkPaid) - Convert.ToDecimal(checkTotalAmount)).ToString();
+            ht["Change"] = "0.00";
 
             new SystemData().GetTaOrderItem();
             var lstOi = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkCode)).ToList();
@@ -235,9 +235,7 @@ namespace SuperPOS.UI.TA
             Hashtable ht = SetPrtInfo();
             ht["Tendered"] = checkPaid;
 
-            ht["Change"] = Convert.ToDecimal(checkTotalAmount) - Convert.ToDecimal(checkPaid) >= 0.0m
-                ? (Convert.ToDecimal(checkTotalAmount) - Convert.ToDecimal(checkPaid)).ToString()
-                : (Convert.ToDecimal(checkPaid) - Convert.ToDecimal(checkTotalAmount)).ToString();
+            ht["Change"] = "0.00";
 
             new SystemData().GetTaOrderItem();
             var lstOi = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkCode)).ToList();
@@ -254,6 +252,13 @@ namespace SuperPOS.UI.TA
             var lstOi = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkCode)).ToList();
 
             PrtPrint.PrtKitchen(lstOi, ht);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTaMain frmTaMain = new FrmTaMain(usrID);
+            frmTaMain.ShowDialog();
         }
     }
 }

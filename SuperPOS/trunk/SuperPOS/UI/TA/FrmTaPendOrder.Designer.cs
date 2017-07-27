@@ -254,6 +254,7 @@
             this.btnExit.Size = new System.Drawing.Size(184, 48);
             this.btnExit.TabIndex = 48;
             this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panelControl3
             // 
