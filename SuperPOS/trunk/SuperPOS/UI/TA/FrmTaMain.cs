@@ -76,10 +76,11 @@ namespace SuperPOS.UI.TA
             usrID = id;
         }
 
-        public FrmTaMain(string cId)
+        public FrmTaMain(string cId, int id)
         {
             InitializeComponent();
             checkID = cId;
+            usrID = id;
         }
 
         #region 事件
@@ -169,6 +170,9 @@ namespace SuperPOS.UI.TA
             treeListOrder.KeyFieldName = "ID";
             treeListOrder.ParentFieldName = "ItemParent";
 
+            //默认订单类型
+            lblType.Text = PubComm.ORDER_TYPE_SHOP;
+
             if (string.IsNullOrEmpty(checkID))
             {
                 //获得账单号
@@ -178,23 +182,34 @@ namespace SuperPOS.UI.TA
             }
             else
             {
+                new SystemData().GetTaOrderItem();
+                new SystemData().GetTaCheckOrder();
                 //TO DO something
-            }
-            
+                lblCheck.Text = checkID;
 
+                if (CommonData.TaCheckOrder.Any(s => s.CheckCode.Equals(checkID)))
+                    ORDER_TYPE = lblType.Text = CommonData.TaCheckOrder.FirstOrDefault(s => s.CheckCode.Equals(checkID)).PayOrderType;
+                //BindData(checkID);
+                
+                InitGrid(CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkID)).ToList());
+
+                treeListOrder.ExpandAll();
+
+                isNew = false;
+            }
             //加载TreeList
             //BindData();
 
-            //默认订单类型
-            lblType.Text = PubComm.ORDER_TYPE_SHOP;
-
             #region 提示打开来电设备失败
-            if (!openDev())
+            if (isNew)
             {
-                if (CommonTool.ConfirmMessage("Failed to open device, continue to order meal?") == DialogResult.Cancel)
+                if (!openDev())
                 {
-                    //无来电设备连接时，取消打开
-                    Close();
+                    if (CommonTool.ConfirmMessage("Failed to open device, continue to order meal?") == DialogResult.Cancel)
+                    {
+                        //无来电设备连接时，取消打开
+                        Close();
+                    }
                 }
             }
             #endregion
@@ -439,7 +454,7 @@ namespace SuperPOS.UI.TA
 
             if (frmTaChangeOrderType.ShowDialog() == DialogResult.OK)
             {
-                lblType.Text = frmTaChangeOrderType.OrderType;
+                ORDER_TYPE = lblType.Text = frmTaChangeOrderType.OrderType;
             }
         }
         #endregion
@@ -481,6 +496,15 @@ namespace SuperPOS.UI.TA
                 checkID = CommonDAL.GetCheckCode(true);
                 lblCheck.Text = checkID;
             }
+        }
+        #endregion
+
+        #region Pend Order按钮
+        private void btnPendOrder_Click(object sender, EventArgs e)
+        {
+            FrmTaPendOrder frmTaPendOrder = new FrmTaPendOrder(usrID);
+            this.Hide();
+            frmTaPendOrder.ShowDialog();
         }
         #endregion
 
@@ -729,11 +753,11 @@ namespace SuperPOS.UI.TA
 
         #region 绑定TreeList数据
 
-        private void BindData()
+        private void BindData(string checkCode)
         {
             new SystemData().GetTaOrderItem();
 
-            treeListOrder.DataSource = CommonData.TaOrderItem.ToList();
+            treeListOrder.DataSource = CommonData.TaOrderItem.Where(s => s.CheckCode.Equals(checkCode)).ToList();
 
             treeListOrder.KeyFieldName = "ID";
             treeListOrder.ParentFieldName = "ItemParent";
@@ -1257,7 +1281,7 @@ namespace SuperPOS.UI.TA
                 taCheckOrderInfo.TotalAmount = CommonDAL.GetTotalAmount(Convert.ToDecimal(taCheckOrderInfo.MenuAmount), Convert.ToDecimal(taCheckOrderInfo.PayDiscount)).ToString();
                 taCheckOrderInfo.Paid = "0.00";
                 taCheckOrderInfo.IsPaid = "N";
-                taCheckOrderInfo.CustomerID = CallerID;
+                taCheckOrderInfo.CustomerID = string.IsNullOrEmpty(CallerID) ? "1" : CallerID;
                 taCheckOrderInfo.CustomerNote = "";
                 taCheckOrderInfo.StaffID = usrID;
                 taCheckOrderInfo.PayTime = DateTime.Now.ToString();
@@ -1285,13 +1309,22 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region 初始化表格
+        private void InitGrid(List<TaOrderItemInfo> lst)
+        {
+            TreeListNode node = null;
+
+            foreach (var taOrderItemInfo in lst)
+            {
+                if (taOrderItemInfo.ItemType == 1)
+                    node = AddTreeListNode(taOrderItemInfo);
+                else
+                    AddTreeListChild(taOrderItemInfo, node);
+
+            }
+        }
         #endregion
 
-        private void btnPendOrder_Click(object sender, EventArgs e)
-        {
-            FrmTaPendOrder frmTaPendOrder = new FrmTaPendOrder(usrID);
-            this.Hide();
-            frmTaPendOrder.ShowDialog();
-        }
+        #endregion
     }
 }
