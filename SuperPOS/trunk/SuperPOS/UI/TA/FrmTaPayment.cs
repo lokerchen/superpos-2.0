@@ -286,7 +286,7 @@ namespace SuperPOS.UI.TA
             if (returnPaid)
             {
                 htDetail["Tendered"] = txtPaid.Text;
-                htDetail["Change"] = dToPay.ToString();
+                htDetail["Change"] = (Math.Abs(dToPay)).ToString();
 
                 htDetail["OrderNo"] = checkID;
                 htDetail["ChkNum"] = checkID;
@@ -313,7 +313,7 @@ namespace SuperPOS.UI.TA
             if (returnPaid)
             {
                 htDetail["Tendered"] = txtPaid.Text;
-                htDetail["Change"] = dToPay.ToString();
+                htDetail["Change"] = (Math.Abs(dToPay)).ToString();
 
                 htDetail["OrderNo"] = checkID;
                 htDetail["ChkNum"] = checkID;
@@ -388,7 +388,7 @@ namespace SuperPOS.UI.TA
             if (returnPaid)
             {
                 htDetail["Tendered"] = txtPaid.Text;
-                htDetail["Change"] = dToPay.ToString();
+                htDetail["Change"] = (Math.Abs(dToPay)).ToString();
 
                 htDetail["OrderNo"] = checkID;
                 htDetail["PayType"] = payType;
