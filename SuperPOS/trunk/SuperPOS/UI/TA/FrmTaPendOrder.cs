@@ -81,6 +81,7 @@ namespace SuperPOS.UI.TA
             systemData.GetTaCheckOrder();
             systemData.GetTaCustomer();
             systemData.GetUsrBase();
+            systemData.GetTaOrderItem();
 
             GetBindData("");
         }
@@ -258,6 +259,13 @@ namespace SuperPOS.UI.TA
         {
             Hide();
             FrmTaMain frmTaMain = new FrmTaMain(usrID);
+            frmTaMain.ShowDialog();
+        }
+
+        private void gvTaPendOrder_DoubleClick(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID);
             frmTaMain.ShowDialog();
         }
     }

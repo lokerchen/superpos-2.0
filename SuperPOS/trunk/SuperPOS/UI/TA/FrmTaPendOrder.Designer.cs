@@ -98,6 +98,7 @@
             this.gvTaPendOrder.OptionsView.ShowGroupPanel = false;
             this.gvTaPendOrder.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvTaPendOrder_CustomDrawRowIndicator);
             this.gvTaPendOrder.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvTaPendOrder_FocusedRowChanged);
+            this.gvTaPendOrder.DoubleClick += new System.EventHandler(this.gvTaPendOrder_DoubleClick);
             // 
             // ID
             // 
