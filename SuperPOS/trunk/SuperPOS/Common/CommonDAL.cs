@@ -1,7 +1,7 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
 using SuperPOS.Domain.Entities;
 
 namespace SuperPOS.Common
@@ -340,6 +340,25 @@ namespace SuperPOS.Common
             return dDiscount <= 0.00m ? Math.Round(menuAmount, 2)  : Math.Round(menuAmount * dDiscount, 2);
         }
 
+        #endregion
+
+        #region 获得系统盘符列表（只有硬盘和可移动磁盘）
+        /// <summary>
+        /// 获得系统盘符列表（只有硬盘和可移动磁盘）
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> GetSysDir()
+        {
+            List<string> lst = new List<string>();
+            SelectQuery selectQuery = new SelectQuery(PubComm.SELECT_WIN32_LOGICALDISK);
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(selectQuery);
+            foreach (ManagementObject disk in searcher.Get().Cast<ManagementObject>().Where(disk => disk["DriveType"].ToString().Equals("3") || disk["DriveType"].ToString().Equals("2")))
+            {
+                lst.Add(disk["Name"].ToString().Trim(':'));
+            }
+
+            return lst;
+        }
         #endregion
     }
 }
