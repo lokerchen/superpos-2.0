@@ -47,6 +47,9 @@ namespace SuperPOS.Common
         public static string ORDER_TYPE_COLLECTION = "COLLECTION";
         public static string ORDER_TYPE_DELIVERY = "DELIVERY";
 
+        //查询所有磁盘
+        public static string SELECT_WIN32_LOGICALDISK = @"SELECT * FROM WIN32_LOGICALDISK";
+
         #region 系统常量
         //账单
         public static string SYS_VALUE_CHECK_CODE = "1001";
