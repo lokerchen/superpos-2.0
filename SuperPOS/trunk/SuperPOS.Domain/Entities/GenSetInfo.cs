@@ -28,5 +28,13 @@ namespace SuperPOS.Domain.Entities
         //是否在按钮上显示Item Code
         [XmlElement(ElementName = "IsShowItemCode")]
         public virtual string IsShowItemCode { get; set; }
+
+        //退出时是否备份数据库
+        [XmlElement(ElementName = "IsBackup")]
+        public virtual string IsBackup { get; set; }
+
+        //备份地址
+        [XmlElement(ElementName = "BackupDriver")]
+        public virtual string BackupDriver { get; set; }
     }
 }

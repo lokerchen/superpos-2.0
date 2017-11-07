@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.lueBackUpDriver = new DevExpress.XtraEditors.LookUpEdit();
+            this.chkIsBackup = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtVatPer = new DevExpress.XtraEditors.TextEdit();
             this.txtCheckCurrency = new DevExpress.XtraEditors.TextEdit();
@@ -39,6 +42,8 @@
             this.chkDisplayCode = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueBackUpDriver.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsBackup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVatPer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckCurrency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTillNum.Properties)).BeginInit();
@@ -47,6 +52,9 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.lueBackUpDriver);
+            this.panelControl1.Controls.Add(this.chkIsBackup);
+            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.btnSave);
             this.panelControl1.Controls.Add(this.txtVatPer);
             this.panelControl1.Controls.Add(this.txtCheckCurrency);
@@ -58,12 +66,38 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(282, 238);
+            this.panelControl1.Size = new System.Drawing.Size(313, 332);
             this.panelControl1.TabIndex = 0;
+            // 
+            // lueBackUpDriver
+            // 
+            this.lueBackUpDriver.Location = new System.Drawing.Point(146, 96);
+            this.lueBackUpDriver.Name = "lueBackUpDriver";
+            this.lueBackUpDriver.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueBackUpDriver.Size = new System.Drawing.Size(136, 24);
+            this.lueBackUpDriver.TabIndex = 13;
+            // 
+            // chkIsBackup
+            // 
+            this.chkIsBackup.Location = new System.Drawing.Point(20, 60);
+            this.chkIsBackup.Name = "chkIsBackup";
+            this.chkIsBackup.Properties.Caption = "Back Up When Exit";
+            this.chkIsBackup.Size = new System.Drawing.Size(156, 22);
+            this.chkIsBackup.TabIndex = 12;
+            this.chkIsBackup.CheckedChanged += new System.EventHandler(this.chkIsBackup_CheckedChanged);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(20, 99);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(102, 18);
+            this.labelControl1.TabIndex = 10;
+            this.labelControl1.Text = "Back Up Driver:";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(68, 189);
+            this.btnSave.Location = new System.Drawing.Point(47, 272);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(139, 33);
             this.btnSave.TabIndex = 9;
@@ -72,7 +106,7 @@
             // 
             // txtVatPer
             // 
-            this.txtVatPer.Location = new System.Drawing.Point(146, 97);
+            this.txtVatPer.Location = new System.Drawing.Point(146, 218);
             this.txtVatPer.Name = "txtVatPer";
             this.txtVatPer.Properties.Mask.EditMask = "P";
             this.txtVatPer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -81,14 +115,14 @@
             // 
             // txtCheckCurrency
             // 
-            this.txtCheckCurrency.Location = new System.Drawing.Point(146, 57);
+            this.txtCheckCurrency.Location = new System.Drawing.Point(98, 175);
             this.txtCheckCurrency.Name = "txtCheckCurrency";
             this.txtCheckCurrency.Size = new System.Drawing.Size(100, 24);
             this.txtCheckCurrency.TabIndex = 7;
             // 
             // txtTillNum
             // 
-            this.txtTillNum.Location = new System.Drawing.Point(146, 17);
+            this.txtTillNum.Location = new System.Drawing.Point(113, 133);
             this.txtTillNum.Name = "txtTillNum";
             this.txtTillNum.Properties.Mask.EditMask = "d";
             this.txtTillNum.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -97,7 +131,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(20, 103);
+            this.labelControl4.Location = new System.Drawing.Point(20, 224);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(111, 18);
             this.labelControl4.TabIndex = 5;
@@ -105,7 +139,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(68, 63);
+            this.labelControl3.Location = new System.Drawing.Point(20, 181);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(63, 18);
             this.labelControl3.TabIndex = 4;
@@ -113,7 +147,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(53, 23);
+            this.labelControl2.Location = new System.Drawing.Point(20, 139);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(78, 18);
             this.labelControl2.TabIndex = 3;
@@ -121,7 +155,7 @@
             // 
             // chkDisplayCode
             // 
-            this.chkDisplayCode.Location = new System.Drawing.Point(20, 143);
+            this.chkDisplayCode.Location = new System.Drawing.Point(20, 21);
             this.chkDisplayCode.Name = "chkDisplayCode";
             this.chkDisplayCode.Properties.Caption = "Display Item Code Select";
             this.chkDisplayCode.Size = new System.Drawing.Size(226, 22);
@@ -131,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 238);
+            this.ClientSize = new System.Drawing.Size(313, 332);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGenSet";
@@ -141,6 +175,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueBackUpDriver.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsBackup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVatPer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckCurrency.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTillNum.Properties)).EndInit();
@@ -160,5 +196,8 @@
         private DevExpress.XtraEditors.TextEdit txtCheckCurrency;
         private DevExpress.XtraEditors.TextEdit txtTillNum;
         private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.CheckEdit chkIsBackup;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LookUpEdit lueBackUpDriver;
     }
 }
