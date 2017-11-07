@@ -12,6 +12,8 @@
     <property name="CheckCurrency" column="CheckCurrency" type="System.String" />
     <property name="VATPer" column="VATPer" type="System.String" />
     <property name="IsShowItemCode" column="IsShowItemCode" type="System.String" />
+    <property name="IsBackup" column="IsBackup" type="System.String" />
+    <property name="BackupDriver" column="BackupDriver" type="System.String" />
   </class>
 
 </hibernate-mapping>

@@ -44,6 +44,14 @@ namespace SuperPOS.UI.Sys
                 genSetInfo.CheckCurrency = txtCheckCurrency.Text;
                 genSetInfo.VATPer = txtVatPer.Text;
                 genSetInfo.IsShowItemCode = chkDisplayCode.Checked ? "Y" : "N";
+                genSetInfo.IsBackup = chkIsBackup.Checked ? "Y" : "N";
+
+                if (chkIsBackup.Checked)
+                {
+                    genSetInfo.BackupDriver = lueBackUpDriver.EditValue.ToString();
+                }
+                else
+                    genSetInfo.BackupDriver = "";
 
                 if (CommonData.GenSet.Any())
                 {
@@ -94,6 +102,19 @@ namespace SuperPOS.UI.Sys
                     txtCheckCurrency.Text = genSetInfo.CheckCurrency;
                     txtVatPer.Text = genSetInfo.VATPer;
                     chkDisplayCode.Checked = genSetInfo.IsShowItemCode.Equals("Y");
+                    if (string.IsNullOrEmpty(genSetInfo.IsBackup))
+                    {
+                        chkIsBackup.Checked = false;
+                        lueBackUpDriver.Properties.NullText = "";
+                        lueBackUpDriver.EditValue = "";
+                    }
+                    else
+                    {
+                        chkIsBackup.Checked = genSetInfo.IsBackup.Equals("Y");
+
+                        if (chkIsBackup.Checked) lueBackUpDriver.EditValue = genSetInfo.BackupDriver;
+                    }
+                    
                 }
                 else
                 {
@@ -101,12 +122,32 @@ namespace SuperPOS.UI.Sys
                     txtCheckCurrency.Text = "";
                     txtVatPer.Text = "";
                     chkDisplayCode.Checked = false;
+                    chkIsBackup.Checked = false;
+                    lueBackUpDriver.Enabled = false;
                 }
             }
             catch (Exception ex)
             {
                 LogHelper.Error(this.Name, ex);
             }
+        }
+        #endregion
+
+        private void chkIsBackup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkDisplayCode.Checked) lueBackUpDriver.Enabled = false;
+            else
+            {
+                lueBackUpDriver.Enabled = true;
+                BindSysCol();
+            }
+        }
+
+        #region 绑定系统盘符
+
+        private void BindSysCol()
+        {
+            lueBackUpDriver.Properties.DataSource = CommonDAL.GetSysDir().ToList();
         }
         #endregion
     }
