@@ -61,5 +61,7 @@ namespace SuperPOS.Common
         public void GetTaPayment() { CommonData.TaPayment = _control.SelectAll<TaPaymentInfo>(); }
 
         public void GetTaPaymentDetail() { CommonData.TaPaymentDetail = _control.SelectAll<TaPaymentDetailInfo>(); }
+        
+        public void GetTaCashDrawSet() { CommonData.TaCashDrawSet = _control.SelectAll<TaCashDrawSetInfo>(); }
     }
 }

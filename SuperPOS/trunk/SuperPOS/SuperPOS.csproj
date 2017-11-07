@@ -177,6 +177,12 @@
     <Compile Include="UI\TA\FrmTaAppendItem.Designer.cs">
       <DependentUpon>FrmTaAppendItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaCashDrawSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaCashDrawSet.Designer.cs">
+      <DependentUpon>FrmTaCashDrawSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaChangeOrderType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaAppendItem.resx">
       <DependentUpon>FrmTaAppendItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaCashDrawSet.resx">
+      <DependentUpon>FrmTaCashDrawSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaChangeOrderType.resx">
       <DependentUpon>FrmTaChangeOrderType.cs</DependentUpon>

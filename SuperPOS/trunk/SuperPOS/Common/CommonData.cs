@@ -59,5 +59,7 @@ namespace SuperPOS.Common
         public static IList<TaPaymentInfo> TaPayment { get; set; }
         
         public static IList<TaPaymentDetailInfo> TaPaymentDetail { get; set; } 
+
+        public static IList<TaCashDrawSetInfo> TaCashDrawSet { get; set; }
     }
 }
