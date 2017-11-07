@@ -34,12 +34,12 @@
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.SetSys = new DevExpress.XtraNavBar.NavBarGroup();
-            this.SysConf = new DevExpress.XtraNavBar.NavBarItem();
-            this.CompAdd = new DevExpress.XtraNavBar.NavBarItem();
-            this.ShiftCode = new DevExpress.XtraNavBar.NavBarItem();
             this.ShopDetail = new DevExpress.XtraNavBar.NavBarItem();
             this.GenSet = new DevExpress.XtraNavBar.NavBarItem();
             this.KeypadSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.CashDrawSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.CompAdd = new DevExpress.XtraNavBar.NavBarItem();
+            this.ShiftCode = new DevExpress.XtraNavBar.NavBarItem();
             this.SysPrt = new DevExpress.XtraNavBar.NavBarItem();
             this.SysExit = new DevExpress.XtraNavBar.NavBarItem();
             this.SetTa = new DevExpress.XtraNavBar.NavBarGroup();
@@ -126,7 +126,7 @@
             this.SetTa,
             this.UsrAuth});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.SysConf,
+            this.CashDrawSet,
             this.UsrSet,
             this.CompAdd,
             this.ShiftCode,
@@ -170,54 +170,16 @@
             this.SetSys.Caption = "System Setting";
             this.SetSys.Expanded = true;
             this.SetSys.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.SysConf),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.CompAdd),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ShiftCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShopDetail),
             new DevExpress.XtraNavBar.NavBarItemLink(this.GenSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.KeypadSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.CashDrawSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.CompAdd),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ShiftCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysPrt),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysExit)});
             this.SetSys.Name = "SetSys";
             this.SetSys.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // SysConf
-            // 
-            this.SysConf.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysConf.Appearance.Options.UseFont = true;
-            this.SysConf.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysConf.AppearanceDisabled.Options.UseFont = true;
-            this.SysConf.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysConf.AppearanceHotTracked.Options.UseFont = true;
-            this.SysConf.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysConf.AppearancePressed.Options.UseFont = true;
-            this.SysConf.Caption = "System Configuration";
-            this.SysConf.Name = "SysConf";
-            this.SysConf.Visible = false;
-            // 
-            // CompAdd
-            // 
-            this.CompAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompAdd.Appearance.Options.UseFont = true;
-            this.CompAdd.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompAdd.AppearanceHotTracked.Options.UseFont = true;
-            this.CompAdd.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompAdd.AppearancePressed.Options.UseFont = true;
-            this.CompAdd.Caption = "Computer Address";
-            this.CompAdd.Name = "CompAdd";
-            this.CompAdd.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CompAdd_LinkClicked);
-            // 
-            // ShiftCode
-            // 
-            this.ShiftCode.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShiftCode.Appearance.Options.UseFont = true;
-            this.ShiftCode.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShiftCode.AppearanceHotTracked.Options.UseFont = true;
-            this.ShiftCode.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShiftCode.AppearancePressed.Options.UseFont = true;
-            this.ShiftCode.Caption = "Shift Code";
-            this.ShiftCode.Name = "ShiftCode";
-            this.ShiftCode.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ShiftCode_LinkClicked);
             // 
             // ShopDetail
             // 
@@ -260,6 +222,44 @@
             this.KeypadSet.Caption = "Keypad Setting";
             this.KeypadSet.Name = "KeypadSet";
             this.KeypadSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.KeypadSet_LinkClicked);
+            // 
+            // CashDrawSet
+            // 
+            this.CashDrawSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashDrawSet.Appearance.Options.UseFont = true;
+            this.CashDrawSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashDrawSet.AppearanceDisabled.Options.UseFont = true;
+            this.CashDrawSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashDrawSet.AppearanceHotTracked.Options.UseFont = true;
+            this.CashDrawSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashDrawSet.AppearancePressed.Options.UseFont = true;
+            this.CashDrawSet.Caption = "Cash Draw Setting";
+            this.CashDrawSet.Name = "CashDrawSet";
+            this.CashDrawSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CashDrawSet_LinkClicked);
+            // 
+            // CompAdd
+            // 
+            this.CompAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompAdd.Appearance.Options.UseFont = true;
+            this.CompAdd.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompAdd.AppearanceHotTracked.Options.UseFont = true;
+            this.CompAdd.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompAdd.AppearancePressed.Options.UseFont = true;
+            this.CompAdd.Caption = "Computer Address";
+            this.CompAdd.Name = "CompAdd";
+            this.CompAdd.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CompAdd_LinkClicked);
+            // 
+            // ShiftCode
+            // 
+            this.ShiftCode.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftCode.Appearance.Options.UseFont = true;
+            this.ShiftCode.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftCode.AppearanceHotTracked.Options.UseFont = true;
+            this.ShiftCode.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftCode.AppearancePressed.Options.UseFont = true;
+            this.ShiftCode.Caption = "Shift Code";
+            this.ShiftCode.Name = "ShiftCode";
+            this.ShiftCode.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ShiftCode_LinkClicked);
             // 
             // SysPrt
             // 
@@ -602,7 +602,7 @@
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup SetSys;
         private DevExpress.XtraNavBar.NavBarGroup SetTa;
-        private DevExpress.XtraNavBar.NavBarItem SysConf;
+        private DevExpress.XtraNavBar.NavBarItem CashDrawSet;
         private DevExpress.XtraNavBar.NavBarItem UsrSet;
         private DevExpress.XtraNavBar.NavBarItem CompAdd;
         private DevExpress.XtraNavBar.NavBarItem ShiftCode;

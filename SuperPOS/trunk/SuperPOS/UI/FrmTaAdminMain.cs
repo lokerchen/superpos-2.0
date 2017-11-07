@@ -181,5 +181,12 @@ namespace SuperPOS.UI.TA
         {
             ShowXtraTabPage("TaDriver", "Driver Set up", new FrmTaDriver(usrID, usrName));
         }
+
+        #region Cash Draw Set
+        private void CashDrawSet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("CashDrawSet", "Cash Draw Setting", new FrmTaCashDrawSet(usrID, usrName));
+        }
+        #endregion
     }
 }

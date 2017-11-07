@@ -52,6 +52,7 @@
     <Compile Include="Entities\ShopDetailInfo.cs" />
     <Compile Include="Entities\SysPrtSetInfo.cs" />
     <Compile Include="Entities\SysValueInfo.cs" />
+    <Compile Include="Entities\TaCashDrawSetInfo.cs" />
     <Compile Include="Entities\TaCheckOrderInfo.cs" />
     <Compile Include="Entities\TaCustomerInfo.cs" />
     <Compile Include="Entities\TaDeliveryNoteInfo.cs" />
@@ -134,6 +135,7 @@
     <EmbeddedResource Include="Mappings\TaDriverInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaCustomerInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaPaymentDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaCashDrawSetInfo.hbm.xml" />
     <Content Include="Mappings\TaPaymentInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
