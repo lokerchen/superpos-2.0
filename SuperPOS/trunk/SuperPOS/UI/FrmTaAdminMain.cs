@@ -188,5 +188,12 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("CashDrawSet", "Cash Draw Setting", new FrmTaCashDrawSet(usrID, usrName));
         }
         #endregion
+
+        #region User Authority Group
+        private void UsrAuthGroup_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("UsrAuthGroup", "User Authority Group", new FrmUsrAuthGrp(usrID, usrName));
+        }
+        #endregion
     }
 }
