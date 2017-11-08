@@ -502,6 +502,7 @@
             this.UsrAuthGroup.AppearancePressed.Options.UseFont = true;
             this.UsrAuthGroup.Caption = "Authority Group";
             this.UsrAuthGroup.Name = "UsrAuthGroup";
+            this.UsrAuthGroup.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.UsrAuthGroup_LinkClicked);
             // 
             // UsrAuthRule
             // 
