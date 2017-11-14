@@ -8,8 +8,11 @@
       <generator class="native" />
     </id>
 
-    <property name="GrpID" column="GrpID" type="System.Int32" />
-    <property name="AuthID" column="AuthID" type="System.Int32" />
+    <property name="GrpID" column="GrpID" type="System.String" />
+    <property name="AccessDept" column="AccessDept" type="System.String" />
+    <property name="AccessDetail" column="AccessDetail" type="System.String" />
+    <property name="AccessBtnID" column="AccessBtnID" type="System.String" />
+    <property name="IsAccess" column="IsAccess" type="System.String" />
   </class>
 
 </hibernate-mapping>

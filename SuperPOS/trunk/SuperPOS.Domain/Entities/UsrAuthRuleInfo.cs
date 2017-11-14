@@ -15,10 +15,22 @@ namespace SuperPOS.Domain.Entities
 
         //权限组ID
         [XmlElement(ElementName = "GrpID")]
-        public virtual int GrpID { get; set; }
+        public virtual string GrpID { get; set; }
 
-        //权限细节ID
-        [XmlElement(ElementName = "AuthID")]
-        public virtual int AuthID { get; set; }
+        //权限部门
+        [XmlElement(ElementName = "AccessDept")]
+        public virtual string AccessDept { get; set; }
+
+        //权限细节
+        [XmlElement(ElementName = "AccessDetail")]
+        public virtual string AccessDetail { get; set; }
+
+        //权限对应按钮ID
+        [XmlElement(ElementName = "AccessBtnID")]
+        public virtual string AccessBtnID { get; set; }
+
+        //是否具有该权限
+        [XmlElement(ElementName = "IsAccess")]
+        public virtual string IsAccess { get; set; }
     }
 }
