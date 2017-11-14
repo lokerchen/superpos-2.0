@@ -195,5 +195,10 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("UsrAuthGroup", "User Authority Group", new FrmUsrAuthGrp(usrID, usrName));
         }
         #endregion
+
+        private void UsrAuthRule_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("UsrAuthRule", "User Rule", new FrmUsrAuthRule(usrID, usrName));
+        }
     }
 }
