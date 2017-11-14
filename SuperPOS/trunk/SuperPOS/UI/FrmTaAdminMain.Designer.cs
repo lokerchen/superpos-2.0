@@ -514,6 +514,7 @@
             this.UsrAuthRule.AppearancePressed.Options.UseFont = true;
             this.UsrAuthRule.Caption = "Authority Rule";
             this.UsrAuthRule.Name = "UsrAuthRule";
+            this.UsrAuthRule.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.UsrAuthRule_LinkClicked);
             // 
             // navBarSeparatorItem1
             // 
