@@ -67,5 +67,9 @@ namespace SuperPOS.Common
         public void GetDataManager() { CommonData.DataManager = _control.SelectAll<DataManagerInfo>(); }
 
         public void GetTaFreeFood() { CommonData.TaFreeFood = _control.SelectAll<TaFreeFoodInfo>(); }
+
+        public void GetTaDeliverySet() { CommonData.TaDeliverySet = _control.SelectAll<TaDeliverySetInfo>(); }
+
+        public void GetTaDeliverySetDetail() { CommonData.TaDeliverySetDetail = _control.SelectAll<TaDeliverySetDetailInfo>(); }
     }
 }
