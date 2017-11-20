@@ -319,7 +319,7 @@ namespace SuperPOS.Common
                 sysValueInfo.ValueID = sValueID;
                 //sysValueInfo.ValueDesc = "FREEFOODITEMAMOUNT";
                 sysValueInfo.ValueDesc = sValueDesc;
-                sysValueInfo.ValueResult = dResult;
+                sysValueInfo.ValueResult = string.IsNullOrEmpty(dResult) ? "0.00" : dResult;
                 _control.AddEntity(sysValueInfo);
                 return dResult;
             }
