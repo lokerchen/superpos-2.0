@@ -200,5 +200,13 @@ namespace SuperPOS.UI.TA
         {
             ShowXtraTabPage("UsrAuthRule", "User Rule", new FrmUsrAuthRule(usrID, usrName));
         }
+
+        #region Data Manager
+        private void DataManager_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("DataManager", "DataManager", new FrmDataManager(usrID, usrName));
+        }
+        #endregion
+
     }
 }

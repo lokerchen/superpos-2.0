@@ -135,6 +135,12 @@
     <Compile Include="UI\Sys\FrmCompAddr.Designer.cs">
       <DependentUpon>FrmCompAddr.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Sys\FrmDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\FrmDataManager.Designer.cs">
+      <DependentUpon>FrmDataManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sys\FrmGenSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmCompAddr.resx">
       <DependentUpon>FrmCompAddr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\FrmDataManager.resx">
+      <DependentUpon>FrmDataManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmGenSet.resx">
       <DependentUpon>FrmGenSet.cs</DependentUpon>
