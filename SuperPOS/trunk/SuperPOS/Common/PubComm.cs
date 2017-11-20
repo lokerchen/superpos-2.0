@@ -62,6 +62,11 @@ namespace SuperPOS.Common
         #region 系统常量
         //账单
         public static string SYS_VALUE_CHECK_CODE = "1001";
+        public static string SYS_DESC_CHECK_CODE = "CHECKCODE";
+        //Free Food Item Amount
+        public static string SYS_VALUE_FREE_FOOD_ITEM_AMOUNT = "1002";
+        public static string SYS_DESC_FREE_FOOD_ITEM_AMOUNT = "FREEFOODITEMAMOUNT";
+        
 
         #endregion
     }
