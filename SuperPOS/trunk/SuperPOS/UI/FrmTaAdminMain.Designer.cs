@@ -60,7 +60,6 @@
             this.UsrAuthGroup = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuthRule = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
@@ -69,6 +68,11 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.TaFreeFood = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaDeliverySet = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaPostcodeAssign = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaPostcodeSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaSubMenu = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -126,8 +130,7 @@
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.SetSys,
             this.SetTa,
-            this.UsrAuth,
-            this.navBarGroup1});
+            this.UsrAuth});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.CashDrawSet,
             this.UsrSet,
@@ -157,7 +160,12 @@
             this.TaDiscount,
             this.TaDeliveryNote,
             this.TaDriver,
-            this.DataManager});
+            this.DataManager,
+            this.TaFreeFood,
+            this.TaDeliverySet,
+            this.TaPostcodeAssign,
+            this.TaPostcodeSet,
+            this.TaSubMenu});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 332;
@@ -313,16 +321,21 @@
             this.SetTa.Caption = "Takeaway & Quick Dining Setting";
             this.SetTa.Expanded = true;
             this.SetTa.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuCat),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuItem),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAPaymentType),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TADeptCode),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TAPrtInfoSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TADriverSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ExtraMenu),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TaDiscount),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TaDeliveryNote),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaFreeFood),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaDeliverySet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaPostcodeAssign),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaPostcodeSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuCat),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuItem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaSubMenu),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ExtraMenu),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TADeptCode),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TAPrtInfoSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TADriverSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TaDriver)});
             this.SetTa.Name = "SetTa";
             this.SetTa.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
@@ -546,11 +559,6 @@
             this.navBarSeparatorItem1.SmallImageIndex = 0;
             this.navBarSeparatorItem1.SmallImageSize = new System.Drawing.Size(0, 0);
             // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.Caption = "navBarGroup1";
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
             // navBarItem5
             // 
             this.navBarItem5.Caption = "navBarItem5";
@@ -597,6 +605,71 @@
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(997, 615);
+            // 
+            // TaFreeFood
+            // 
+            this.TaFreeFood.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.Appearance.Options.UseFont = true;
+            this.TaFreeFood.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.AppearanceDisabled.Options.UseFont = true;
+            this.TaFreeFood.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.AppearanceHotTracked.Options.UseFont = true;
+            this.TaFreeFood.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.AppearancePressed.Options.UseFont = true;
+            this.TaFreeFood.Caption = "Free Food Items";
+            this.TaFreeFood.Name = "TaFreeFood";
+            // 
+            // TaDeliverySet
+            // 
+            this.TaDeliverySet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.Appearance.Options.UseFont = true;
+            this.TaDeliverySet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.AppearanceDisabled.Options.UseFont = true;
+            this.TaDeliverySet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.AppearanceHotTracked.Options.UseFont = true;
+            this.TaDeliverySet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.AppearancePressed.Options.UseFont = true;
+            this.TaDeliverySet.Caption = "Delivery Settings";
+            this.TaDeliverySet.Name = "TaDeliverySet";
+            // 
+            // TaPostcodeAssign
+            // 
+            this.TaPostcodeAssign.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.Appearance.Options.UseFont = true;
+            this.TaPostcodeAssign.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.AppearanceDisabled.Options.UseFont = true;
+            this.TaPostcodeAssign.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.AppearanceHotTracked.Options.UseFont = true;
+            this.TaPostcodeAssign.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.AppearancePressed.Options.UseFont = true;
+            this.TaPostcodeAssign.Caption = "Postcode Assignment";
+            this.TaPostcodeAssign.Name = "TaPostcodeAssign";
+            // 
+            // TaPostcodeSet
+            // 
+            this.TaPostcodeSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.Appearance.Options.UseFont = true;
+            this.TaPostcodeSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.AppearanceDisabled.Options.UseFont = true;
+            this.TaPostcodeSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.AppearanceHotTracked.Options.UseFont = true;
+            this.TaPostcodeSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.AppearancePressed.Options.UseFont = true;
+            this.TaPostcodeSet.Caption = "Postcode Settings";
+            this.TaPostcodeSet.Name = "TaPostcodeSet";
+            // 
+            // TaSubMenu
+            // 
+            this.TaSubMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.Appearance.Options.UseFont = true;
+            this.TaSubMenu.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.AppearanceDisabled.Options.UseFont = true;
+            this.TaSubMenu.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.AppearanceHotTracked.Options.UseFont = true;
+            this.TaSubMenu.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.AppearancePressed.Options.UseFont = true;
+            this.TaSubMenu.Caption = "Sub Menu";
+            this.TaSubMenu.Name = "TaSubMenu";
             // 
             // FrmTaAdminMain
             // 
@@ -661,6 +734,10 @@
         private DevExpress.XtraNavBar.NavBarItem TaDeliveryNote;
         private DevExpress.XtraNavBar.NavBarItem TaDriver;
         private DevExpress.XtraNavBar.NavBarItem DataManager;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private DevExpress.XtraNavBar.NavBarItem TaFreeFood;
+        private DevExpress.XtraNavBar.NavBarItem TaDeliverySet;
+        private DevExpress.XtraNavBar.NavBarItem TaPostcodeAssign;
+        private DevExpress.XtraNavBar.NavBarItem TaPostcodeSet;
+        private DevExpress.XtraNavBar.NavBarItem TaSubMenu;
     }
 }
