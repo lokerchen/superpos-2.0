@@ -243,6 +243,12 @@
     <Compile Include="UI\Sys\FrmUsrSet.Designer.cs">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaFreeItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaFreeItem.Designer.cs">
+      <DependentUpon>FrmTaFreeItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaIngredMode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrSet.resx">
       <DependentUpon>FrmUsrSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaFreeItem.resx">
+      <DependentUpon>FrmTaFreeItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaIngredMode.resx">
       <DependentUpon>FrmTaIngredMode.cs</DependentUpon>
