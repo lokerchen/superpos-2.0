@@ -49,6 +49,8 @@ namespace SuperPOS.Common
             systemData.GetTaExtraMenu();
             //用户使用钱箱
             systemData.GetTaCashDrawSet();
+            //获得Data Manager
+            systemData.GetDataManager();
 
             #region Takeaway
             //Department Code

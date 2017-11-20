@@ -38,6 +38,7 @@
             this.GenSet = new DevExpress.XtraNavBar.NavBarItem();
             this.KeypadSet = new DevExpress.XtraNavBar.NavBarItem();
             this.CashDrawSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.DataManager = new DevExpress.XtraNavBar.NavBarItem();
             this.CompAdd = new DevExpress.XtraNavBar.NavBarItem();
             this.ShiftCode = new DevExpress.XtraNavBar.NavBarItem();
             this.SysPrt = new DevExpress.XtraNavBar.NavBarItem();
@@ -59,6 +60,7 @@
             this.UsrAuthGroup = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuthRule = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
@@ -124,7 +126,8 @@
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.SetSys,
             this.SetTa,
-            this.UsrAuth});
+            this.UsrAuth,
+            this.navBarGroup1});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.CashDrawSet,
             this.UsrSet,
@@ -153,7 +156,8 @@
             this.ExtraMenu,
             this.TaDiscount,
             this.TaDeliveryNote,
-            this.TaDriver});
+            this.TaDriver,
+            this.DataManager});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 332;
@@ -174,6 +178,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.GenSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.KeypadSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.CashDrawSet),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.DataManager),
             new DevExpress.XtraNavBar.NavBarItemLink(this.CompAdd),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShiftCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysPrt),
@@ -236,6 +241,20 @@
             this.CashDrawSet.Caption = "Cash Draw Setting";
             this.CashDrawSet.Name = "CashDrawSet";
             this.CashDrawSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.CashDrawSet_LinkClicked);
+            // 
+            // DataManager
+            // 
+            this.DataManager.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataManager.Appearance.Options.UseFont = true;
+            this.DataManager.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataManager.AppearanceDisabled.Options.UseFont = true;
+            this.DataManager.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataManager.AppearanceHotTracked.Options.UseFont = true;
+            this.DataManager.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataManager.AppearancePressed.Options.UseFont = true;
+            this.DataManager.Caption = "Data Manager";
+            this.DataManager.Name = "DataManager";
+            this.DataManager.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.DataManager_LinkClicked);
             // 
             // CompAdd
             // 
@@ -527,6 +546,11 @@
             this.navBarSeparatorItem1.SmallImageIndex = 0;
             this.navBarSeparatorItem1.SmallImageSize = new System.Drawing.Size(0, 0);
             // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "navBarGroup1";
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
             // navBarItem5
             // 
             this.navBarItem5.Caption = "navBarItem5";
@@ -636,5 +660,7 @@
         private DevExpress.XtraNavBar.NavBarItem TaDiscount;
         private DevExpress.XtraNavBar.NavBarItem TaDeliveryNote;
         private DevExpress.XtraNavBar.NavBarItem TaDriver;
+        private DevExpress.XtraNavBar.NavBarItem DataManager;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
     }
 }
