@@ -213,6 +213,12 @@
     <Compile Include="UI\TA\FrmTaDeliveryNote.Designer.cs">
       <DependentUpon>FrmTaDeliveryNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaDeliverySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaDeliverySet.Designer.cs">
+      <DependentUpon>FrmTaDeliverySet.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaDiscount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaDeliveryNote.resx">
       <DependentUpon>FrmTaDeliveryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaDeliverySet.resx">
+      <DependentUpon>FrmTaDeliverySet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaDiscount.resx">
       <DependentUpon>FrmTaDiscount.cs</DependentUpon>

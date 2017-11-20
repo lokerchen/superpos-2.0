@@ -65,5 +65,9 @@ namespace SuperPOS.Common
         public static IList<DataManagerInfo> DataManager { get; set; } 
 
         public static IList<TaFreeFoodInfo> TaFreeFood { get; set; }
+
+        public static IList<TaDeliverySetInfo> TaDeliverySet { get; set; } 
+
+        public static IList<TaDeliverySetDetailInfo> TaDeliverySetDetail { get; set; } 
     }
 }

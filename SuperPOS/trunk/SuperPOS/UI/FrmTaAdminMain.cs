@@ -216,5 +216,13 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("TaFreeFood", "Free Food Items", new FrmTaFreeItem(usrID, usrName));
         }
         #endregion
+
+        #region Delivery Setting
+        private void TaDeliverySet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("DeliverySet", "Delivery Settings", new FrmTaDeliverySet(usrID, usrName));
+        }
+        #endregion
+
     }
 }

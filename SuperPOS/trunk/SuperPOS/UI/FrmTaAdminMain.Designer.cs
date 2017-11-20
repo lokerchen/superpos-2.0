@@ -408,6 +408,7 @@
             this.TaDeliverySet.AppearancePressed.Options.UseFont = true;
             this.TaDeliverySet.Caption = "Delivery Settings";
             this.TaDeliverySet.Name = "TaDeliverySet";
+            this.TaDeliverySet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaDeliverySet_LinkClicked);
             // 
             // TaPostcodeAssign
             // 

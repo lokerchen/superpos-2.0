@@ -53,6 +53,9 @@ namespace SuperPOS.Common
             systemData.GetDataManager();
             //获得Free Food
             systemData.GetTaFreeFood();
+            //获得Delivery Set
+            systemData.GetTaDeliverySet();
+            systemData.GetTaDeliverySetDetail();
 
             #region Takeaway
             //Department Code
