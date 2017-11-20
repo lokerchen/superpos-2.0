@@ -56,6 +56,9 @@ namespace SuperPOS.Common
         public static string ACCESS_EATIN = "EATIN";
         public static string ACCESS_GENERAL = "GENERAL";
 
+        //数据库名称，备份和还原数据库时使用，与配置文件中的数据库名称保持一致
+        public static string DB_NAME = "SuperPOS2.db";
+
         #region 系统常量
         //账单
         public static string SYS_VALUE_CHECK_CODE = "1001";
