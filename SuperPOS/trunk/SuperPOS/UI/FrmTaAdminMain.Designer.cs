@@ -44,16 +44,21 @@
             this.SysPrt = new DevExpress.XtraNavBar.NavBarItem();
             this.SysExit = new DevExpress.XtraNavBar.NavBarItem();
             this.SetTa = new DevExpress.XtraNavBar.NavBarGroup();
-            this.TAMenuCat = new DevExpress.XtraNavBar.NavBarItem();
-            this.TAMenuItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.TAMenuSet = new DevExpress.XtraNavBar.NavBarItem();
             this.TAPaymentType = new DevExpress.XtraNavBar.NavBarItem();
-            this.TADeptCode = new DevExpress.XtraNavBar.NavBarItem();
-            this.TAPrtInfoSet = new DevExpress.XtraNavBar.NavBarItem();
-            this.TADriverSet = new DevExpress.XtraNavBar.NavBarItem();
-            this.ExtraMenu = new DevExpress.XtraNavBar.NavBarItem();
             this.TaDiscount = new DevExpress.XtraNavBar.NavBarItem();
             this.TaDeliveryNote = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaFreeFood = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaDeliverySet = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaPostcodeAssign = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaPostcodeSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.TAMenuCat = new DevExpress.XtraNavBar.NavBarItem();
+            this.TAMenuItem = new DevExpress.XtraNavBar.NavBarItem();
+            this.TaSubMenu = new DevExpress.XtraNavBar.NavBarItem();
+            this.ExtraMenu = new DevExpress.XtraNavBar.NavBarItem();
+            this.TADeptCode = new DevExpress.XtraNavBar.NavBarItem();
+            this.TAMenuSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.TAPrtInfoSet = new DevExpress.XtraNavBar.NavBarItem();
+            this.TADriverSet = new DevExpress.XtraNavBar.NavBarItem();
             this.TaDriver = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuth = new DevExpress.XtraNavBar.NavBarGroup();
             this.UsrSet = new DevExpress.XtraNavBar.NavBarItem();
@@ -68,11 +73,6 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.TaFreeFood = new DevExpress.XtraNavBar.NavBarItem();
-            this.TaDeliverySet = new DevExpress.XtraNavBar.NavBarItem();
-            this.TaPostcodeAssign = new DevExpress.XtraNavBar.NavBarItem();
-            this.TaPostcodeSet = new DevExpress.XtraNavBar.NavBarItem();
-            this.TaSubMenu = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -340,48 +340,6 @@
             this.SetTa.Name = "SetTa";
             this.SetTa.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
             // 
-            // TAMenuCat
-            // 
-            this.TAMenuCat.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuCat.Appearance.Options.UseFont = true;
-            this.TAMenuCat.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuCat.AppearanceDisabled.Options.UseFont = true;
-            this.TAMenuCat.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuCat.AppearanceHotTracked.Options.UseFont = true;
-            this.TAMenuCat.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuCat.AppearancePressed.Options.UseFont = true;
-            this.TAMenuCat.Caption = "Menu Category";
-            this.TAMenuCat.Name = "TAMenuCat";
-            this.TAMenuCat.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuCat_LinkClicked);
-            // 
-            // TAMenuItem
-            // 
-            this.TAMenuItem.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuItem.Appearance.Options.UseFont = true;
-            this.TAMenuItem.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuItem.AppearanceDisabled.Options.UseFont = true;
-            this.TAMenuItem.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuItem.AppearanceHotTracked.Options.UseFont = true;
-            this.TAMenuItem.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuItem.AppearancePressed.Options.UseFont = true;
-            this.TAMenuItem.Caption = "Menu Item";
-            this.TAMenuItem.Name = "TAMenuItem";
-            this.TAMenuItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuItem_LinkClicked);
-            // 
-            // TAMenuSet
-            // 
-            this.TAMenuSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuSet.Appearance.Options.UseFont = true;
-            this.TAMenuSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuSet.AppearanceDisabled.Options.UseFont = true;
-            this.TAMenuSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuSet.AppearanceHotTracked.Options.UseFont = true;
-            this.TAMenuSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAMenuSet.AppearancePressed.Options.UseFont = true;
-            this.TAMenuSet.Caption = "Menu Set";
-            this.TAMenuSet.Name = "TAMenuSet";
-            this.TAMenuSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuSet_LinkClicked);
-            // 
             // TAPaymentType
             // 
             this.TAPaymentType.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -395,60 +353,6 @@
             this.TAPaymentType.Caption = "Payment Type";
             this.TAPaymentType.Name = "TAPaymentType";
             this.TAPaymentType.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAPaymentType_LinkClicked);
-            // 
-            // TADeptCode
-            // 
-            this.TADeptCode.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADeptCode.Appearance.Options.UseFont = true;
-            this.TADeptCode.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADeptCode.AppearanceDisabled.Options.UseFont = true;
-            this.TADeptCode.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADeptCode.AppearanceHotTracked.Options.UseFont = true;
-            this.TADeptCode.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADeptCode.AppearancePressed.Options.UseFont = true;
-            this.TADeptCode.Caption = "Department Code";
-            this.TADeptCode.Name = "TADeptCode";
-            this.TADeptCode.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TADeptCode_LinkClicked);
-            // 
-            // TAPrtInfoSet
-            // 
-            this.TAPrtInfoSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAPrtInfoSet.Appearance.Options.UseFont = true;
-            this.TAPrtInfoSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAPrtInfoSet.AppearanceDisabled.Options.UseFont = true;
-            this.TAPrtInfoSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAPrtInfoSet.AppearanceHotTracked.Options.UseFont = true;
-            this.TAPrtInfoSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TAPrtInfoSet.AppearancePressed.Options.UseFont = true;
-            this.TAPrtInfoSet.Caption = "Printer infomation";
-            this.TAPrtInfoSet.Name = "TAPrtInfoSet";
-            // 
-            // TADriverSet
-            // 
-            this.TADriverSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.Appearance.Options.UseFont = true;
-            this.TADriverSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.AppearanceDisabled.Options.UseFont = true;
-            this.TADriverSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.AppearanceHotTracked.Options.UseFont = true;
-            this.TADriverSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.AppearancePressed.Options.UseFont = true;
-            this.TADriverSet.Caption = "Driver Setting";
-            this.TADriverSet.Name = "TADriverSet";
-            // 
-            // ExtraMenu
-            // 
-            this.ExtraMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraMenu.Appearance.Options.UseFont = true;
-            this.ExtraMenu.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraMenu.AppearanceDisabled.Options.UseFont = true;
-            this.ExtraMenu.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraMenu.AppearanceHotTracked.Options.UseFont = true;
-            this.ExtraMenu.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExtraMenu.AppearancePressed.Options.UseFont = true;
-            this.ExtraMenu.Caption = "Extra Menu Edit";
-            this.ExtraMenu.Name = "ExtraMenu";
-            this.ExtraMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ExtraMenu_LinkClicked);
             // 
             // TaDiscount
             // 
@@ -477,6 +381,168 @@
             this.TaDeliveryNote.Caption = "Delivery Notes";
             this.TaDeliveryNote.Name = "TaDeliveryNote";
             this.TaDeliveryNote.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaDeliveryNote_LinkClicked);
+            // 
+            // TaFreeFood
+            // 
+            this.TaFreeFood.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.Appearance.Options.UseFont = true;
+            this.TaFreeFood.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.AppearanceDisabled.Options.UseFont = true;
+            this.TaFreeFood.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.AppearanceHotTracked.Options.UseFont = true;
+            this.TaFreeFood.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaFreeFood.AppearancePressed.Options.UseFont = true;
+            this.TaFreeFood.Caption = "Free Food Items";
+            this.TaFreeFood.Name = "TaFreeFood";
+            this.TaFreeFood.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaFreeFood_LinkClicked);
+            // 
+            // TaDeliverySet
+            // 
+            this.TaDeliverySet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.Appearance.Options.UseFont = true;
+            this.TaDeliverySet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.AppearanceDisabled.Options.UseFont = true;
+            this.TaDeliverySet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.AppearanceHotTracked.Options.UseFont = true;
+            this.TaDeliverySet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaDeliverySet.AppearancePressed.Options.UseFont = true;
+            this.TaDeliverySet.Caption = "Delivery Settings";
+            this.TaDeliverySet.Name = "TaDeliverySet";
+            // 
+            // TaPostcodeAssign
+            // 
+            this.TaPostcodeAssign.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.Appearance.Options.UseFont = true;
+            this.TaPostcodeAssign.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.AppearanceDisabled.Options.UseFont = true;
+            this.TaPostcodeAssign.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.AppearanceHotTracked.Options.UseFont = true;
+            this.TaPostcodeAssign.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeAssign.AppearancePressed.Options.UseFont = true;
+            this.TaPostcodeAssign.Caption = "Postcode Assignment";
+            this.TaPostcodeAssign.Name = "TaPostcodeAssign";
+            // 
+            // TaPostcodeSet
+            // 
+            this.TaPostcodeSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.Appearance.Options.UseFont = true;
+            this.TaPostcodeSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.AppearanceDisabled.Options.UseFont = true;
+            this.TaPostcodeSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.AppearanceHotTracked.Options.UseFont = true;
+            this.TaPostcodeSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaPostcodeSet.AppearancePressed.Options.UseFont = true;
+            this.TaPostcodeSet.Caption = "Postcode Settings";
+            this.TaPostcodeSet.Name = "TaPostcodeSet";
+            // 
+            // TAMenuCat
+            // 
+            this.TAMenuCat.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuCat.Appearance.Options.UseFont = true;
+            this.TAMenuCat.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuCat.AppearanceDisabled.Options.UseFont = true;
+            this.TAMenuCat.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuCat.AppearanceHotTracked.Options.UseFont = true;
+            this.TAMenuCat.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuCat.AppearancePressed.Options.UseFont = true;
+            this.TAMenuCat.Caption = "Menu Category";
+            this.TAMenuCat.Name = "TAMenuCat";
+            this.TAMenuCat.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuCat_LinkClicked);
+            // 
+            // TAMenuItem
+            // 
+            this.TAMenuItem.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuItem.Appearance.Options.UseFont = true;
+            this.TAMenuItem.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuItem.AppearanceDisabled.Options.UseFont = true;
+            this.TAMenuItem.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuItem.AppearanceHotTracked.Options.UseFont = true;
+            this.TAMenuItem.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuItem.AppearancePressed.Options.UseFont = true;
+            this.TAMenuItem.Caption = "Menu Item";
+            this.TAMenuItem.Name = "TAMenuItem";
+            this.TAMenuItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuItem_LinkClicked);
+            // 
+            // TaSubMenu
+            // 
+            this.TaSubMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.Appearance.Options.UseFont = true;
+            this.TaSubMenu.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.AppearanceDisabled.Options.UseFont = true;
+            this.TaSubMenu.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.AppearanceHotTracked.Options.UseFont = true;
+            this.TaSubMenu.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSubMenu.AppearancePressed.Options.UseFont = true;
+            this.TaSubMenu.Caption = "Sub Menu";
+            this.TaSubMenu.Name = "TaSubMenu";
+            // 
+            // ExtraMenu
+            // 
+            this.ExtraMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtraMenu.Appearance.Options.UseFont = true;
+            this.ExtraMenu.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtraMenu.AppearanceDisabled.Options.UseFont = true;
+            this.ExtraMenu.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtraMenu.AppearanceHotTracked.Options.UseFont = true;
+            this.ExtraMenu.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtraMenu.AppearancePressed.Options.UseFont = true;
+            this.ExtraMenu.Caption = "Extra Menu Edit";
+            this.ExtraMenu.Name = "ExtraMenu";
+            this.ExtraMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ExtraMenu_LinkClicked);
+            // 
+            // TADeptCode
+            // 
+            this.TADeptCode.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADeptCode.Appearance.Options.UseFont = true;
+            this.TADeptCode.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADeptCode.AppearanceDisabled.Options.UseFont = true;
+            this.TADeptCode.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADeptCode.AppearanceHotTracked.Options.UseFont = true;
+            this.TADeptCode.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADeptCode.AppearancePressed.Options.UseFont = true;
+            this.TADeptCode.Caption = "Department Code";
+            this.TADeptCode.Name = "TADeptCode";
+            this.TADeptCode.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TADeptCode_LinkClicked);
+            // 
+            // TAMenuSet
+            // 
+            this.TAMenuSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuSet.Appearance.Options.UseFont = true;
+            this.TAMenuSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuSet.AppearanceDisabled.Options.UseFont = true;
+            this.TAMenuSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuSet.AppearanceHotTracked.Options.UseFont = true;
+            this.TAMenuSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAMenuSet.AppearancePressed.Options.UseFont = true;
+            this.TAMenuSet.Caption = "Menu Set";
+            this.TAMenuSet.Name = "TAMenuSet";
+            this.TAMenuSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TAMenuSet_LinkClicked);
+            // 
+            // TAPrtInfoSet
+            // 
+            this.TAPrtInfoSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPrtInfoSet.Appearance.Options.UseFont = true;
+            this.TAPrtInfoSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPrtInfoSet.AppearanceDisabled.Options.UseFont = true;
+            this.TAPrtInfoSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPrtInfoSet.AppearanceHotTracked.Options.UseFont = true;
+            this.TAPrtInfoSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TAPrtInfoSet.AppearancePressed.Options.UseFont = true;
+            this.TAPrtInfoSet.Caption = "Printer infomation";
+            this.TAPrtInfoSet.Name = "TAPrtInfoSet";
+            // 
+            // TADriverSet
+            // 
+            this.TADriverSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADriverSet.Appearance.Options.UseFont = true;
+            this.TADriverSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADriverSet.AppearanceDisabled.Options.UseFont = true;
+            this.TADriverSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADriverSet.AppearanceHotTracked.Options.UseFont = true;
+            this.TADriverSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TADriverSet.AppearancePressed.Options.UseFont = true;
+            this.TADriverSet.Caption = "Driver Setting";
+            this.TADriverSet.Name = "TADriverSet";
             // 
             // TaDriver
             // 
@@ -605,71 +671,6 @@
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(997, 615);
-            // 
-            // TaFreeFood
-            // 
-            this.TaFreeFood.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaFreeFood.Appearance.Options.UseFont = true;
-            this.TaFreeFood.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaFreeFood.AppearanceDisabled.Options.UseFont = true;
-            this.TaFreeFood.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaFreeFood.AppearanceHotTracked.Options.UseFont = true;
-            this.TaFreeFood.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaFreeFood.AppearancePressed.Options.UseFont = true;
-            this.TaFreeFood.Caption = "Free Food Items";
-            this.TaFreeFood.Name = "TaFreeFood";
-            // 
-            // TaDeliverySet
-            // 
-            this.TaDeliverySet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaDeliverySet.Appearance.Options.UseFont = true;
-            this.TaDeliverySet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaDeliverySet.AppearanceDisabled.Options.UseFont = true;
-            this.TaDeliverySet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaDeliverySet.AppearanceHotTracked.Options.UseFont = true;
-            this.TaDeliverySet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaDeliverySet.AppearancePressed.Options.UseFont = true;
-            this.TaDeliverySet.Caption = "Delivery Settings";
-            this.TaDeliverySet.Name = "TaDeliverySet";
-            // 
-            // TaPostcodeAssign
-            // 
-            this.TaPostcodeAssign.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeAssign.Appearance.Options.UseFont = true;
-            this.TaPostcodeAssign.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeAssign.AppearanceDisabled.Options.UseFont = true;
-            this.TaPostcodeAssign.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeAssign.AppearanceHotTracked.Options.UseFont = true;
-            this.TaPostcodeAssign.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeAssign.AppearancePressed.Options.UseFont = true;
-            this.TaPostcodeAssign.Caption = "Postcode Assignment";
-            this.TaPostcodeAssign.Name = "TaPostcodeAssign";
-            // 
-            // TaPostcodeSet
-            // 
-            this.TaPostcodeSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeSet.Appearance.Options.UseFont = true;
-            this.TaPostcodeSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeSet.AppearanceDisabled.Options.UseFont = true;
-            this.TaPostcodeSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeSet.AppearanceHotTracked.Options.UseFont = true;
-            this.TaPostcodeSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaPostcodeSet.AppearancePressed.Options.UseFont = true;
-            this.TaPostcodeSet.Caption = "Postcode Settings";
-            this.TaPostcodeSet.Name = "TaPostcodeSet";
-            // 
-            // TaSubMenu
-            // 
-            this.TaSubMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaSubMenu.Appearance.Options.UseFont = true;
-            this.TaSubMenu.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaSubMenu.AppearanceDisabled.Options.UseFont = true;
-            this.TaSubMenu.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaSubMenu.AppearanceHotTracked.Options.UseFont = true;
-            this.TaSubMenu.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaSubMenu.AppearancePressed.Options.UseFont = true;
-            this.TaSubMenu.Caption = "Sub Menu";
-            this.TaSubMenu.Name = "TaSubMenu";
             // 
             // FrmTaAdminMain
             // 

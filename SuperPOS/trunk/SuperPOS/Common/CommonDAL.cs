@@ -51,6 +51,8 @@ namespace SuperPOS.Common
             systemData.GetTaCashDrawSet();
             //获得Data Manager
             systemData.GetDataManager();
+            //获得Free Food
+            systemData.GetTaFreeFood();
 
             #region Takeaway
             //Department Code
@@ -283,6 +285,43 @@ namespace SuperPOS.Common
                 sysValueInfo.ValueDesc = "CHECKCODE";
                 sysValueInfo.ValueResult = "1";
                 return "1";
+            }
+        }
+        #endregion
+
+        #region 获得Free Food Item Amount
+        public static string GetSysValue(string sValueID, string sValueDesc, string dResult)
+        {
+            new SystemData().GetSysValue();
+
+            var lstValue = CommonData.SysValue.Where(s => s.ValueID.Equals(sValueID));
+
+            SysValueInfo sysValueInfo = new SysValueInfo();
+            if (lstValue.Any())
+            {
+                sysValueInfo = lstValue.FirstOrDefault();
+
+                if (string.IsNullOrEmpty(dResult))
+                {
+                    _control.UpdateEntity(sysValueInfo);
+                    return sysValueInfo.ValueResult;
+                }
+                else
+                {
+                    sysValueInfo.ValueResult = dResult;
+                    _control.UpdateEntity(sysValueInfo);
+                    return dResult;
+                }
+
+            }
+            else
+            {
+                sysValueInfo.ValueID = sValueID;
+                //sysValueInfo.ValueDesc = "FREEFOODITEMAMOUNT";
+                sysValueInfo.ValueDesc = sValueDesc;
+                sysValueInfo.ValueResult = dResult;
+                _control.AddEntity(sysValueInfo);
+                return dResult;
             }
         }
         #endregion

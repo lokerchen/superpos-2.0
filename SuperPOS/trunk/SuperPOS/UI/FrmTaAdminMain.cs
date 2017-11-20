@@ -196,10 +196,12 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region User Rule
         private void UsrAuthRule_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             ShowXtraTabPage("UsrAuthRule", "User Rule", new FrmUsrAuthRule(usrID, usrName));
         }
+        #endregion
 
         #region Data Manager
         private void DataManager_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -208,5 +210,11 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        #region Free Food Item
+        private void TaFreeFood_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TaFreeFood", "Free Food Items", new FrmTaFreeItem(usrID, usrName));
+        }
+        #endregion
     }
 }
