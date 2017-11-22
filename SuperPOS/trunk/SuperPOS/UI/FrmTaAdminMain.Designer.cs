@@ -436,6 +436,7 @@
             this.TaPostcodeSet.AppearancePressed.Options.UseFont = true;
             this.TaPostcodeSet.Caption = "Postcode Settings";
             this.TaPostcodeSet.Name = "TaPostcodeSet";
+            this.TaPostcodeSet.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaPostcodeSet_LinkClicked);
             // 
             // TAMenuCat
             // 

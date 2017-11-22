@@ -327,6 +327,12 @@
     <Compile Include="UI\TA\FrmTaPostCode.Designer.cs">
       <DependentUpon>FrmTaPostCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaPostCodeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaPostCodeSet.Designer.cs">
+      <DependentUpon>FrmTaPostCodeSet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\FrmDesktopArea.resx">
       <DependentUpon>FrmDesktopArea.cs</DependentUpon>
@@ -450,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaPostCode.resx">
       <DependentUpon>FrmTaPostCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaPostCodeSet.resx">
+      <DependentUpon>FrmTaPostCodeSet.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinqToDB.Templates\!ReadMe.LinqToDB.md" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
