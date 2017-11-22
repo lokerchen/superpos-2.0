@@ -58,7 +58,6 @@
             this.TADeptCode = new DevExpress.XtraNavBar.NavBarItem();
             this.TAMenuSet = new DevExpress.XtraNavBar.NavBarItem();
             this.TAPrtInfoSet = new DevExpress.XtraNavBar.NavBarItem();
-            this.TADriverSet = new DevExpress.XtraNavBar.NavBarItem();
             this.TaDriver = new DevExpress.XtraNavBar.NavBarItem();
             this.UsrAuth = new DevExpress.XtraNavBar.NavBarGroup();
             this.UsrSet = new DevExpress.XtraNavBar.NavBarItem();
@@ -154,7 +153,6 @@
             this.GenSet,
             this.KeypadSet,
             this.TAPrtInfoSet,
-            this.TADriverSet,
             this.SysPrt,
             this.ExtraMenu,
             this.TaDiscount,
@@ -335,7 +333,6 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.TADeptCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAMenuSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TAPrtInfoSet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.TADriverSet),
             new DevExpress.XtraNavBar.NavBarItemLink(this.TaDriver)});
             this.SetTa.Name = "SetTa";
             this.SetTa.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
@@ -534,19 +531,6 @@
             this.TAPrtInfoSet.Caption = "Printer infomation";
             this.TAPrtInfoSet.Name = "TAPrtInfoSet";
             // 
-            // TADriverSet
-            // 
-            this.TADriverSet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.Appearance.Options.UseFont = true;
-            this.TADriverSet.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.AppearanceDisabled.Options.UseFont = true;
-            this.TADriverSet.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.AppearanceHotTracked.Options.UseFont = true;
-            this.TADriverSet.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TADriverSet.AppearancePressed.Options.UseFont = true;
-            this.TADriverSet.Caption = "Driver Setting";
-            this.TADriverSet.Name = "TADriverSet";
-            // 
             // TaDriver
             // 
             this.TaDriver.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -731,7 +715,6 @@
         private DevExpress.XtraNavBar.NavBarItem GenSet;
         private DevExpress.XtraNavBar.NavBarItem KeypadSet;
         private DevExpress.XtraNavBar.NavBarItem TAPrtInfoSet;
-        private DevExpress.XtraNavBar.NavBarItem TADriverSet;
         private DevExpress.XtraNavBar.NavBarItem SysPrt;
         private DevExpress.XtraNavBar.NavBarItem ExtraMenu;
         private DevExpress.XtraNavBar.NavBarItem TaDiscount;
