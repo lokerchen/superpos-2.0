@@ -56,6 +56,9 @@ namespace SuperPOS.Common
             //获得Delivery Set
             systemData.GetTaDeliverySet();
             systemData.GetTaDeliverySetDetail();
+            //Post code
+            systemData.GetTaPostcodeCharge();
+            systemData.GetTaPostcodeZone();
 
             #region Takeaway
             //Department Code
