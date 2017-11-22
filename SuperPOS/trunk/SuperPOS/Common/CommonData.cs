@@ -69,5 +69,9 @@ namespace SuperPOS.Common
         public static IList<TaDeliverySetInfo> TaDeliverySet { get; set; } 
 
         public static IList<TaDeliverySetDetailInfo> TaDeliverySetDetail { get; set; } 
+
+        public static IList<TaPostcodeChargeInfo> TaPostcodeCharge { get; set; } 
+
+        public static IList<TaPostcodeZoneInfo> TaPostcodeZone { get; set; } 
     }
 }

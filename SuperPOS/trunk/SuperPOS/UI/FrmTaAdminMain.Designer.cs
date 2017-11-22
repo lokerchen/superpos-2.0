@@ -422,6 +422,7 @@
             this.TaPostcodeAssign.AppearancePressed.Options.UseFont = true;
             this.TaPostcodeAssign.Caption = "Postcode Assignment";
             this.TaPostcodeAssign.Name = "TaPostcodeAssign";
+            this.TaPostcodeAssign.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaPostcodeAssign_LinkClicked);
             // 
             // TaPostcodeSet
             // 
