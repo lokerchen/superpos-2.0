@@ -168,19 +168,35 @@ namespace SuperPOS.UI.TA
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            new SystemData().GetTaExtraMenu();
 
+            if (CommonTool.ConfirmDelete() == DialogResult.Cancel) return;
+            else
+            {
+                try
+                {
+                    _control.DeleteEntity(CommonData.TaExtraMenu.FirstOrDefault(s => s.ID == Convert.ToInt32(gvExtraMenu.GetRowCellValue(gvExtraMenu.FocusedRowHandle, "ID"))));
+                    CommonTool.ShowMessage("Delete successful!");
+                    BindGridData();
+                    isAdd = false;
+                }
+                catch (Exception ex) { LogHelper.Error(this.Name, ex); }
+            }
         }
 
         private void FrmTaExtraMenuEdit_Load(object sender, EventArgs e)
         {
             BindGridData();
 
-            if (gvExtraMenu.RowCount <= 0)
-            {
-                isAdd = true;
-                BindChkComboType(false);
-                BindChkComboBtnType(false);
-            }
+            //if (gvExtraMenu.RowCount <= 0)
+            //{
+            //    isAdd = true;
+            //    BindChkComboType(false);
+            //    BindChkComboBtnType(false);
+            //}
+
+            //BindChkComboType(false);
+            //BindChkComboBtnType(false);
         }
     }
 }
