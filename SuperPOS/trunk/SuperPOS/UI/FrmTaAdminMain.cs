@@ -230,5 +230,12 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("PostcodeAssignment", "Postcode Assignment", new FrmTaPostCode(usrID, usrName));
         }
         #endregion
+
+        #region Postcode Settings
+        private void TaPostcodeSet_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("PostcodeSettings", "Postcode Settings", new FrmTaPostCodeSet(usrID, usrName));
+        }
+        #endregion
     }
 }

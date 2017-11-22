@@ -75,5 +75,7 @@ namespace SuperPOS.Common
         public void GetTaPostcodeCharge() { CommonData.TaPostcodeCharge = _control.SelectAll<TaPostcodeChargeInfo>(); }
 
         public void GetTaPostcodeZone() { CommonData.TaPostcodeZone = _control.SelectAll<TaPostcodeZoneInfo>(); }
+
+        public void GetTaPostcodeSet() { CommonData.TaPostcodeSet = _control.SelectAll<TaPostcodeSetInfo>(); }
     }
 }

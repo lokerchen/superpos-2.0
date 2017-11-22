@@ -73,6 +73,7 @@
     <Compile Include="Entities\TaPaymentInfo.cs" />
     <Compile Include="Entities\TaPaymentTypeInfo.cs" />
     <Compile Include="Entities\TaPostcodeChargeInfo.cs" />
+    <Compile Include="Entities\TaPostcodeSetInfo.cs" />
     <Compile Include="Entities\TaPostcodeZoneInfo.cs" />
     <Compile Include="Entities\TAShiftCodeInfo.cs" />
     <Compile Include="Entities\TaOrderItemInfo.cs" />
@@ -149,6 +150,7 @@
     <Content Include="Mappings\TaPaymentInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaPostcodeChargeInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaPostcodeZoneInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaPostcodeSetInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
