@@ -333,6 +333,18 @@
     <Compile Include="UI\TA\FrmTaPostCodeSet.Designer.cs">
       <DependentUpon>FrmTaPostCodeSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaSubMenu.Designer.cs">
+      <DependentUpon>FrmTaSubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaSubMenuDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaSubMenuDetail.Designer.cs">
+      <DependentUpon>FrmTaSubMenuDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UI\FrmDesktopArea.resx">
       <DependentUpon>FrmDesktopArea.cs</DependentUpon>
@@ -459,6 +471,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaPostCodeSet.resx">
       <DependentUpon>FrmTaPostCodeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaSubMenu.resx">
+      <DependentUpon>FrmTaSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaSubMenuDetail.resx">
+      <DependentUpon>FrmTaSubMenuDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinqToDB.Templates\!ReadMe.LinqToDB.md" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
