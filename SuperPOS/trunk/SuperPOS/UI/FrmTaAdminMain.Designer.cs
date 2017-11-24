@@ -475,6 +475,7 @@
             this.TaSubMenu.AppearancePressed.Options.UseFont = true;
             this.TaSubMenu.Caption = "Sub Menu";
             this.TaSubMenu.Name = "TaSubMenu";
+            this.TaSubMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaSubMenu_LinkClicked);
             // 
             // ExtraMenu
             // 

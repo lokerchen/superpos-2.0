@@ -61,6 +61,9 @@ namespace SuperPOS.Common
             systemData.GetTaPostcodeZone();
             //Post code settings
             systemData.GetTaPostcodeSet();
+            //Sub Menu
+            systemData.GetTaSubMenu();
+            systemData.GetTaSubMenuDetail();
 
             #region Takeaway
             //Department Code

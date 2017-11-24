@@ -237,5 +237,13 @@ namespace SuperPOS.UI.TA
             ShowXtraTabPage("PostcodeSettings", "Postcode Settings", new FrmTaPostCodeSet(usrID, usrName));
         }
         #endregion
+
+        #region Sub Menu
+        private void TaSubMenu_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("SubMenu", "Sub Menu", new FrmTaSubMenu(usrID, usrName));
+        }
+        #endregion
+
     }
 }
