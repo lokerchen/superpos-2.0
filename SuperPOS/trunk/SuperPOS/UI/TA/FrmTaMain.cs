@@ -53,6 +53,8 @@ namespace SuperPOS.UI.TA
         //订单类型
         private string ORDER_TYPE = PubComm.ORDER_TYPE_SHOP;
 
+        private AutoSizeFormClass asfc = new AutoSizeFormClass();
+
         #region 来电显示相关
         [StructLayout(LayoutKind.Sequential)]
         public struct tag_pstn_Data
@@ -156,6 +158,8 @@ namespace SuperPOS.UI.TA
         #region 窗口加载
         private void FrmTaMain_Load(object sender, EventArgs e)
         {
+            asfc.controllInitializeSize(this);
+
             //展开所有TreeList
             treeListOrder.ExpandAll();
 
@@ -1326,5 +1330,10 @@ namespace SuperPOS.UI.TA
         #endregion
 
         #endregion
+
+        private void FrmTaMain_SizeChanged(object sender, EventArgs e)
+        {
+            asfc.controlAutoSize(this);
+        }
     }
 }

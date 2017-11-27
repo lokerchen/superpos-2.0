@@ -1279,6 +1279,7 @@
             this.Text = "FrmTaMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTaMain_Load);
+            this.SizeChanged += new System.EventHandler(this.FrmTaMain_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
