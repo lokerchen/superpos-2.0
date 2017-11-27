@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\AutoSizeFormClass.cs" />
     <Compile Include="Common\CommonDAL.cs" />
     <Compile Include="Common\CommonData.cs" />
     <Compile Include="Common\CommonTool.cs" />
