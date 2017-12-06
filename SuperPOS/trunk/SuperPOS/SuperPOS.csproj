@@ -91,6 +91,7 @@
     <Compile Include="Common\EntityControl.cs" />
     <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\PubComm.cs" />
+    <Compile Include="Common\PrimaryScreen .cs" />
     <Compile Include="Common\SessionFactory.cs" />
     <Compile Include="Common\SystemData.cs" />
     <Compile Include="Print\PrtCommon.cs" />

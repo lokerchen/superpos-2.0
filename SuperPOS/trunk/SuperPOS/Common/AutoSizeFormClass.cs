@@ -56,28 +56,12 @@ namespace SuperPOS.Common
                 controlRect cR;
                 //  cR.Left = mForm.Left; cR.Top = mForm.Top; cR.Width = mForm.Width; cR.Height = mForm.Height;
                 cR.Left = 0; cR.Top = 0; cR.Width = mForm.PreferredSize.Width; cR.Height = mForm.PreferredSize.Height;
-                //cR.Left = 0; cR.Top = 0; cR.Width = Screen.PrimaryScreen.Bounds.Width; cR.Height = Screen.PrimaryScreen.Bounds.Height;
 
                 oldCtrl.Add(cR);//第一个为"窗体本身",只加入一次即可
                 AddControl(mForm);//窗体内其余控件可能嵌套其它控件(比如panel),故单独抽出以便递归调用
             }
-
             float wScale = (float)mForm.Width / (float)oldCtrl[0].Width;//新旧窗体之间的比例，与最早的旧窗体
             float hScale = (float)mForm.Height / (float)oldCtrl[0].Height;//.Height;
-
-            //float wScale = (float)SystemInformation.WorkingArea.Width / (float)oldCtrl[0].Width;//新旧窗体之间的比例，与最早的旧窗体
-            //float hScale = (float)SystemInformation.WorkingArea.Height / (float)oldCtrl[0].Height;//.Height;
-
-            //float wScale = 0.0f;//新旧窗体之间的比例，与最早的旧窗体
-            //float hScale = 0.0f;//.Height;
-
-            //wScale = (float) mForm.Width >= PubComm.SCREEN_WIDTH
-            //    ? (float) mForm.Width / (float) oldCtrl[0].Width
-            //    : (float) oldCtrl[0].Width / (float) mForm.Width;
-            //hScale = (float) mForm.Height >= PubComm.SCREEN_HEIGHT
-            //    ? (float) mForm.Height / (float) oldCtrl[0].Height
-            //    : (float) oldCtrl[0].Height / (float) mForm.Height;
-
             ctrlNo = 1;//进入=1，第0个为窗体本身,窗体内的控件,从序号1开始
             AutoScaleControl(mForm, wScale, hScale);//窗体内其余控件还可能嵌套控件(比如panel),要单独抽出,因为要递归调用
         }
@@ -123,6 +107,8 @@ namespace SuperPOS.Common
                     Cursor.Current = Cursors.Default;
                 }
             }
+
+
         }
     }
 }
