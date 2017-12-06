@@ -158,8 +158,6 @@ namespace SuperPOS.UI.TA
         #region 窗口加载
         private void FrmTaMain_Load(object sender, EventArgs e)
         {
-            asfc.controllInitializeSize(this);
-
             //展开所有TreeList
             treeListOrder.ExpandAll();
 
@@ -203,6 +201,8 @@ namespace SuperPOS.UI.TA
             }
             //加载TreeList
             //BindData();
+
+            asfc.controllInitializeSize(this);
 
             #region 提示打开来电设备失败
             if (isNew)
@@ -1333,6 +1333,7 @@ namespace SuperPOS.UI.TA
 
         private void FrmTaMain_SizeChanged(object sender, EventArgs e)
         {
+            //asfc.controlAutoSize(this, 1170, 700);
             asfc.controlAutoSize(this);
         }
     }
