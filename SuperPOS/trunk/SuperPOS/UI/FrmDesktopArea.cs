@@ -20,6 +20,8 @@ namespace SuperPOS.UI
         //用户姓名
         public string usrName = "";
 
+        private AutoSizeFormClass asfc = new AutoSizeFormClass();
+
         public FrmDesktopArea()
         {
             InitializeComponent();
@@ -57,12 +59,19 @@ namespace SuperPOS.UI
             {
                 lblSession.Text = lstSession.FirstOrDefault().ShiftName;
             }
+
+            asfc.controllInitializeSize(this);
         }
 
         private void btnTakeaway_Click(object sender, EventArgs e)
         {
             FrmTaMain frmTaMain = new FrmTaMain(usrID);
             frmTaMain.ShowDialog();
+        }
+
+        private void FrmDesktopArea_SizeChanged(object sender, EventArgs e)
+        {
+            asfc.controlAutoSize(this);
         }
     }
 }
