@@ -229,6 +229,47 @@ namespace SuperPOS.UI.TA
 
             SetMenuCate(iCatePageNum, iMenuSetId);
             SetMenuItem(iPageNum, iMenuCateId, iMenuSetId);
+
+            //英文
+            if (iLangStatusId == PubComm.MENU_LANG_DEFAULT)
+            {
+                foreach (TreeListNode treeListNode in treeListOrder.Nodes)
+                {
+                    //主菜品
+                    if (treeListNode["ItemType"].ToString().Equals(PubComm.MENU_ITEM_MAIN.ToString()))
+                    {
+                        if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(treeListNode["ItemCode"])))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(treeListNode["ItemCode"]))?.MiEngName;
+                        }
+
+                        if (treeListNode.HasChildren)
+                        {
+                            SetChildNode(treeListNode);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (TreeListNode treeListNode in treeListOrder.Nodes)
+                {
+                    //主菜品
+                    if (treeListNode["ItemType"].ToString().Equals(PubComm.MENU_ITEM_MAIN.ToString()))
+                    {
+                        if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(treeListNode["ItemCode"])))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(treeListNode["ItemCode"]))?.MiOtherName;
+                        }
+
+                        if (treeListNode.HasChildren)
+                        {
+                            SetChildNode(treeListNode);
+                        }
+                    }
+                }
+            }
+            
         }
         #endregion
 
@@ -1285,7 +1326,7 @@ namespace SuperPOS.UI.TA
         }
 
         #endregion
-
+        
         #endregion
 
         #region 保存账单
@@ -1379,5 +1420,72 @@ namespace SuperPOS.UI.TA
 
             this.Close();
         }
+
+        #region 对Node子节点操作中英文显示
+        private void SetChildNode(TreeListNode parentNode)
+        {
+            foreach (TreeListNode treeListNode in parentNode.Nodes)
+            {
+                //Console.WriteLine(treeListNode["ItemCode"]);
+
+                if (iLangStatusId == PubComm.MENU_LANG_DEFAULT)
+                {
+                    //子菜品
+                    if (treeListNode["ItemType"].ToString().Equals(PubComm.MENU_ITEM_CHILD.ToString()))
+                    {
+                        if (CommonData.TaMenuItemOtherChoice.Any(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString())))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaMenuItemOtherChoice.FirstOrDefault(s => s.ID.ToString().Equals(treeListNode["ItemCode"]))?.MiEngName;
+                        }
+                    }
+
+                    //改码
+                    if (treeListNode["ItemType"].ToString().Equals(PubComm.MENU_ITEM_APPEND.ToString()))
+                    {
+                        if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(treeListNode["ItemCode"])))
+                        {
+                            treeListNode["ItemDishName"] = treeListNode["ItemDishName"].ToString().Split(' ')[0] + " " + CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(treeListNode["ItemCode"]))?.MiEngName;
+                        }
+                        else if (CommonData.TaMenuItemOtherChoice.Any(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString())))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaMenuItemOtherChoice.FirstOrDefault(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString()))?.MiEngName;
+                        }
+                        else if (CommonData.TaExtraMenu.Any(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString())))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaExtraMenu.FirstOrDefault(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString()))?.eMenuEngName;
+                        }
+                    }
+                }
+                else
+                {
+                    //子菜品
+                    if (treeListNode["ItemType"].ToString().Equals(PubComm.MENU_ITEM_CHILD.ToString()))
+                    {
+                        if (CommonData.TaMenuItemOtherChoice.Any(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString())))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaMenuItemOtherChoice.FirstOrDefault(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString()))?.MiOtherName;
+                        }
+                    }
+
+                    //改码
+                    if (treeListNode["ItemType"].ToString().Equals(PubComm.MENU_ITEM_APPEND.ToString()))
+                    {
+                        if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(treeListNode["ItemCode"])))
+                        {
+                            treeListNode["ItemDishName"] = treeListNode["ItemDishName"].ToString().Split(' ')[0] + " " + CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(treeListNode["ItemCode"]))?.MiOtherName;
+                        }
+                        else if (CommonData.TaMenuItemOtherChoice.Any(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString())))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaMenuItemOtherChoice.FirstOrDefault(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString()))?.MiOtherName;
+                        }
+                        else if (CommonData.TaExtraMenu.Any(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString())))
+                        {
+                            treeListNode["ItemDishName"] = CommonData.TaExtraMenu.FirstOrDefault(s => s.ID.ToString().Equals(treeListNode["ItemCode"].ToString()))?.eMenuOtherName;
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }
