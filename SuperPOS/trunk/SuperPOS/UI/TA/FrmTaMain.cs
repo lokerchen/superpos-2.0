@@ -1336,5 +1336,18 @@ namespace SuperPOS.UI.TA
             //asfc.controlAutoSize(this, 1170, 700);
             asfc.controlAutoSize(this);
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (treeListOrder.AllNodesCount > 0)
+            {
+                if (CommonTool.ConfirmMessage("Are you sure you want to cancel the order?") == DialogResult.OK)
+                {
+                    treeListOrder.Nodes.Clear();
+                }
+            }
+
+            this.Close();
+        }
     }
 }
