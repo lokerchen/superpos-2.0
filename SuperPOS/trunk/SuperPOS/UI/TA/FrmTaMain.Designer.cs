@@ -445,6 +445,7 @@
             this.btnHome.Size = new System.Drawing.Size(80, 60);
             this.btnHome.TabIndex = 20;
             this.btnHome.Text = "HOME";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnCid
             // 
