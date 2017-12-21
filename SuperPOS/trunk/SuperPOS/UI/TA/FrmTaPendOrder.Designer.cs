@@ -47,6 +47,7 @@
             this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.StaffName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTaPendOrder)).BeginInit();
@@ -86,7 +87,8 @@
             this.CheckCode,
             this.PayOrderType,
             this.TotalAmount,
-            this.IsPaid});
+            this.IsPaid,
+            this.StaffName});
             this.gvTaPendOrder.GridControl = this.gridControlTaPendOrder;
             this.gvTaPendOrder.IndicatorWidth = 50;
             this.gvTaPendOrder.Name = "gvTaPendOrder";
@@ -268,6 +270,14 @@
             this.panelControl3.Size = new System.Drawing.Size(201, 221);
             this.panelControl3.TabIndex = 49;
             // 
+            // StaffName
+            // 
+            this.StaffName.Caption = "Staff Name";
+            this.StaffName.FieldName = "StaffName";
+            this.StaffName.Name = "StaffName";
+            this.StaffName.Visible = true;
+            this.StaffName.VisibleIndex = 4;
+            // 
             // FrmTaPendOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -316,5 +326,6 @@
         private DevExpress.XtraEditors.SimpleButton btnAll;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraGrid.Columns.GridColumn StaffName;
     }
 }
