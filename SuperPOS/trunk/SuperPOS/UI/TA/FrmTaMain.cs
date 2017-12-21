@@ -632,7 +632,7 @@ namespace SuperPOS.UI.TA
                 }
                 else
                 {
-                    SetListNode(taMenuItemInfo);
+                    SetListNode(taMenuItemInfo, 1);
                 }
             }
         }
@@ -1439,7 +1439,7 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
-        private void SetListNode(TaMenuItemInfo taMenuItemInfo)
+        private void SetListNode(TaMenuItemInfo taMenuItemInfo, int iQ)
         {
             //判断是否存在相同菜品
             //若存在，则合并，并对数量+1
@@ -1455,13 +1455,13 @@ namespace SuperPOS.UI.TA
 
                     if (dQty > 1)
                     {
-                        treeListNode["ItemQty"] = (dQty + 1).ToString();
-                        treeListNode["ItemTotalPrice"] = ((dPrice / dQty) * (dQty + 1)).ToString();
+                        treeListNode["ItemQty"] = (dQty + iQ).ToString();
+                        treeListNode["ItemTotalPrice"] = ((dPrice / dQty) * (dQty + iQ)).ToString();
                     }
                     else
                     {
-                        treeListNode["ItemQty"] = (dQty + 1).ToString();
-                        treeListNode["ItemTotalPrice"] = (dPrice * 2.0m).ToString();
+                        treeListNode["ItemQty"] = (dQty + iQ).ToString();
+                        treeListNode["ItemTotalPrice"] = (dPrice * iQ).ToString();
                     }
                     treeListOrder.EndUpdate();
 
@@ -1470,7 +1470,7 @@ namespace SuperPOS.UI.TA
             }
             else
             {
-                int iQty = 1;
+                int iQty = iQ;
                 TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
                 taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
                 taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
@@ -1510,7 +1510,29 @@ namespace SuperPOS.UI.TA
                         string sWord = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(sKeyWord)).MiEngName;
                         TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(sWord, iMenuCateId, iMenuSetId);
 
-                        SetListNode(taMenuItemInfo);
+                        SetListNode(taMenuItemInfo, 1);
+                    }
+                }
+            }
+        }
+
+        private void btnKeypad_Click(object sender, EventArgs e)
+        {
+            FrmTaKeyPad frmTaKeyPad = new FrmTaKeyPad();
+
+            if (frmTaKeyPad.ShowDialog() == DialogResult.OK)
+            {
+                string sDishCode = frmTaKeyPad.DisCode;
+                string sQty = frmTaKeyPad.Qty;
+
+                if (!string.IsNullOrEmpty(sDishCode))
+                {
+                    if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(sDishCode)))
+                    {
+                        string sWord = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(sDishCode)).MiEngName;
+                        TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(sWord, iMenuCateId, iMenuSetId);
+
+                        SetListNode(taMenuItemInfo, Convert.ToInt32(sQty));
                     }
                 }
             }

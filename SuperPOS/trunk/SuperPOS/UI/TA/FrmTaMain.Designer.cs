@@ -748,6 +748,7 @@
             this.btnKeypad.Size = new System.Drawing.Size(111, 42);
             this.btnKeypad.TabIndex = 27;
             this.btnKeypad.Text = "Key Pad";
+            this.btnKeypad.Click += new System.EventHandler(this.btnKeypad_Click);
             // 
             // btnOrderType
             // 
