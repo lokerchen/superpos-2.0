@@ -786,6 +786,7 @@
             this.btnSearchMeal.Size = new System.Drawing.Size(111, 42);
             this.btnSearchMeal.TabIndex = 24;
             this.btnSearchMeal.Text = "Search Meal";
+            this.btnSearchMeal.Click += new System.EventHandler(this.btnSearchMeal_Click);
             // 
             // btnMenu
             // 
