@@ -335,6 +335,12 @@
     <Compile Include="UI\TA\FrmTaPostCodeSet.Designer.cs">
       <DependentUpon>FrmTaPostCodeSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaSearchFoodItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaSearchFoodItem.Designer.cs">
+      <DependentUpon>FrmTaSearchFoodItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaSubMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -473,6 +479,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaPostCodeSet.resx">
       <DependentUpon>FrmTaPostCodeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaSearchFoodItem.resx">
+      <DependentUpon>FrmTaSearchFoodItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaSubMenu.resx">
       <DependentUpon>FrmTaSubMenu.cs</DependentUpon>

@@ -632,57 +632,8 @@ namespace SuperPOS.UI.TA
                 }
                 else
                 {
-                    //判断是否存在相同菜品
-                    //若存在，则合并，并对数量+1
-                    if (treeListOrder.Nodes.Any(s => s["ItemCode"].Equals(taMenuItemInfo.MiDishCode) && s["ItemType"].ToString().Equals("1")))
-                    {
-                        foreach (
-                            TreeListNode treeListNode in treeListOrder.Nodes.Where(s => s["ItemCode"].Equals(taMenuItemInfo.MiDishCode) && s["ItemType"].ToString().Equals("1")))
-                        {
-                            //if (treeListNode["ItemCode"].ToString().Equals(taMenuItemInfo.MiDishCode))
-                            //btnAdd_Click(sender, e);
-                            treeListOrder.BeginUpdate();
-                            decimal dQty = Convert.ToDecimal(treeListNode["ItemQty"]);
-                            decimal dPrice = Convert.ToDecimal(treeListNode["ItemTotalPrice"]);
-
-                            if (dQty > 1)
-                            {
-                                treeListNode["ItemQty"] = (dQty + 1).ToString();
-                                treeListNode["ItemTotalPrice"] = ((dPrice/dQty)*(dQty + 1)).ToString();
-                            }
-                            else
-                            {
-                                treeListNode["ItemQty"] = (dQty + 1).ToString();
-                                treeListNode["ItemTotalPrice"] = (dPrice*2.0m).ToString();
-                            }
-                            treeListOrder.EndUpdate();
-
-                            treeListOrder.ExpandAll();
-                        }
-                    }
-                    else
-                    {
-                        int iQty = 1;
-                        TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
-                        taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
-                        taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
-                        taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
-                        taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
-                        taOrderItemInfo.ItemQty = iQty.ToString();
-                        taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
-                        taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
-                        taOrderItemInfo.CheckCode = checkID;
-                        taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
-                        taOrderItemInfo.ItemParent = "0";
-                        //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
-                        taOrderItemInfo.OrderTime = DateTime.Now.ToString();
-                        taOrderItemInfo.OrderStaff = usrID;
-
-                        TreeListNode node = AddTreeListNode(taOrderItemInfo);
-
-                        //Second/Third Choices
-                        SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, taOrderItemInfo.ItemID, node);
-                    }}
+                    SetListNode(taMenuItemInfo);
+                }
             }
         }
         #endregion
@@ -1487,5 +1438,82 @@ namespace SuperPOS.UI.TA
             }
         }
         #endregion
+
+        private void SetListNode(TaMenuItemInfo taMenuItemInfo)
+        {
+            //判断是否存在相同菜品
+            //若存在，则合并，并对数量+1
+            if (treeListOrder.Nodes.Any(s => s["ItemCode"].Equals(taMenuItemInfo.MiDishCode) && s["ItemType"].ToString().Equals("1")))
+            {
+                foreach (TreeListNode treeListNode in treeListOrder.Nodes.Where(s => s["ItemCode"].Equals(taMenuItemInfo.MiDishCode) && s["ItemType"].ToString().Equals("1")))
+                {
+                    //if (treeListNode["ItemCode"].ToString().Equals(taMenuItemInfo.MiDishCode))
+                    //btnAdd_Click(sender, e);
+                    treeListOrder.BeginUpdate();
+                    decimal dQty = Convert.ToDecimal(treeListNode["ItemQty"]);
+                    decimal dPrice = Convert.ToDecimal(treeListNode["ItemTotalPrice"]);
+
+                    if (dQty > 1)
+                    {
+                        treeListNode["ItemQty"] = (dQty + 1).ToString();
+                        treeListNode["ItemTotalPrice"] = ((dPrice / dQty) * (dQty + 1)).ToString();
+                    }
+                    else
+                    {
+                        treeListNode["ItemQty"] = (dQty + 1).ToString();
+                        treeListNode["ItemTotalPrice"] = (dPrice * 2.0m).ToString();
+                    }
+                    treeListOrder.EndUpdate();
+
+                    treeListOrder.ExpandAll();
+                }
+            }
+            else
+            {
+                int iQty = 1;
+                TaOrderItemInfo taOrderItemInfo = new TaOrderItemInfo();
+                taOrderItemInfo.ItemID = Guid.NewGuid().ToString();
+                taOrderItemInfo.ItemCode = taMenuItemInfo.MiDishCode;
+                taOrderItemInfo.ItemDishName = taMenuItemInfo.MiEngName;
+                taOrderItemInfo.ItemDishOtherName = taMenuItemInfo.MiOtherName;
+                taOrderItemInfo.ItemQty = iQty.ToString();
+                taOrderItemInfo.ItemPrice = taMenuItemInfo.MiRegularPrice;
+                taOrderItemInfo.ItemTotalPrice = (iQty * Convert.ToDecimal(taMenuItemInfo.MiRegularPrice)).ToString();
+                taOrderItemInfo.CheckCode = checkID;
+                taOrderItemInfo.ItemType = PubComm.MENU_ITEM_MAIN;
+                taOrderItemInfo.ItemParent = "0";
+                //taOrderItemInfo.ItemParent = Convert.ToInt32(taMenuItemInfo.ID);
+                taOrderItemInfo.OrderTime = DateTime.Now.ToString();
+                taOrderItemInfo.OrderStaff = usrID;
+
+                TreeListNode node = AddTreeListNode(taOrderItemInfo);
+
+                //Second/Third Choices
+                SetAllOtherChoice(taMenuItemInfo.ID, iQty.ToString(), checkID, taOrderItemInfo.ItemID, node);
+            }
+        }
+
+        private void btnSearchMeal_Click(object sender, EventArgs e)
+        {
+            string sKeyWord = "";
+
+            FrmTaSearchFoodItem frmTaSearchFoodItem = new FrmTaSearchFoodItem();
+
+            if (frmTaSearchFoodItem.ShowDialog() == DialogResult.OK)
+            {
+                sKeyWord = frmTaSearchFoodItem.sId;
+
+                if (!string.IsNullOrEmpty(sKeyWord))
+                {
+                    if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(sKeyWord)))
+                    {
+                        string sWord = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(sKeyWord)).MiEngName;
+                        TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(sWord, iMenuCateId, iMenuSetId);
+
+                        SetListNode(taMenuItemInfo);
+                    }
+                }
+            }
+        }
     }
 }
