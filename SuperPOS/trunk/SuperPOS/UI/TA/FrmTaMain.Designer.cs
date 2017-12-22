@@ -177,6 +177,7 @@
             this.treeListOrder.Size = new System.Drawing.Size(390, 455);
             this.treeListOrder.TabIndex = 0;
             this.treeListOrder.CustomDrawNodeIndicator += new DevExpress.XtraTreeList.CustomDrawNodeIndicatorEventHandler(this.treeListOrder_CustomDrawNodeIndicator);
+            this.treeListOrder.DoubleClick += new System.EventHandler(this.treeListOrder_DoubleClick);
             // 
             // ID
             // 

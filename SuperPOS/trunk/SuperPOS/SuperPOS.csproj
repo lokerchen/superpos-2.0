@@ -209,6 +209,12 @@
     <Compile Include="UI\TA\FrmTaChangeOrderType.Designer.cs">
       <DependentUpon>FrmTaChangeOrderType.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmTaChangePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmTaChangePrice.Designer.cs">
+      <DependentUpon>FrmTaChangePrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaDeliveryNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaChangeOrderType.resx">
       <DependentUpon>FrmTaChangeOrderType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmTaChangePrice.resx">
+      <DependentUpon>FrmTaChangePrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaDeliveryNote.resx">
       <DependentUpon>FrmTaDeliveryNote.cs</DependentUpon>
