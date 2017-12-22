@@ -79,6 +79,7 @@
     <Compile Include="Entities\TaOrderItemInfo.cs" />
     <Compile Include="Entities\TaSubMenuDetailInfo.cs" />
     <Compile Include="Entities\TaSubMenuInfo.cs" />
+    <Compile Include="Entities\TaSysFontInfo.cs" />
     <Compile Include="Entities\UsrAuthDetailInfo.cs" />
     <Compile Include="Entities\UsrAuthRuleInfo.cs" />
     <Compile Include="Entities\UsrAuthAccessInfo.cs" />
@@ -155,6 +156,7 @@
     <EmbeddedResource Include="Mappings\TaPostcodeSetInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaSubMenuDetailInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TaSubMenuInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TaSysFontInfo.hbm.xml" />
     <Content Include="Mappings\UsrAuthorityInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

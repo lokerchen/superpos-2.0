@@ -72,6 +72,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.TaSysFont = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
@@ -163,7 +164,8 @@
             this.TaDeliverySet,
             this.TaPostcodeAssign,
             this.TaPostcodeSet,
-            this.TaSubMenu});
+            this.TaSubMenu,
+            this.TaSysFont});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 332;
@@ -188,6 +190,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.CompAdd),
             new DevExpress.XtraNavBar.NavBarItemLink(this.ShiftCode),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysPrt),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.TaSysFont),
             new DevExpress.XtraNavBar.NavBarItemLink(this.SysExit)});
             this.SetSys.Name = "SetSys";
             this.SetSys.ShowIcons = DevExpress.Utils.DefaultBoolean.False;
@@ -660,6 +663,20 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(997, 615);
             // 
+            // TaSysFont
+            // 
+            this.TaSysFont.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSysFont.Appearance.Options.UseFont = true;
+            this.TaSysFont.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSysFont.AppearanceDisabled.Options.UseFont = true;
+            this.TaSysFont.AppearanceHotTracked.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSysFont.AppearanceHotTracked.Options.UseFont = true;
+            this.TaSysFont.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaSysFont.AppearancePressed.Options.UseFont = true;
+            this.TaSysFont.Caption = "System Button Font";
+            this.TaSysFont.Name = "TaSysFont";
+            this.TaSysFont.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.TaSysFont_LinkClicked);
+            // 
             // FrmTaAdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -728,5 +745,6 @@
         private DevExpress.XtraNavBar.NavBarItem TaPostcodeAssign;
         private DevExpress.XtraNavBar.NavBarItem TaPostcodeSet;
         private DevExpress.XtraNavBar.NavBarItem TaSubMenu;
+        private DevExpress.XtraNavBar.NavBarItem TaSysFont;
     }
 }

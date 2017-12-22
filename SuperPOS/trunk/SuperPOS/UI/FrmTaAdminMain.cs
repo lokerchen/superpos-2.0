@@ -245,5 +245,9 @@ namespace SuperPOS.UI.TA
         }
         #endregion
 
+        private void TaSysFont_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ShowXtraTabPage("TaSysFont", "MenuItem/Category Button Font", new FrmTaSysFont(usrID, usrName));
+        }
     }
 }
