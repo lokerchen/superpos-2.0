@@ -81,5 +81,7 @@ namespace SuperPOS.Common
         public void GetTaSubMenu() { CommonData.TaSubMenu = _control.SelectAll<TaSubMenuInfo>(); }
 
         public void GetTaSubMenuDetail() { CommonData.TaSubMenuDetail = _control.SelectAll<TaSubMenuDetailInfo>(); }
+
+        public void GetTaSysFont() { CommonData.TaSysFont = _control.SelectAll<TaSysFontInfo>(); }
     }
 }

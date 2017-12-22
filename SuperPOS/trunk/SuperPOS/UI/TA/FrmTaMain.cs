@@ -584,6 +584,7 @@ namespace SuperPOS.UI.TA
             for (int i = 0; i < 16; i++)
             {
                 btnMenuItem[i].Click += btnMenuItem_Click;
+                btnMenuItem[i].Font = new Font(SystemFonts.DefaultFont.FontFamily, float.Parse(CommonData.TaSysFont.FirstOrDefault().miFont));
             }
         }
         #endregion
@@ -691,6 +692,7 @@ namespace SuperPOS.UI.TA
             for (int i = 0; i < 42; i++)
             {
                 btnMenuCate[i].Click += btnMenuCate_Click;
+                btnMenuCate[i].Font = new Font(SystemFonts.DefaultFont.FontFamily, float.Parse(CommonData.TaSysFont.FirstOrDefault().cateFont));
             }
         }
         #endregion
