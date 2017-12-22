@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraTreeList.Nodes;
 using SuperPOS.Common;
 using SuperPOS.Domain.Entities;
@@ -1461,7 +1462,7 @@ namespace SuperPOS.UI.TA
                     else
                     {
                         treeListNode["ItemQty"] = (dQty + iQ).ToString();
-                        treeListNode["ItemTotalPrice"] = (dPrice * iQ).ToString();
+                        treeListNode["ItemTotalPrice"] = (dPrice * (dQty + iQ)).ToString();
                     }
                     treeListOrder.EndUpdate();
 
@@ -1533,6 +1534,52 @@ namespace SuperPOS.UI.TA
                         TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(sWord, iMenuCateId, iMenuSetId);
 
                         SetListNode(taMenuItemInfo, Convert.ToInt32(sQty));
+                    }
+                }
+            }
+        }
+
+        private void treeListOrder_DoubleClick(object sender, EventArgs e)
+        {
+            if (treeListOrder.FocusedNode != null)
+            {
+                if (treeListOrder.FocusedNode["ItemType"].ToString().Equals("1"))
+                {
+                    decimal dPrice = 0.0m;
+                    bool isUpdate = false;
+                    if (Convert.ToDecimal(treeListOrder.FocusedNode["ItemQty"].ToString()) > 1)
+                    {
+                        dPrice = Convert.ToDecimal(treeListOrder.FocusedNode["ItemTotalPrice"].ToString()) /
+                                 Convert.ToDecimal(treeListOrder.FocusedNode["ItemQty"].ToString());
+                        isUpdate = true;
+                    }
+                    else
+                        dPrice = Convert.ToDecimal(treeListOrder.FocusedNode["ItemTotalPrice"].ToString());
+
+                    FrmTaChangePrice frmTaChangePrice = new FrmTaChangePrice(treeListOrder.FocusedNode["ItemCode"].ToString(), dPrice.ToString());
+
+                    string sNewPrice = dPrice.ToString();
+
+                    if (frmTaChangePrice.ShowDialog() == DialogResult.OK)
+                    {
+                        sNewPrice = frmTaChangePrice.NewPrice;
+
+                        if (!string.IsNullOrEmpty(sNewPrice))
+                        {
+                            if (isUpdate)
+                            {
+                                treeListOrder.FocusedNode["ItemTotalPrice"] =
+                                    Convert.ToDecimal(treeListOrder.FocusedNode["ItemQty"].ToString())*
+                                    Convert.ToDecimal(sNewPrice);
+
+                                treeListOrder.FocusedNode["ItemPrice"] = Convert.ToDecimal(sNewPrice);
+                            }
+                            else
+                            {
+                                treeListOrder.FocusedNode["ItemPrice"] = Convert.ToDecimal(sNewPrice);
+                                treeListOrder.FocusedNode["ItemTotalPrice"] = Convert.ToDecimal(sNewPrice);
+                            }
+                        }
                     }
                 }
             }
