@@ -270,6 +270,28 @@ namespace SuperPOS.Common
 
         #endregion
 
+        #region 查找关键字，获得MenuItem分页
+        /// <summary>
+        /// 查找关键字，获得MenuItem分页
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <param name="sKeyWord">查询关键字</param>
+        /// <returns></returns>
+        public static List<TaMenuItemInfo> GetListQueryPageMenuItemByKeyWord(int iPageNum, string sKeyWord)
+        {
+            new SystemData().GetTaMenuItem();
+
+            return !string.IsNullOrEmpty(sKeyWord)
+                ? CommonData.TaMenuItem.Where(s => s.MiEngName.Contains(sKeyWord) || s.MiOtherName.Contains(sKeyWord))
+                    .Skip(PAGESIZE_MENUITEM*(iPageNum - 1))
+                    .Take(PAGESIZE_MENUITEM).ToList()
+                : CommonData.TaMenuItem
+                    .Skip(PAGESIZE_MENUITEM*(iPageNum - 1))
+                    .Take(PAGESIZE_MENUITEM).ToList();
+        }
+
+        #endregion
+
         #region 获得账单号
         /// <summary>
         /// 获得账单号
