@@ -1508,12 +1508,38 @@ namespace SuperPOS.UI.TA
 
                 if (!string.IsNullOrEmpty(sKeyWord))
                 {
-                    if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(sKeyWord)))
-                    {
-                        string sWord = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(sKeyWord)).MiEngName;
-                        TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(sWord, iMenuCateId, iMenuSetId);
+                    //if (CommonData.TaMenuItem.Any(s => s.MiDishCode.Equals(sKeyWord)))
+                    //{
+                    //    string sWord = CommonData.TaMenuItem.FirstOrDefault(s => s.MiDishCode.Equals(sKeyWord)).MiEngName;
+                    //    TaMenuItemInfo taMenuItemInfo = GetMenuItemInfo(sWord, iMenuCateId, iMenuSetId);
 
-                        SetListNode(taMenuItemInfo, 1);
+                    //    SetListNode(taMenuItemInfo, 1);
+                    //}
+                    bool status = CommonDAL.IsShowMenuItemCode();
+
+                    int i = 0;
+                    foreach (var taMenuItemInfo in CommonDAL.GetListQueryPageMenuItemByKeyWord(iPageNum, sKeyWord))
+                    {
+                        btnMenuItem[i].Text = status
+                            ? "(" + taMenuItemInfo.MiDishCode + ")" +
+                              (iLangStatusId == PubComm.MENU_LANG_DEFAULT
+                                  ? taMenuItemInfo.MiEngName
+                                  : taMenuItemInfo.MiOtherName)
+                            : (iLangStatusId == PubComm.MENU_LANG_DEFAULT
+                                ? taMenuItemInfo.MiEngName
+                                : taMenuItemInfo.MiOtherName);
+                        i++;
+                    }
+                    
+                    for (int j = i; j < 16; j++)
+                    {
+                        btnMenuItem[j].Text = "";
+                    }
+
+                    //如果没有找到菜品，则返回所有菜品
+                    if (i == 0)
+                    {
+                        SetMenuItem(iCatePageNum, iMenuCateId, iMenuSetId);
                     }
                 }
             }
