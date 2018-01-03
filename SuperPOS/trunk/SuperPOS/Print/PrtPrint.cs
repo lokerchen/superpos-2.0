@@ -108,12 +108,14 @@ namespace SuperPOS.Print
                 sb.Append(GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty,
                     taOrderItemInfo.ItemDishName, taOrderItemInfo.ItemTotalPrice));
                 sb.Append(Environment.NewLine);
-                var CNameList = CommonData.TaMenuItem.Where(s => s.MiDishCode.Equals(taOrderItemInfo.ItemCode));
-                if (CNameList.Any())
-                {
-                    sb.Append(PrtCommon.GetHanZiTab(CNameList.FirstOrDefault().MiOtherName));
-                    sb.Append(Environment.NewLine);
-                }
+                //var CNameList = CommonData.TaMenuItem.Where(s => s.MiDishCode.Equals(taOrderItemInfo.ItemCode));
+                //if (CNameList.Any())
+                //{
+                //    sb.Append(PrtCommon.GetHanZiTab(CNameList.FirstOrDefault().MiOtherName));
+                //    sb.Append(Environment.NewLine);
+                //}
+                sb.Append(PrtCommon.GetHanZiTab(taOrderItemInfo.ItemDishOtherName));
+                sb.Append(Environment.NewLine);
             }
 
             sb.Append(L);
@@ -819,12 +821,14 @@ namespace SuperPOS.Print
             {
                 sb.Append(GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty, taOrderItemInfo.ItemDishName));
                 sb.Append(Environment.NewLine);
-                var CNameList = CommonData.TaMenuItem.Where(s => s.MiDishCode.Equals(taOrderItemInfo.ItemCode));
-                if (CNameList.Any())
-                {
-                    sb.Append(PrtCommon.GetHanZiTabKitchen(CNameList.FirstOrDefault().MiOtherName));
-                    sb.Append(Environment.NewLine);
-                }
+                //var CNameList = CommonData.TaMenuItem.Where(s => s.MiDishCode.Equals(taOrderItemInfo.ItemCode));
+                //if (CNameList.Any())
+                //{
+                //    sb.Append(PrtCommon.GetHanZiTabKitchen(CNameList.FirstOrDefault().MiOtherName));
+                //    sb.Append(Environment.NewLine);
+                //}
+                sb.Append(PrtCommon.GetHanZiTabKitchen(taOrderItemInfo.ItemDishOtherName));
+                sb.Append(Environment.NewLine);
             }
 
             sb.Append(L);
