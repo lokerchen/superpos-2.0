@@ -24,8 +24,7 @@ namespace SuperPOS.UI.TA
         private int checkID;
         //账单号
         private string checkCode;
-        //账单类型
-        private string checkOrderType;
+        
         //账单总价
         private string checkTotalAmount;
         //已付款
@@ -35,9 +34,28 @@ namespace SuperPOS.UI.TA
         //下单用户
         private string checkUsrName;
         //来电ID
-        private string checkCustID;
+        private int checkCustID;
         //司机ID
         private int checkDriverID;
+        //下单时间
+        private string checkOrderTime;
+        //PostCode
+        private string checkPostCode;
+        //PostCodeZone
+        private string checkPostCodeZone;
+        //Addr
+        private string checkAddr;
+        //账单类型
+        private string checkOrderType;
+        //CustomerName
+        private string checkCustomerName;
+        //CustomerPhone
+        private string checkCustomerPhone;
+        //DriverName
+        private string checkDriverName;
+
+
+        private AutoSizeFormClass asfc = new AutoSizeFormClass();
 
         public FrmTaPendOrder()
         {
@@ -57,18 +75,27 @@ namespace SuperPOS.UI.TA
                     on check.CustomerID equals cust.ID.ToString()
                 join user in CommonData.UsrBase
                     on check.StaffID equals user.ID
-                where !check.IsPaid.Equals("Y")
+                join driver in CommonData.TaDriver
+                    on check.DriverID equals driver.ID
+                where !check.IsPaid.Equals("Y") 
                 select new
                 {
                     ID = check.ID,
                     CheckCode = check.CheckCode,
+                    OrderTime = check.PayTime,
+                    PostCode = cust.cusPostcode,
+                    PostCodeZone = cust.cusPcZone,
+                    Addr = cust.cusAddr,
                     PayOrderType = check.PayOrderType,
+                    CustomerName = cust.cusName,
+                    CustomerPhone = cust.cusPhone,
                     IsPaid = check.IsPaid,
                     TotalAmount = check.TotalAmount,
                     StaffName = user.UsrName,
                     Paid = check.Paid,
                     CustID = cust.ID,
-                    DriverID = check.DriverID
+                    DriverID = check.DriverID,
+                    DriverName = driver.DriverName,
                 };
 
             gridControlTaPendOrder.DataSource = !string.IsNullOrEmpty(orderType) ? lstDb.Where(s => s.PayOrderType.Equals(orderType)).ToList() : lstDb.ToList();
@@ -84,6 +111,8 @@ namespace SuperPOS.UI.TA
             systemData.GetTaOrderItem();
 
             GetBindData("");
+
+            asfc.controllInitializeSize(this);
         }
 
         private void gvTaPendOrder_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
@@ -101,8 +130,22 @@ namespace SuperPOS.UI.TA
             checkID = Convert.ToInt32(gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "ID").ToString());
             //账单号
             checkCode = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "CheckCode").ToString();
+            //订单时间
+            checkOrderTime = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "OrderTime").ToString();
+            //PostCode
+            checkPostCode = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "PostCode").ToString();
+            //PostCodeZone
+            //checkPostCodeZone = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "PostCodeZone").ToString();
+            //Addr
+            checkAddr = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "Addr").ToString();
             //账单类型
             checkOrderType = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "PayOrderType").ToString();
+            //CustomerName
+            checkCustomerName = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "CustomerName").ToString();
+            //CustomerPhone
+            checkCustomerPhone = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "CustomerPhone").ToString();
+            //DriverName
+            checkDriverName = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "DriverName").ToString();
             //账单总价
             checkTotalAmount = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "TotalAmount").ToString();
             //已付款
@@ -112,14 +155,14 @@ namespace SuperPOS.UI.TA
             //下单用户
             checkUsrName = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "StaffName").ToString();
             //来电ID
-            checkCustID = gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "CustID").ToString();
+            checkCustID = Convert.ToInt32(gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "CustID").ToString());
             //司机ID
             checkDriverID = Convert.ToInt32(gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "DriverID").ToString());
         }
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            FrmTaPayment frmTaPayment = new FrmTaPayment(usrID, checkCode, checkOrderType, checkCustID, SetPrtInfo());
+            FrmTaPayment frmTaPayment = new FrmTaPayment(usrID, checkCode, checkOrderType, checkCustID.ToString(), SetPrtInfo());
 
             if (frmTaPayment.ShowDialog() == DialogResult.OK)
             {
@@ -267,6 +310,11 @@ namespace SuperPOS.UI.TA
             Hide();
             FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID);
             frmTaMain.ShowDialog();
+        }
+
+        private void FrmTaPendOrder_SizeChanged(object sender, EventArgs e)
+        {
+            asfc.controlAutoSize(this);
         }
     }
 }

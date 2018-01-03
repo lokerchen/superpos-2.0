@@ -33,8 +33,16 @@
             this.gvTaPendOrder = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CheckCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OrderTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PostCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PostCodeZone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Addr = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PayOrderType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CustomerPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.StaffName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DriverName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IsPaid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnPrtKit = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrtBill = new DevExpress.XtraEditors.SimpleButton();
@@ -47,7 +55,6 @@
             this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.StaffName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTaPendOrder)).BeginInit();
@@ -63,7 +70,7 @@
             this.panelControl1.Controls.Add(this.gridControlTaPendOrder);
             this.panelControl1.Location = new System.Drawing.Point(12, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(752, 559);
+            this.panelControl1.Size = new System.Drawing.Size(752, 504);
             this.panelControl1.TabIndex = 0;
             // 
             // gridControlTaPendOrder
@@ -71,7 +78,7 @@
             this.gridControlTaPendOrder.Location = new System.Drawing.Point(5, 5);
             this.gridControlTaPendOrder.MainView = this.gvTaPendOrder;
             this.gridControlTaPendOrder.Name = "gridControlTaPendOrder";
-            this.gridControlTaPendOrder.Size = new System.Drawing.Size(742, 549);
+            this.gridControlTaPendOrder.Size = new System.Drawing.Size(742, 494);
             this.gridControlTaPendOrder.TabIndex = 3;
             this.gridControlTaPendOrder.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTaPendOrder});
@@ -85,10 +92,17 @@
             this.gvTaPendOrder.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
             this.CheckCode,
+            this.OrderTime,
+            this.PostCode,
+            this.PostCodeZone,
+            this.Addr,
             this.PayOrderType,
+            this.CustomerName,
+            this.CustomerPhone,
             this.TotalAmount,
-            this.IsPaid,
-            this.StaffName});
+            this.StaffName,
+            this.DriverName,
+            this.IsPaid});
             this.gvTaPendOrder.GridControl = this.gridControlTaPendOrder;
             this.gvTaPendOrder.IndicatorWidth = 50;
             this.gvTaPendOrder.Name = "gvTaPendOrder";
@@ -114,11 +128,43 @@
             // 
             this.CheckCode.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckCode.AppearanceCell.Options.UseFont = true;
-            this.CheckCode.Caption = "Check Code";
+            this.CheckCode.Caption = "Order No.";
             this.CheckCode.FieldName = "CheckCode";
             this.CheckCode.Name = "CheckCode";
             this.CheckCode.Visible = true;
             this.CheckCode.VisibleIndex = 0;
+            // 
+            // OrderTime
+            // 
+            this.OrderTime.Caption = "Time";
+            this.OrderTime.FieldName = "OrderTime";
+            this.OrderTime.Name = "OrderTime";
+            this.OrderTime.Visible = true;
+            this.OrderTime.VisibleIndex = 2;
+            // 
+            // PostCode
+            // 
+            this.PostCode.Caption = "PostCode";
+            this.PostCode.FieldName = "PostCode";
+            this.PostCode.Name = "PostCode";
+            this.PostCode.Visible = true;
+            this.PostCode.VisibleIndex = 3;
+            // 
+            // PostCodeZone
+            // 
+            this.PostCodeZone.Caption = "PostCode Zone";
+            this.PostCodeZone.FieldName = "PostCodeZone";
+            this.PostCodeZone.Name = "PostCodeZone";
+            this.PostCodeZone.Visible = true;
+            this.PostCodeZone.VisibleIndex = 4;
+            // 
+            // Addr
+            // 
+            this.Addr.Caption = "Address";
+            this.Addr.FieldName = "Addr";
+            this.Addr.Name = "Addr";
+            this.Addr.Visible = true;
+            this.Addr.VisibleIndex = 5;
             // 
             // PayOrderType
             // 
@@ -130,6 +176,22 @@
             this.PayOrderType.Visible = true;
             this.PayOrderType.VisibleIndex = 1;
             // 
+            // CustomerName
+            // 
+            this.CustomerName.Caption = "Customer Name";
+            this.CustomerName.FieldName = "CustomerName";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.Visible = true;
+            this.CustomerName.VisibleIndex = 6;
+            // 
+            // CustomerPhone
+            // 
+            this.CustomerPhone.Caption = "Phone Number";
+            this.CustomerPhone.FieldName = "CustomerPhone";
+            this.CustomerPhone.Name = "CustomerPhone";
+            this.CustomerPhone.Visible = true;
+            this.CustomerPhone.VisibleIndex = 7;
+            // 
             // TotalAmount
             // 
             this.TotalAmount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,7 +200,23 @@
             this.TotalAmount.FieldName = "TotalAmount";
             this.TotalAmount.Name = "TotalAmount";
             this.TotalAmount.Visible = true;
-            this.TotalAmount.VisibleIndex = 2;
+            this.TotalAmount.VisibleIndex = 8;
+            // 
+            // StaffName
+            // 
+            this.StaffName.Caption = "Staff Name";
+            this.StaffName.FieldName = "StaffName";
+            this.StaffName.Name = "StaffName";
+            this.StaffName.Visible = true;
+            this.StaffName.VisibleIndex = 11;
+            // 
+            // DriverName
+            // 
+            this.DriverName.Caption = "Driver";
+            this.DriverName.FieldName = "DriverName";
+            this.DriverName.Name = "DriverName";
+            this.DriverName.Visible = true;
+            this.DriverName.VisibleIndex = 10;
             // 
             // IsPaid
             // 
@@ -148,13 +226,13 @@
             this.IsPaid.FieldName = "IsPaid";
             this.IsPaid.Name = "IsPaid";
             this.IsPaid.Visible = true;
-            this.IsPaid.VisibleIndex = 3;
+            this.IsPaid.VisibleIndex = 9;
             // 
             // btnPrtKit
             // 
             this.btnPrtKit.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPrtKit.Appearance.Options.UseFont = true;
-            this.btnPrtKit.Location = new System.Drawing.Point(5, 165);
+            this.btnPrtKit.Location = new System.Drawing.Point(9, 113);
             this.btnPrtKit.Name = "btnPrtKit";
             this.btnPrtKit.Size = new System.Drawing.Size(184, 48);
             this.btnPrtKit.TabIndex = 43;
@@ -165,7 +243,7 @@
             // 
             this.btnPrtBill.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPrtBill.Appearance.Options.UseFont = true;
-            this.btnPrtBill.Location = new System.Drawing.Point(5, 111);
+            this.btnPrtBill.Location = new System.Drawing.Point(9, 59);
             this.btnPrtBill.Name = "btnPrtBill";
             this.btnPrtBill.Size = new System.Drawing.Size(184, 48);
             this.btnPrtBill.TabIndex = 42;
@@ -176,7 +254,7 @@
             // 
             this.btnPrtReceipt.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPrtReceipt.Appearance.Options.UseFont = true;
-            this.btnPrtReceipt.Location = new System.Drawing.Point(5, 57);
+            this.btnPrtReceipt.Location = new System.Drawing.Point(9, 5);
             this.btnPrtReceipt.Name = "btnPrtReceipt";
             this.btnPrtReceipt.Size = new System.Drawing.Size(184, 48);
             this.btnPrtReceipt.TabIndex = 41;
@@ -190,7 +268,7 @@
             this.panelControl2.Controls.Add(this.btnPrtBill);
             this.panelControl2.Location = new System.Drawing.Point(771, 12);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(200, 223);
+            this.panelControl2.Size = new System.Drawing.Size(200, 168);
             this.panelControl2.TabIndex = 44;
             // 
             // btnDelivery
@@ -241,7 +319,7 @@
             // 
             this.btnPay.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPay.Appearance.Options.UseFont = true;
-            this.btnPay.Location = new System.Drawing.Point(771, 469);
+            this.btnPay.Location = new System.Drawing.Point(5, 223);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(189, 48);
             this.btnPay.TabIndex = 44;
@@ -252,7 +330,7 @@
             // 
             this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
             this.btnExit.Appearance.Options.UseFont = true;
-            this.btnExit.Location = new System.Drawing.Point(771, 523);
+            this.btnExit.Location = new System.Drawing.Point(5, 277);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(184, 48);
             this.btnExit.TabIndex = 48;
@@ -261,38 +339,32 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.btnPay);
+            this.panelControl3.Controls.Add(this.btnExit);
             this.panelControl3.Controls.Add(this.btnAll);
             this.panelControl3.Controls.Add(this.btnDelivery);
             this.panelControl3.Controls.Add(this.btnCollection);
             this.panelControl3.Controls.Add(this.btnShop);
-            this.panelControl3.Location = new System.Drawing.Point(770, 241);
+            this.panelControl3.Location = new System.Drawing.Point(770, 186);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(201, 221);
+            this.panelControl3.Size = new System.Drawing.Size(201, 330);
             this.panelControl3.TabIndex = 49;
-            // 
-            // StaffName
-            // 
-            this.StaffName.Caption = "Staff Name";
-            this.StaffName.FieldName = "StaffName";
-            this.StaffName.Name = "StaffName";
-            this.StaffName.Visible = true;
-            this.StaffName.VisibleIndex = 4;
             // 
             // FrmTaPendOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 583);
-            this.Controls.Add(this.btnPay);
+            this.ClientSize = new System.Drawing.Size(980, 522);
             this.Controls.Add(this.panelControl3);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaPendOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmTaPendOrder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTaPendOrder_Load);
+            this.SizeChanged += new System.EventHandler(this.FrmTaPendOrder_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTaPendOrder)).EndInit();
@@ -327,5 +399,12 @@
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraGrid.Columns.GridColumn StaffName;
+        private DevExpress.XtraGrid.Columns.GridColumn OrderTime;
+        private DevExpress.XtraGrid.Columns.GridColumn PostCode;
+        private DevExpress.XtraGrid.Columns.GridColumn PostCodeZone;
+        private DevExpress.XtraGrid.Columns.GridColumn Addr;
+        private DevExpress.XtraGrid.Columns.GridColumn CustomerName;
+        private DevExpress.XtraGrid.Columns.GridColumn CustomerPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn DriverName;
     }
 }
