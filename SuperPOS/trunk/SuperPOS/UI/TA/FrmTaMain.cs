@@ -1612,5 +1612,11 @@ namespace SuperPOS.UI.TA
                 }
             }
         }
+
+        private void btnCustInfo_Click(object sender, EventArgs e)
+        {
+            FrmTaCustomerInfo frmTaCustomerInfo = new FrmTaCustomerInfo();
+            frmTaCustomerInfo.ShowDialog();
+        }
     }
 }
