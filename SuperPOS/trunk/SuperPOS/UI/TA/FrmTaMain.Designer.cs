@@ -434,6 +434,7 @@
             this.btnCustInfo.Size = new System.Drawing.Size(80, 60);
             this.btnCustInfo.TabIndex = 17;
             this.btnCustInfo.Text = "Cust Info";
+            this.btnCustInfo.Click += new System.EventHandler(this.btnCustInfo_Click);
             // 
             // btnHome
             // 
