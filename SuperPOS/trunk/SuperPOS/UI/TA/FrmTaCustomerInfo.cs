@@ -26,14 +26,23 @@ namespace SuperPOS.UI.TA
 
         private AutoSizeFormClass asfc = new AutoSizeFormClass();
 
+        //来电号码
+        private string cusNum = "";
+
         public FrmTaCustomerInfo()
         {
             InitializeComponent();
         }
 
+        public FrmTaCustomerInfo(string sComePhoe)
+        {
+            InitializeComponent();
+            cusNum = sComePhoe;
+        }
+
         private void FrmTaCustomerInfo_Load(object sender, EventArgs e)
         {
-            BindData();
+            BindData(cusNum);
             gvCompCustomer.BestFitColumns();
             asfc.controllInitializeSize(this);
         }
@@ -54,11 +63,11 @@ namespace SuperPOS.UI.TA
             chkBlackListed.Checked = gvCompCustomer.GetRowCellValue(gvCompCustomer.FocusedRowHandle, "cusIsBlack").ToString().Equals("Y") ? true : false;
         }
 
-        private void BindData()
+        private void BindData(string sPhone)
         {
             new SystemData().GetTaCustomer();
 
-            gridControlCustomer.DataSource = CommonData.TaCustomer.ToList();
+            gridControlCustomer.DataSource = string.IsNullOrEmpty(sPhone) ? CommonData.TaCustomer.ToList() : CommonData.TaCustomer.Where(s => s.cusPhone.Equals(sPhone)).ToList();
             gvCompCustomer.FocusedRowHandle = gvCompCustomer.RowCount - 1;
         }
 
@@ -175,7 +184,7 @@ namespace SuperPOS.UI.TA
             }
             catch (Exception ex) { LogHelper.Error(this.Name, ex); }
 
-            BindData();
+            BindData("");
 
             isAdd = false;
 
@@ -189,7 +198,7 @@ namespace SuperPOS.UI.TA
             else
             {
                 _control.DeleteEntity(CommonData.TaCustomer.FirstOrDefault(s => s.ID == Convert.ToInt32(gvCompCustomer.GetRowCellValue(gvCompCustomer.FocusedRowHandle, "ID"))));
-                BindData();
+                BindData("");
             }
         }
 
@@ -203,7 +212,7 @@ namespace SuperPOS.UI.TA
                 {
                     _control.DeleteEntity(taCustomerInfo);
                 }
-                BindData();
+                BindData("");
             }
         }
 
