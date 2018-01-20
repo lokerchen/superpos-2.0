@@ -460,6 +460,7 @@
             this.btnCid.Size = new System.Drawing.Size(80, 60);
             this.btnCid.TabIndex = 18;
             this.btnCid.Text = "CID";
+            this.btnCid.Click += new System.EventHandler(this.btnCid_Click);
             // 
             // btnAppend
             // 
