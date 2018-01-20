@@ -451,6 +451,7 @@
             this.txtPay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPay.Size = new System.Drawing.Size(297, 46);
             this.txtPay.TabIndex = 35;
+            this.txtPay.Click += new System.EventHandler(this.txtPay_Click);
             // 
             // panelControl5
             // 
@@ -707,15 +708,18 @@
             // txtDiscount
             // 
             this.txtDiscount.EditValue = "0.00";
-            this.txtDiscount.Enabled = false;
             this.txtDiscount.Location = new System.Drawing.Point(97, 67);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtDiscount.Properties.Appearance.Options.UseFont = true;
             this.txtDiscount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtDiscount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtDiscount.Properties.Mask.EditMask = "f2";
+            this.txtDiscount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDiscount.Size = new System.Drawing.Size(118, 30);
             this.txtDiscount.TabIndex = 28;
+            this.txtDiscount.EditValueChanged += new System.EventHandler(this.txtDiscount_EditValueChanged);
+            this.txtDiscount.Click += new System.EventHandler(this.txtDiscount_Click);
             // 
             // labelControl14
             // 
@@ -729,15 +733,18 @@
             // txtDelivery
             // 
             this.txtDelivery.EditValue = "0.00";
-            this.txtDelivery.Enabled = false;
             this.txtDelivery.Location = new System.Drawing.Point(97, 25);
             this.txtDelivery.Name = "txtDelivery";
             this.txtDelivery.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtDelivery.Properties.Appearance.Options.UseFont = true;
             this.txtDelivery.Properties.Appearance.Options.UseTextOptions = true;
             this.txtDelivery.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtDelivery.Properties.Mask.EditMask = "f2";
+            this.txtDelivery.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDelivery.Size = new System.Drawing.Size(118, 30);
             this.txtDelivery.TabIndex = 26;
+            this.txtDelivery.EditValueChanged += new System.EventHandler(this.txtDelivery_EditValueChanged);
+            this.txtDelivery.Click += new System.EventHandler(this.txtDelivery_Click);
             // 
             // labelControl13
             // 

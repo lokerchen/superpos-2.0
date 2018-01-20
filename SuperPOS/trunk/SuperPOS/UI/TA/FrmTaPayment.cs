@@ -41,6 +41,12 @@ namespace SuperPOS.UI.TA
 
         private string payType = "";
 
+        //点击按钮名字
+        private string objName = "txtPay";
+
+        //初始账单总额
+        private string sTotal = "0.00";
+
         #region 构造函数
         public FrmTaPayment()
         {
@@ -91,16 +97,42 @@ namespace SuperPOS.UI.TA
         {
             SimpleButton btn = (SimpleButton)sender;
 
-            if (!string.IsNullOrEmpty(txtPay.Text))
+            //Discount
+            if (objName.Equals("txtDiscount"))
             {
-                if (Convert.ToDecimal(txtPay.Text) > 0.00m)
-                    txtPay.Text += btn.Text;
+                if (txtDiscount.Text.Equals("0.00") || txtDiscount.Text.Equals("0.0") || txtDiscount.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtDiscount.Text)) txtDiscount.Text = btn.Text;
                 else
-                    txtPay.Text = btn.Text;
+                {
+                    if (txtDiscount.Text.EndsWith("%"))
+                        txtDiscount.Text = txtDiscount.Text.Substring(0, txtDiscount.Text.Length - 1) + btn.Text + "%";
+                    else
+                        txtDiscount.Text += btn.Text;
+                }
             }
-            else
+            else if (objName.Equals("txtDelivery"))
             {
-                txtPay.Text = btn.Text;
+                if (txtDelivery.Text.Equals("0.00") || txtDelivery.Text.Equals("0.0") || txtDelivery.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtDelivery.Text)) txtDelivery.Text = btn.Text;
+                else
+                {
+                    if (txtDelivery.Text.EndsWith("%"))
+                        txtDelivery.Text = txtDelivery.Text.Substring(0, txtDelivery.Text.Length - 1) + btn.Text + "%";
+                    else
+                        txtDelivery.Text += btn.Text;
+                }
+            }
+            else if (objName.Equals("txtPay"))
+            {
+                if (txtPay.Text.Equals("0.00") || txtPay.Text.Equals("0.0") || txtPay.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtPay.Text)) txtPay.Text = btn.Text;
+                else
+                {
+                    if (txtPay.Text.EndsWith("%"))
+                        txtPay.Text = txtPay.Text.Substring(0, txtPay.Text.Length - 1) + btn.Text + "%";
+                    else
+                        txtPay.Text += btn.Text;
+                }
             }
         }
         #endregion
@@ -273,7 +305,7 @@ namespace SuperPOS.UI.TA
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            
+            SaveAllInfo();
         }
 
         #endregion
@@ -637,9 +669,12 @@ namespace SuperPOS.UI.TA
                 TaCheckOrderInfo taCheckOrderInfo = lstChk.FirstOrDefault();
                 txtDelivery.Text = taCheckOrderInfo.PayDelivery;
                 txtDiscount.Text = taCheckOrderInfo.PayDiscount;
-                txtTotal.Text = taCheckOrderInfo.TotalAmount;
                 txtDiscount.Text = CommonDAL.GetTaDiscountAmount(orderType, Convert.ToDecimal(taCheckOrderInfo.MenuAmount)).ToString();
                 txtPaid.Text = GetPayDetail(checkID).ToString();
+                sTotal = txtTotal.Text = (Convert.ToDecimal(taCheckOrderInfo.MenuAmount)
+                                          - Convert.ToDecimal(txtDiscount.Text)
+                                          + Convert.ToDecimal(txtDelivery.Text)
+                                          - Convert.ToDecimal(txtPaid.Text)).ToString();
             }
             else
             {
@@ -728,6 +763,8 @@ namespace SuperPOS.UI.TA
                 if (lstChk.Any())
                 {
                     TaCheckOrderInfo taCheckOrderInfo = lstChk.FirstOrDefault();
+                    taCheckOrderInfo.PayDiscount = txtDiscount.Text;
+                    taCheckOrderInfo.PayDelivery = txtDelivery.Text;
                     taCheckOrderInfo.Paid = GetPayDetail(checkID).ToString();
                     taCheckOrderInfo.IsPaid = @"Y";
 
@@ -752,6 +789,32 @@ namespace SuperPOS.UI.TA
             else
             {
                 txtToPay.Text = dToPay.ToString("0.00");
+
+                //超过，付款完成
+                new SystemData().GetTaCheckOrder();
+                var lstChk = CommonData.TaCheckOrder.Where(s => s.CheckCode.Equals(checkID));
+
+                //更新账单信息
+                if (lstChk.Any())
+                {
+                    TaCheckOrderInfo taCheckOrderInfo = lstChk.FirstOrDefault();
+                    taCheckOrderInfo.PayDiscount = txtDiscount.Text;
+                    taCheckOrderInfo.PayDelivery = txtDelivery.Text;
+                    taCheckOrderInfo.Paid = GetPayDetail(checkID).ToString();
+                    taCheckOrderInfo.TotalAmount = txtTotal.Text;
+                    taCheckOrderInfo.IsPaid = @"N";
+
+                    if (dri > 0)
+                    {
+                        new SystemData().GetTaDriver();
+                        var lstDri = CommonData.TaDriver.Where(s => s.DriverName.Equals(chkDriver[dri].Text));
+                        taCheckOrderInfo.DriverID = lstDri.Any() ? lstDri.FirstOrDefault().ID : 0;
+                    }
+
+                    _control.UpdateEntity(taCheckOrderInfo);
+
+                    returnPaid = false;
+                }
             }
         }
         #endregion
@@ -830,5 +893,81 @@ namespace SuperPOS.UI.TA
         #endregion
 
         #endregion
+
+        private void txtDelivery_Click(object sender, EventArgs e)
+        {
+            objName = "txtDelivery";
+            txtDelivery.SelectAll();
+        }
+
+        private void txtDiscount_Click(object sender, EventArgs e)
+        {
+            objName = "txtDiscount";
+            txtDiscount.SelectAll();
+        }
+
+        private void txtPay_Click(object sender, EventArgs e)
+        {
+            objName = "txtPay";
+            txtPay.SelectAll();
+        }
+
+        private void txtDiscount_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string sDiscount = "0";
+
+                if (txtDiscount.Text.Length >= 2)
+                {
+                    if (txtDiscount.Text.Substring(0, txtDiscount.Text.Length - 2).EndsWith("."))
+                        sDiscount = txtDiscount.Text.Substring(0, txtDiscount.Text.Length - 1) + "0";
+                    else
+                        sDiscount = txtDiscount.Text;
+                }
+                else
+                {
+                    sDiscount = txtDiscount.Text;
+                }
+
+                decimal d = Convert.ToDecimal(sTotal)  - Convert.ToDecimal(sDiscount) + Convert.ToDecimal(txtDelivery.Text);
+                txtTotal.Text = d <= 0 ? "0.00" : d.ToString();
+                txtToPay.Text = d <= 0 ? "0.00" : (d - Convert.ToDecimal(txtPaid.Text)).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.Message, ex);
+                throw;
+            }
+        }
+
+        private void txtDelivery_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string sDelivery = "0";
+
+                if (txtDelivery.Text.Length >= 2)
+                {
+                    if (txtDelivery.Text.Substring(0, txtDelivery.Text.Length - 2).EndsWith("."))
+                        sDelivery = txtDelivery.Text.Substring(0, txtDelivery.Text.Length - 1) + "0";
+                    else
+                        sDelivery = txtDelivery.Text;
+                }
+                else
+                {
+                    sDelivery = txtDelivery.Text;
+                }
+
+                decimal d = Convert.ToDecimal(sTotal) + Convert.ToDecimal(sDelivery) - Convert.ToDecimal(txtDiscount.Text);
+                txtTotal.Text = d <= 0 ? "0.00" : d.ToString();
+                txtToPay.Text = d <= 0 ? "0.00" : (d - Convert.ToDecimal(txtPaid.Text)).ToString();
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Error(ex.Message, ex);
+                throw;
+            }
+        }
     }
 }
