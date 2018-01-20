@@ -49,6 +49,7 @@ namespace SuperPOS.UI.TA
 
         private void gvCompCustomer_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            if (gvCompCustomer.RowCount < 1) return;
             txtPhone.Text = gvCompCustomer.GetRowCellValue(gvCompCustomer.FocusedRowHandle, "cusPhone").ToString();
             txtName.Text = gvCompCustomer.GetRowCellValue(gvCompCustomer.FocusedRowHandle, "cusName").ToString();
             txtHouseNo.Text = gvCompCustomer.GetRowCellValue(gvCompCustomer.FocusedRowHandle, "cusHouseNo").ToString();
@@ -197,6 +198,8 @@ namespace SuperPOS.UI.TA
                 return;
             else
             {
+                if (gvCompCustomer.RowCount < 1) return;
+
                 _control.DeleteEntity(CommonData.TaCustomer.FirstOrDefault(s => s.ID == Convert.ToInt32(gvCompCustomer.GetRowCellValue(gvCompCustomer.FocusedRowHandle, "ID"))));
                 BindData("");
             }
@@ -208,6 +211,8 @@ namespace SuperPOS.UI.TA
                 return;
             else
             {
+                if (gvCompCustomer.RowCount < 1) return;
+
                 foreach (var taCustomerInfo in CommonData.TaCustomer)
                 {
                     _control.DeleteEntity(taCustomerInfo);
