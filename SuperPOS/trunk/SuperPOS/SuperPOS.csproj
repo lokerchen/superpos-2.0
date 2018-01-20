@@ -197,6 +197,12 @@
     <Compile Include="UI\Sys\FrmUsrAuthRule.Designer.cs">
       <DependentUpon>FrmUsrAuthRule.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TA\FrmCaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TA\FrmCaller.Designer.cs">
+      <DependentUpon>FrmCaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TA\FrmTaAppendItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -434,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sys\FrmUsrAuthRule.resx">
       <DependentUpon>FrmUsrAuthRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TA\FrmCaller.resx">
+      <DependentUpon>FrmCaller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TA\FrmTaAppendItem.resx">
       <DependentUpon>FrmTaAppendItem.cs</DependentUpon>
