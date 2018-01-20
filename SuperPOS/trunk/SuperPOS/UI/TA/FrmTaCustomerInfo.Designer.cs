@@ -30,12 +30,34 @@
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtPhone = new DevExpress.XtraEditors.TextEdit();
-            this.txtName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPostcode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.chkBlackListed = new DevExpress.XtraEditors.CheckEdit();
+            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNew = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
+            this.txtHouseNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.gridControlCustomer = new DevExpress.XtraGrid.GridControl();
+            this.gvCompCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusAddr = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusPostcode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusDistance = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusPcZone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusIsBlack = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusHouseNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusDelCharge = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusReadyTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusIntNotes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cusNotesOnBill = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtNotesOnBill = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.txtIntNotes = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtReadyTime = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtDelCharge = new DevExpress.XtraEditors.TextEdit();
@@ -44,51 +66,30 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtDistance = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNotesOnBill = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtIntNotes = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPostcode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPhone = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
-            this.gridControlCustomer = new DevExpress.XtraGrid.GridControl();
-            this.gvCompCustomer = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtHouseNo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.cusAddr = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusPostcode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusDistance = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusPcZone = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusIsBlack = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
-            this.btnNew = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
-            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
-            this.chkBlackListed = new DevExpress.XtraEditors.CheckEdit();
-            this.cusHouseNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusDelCharge = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusReadyTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusIntNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cusNotesOnBill = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPostcode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkBlackListed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHouseNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCompCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNotesOnBill.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIntNotes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReadyTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCharge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPcZone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDistance.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotesOnBill.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIntNotes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPostcode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCompCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHouseNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkBlackListed.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -101,6 +102,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnExit);
             this.panelControl1.Controls.Add(this.chkBlackListed);
             this.panelControl1.Controls.Add(this.btnExport);
             this.panelControl1.Controls.Add(this.btnImport);
@@ -136,147 +138,96 @@
             this.panelControl1.Size = new System.Drawing.Size(1077, 553);
             this.panelControl1.TabIndex = 1;
             // 
-            // txtPhone
+            // chkBlackListed
             // 
-            this.txtPhone.Location = new System.Drawing.Point(112, 5);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(125, 24);
-            this.txtPhone.TabIndex = 1;
+            this.chkBlackListed.Location = new System.Drawing.Point(13, 524);
+            this.chkBlackListed.Name = "chkBlackListed";
+            this.chkBlackListed.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBlackListed.Properties.Appearance.Options.UseFont = true;
+            this.chkBlackListed.Properties.Caption = "Black Listed";
+            this.chkBlackListed.Size = new System.Drawing.Size(224, 26);
+            this.chkBlackListed.TabIndex = 31;
             // 
-            // txtName
+            // btnExport
             // 
-            this.txtName.Location = new System.Drawing.Point(112, 48);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(125, 24);
-            this.txtName.TabIndex = 3;
+            this.btnExport.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Appearance.Options.UseFont = true;
+            this.btnExport.Location = new System.Drawing.Point(843, 495);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(110, 50);
+            this.btnExport.TabIndex = 30;
+            this.btnExport.Text = "Export Data";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
-            // labelControl2
+            // btnImport
             // 
-            this.labelControl2.Location = new System.Drawing.Point(50, 54);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(44, 18);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Name:";
+            this.btnImport.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Appearance.Options.UseFont = true;
+            this.btnImport.Location = new System.Drawing.Point(723, 495);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(110, 50);
+            this.btnImport.TabIndex = 29;
+            this.btnImport.Text = "Import Data";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
-            // txtPostcode
+            // btnDelete
             // 
-            this.txtPostcode.Location = new System.Drawing.Point(112, 233);
-            this.txtPostcode.Name = "txtPostcode";
-            this.txtPostcode.Size = new System.Drawing.Size(125, 24);
-            this.txtPostcode.TabIndex = 7;
+            this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Appearance.Options.UseFont = true;
+            this.btnDelete.Location = new System.Drawing.Point(483, 495);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(110, 50);
+            this.btnDelete.TabIndex = 28;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // labelControl3
+            // btnSave
             // 
-            this.labelControl3.Location = new System.Drawing.Point(6, 236);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(88, 18);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "Postcode #1:";
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Location = new System.Drawing.Point(363, 495);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(110, 50);
+            this.btnSave.TabIndex = 27;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // labelControl4
+            // btnNew
             // 
-            this.labelControl4.Location = new System.Drawing.Point(13, 132);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(81, 18);
-            this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "Address #1:";
+            this.btnNew.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Appearance.Options.UseFont = true;
+            this.btnNew.Location = new System.Drawing.Point(243, 495);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(110, 50);
+            this.btnNew.TabIndex = 26;
+            this.btnNew.Text = "New";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // txtReadyTime
+            // btnClear
             // 
-            this.txtReadyTime.Location = new System.Drawing.Point(112, 405);
-            this.txtReadyTime.Name = "txtReadyTime";
-            this.txtReadyTime.Size = new System.Drawing.Size(125, 24);
-            this.txtReadyTime.TabIndex = 15;
+            this.btnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Appearance.Options.UseFont = true;
+            this.btnClear.Location = new System.Drawing.Point(603, 495);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(110, 50);
+            this.btnClear.TabIndex = 25;
+            this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // labelControl5
+            // txtHouseNo
             // 
-            this.labelControl5.Location = new System.Drawing.Point(10, 408);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(84, 18);
-            this.labelControl5.TabIndex = 14;
-            this.labelControl5.Text = "Ready Time:";
+            this.txtHouseNo.Location = new System.Drawing.Point(112, 89);
+            this.txtHouseNo.Name = "txtHouseNo";
+            this.txtHouseNo.Size = new System.Drawing.Size(125, 24);
+            this.txtHouseNo.TabIndex = 24;
             // 
-            // txtDelCharge
+            // labelControl9
             // 
-            this.txtDelCharge.Location = new System.Drawing.Point(112, 362);
-            this.txtDelCharge.Name = "txtDelCharge";
-            this.txtDelCharge.Size = new System.Drawing.Size(125, 24);
-            this.txtDelCharge.TabIndex = 13;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(18, 365);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(76, 18);
-            this.labelControl6.TabIndex = 12;
-            this.labelControl6.Text = "Del Charge:";
-            // 
-            // txtPcZone
-            // 
-            this.txtPcZone.Location = new System.Drawing.Point(112, 318);
-            this.txtPcZone.Name = "txtPcZone";
-            this.txtPcZone.Size = new System.Drawing.Size(125, 24);
-            this.txtPcZone.TabIndex = 11;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(35, 321);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(59, 18);
-            this.labelControl7.TabIndex = 10;
-            this.labelControl7.Text = "PC Zone:";
-            // 
-            // txtDistance
-            // 
-            this.txtDistance.Location = new System.Drawing.Point(112, 275);
-            this.txtDistance.Name = "txtDistance";
-            this.txtDistance.Size = new System.Drawing.Size(125, 24);
-            this.txtDistance.TabIndex = 9;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(34, 278);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(60, 18);
-            this.labelControl8.TabIndex = 8;
-            this.labelControl8.Text = "Distance:";
-            // 
-            // txtNotesOnBill
-            // 
-            this.txtNotesOnBill.Location = new System.Drawing.Point(112, 487);
-            this.txtNotesOnBill.Name = "txtNotesOnBill";
-            this.txtNotesOnBill.Size = new System.Drawing.Size(125, 24);
-            this.txtNotesOnBill.TabIndex = 19;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(11, 490);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(83, 18);
-            this.labelControl11.TabIndex = 18;
-            this.labelControl11.Text = "Notes on bill:";
-            // 
-            // txtIntNotes
-            // 
-            this.txtIntNotes.Location = new System.Drawing.Point(112, 444);
-            this.txtIntNotes.Name = "txtIntNotes";
-            this.txtIntNotes.Size = new System.Drawing.Size(125, 24);
-            this.txtIntNotes.TabIndex = 17;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(22, 447);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(72, 18);
-            this.labelControl12.TabIndex = 16;
-            this.labelControl12.Text = "Int. Notes:";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(112, 130);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(125, 86);
-            this.txtAddress.TabIndex = 5;
+            this.labelControl9.Location = new System.Drawing.Point(20, 95);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(74, 18);
+            this.labelControl9.TabIndex = 23;
+            this.labelControl9.Text = "House No.:";
             // 
             // gridControlCustomer
             // 
@@ -341,21 +292,6 @@
             this.cusName.Visible = true;
             this.cusName.VisibleIndex = 1;
             // 
-            // txtHouseNo
-            // 
-            this.txtHouseNo.Location = new System.Drawing.Point(112, 89);
-            this.txtHouseNo.Name = "txtHouseNo";
-            this.txtHouseNo.Size = new System.Drawing.Size(125, 24);
-            this.txtHouseNo.TabIndex = 24;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(20, 95);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(74, 18);
-            this.labelControl9.TabIndex = 23;
-            this.labelControl9.Text = "House No.:";
-            // 
             // cusAddr
             // 
             this.cusAddr.Caption = "Address";
@@ -396,82 +332,6 @@
             this.cusIsBlack.Visible = true;
             this.cusIsBlack.VisibleIndex = 6;
             // 
-            // btnClear
-            // 
-            this.btnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Appearance.Options.UseFont = true;
-            this.btnClear.Location = new System.Drawing.Point(669, 495);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(116, 50);
-            this.btnClear.TabIndex = 25;
-            this.btnClear.Text = "Clear";
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Appearance.Options.UseFont = true;
-            this.btnNew.Location = new System.Drawing.Point(279, 495);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(116, 50);
-            this.btnNew.TabIndex = 26;
-            this.btnNew.Text = "New";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(409, 495);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 50);
-            this.btnSave.TabIndex = 27;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.Location = new System.Drawing.Point(539, 495);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 50);
-            this.btnDelete.TabIndex = 28;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnImport
-            // 
-            this.btnImport.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.Appearance.Options.UseFont = true;
-            this.btnImport.Location = new System.Drawing.Point(799, 495);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(116, 50);
-            this.btnImport.TabIndex = 29;
-            this.btnImport.Text = "Import Data";
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Appearance.Options.UseFont = true;
-            this.btnExport.Location = new System.Drawing.Point(929, 495);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(116, 50);
-            this.btnExport.TabIndex = 30;
-            this.btnExport.Text = "Export Data";
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // chkBlackListed
-            // 
-            this.chkBlackListed.Location = new System.Drawing.Point(13, 524);
-            this.chkBlackListed.Name = "chkBlackListed";
-            this.chkBlackListed.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBlackListed.Properties.Appearance.Options.UseFont = true;
-            this.chkBlackListed.Properties.Caption = "Black Listed";
-            this.chkBlackListed.Size = new System.Drawing.Size(224, 26);
-            this.chkBlackListed.TabIndex = 31;
-            // 
             // cusHouseNo
             // 
             this.cusHouseNo.Caption = "cusHouseNo";
@@ -502,6 +362,159 @@
             this.cusNotesOnBill.FieldName = "cusNotesOnBill";
             this.cusNotesOnBill.Name = "cusNotesOnBill";
             // 
+            // txtNotesOnBill
+            // 
+            this.txtNotesOnBill.Location = new System.Drawing.Point(112, 487);
+            this.txtNotesOnBill.Name = "txtNotesOnBill";
+            this.txtNotesOnBill.Size = new System.Drawing.Size(125, 24);
+            this.txtNotesOnBill.TabIndex = 19;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(11, 490);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(83, 18);
+            this.labelControl11.TabIndex = 18;
+            this.labelControl11.Text = "Notes on bill:";
+            // 
+            // txtIntNotes
+            // 
+            this.txtIntNotes.Location = new System.Drawing.Point(112, 444);
+            this.txtIntNotes.Name = "txtIntNotes";
+            this.txtIntNotes.Size = new System.Drawing.Size(125, 24);
+            this.txtIntNotes.TabIndex = 17;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(22, 447);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(72, 18);
+            this.labelControl12.TabIndex = 16;
+            this.labelControl12.Text = "Int. Notes:";
+            // 
+            // txtReadyTime
+            // 
+            this.txtReadyTime.Location = new System.Drawing.Point(112, 405);
+            this.txtReadyTime.Name = "txtReadyTime";
+            this.txtReadyTime.Size = new System.Drawing.Size(125, 24);
+            this.txtReadyTime.TabIndex = 15;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(10, 408);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(84, 18);
+            this.labelControl5.TabIndex = 14;
+            this.labelControl5.Text = "Ready Time:";
+            // 
+            // txtDelCharge
+            // 
+            this.txtDelCharge.Location = new System.Drawing.Point(112, 362);
+            this.txtDelCharge.Name = "txtDelCharge";
+            this.txtDelCharge.Size = new System.Drawing.Size(125, 24);
+            this.txtDelCharge.TabIndex = 13;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(18, 365);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(76, 18);
+            this.labelControl6.TabIndex = 12;
+            this.labelControl6.Text = "Del Charge:";
+            // 
+            // txtPcZone
+            // 
+            this.txtPcZone.Location = new System.Drawing.Point(112, 318);
+            this.txtPcZone.Name = "txtPcZone";
+            this.txtPcZone.Size = new System.Drawing.Size(125, 24);
+            this.txtPcZone.TabIndex = 11;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(35, 321);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(59, 18);
+            this.labelControl7.TabIndex = 10;
+            this.labelControl7.Text = "PC Zone:";
+            // 
+            // txtDistance
+            // 
+            this.txtDistance.Location = new System.Drawing.Point(112, 275);
+            this.txtDistance.Name = "txtDistance";
+            this.txtDistance.Size = new System.Drawing.Size(125, 24);
+            this.txtDistance.TabIndex = 9;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(34, 278);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(60, 18);
+            this.labelControl8.TabIndex = 8;
+            this.labelControl8.Text = "Distance:";
+            // 
+            // txtPostcode
+            // 
+            this.txtPostcode.Location = new System.Drawing.Point(112, 233);
+            this.txtPostcode.Name = "txtPostcode";
+            this.txtPostcode.Size = new System.Drawing.Size(125, 24);
+            this.txtPostcode.TabIndex = 7;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(6, 236);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(88, 18);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Postcode #1:";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(13, 132);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(81, 18);
+            this.labelControl4.TabIndex = 4;
+            this.labelControl4.Text = "Address #1:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(112, 48);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(125, 24);
+            this.txtName.TabIndex = 3;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(50, 54);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(44, 18);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "Name:";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(112, 5);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(125, 24);
+            this.txtPhone.TabIndex = 1;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(112, 130);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(125, 86);
+            this.txtAddress.TabIndex = 5;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.Location = new System.Drawing.Point(963, 495);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(110, 50);
+            this.btnExit.TabIndex = 32;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FrmTaCustomerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -518,20 +531,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPostcode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkBlackListed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHouseNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCompCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNotesOnBill.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIntNotes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReadyTime.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCharge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPcZone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDistance.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotesOnBill.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIntNotes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPostcode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCompCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHouseNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkBlackListed.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,5 +596,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn cusReadyTime;
         private DevExpress.XtraGrid.Columns.GridColumn cusIntNotes;
         private DevExpress.XtraGrid.Columns.GridColumn cusNotesOnBill;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
     }
 }
