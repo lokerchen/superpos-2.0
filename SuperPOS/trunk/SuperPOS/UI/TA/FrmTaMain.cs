@@ -206,17 +206,17 @@ namespace SuperPOS.UI.TA
             asfc.controllInitializeSize(this);
 
             #region 提示打开来电设备失败
-            if (isNew)
-            {
-                if (!openDev())
-                {
-                    if (CommonTool.ConfirmMessage("Failed to open device, continue to order meal?") == DialogResult.Cancel)
-                    {
-                        //无来电设备连接时，取消打开
-                        Close();
-                    }
-                }
-            }
+            //if (isNew)
+            //{
+            //    if (!openDev())
+            //    {
+            //        if (CommonTool.ConfirmMessage("Failed to open device, continue to order meal?") == DialogResult.Cancel)
+            //        {
+            //            //无来电设备连接时，取消打开
+            //            Close();
+            //        }
+            //    }
+            //}
             #endregion
         }
         #endregion
@@ -1148,116 +1148,116 @@ namespace SuperPOS.UI.TA
             return (constructedString);
         }
 
-        protected override void DefWndProc(ref System.Windows.Forms.Message m)
-        {
-            switch (m.Msg)
-            {
-                case BriSDKLib.BRI_EVENT_MESSAGE:
-                    {
-                        BriSDKLib.TBriEvent_Data EventData = (BriSDKLib.TBriEvent_Data)Marshal.PtrToStructure(m.LParam, typeof(BriSDKLib.TBriEvent_Data));
-                        string strValue = "";
+        //protected override void DefWndProc(ref System.Windows.Forms.Message m)
+        //{
+        //    switch (m.Msg)
+        //    {
+        //        case BriSDKLib.BRI_EVENT_MESSAGE:
+        //            {
+        //                BriSDKLib.TBriEvent_Data EventData = (BriSDKLib.TBriEvent_Data)Marshal.PtrToStructure(m.LParam, typeof(BriSDKLib.TBriEvent_Data));
+        //                string strValue = "";
                         
-                        if (BriSDKLib.QNV_SetParam(EventData.uChannelID, BriSDKLib.QNV_PARAM_RINGCALLIDTYPE, BriSDKLib.DIALTYPE_FSK) <= 0)
-                        {
-                            AppendStatus("QNV_PARAM_RINGCALLIDTYPE");
-                            return;
-                        }
+        //                if (BriSDKLib.QNV_SetParam(EventData.uChannelID, BriSDKLib.QNV_PARAM_RINGCALLIDTYPE, BriSDKLib.DIALTYPE_FSK) <= 0)
+        //                {
+        //                    AppendStatus("QNV_PARAM_RINGCALLIDTYPE");
+        //                    return;
+        //                }
 
-                        if (BriSDKLib.QNV_SetParam(EventData.uChannelID, BriSDKLib.QNV_PARAM_AM_LINEIN, 6) <= 0)
-                        {
-                            AppendStatus("QNV_PARAM_AM_LINEIN");
-                            return;
-                        }
+        //                if (BriSDKLib.QNV_SetParam(EventData.uChannelID, BriSDKLib.QNV_PARAM_AM_LINEIN, 6) <= 0)
+        //                {
+        //                    AppendStatus("QNV_PARAM_AM_LINEIN");
+        //                    return;
+        //                }
 
-                        if (BriSDKLib.QNV_SetDevCtrl(EventData.uChannelID, BriSDKLib.QNV_CTRL_RECVFSK, 1) <= 0)
-                        {
-                            AppendStatus("QNV_CTRL_RECVFSK");
-                            return;
-                        }
+        //                if (BriSDKLib.QNV_SetDevCtrl(EventData.uChannelID, BriSDKLib.QNV_CTRL_RECVFSK, 1) <= 0)
+        //                {
+        //                    AppendStatus("QNV_CTRL_RECVFSK");
+        //                    return;
+        //                }
 
-                        if (BriSDKLib.QNV_SetDevCtrl(EventData.uChannelID, BriSDKLib.QNV_CTRL_SELECTADCIN, 1) < 0)
-                        {
-                            AppendStatus("QNV_CTRL_SELECTADCIN");
-                            return;
-                        }
+        //                if (BriSDKLib.QNV_SetDevCtrl(EventData.uChannelID, BriSDKLib.QNV_CTRL_SELECTADCIN, 1) < 0)
+        //                {
+        //                    AppendStatus("QNV_CTRL_SELECTADCIN");
+        //                    return;
+        //                }
 
-                        switch (EventData.lEventType)
-                        {
-                            case BriSDKLib.BriEvent_PhoneHook:
-                                {
-                                    strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：电话机摘机";
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_PhoneHang:
-                                {
-                                    strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：电话机挂机";
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_CallIn:
-                                {////两声响铃结束后开始呼叫转移到CC
-                                    //AppendStatus(BriSDKLib.BriEvent_CallIn.ToString());
-                                    strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：来电响铃：" + FromASCIIByteArray(EventData.szData);
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_GetCallID:
-                                {
-                                    //AppendStatus(BriSDKLib.BriEvent_GetCallID.ToString());
-                                    //strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到来电号码 " + FromASCIIByteArray(EventData.szData);
+        //                switch (EventData.lEventType)
+        //                {
+        //                    case BriSDKLib.BriEvent_PhoneHook:
+        //                        {
+        //                            strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：电话机摘机";
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_PhoneHang:
+        //                        {
+        //                            strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：电话机挂机";
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_CallIn:
+        //                        {////两声响铃结束后开始呼叫转移到CC
+        //                            //AppendStatus(BriSDKLib.BriEvent_CallIn.ToString());
+        //                            strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：来电响铃：" + FromASCIIByteArray(EventData.szData);
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_GetCallID:
+        //                        {
+        //                            //AppendStatus(BriSDKLib.BriEvent_GetCallID.ToString());
+        //                            //strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到来电号码 " + FromASCIIByteArray(EventData.szData);
 
-                                    //MessageBox.Show(strValue);
-                                    string CallerPhone = FromASCIIByteArray(EventData.szData);
+        //                            //MessageBox.Show(strValue);
+        //                            string CallerPhone = FromASCIIByteArray(EventData.szData);
 
-                                    if (string.IsNullOrEmpty(CallerPhone))
-                                    {
-                                        //新客户
-                                    }
-                                    else
-                                    {
-                                        //老客户
-                                    }
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_StopCallIn:
-                                {
-                                    strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：停止呼入，产生一个未接电话 ";
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_GetDTMFChar: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到按键 " + FromASCIIByteArray(EventData.szData); break;
-                            case BriSDKLib.BriEvent_RemoteHang:
-                                {
-                                    strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：远程挂机 ";
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_Busy:
-                                {
+        //                            if (string.IsNullOrEmpty(CallerPhone))
+        //                            {
+        //                                //新客户
+        //                            }
+        //                            else
+        //                            {
+        //                                //老客户
+        //                            }
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_StopCallIn:
+        //                        {
+        //                            strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：停止呼入，产生一个未接电话 ";
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_GetDTMFChar: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到按键 " + FromASCIIByteArray(EventData.szData); break;
+        //                    case BriSDKLib.BriEvent_RemoteHang:
+        //                        {
+        //                            strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：远程挂机 ";
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_Busy:
+        //                        {
 
-                                    strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到忙音,线路已经断开 ";
-                                }
-                                break;
-                            case BriSDKLib.BriEvent_DialTone: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：检测到拨号音 "; break;
-                            case BriSDKLib.BriEvent_PhoneDial: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：电话机拨号 " + FromASCIIByteArray(EventData.szData); break;
-                            case BriSDKLib.BriEvent_RingBack: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：拨号后接收到回铃音 "; break;
-                            case BriSDKLib.BriEvent_DevErr:
-                                {
-                                    if (EventData.lResult == 3)
-                                    {
-                                        strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：设备可能被移除 ";
-                                    }
-                                }
-                                break;
-                            default: break;
-                        }
-                        if (strValue.Length > 0)
-                        {
-                            AppendStatus(strValue);
-                        }
-                    }
-                    break;
-                default:
-                    base.DefWndProc(ref m);
-                    break;
-            }
-        }
+        //                            strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：接收到忙音,线路已经断开 ";
+        //                        }
+        //                        break;
+        //                    case BriSDKLib.BriEvent_DialTone: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：检测到拨号音 "; break;
+        //                    case BriSDKLib.BriEvent_PhoneDial: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：电话机拨号 " + FromASCIIByteArray(EventData.szData); break;
+        //                    case BriSDKLib.BriEvent_RingBack: strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：拨号后接收到回铃音 "; break;
+        //                    case BriSDKLib.BriEvent_DevErr:
+        //                        {
+        //                            if (EventData.lResult == 3)
+        //                            {
+        //                                strValue = "通道" + (EventData.uChannelID + 1).ToString() + "：设备可能被移除 ";
+        //                            }
+        //                        }
+        //                        break;
+        //                    default: break;
+        //                }
+        //                if (strValue.Length > 0)
+        //                {
+        //                    AppendStatus(strValue);
+        //                }
+        //            }
+        //            break;
+        //        default:
+        //            base.DefWndProc(ref m);
+        //            break;
+        //    }
+        //}
 
         #region 打开设备
         private bool openDev()
@@ -1617,6 +1617,16 @@ namespace SuperPOS.UI.TA
         {
             FrmTaCustomerInfo frmTaCustomerInfo = new FrmTaCustomerInfo();
             frmTaCustomerInfo.ShowDialog();
+        }
+
+        private void btnCid_Click(object sender, EventArgs e)
+        {
+            FrmCaller frmCaller = new FrmCaller(usrID);
+
+            if (frmCaller.ShowDialog() == DialogResult.OK)
+            {
+                string sCallNum = frmCaller.CallNum;
+            }
         }
     }
 }
