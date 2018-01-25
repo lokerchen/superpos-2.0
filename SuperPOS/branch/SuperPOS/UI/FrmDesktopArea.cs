@@ -63,15 +63,15 @@ namespace SuperPOS.UI
             asfc.controllInitializeSize(this);
         }
 
-        private void btnTakeaway_Click(object sender, EventArgs e)
-        {
-            FrmTaMain frmTaMain = new FrmTaMain(usrID);
-            frmTaMain.ShowDialog();
-        }
-
         private void FrmDesktopArea_SizeChanged(object sender, EventArgs e)
         {
             asfc.controlAutoSize(this);
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            FrmTaMain frmTaMain = new FrmTaMain(usrID);
+            frmTaMain.ShowDialog();
         }
     }
 }
