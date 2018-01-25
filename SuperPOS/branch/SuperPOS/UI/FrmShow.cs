@@ -24,5 +24,10 @@ namespace SuperPOS.UI
             FrmLogon frmLogon = new FrmLogon();
             frmLogon.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
