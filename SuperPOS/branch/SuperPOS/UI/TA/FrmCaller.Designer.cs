@@ -54,36 +54,37 @@
             this.txtPhone = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.lblCallInfo = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.txtTelNum = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
+            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit9 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit10 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit11 = new DevExpress.XtraEditors.CheckEdit();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.checkEdit6 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit7 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit8 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTelNum = new DevExpress.XtraEditors.TextEdit();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblCallInfo = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelMember)).BeginInit();
             this.panelMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkBlackList.Properties)).BeginInit();
@@ -100,30 +101,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelNum.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
+            this.panelControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
+            this.panelControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
-            this.panelControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelNum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMember
@@ -152,10 +153,11 @@
             this.panelMember.Controls.Add(this.labelControl2);
             this.panelMember.Controls.Add(this.txtPhone);
             this.panelMember.Controls.Add(this.labelControl1);
-            this.panelMember.Location = new System.Drawing.Point(5, 5);
+            this.panelMember.Location = new System.Drawing.Point(667, 7);
             this.panelMember.Name = "panelMember";
             this.panelMember.Size = new System.Drawing.Size(275, 448);
             this.panelMember.TabIndex = 1;
+            this.panelMember.Visible = false;
             // 
             // labelControl12
             // 
@@ -347,35 +349,76 @@
             this.panelControl1.Controls.Add(this.panelMember);
             this.panelControl1.Location = new System.Drawing.Point(6, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(949, 462);
+            this.panelControl1.Size = new System.Drawing.Size(668, 462);
             this.panelControl1.TabIndex = 2;
             // 
-            // panelControl2
+            // panelControl5
             // 
-            this.panelControl2.Controls.Add(this.lblCallInfo);
-            this.panelControl2.Controls.Add(this.labelControl13);
-            this.panelControl2.Location = new System.Drawing.Point(287, 5);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(315, 86);
-            this.panelControl2.TabIndex = 2;
+            this.panelControl5.Controls.Add(this.panelControl7);
+            this.panelControl5.Location = new System.Drawing.Point(520, 7);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(141, 448);
+            this.panelControl5.TabIndex = 5;
             // 
-            // labelControl13
+            // panelControl7
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(41, 6);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(234, 30);
-            this.labelControl13.TabIndex = 0;
-            this.labelControl13.Text = "Caller ID Information";
+            this.panelControl7.Controls.Add(this.labelControl19);
+            this.panelControl7.Controls.Add(this.labelControl18);
+            this.panelControl7.Location = new System.Drawing.Point(6, 3);
+            this.panelControl7.Name = "panelControl7";
+            this.panelControl7.Size = new System.Drawing.Size(129, 87);
+            this.panelControl7.TabIndex = 0;
             // 
-            // lblCallInfo
+            // labelControl19
             // 
-            this.lblCallInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCallInfo.Location = new System.Drawing.Point(71, 50);
-            this.lblCallInfo.Name = "lblCallInfo";
-            this.lblCallInfo.Size = new System.Drawing.Size(159, 24);
-            this.lblCallInfo.TabIndex = 1;
-            this.lblCallInfo.Text = "2018-01-18 18:00";
+            this.labelControl19.Location = new System.Drawing.Point(38, 59);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(58, 18);
+            this.labelControl19.TabIndex = 2;
+            this.labelControl19.Text = "19:30:00";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Location = new System.Drawing.Point(15, 5);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(108, 52);
+            this.labelControl18.TabIndex = 0;
+            this.labelControl18.Text = "1000";
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.panelControl6);
+            this.panelControl4.Location = new System.Drawing.Point(343, 7);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(170, 448);
+            this.panelControl4.TabIndex = 4;
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Controls.Add(this.labelControl17);
+            this.panelControl6.Controls.Add(this.labelControl16);
+            this.panelControl6.Location = new System.Drawing.Point(5, 6);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(160, 62);
+            this.panelControl6.TabIndex = 0;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(13, 35);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(135, 18);
+            this.labelControl17.TabIndex = 1;
+            this.labelControl17.Text = "19:30:00 Tom Smith";
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl16.Location = new System.Drawing.Point(20, 5);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(121, 24);
+            this.labelControl16.TabIndex = 0;
+            this.labelControl16.Text = "07866878668";
             // 
             // panelControl3
             // 
@@ -397,143 +440,39 @@
             this.panelControl3.Controls.Add(this.simpleButton1);
             this.panelControl3.Controls.Add(this.labelControl14);
             this.panelControl3.Controls.Add(this.txtTelNum);
-            this.panelControl3.Location = new System.Drawing.Point(287, 98);
+            this.panelControl3.Location = new System.Drawing.Point(6, 100);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(331, 355);
             this.panelControl3.TabIndex = 3;
             // 
-            // panelControl4
+            // simpleButton4
             // 
-            this.panelControl4.Controls.Add(this.panelControl6);
-            this.panelControl4.Location = new System.Drawing.Point(624, 5);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(170, 448);
-            this.panelControl4.TabIndex = 4;
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.Location = new System.Drawing.Point(235, 315);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(75, 29);
+            this.simpleButton4.TabIndex = 18;
+            this.simpleButton4.Text = "-";
             // 
-            // panelControl5
+            // labelControl15
             // 
-            this.panelControl5.Controls.Add(this.panelControl7);
-            this.panelControl5.Location = new System.Drawing.Point(801, 5);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(141, 448);
-            this.panelControl5.TabIndex = 5;
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl15.Location = new System.Drawing.Point(248, 281);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(50, 28);
+            this.labelControl15.TabIndex = 17;
+            this.labelControl15.Text = "+ 30";
             // 
-            // txtTelNum
+            // simpleButton3
             // 
-            this.txtTelNum.EditValue = "07533375888";
-            this.txtTelNum.Location = new System.Drawing.Point(5, 48);
-            this.txtTelNum.Name = "txtTelNum";
-            this.txtTelNum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelNum.Properties.Appearance.Options.UseFont = true;
-            this.txtTelNum.Size = new System.Drawing.Size(206, 40);
-            this.txtTelNum.TabIndex = 0;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(23, 18);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(170, 24);
-            this.labelControl14.TabIndex = 2;
-            this.labelControl14.Text = "Telephone Number";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(217, 5);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(109, 40);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Edit";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(217, 51);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(109, 37);
-            this.simpleButton2.TabIndex = 4;
-            this.simpleButton2.Text = "Table Booking";
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(23, 121);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = "Delivery";
-            this.checkEdit1.Size = new System.Drawing.Size(109, 32);
-            this.checkEdit1.TabIndex = 5;
-            // 
-            // checkEdit2
-            // 
-            this.checkEdit2.Location = new System.Drawing.Point(154, 123);
-            this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit2.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit2.Properties.Caption = "Collection";
-            this.checkEdit2.Size = new System.Drawing.Size(121, 32);
-            this.checkEdit2.TabIndex = 6;
-            // 
-            // checkEdit3
-            // 
-            this.checkEdit3.Location = new System.Drawing.Point(14, 241);
-            this.checkEdit3.Name = "checkEdit3";
-            this.checkEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit3.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit3.Properties.Caption = "+5";
-            this.checkEdit3.Size = new System.Drawing.Size(52, 32);
-            this.checkEdit3.TabIndex = 7;
-            // 
-            // checkEdit4
-            // 
-            this.checkEdit4.Location = new System.Drawing.Point(83, 241);
-            this.checkEdit4.Name = "checkEdit4";
-            this.checkEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit4.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit4.Properties.Caption = "+10";
-            this.checkEdit4.Size = new System.Drawing.Size(70, 32);
-            this.checkEdit4.TabIndex = 8;
-            // 
-            // checkEdit5
-            // 
-            this.checkEdit5.Location = new System.Drawing.Point(159, 241);
-            this.checkEdit5.Name = "checkEdit5";
-            this.checkEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit5.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit5.Properties.Caption = "+15";
-            this.checkEdit5.Size = new System.Drawing.Size(69, 32);
-            this.checkEdit5.TabIndex = 9;
-            // 
-            // checkEdit6
-            // 
-            this.checkEdit6.Location = new System.Drawing.Point(159, 279);
-            this.checkEdit6.Name = "checkEdit6";
-            this.checkEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit6.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit6.Properties.Caption = "+40";
-            this.checkEdit6.Size = new System.Drawing.Size(69, 32);
-            this.checkEdit6.TabIndex = 12;
-            // 
-            // checkEdit7
-            // 
-            this.checkEdit7.Location = new System.Drawing.Point(83, 279);
-            this.checkEdit7.Name = "checkEdit7";
-            this.checkEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit7.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit7.Properties.Caption = "+30";
-            this.checkEdit7.Size = new System.Drawing.Size(70, 32);
-            this.checkEdit7.TabIndex = 11;
-            // 
-            // checkEdit8
-            // 
-            this.checkEdit8.Location = new System.Drawing.Point(14, 279);
-            this.checkEdit8.Name = "checkEdit8";
-            this.checkEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit8.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit8.Properties.Caption = "+20";
-            this.checkEdit8.Size = new System.Drawing.Size(63, 32);
-            this.checkEdit8.TabIndex = 10;
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Location = new System.Drawing.Point(235, 243);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 29);
+            this.simpleButton3.TabIndex = 16;
+            this.simpleButton3.Text = "+";
             // 
             // checkEdit9
             // 
@@ -565,92 +504,167 @@
             this.checkEdit11.Size = new System.Drawing.Size(63, 32);
             this.checkEdit11.TabIndex = 13;
             // 
-            // simpleButton3
+            // checkEdit6
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(235, 243);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 29);
-            this.simpleButton3.TabIndex = 16;
-            this.simpleButton3.Text = "+";
+            this.checkEdit6.Location = new System.Drawing.Point(159, 279);
+            this.checkEdit6.Name = "checkEdit6";
+            this.checkEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit6.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit6.Properties.Caption = "+40";
+            this.checkEdit6.Size = new System.Drawing.Size(69, 32);
+            this.checkEdit6.TabIndex = 12;
             // 
-            // labelControl15
+            // checkEdit7
             // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Location = new System.Drawing.Point(248, 281);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(50, 28);
-            this.labelControl15.TabIndex = 17;
-            this.labelControl15.Text = "+ 30";
+            this.checkEdit7.Location = new System.Drawing.Point(83, 279);
+            this.checkEdit7.Name = "checkEdit7";
+            this.checkEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit7.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit7.Properties.Caption = "+30";
+            this.checkEdit7.Size = new System.Drawing.Size(70, 32);
+            this.checkEdit7.TabIndex = 11;
             // 
-            // simpleButton4
+            // checkEdit8
             // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Location = new System.Drawing.Point(235, 315);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 29);
-            this.simpleButton4.TabIndex = 18;
-            this.simpleButton4.Text = "-";
+            this.checkEdit8.Location = new System.Drawing.Point(14, 279);
+            this.checkEdit8.Name = "checkEdit8";
+            this.checkEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit8.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit8.Properties.Caption = "+20";
+            this.checkEdit8.Size = new System.Drawing.Size(63, 32);
+            this.checkEdit8.TabIndex = 10;
             // 
-            // panelControl6
+            // checkEdit5
             // 
-            this.panelControl6.Controls.Add(this.labelControl17);
-            this.panelControl6.Controls.Add(this.labelControl16);
-            this.panelControl6.Location = new System.Drawing.Point(5, 6);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(160, 62);
-            this.panelControl6.TabIndex = 0;
+            this.checkEdit5.Location = new System.Drawing.Point(159, 241);
+            this.checkEdit5.Name = "checkEdit5";
+            this.checkEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit5.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit5.Properties.Caption = "+15";
+            this.checkEdit5.Size = new System.Drawing.Size(69, 32);
+            this.checkEdit5.TabIndex = 9;
             // 
-            // labelControl16
+            // checkEdit4
             // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(20, 5);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(121, 24);
-            this.labelControl16.TabIndex = 0;
-            this.labelControl16.Text = "07866878668";
+            this.checkEdit4.Location = new System.Drawing.Point(83, 241);
+            this.checkEdit4.Name = "checkEdit4";
+            this.checkEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit4.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit4.Properties.Caption = "+10";
+            this.checkEdit4.Size = new System.Drawing.Size(70, 32);
+            this.checkEdit4.TabIndex = 8;
             // 
-            // labelControl17
+            // checkEdit3
             // 
-            this.labelControl17.Location = new System.Drawing.Point(13, 35);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(135, 18);
-            this.labelControl17.TabIndex = 1;
-            this.labelControl17.Text = "19:30:00 Tom Smith";
+            this.checkEdit3.Location = new System.Drawing.Point(14, 241);
+            this.checkEdit3.Name = "checkEdit3";
+            this.checkEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit3.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit3.Properties.Caption = "+5";
+            this.checkEdit3.Size = new System.Drawing.Size(52, 32);
+            this.checkEdit3.TabIndex = 7;
             // 
-            // panelControl7
+            // checkEdit2
             // 
-            this.panelControl7.Controls.Add(this.labelControl19);
-            this.panelControl7.Controls.Add(this.labelControl18);
-            this.panelControl7.Location = new System.Drawing.Point(6, 3);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(129, 87);
-            this.panelControl7.TabIndex = 0;
+            this.checkEdit2.Location = new System.Drawing.Point(154, 123);
+            this.checkEdit2.Name = "checkEdit2";
+            this.checkEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit2.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit2.Properties.Caption = "Collection";
+            this.checkEdit2.Size = new System.Drawing.Size(121, 32);
+            this.checkEdit2.TabIndex = 6;
             // 
-            // labelControl18
+            // checkEdit1
             // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl18.Location = new System.Drawing.Point(15, 5);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(108, 52);
-            this.labelControl18.TabIndex = 0;
-            this.labelControl18.Text = "1000";
+            this.checkEdit1.Location = new System.Drawing.Point(23, 121);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit1.Properties.Caption = "Delivery";
+            this.checkEdit1.Size = new System.Drawing.Size(109, 32);
+            this.checkEdit1.TabIndex = 5;
             // 
-            // labelControl19
+            // simpleButton2
             // 
-            this.labelControl19.Location = new System.Drawing.Point(38, 59);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(58, 18);
-            this.labelControl19.TabIndex = 2;
-            this.labelControl19.Text = "19:30:00";
+            this.simpleButton2.Location = new System.Drawing.Point(217, 51);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(109, 37);
+            this.simpleButton2.TabIndex = 4;
+            this.simpleButton2.Text = "Table Booking";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(217, 5);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(109, 40);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Edit";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Location = new System.Drawing.Point(23, 18);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(170, 24);
+            this.labelControl14.TabIndex = 2;
+            this.labelControl14.Text = "Telephone Number";
+            // 
+            // txtTelNum
+            // 
+            this.txtTelNum.EditValue = "07533375888";
+            this.txtTelNum.Location = new System.Drawing.Point(5, 48);
+            this.txtTelNum.Name = "txtTelNum";
+            this.txtTelNum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelNum.Properties.Appearance.Options.UseFont = true;
+            this.txtTelNum.Size = new System.Drawing.Size(206, 40);
+            this.txtTelNum.TabIndex = 0;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.lblCallInfo);
+            this.panelControl2.Controls.Add(this.labelControl13);
+            this.panelControl2.Location = new System.Drawing.Point(6, 7);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(315, 86);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // lblCallInfo
+            // 
+            this.lblCallInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCallInfo.Location = new System.Drawing.Point(71, 50);
+            this.lblCallInfo.Name = "lblCallInfo";
+            this.lblCallInfo.Size = new System.Drawing.Size(159, 24);
+            this.lblCallInfo.TabIndex = 1;
+            this.lblCallInfo.Text = "2018-01-18 18:00";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Location = new System.Drawing.Point(41, 6);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(234, 30);
+            this.labelControl13.TabIndex = 0;
+            this.labelControl13.Text = "Caller ID Information";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.Location = new System.Drawing.Point(200, 471);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(259, 55);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FrmCaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 472);
+            this.ClientSize = new System.Drawing.Size(678, 532);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCaller";
@@ -673,34 +687,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelNum.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
-            this.panelControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
+            this.panelControl6.ResumeLayout(false);
+            this.panelControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelNum.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -763,5 +777,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
     }
 }
