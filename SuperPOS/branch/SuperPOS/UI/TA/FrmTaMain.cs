@@ -1628,5 +1628,10 @@ namespace SuperPOS.UI.TA
                 string sCallNum = frmCaller.CallNum;
             }
         }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            treeListOrder_DoubleClick(sender, e);
+        }
     }
 }
