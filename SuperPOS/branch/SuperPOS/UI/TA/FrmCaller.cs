@@ -31,5 +31,10 @@ namespace SuperPOS.UI.TA
             InitializeComponent();
             usrId = uId;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
