@@ -33,51 +33,58 @@
             this.lblctlTxt = new DevExpress.XtraEditors.LabelControl();
             this.chkOc0 = new DevExpress.XtraEditors.CheckEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.chkOc1 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc2 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc3 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc7 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc6 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc5 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc4 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc11 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc10 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc9 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc8 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc15 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc14 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc13 = new DevExpress.XtraEditors.CheckEdit();
-            this.chkOc12 = new DevExpress.XtraEditors.CheckEdit();
             this.chkOc19 = new DevExpress.XtraEditors.CheckEdit();
             this.chkOc18 = new DevExpress.XtraEditors.CheckEdit();
             this.chkOc17 = new DevExpress.XtraEditors.CheckEdit();
             this.chkOc16 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc15 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc14 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc13 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc12 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc11 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc10 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc9 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc8 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc7 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc6 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc5 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc4 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc3 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc2 = new DevExpress.XtraEditors.CheckEdit();
+            this.chkOc1 = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc0.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc19.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc18.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc17.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc16.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc15.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOK
             // 
+            this.btnOK.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.btnOK.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Appearance.Options.UseBackColor = true;
+            this.btnOK.Appearance.Options.UseFont = true;
+            this.btnOK.Appearance.Options.UseForeColor = true;
+            this.btnOK.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnOK.Location = new System.Drawing.Point(268, 280);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(137, 54);
@@ -87,6 +94,13 @@
             // 
             // btnExit
             // 
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.btnExit.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Appearance.Options.UseBackColor = true;
+            this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.Appearance.Options.UseForeColor = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnExit.Location = new System.Drawing.Point(561, 280);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(137, 54);
@@ -140,115 +154,45 @@
             this.panelControl2.Size = new System.Drawing.Size(980, 211);
             this.panelControl2.TabIndex = 5;
             // 
-            // chkOc1
+            // chkOc19
             // 
-            this.chkOc1.Location = new System.Drawing.Point(255, 5);
-            this.chkOc1.Name = "chkOc1";
-            this.chkOc1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc1.Properties.Appearance.Options.UseFont = true;
-            this.chkOc1.Properties.Caption = "checkEdit2";
-            this.chkOc1.Size = new System.Drawing.Size(146, 32);
-            this.chkOc1.TabIndex = 5;
+            this.chkOc19.Location = new System.Drawing.Point(755, 157);
+            this.chkOc19.Name = "chkOc19";
+            this.chkOc19.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc19.Properties.Appearance.Options.UseFont = true;
+            this.chkOc19.Properties.Caption = "checkEdit17";
+            this.chkOc19.Size = new System.Drawing.Size(146, 32);
+            this.chkOc19.TabIndex = 23;
             // 
-            // chkOc2
+            // chkOc18
             // 
-            this.chkOc2.Location = new System.Drawing.Point(505, 5);
-            this.chkOc2.Name = "chkOc2";
-            this.chkOc2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc2.Properties.Appearance.Options.UseFont = true;
-            this.chkOc2.Properties.Caption = "checkEdit3";
-            this.chkOc2.Size = new System.Drawing.Size(146, 32);
-            this.chkOc2.TabIndex = 6;
+            this.chkOc18.Location = new System.Drawing.Point(505, 157);
+            this.chkOc18.Name = "chkOc18";
+            this.chkOc18.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc18.Properties.Appearance.Options.UseFont = true;
+            this.chkOc18.Properties.Caption = "checkEdit18";
+            this.chkOc18.Size = new System.Drawing.Size(146, 32);
+            this.chkOc18.TabIndex = 22;
             // 
-            // chkOc3
+            // chkOc17
             // 
-            this.chkOc3.Location = new System.Drawing.Point(755, 5);
-            this.chkOc3.Name = "chkOc3";
-            this.chkOc3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc3.Properties.Appearance.Options.UseFont = true;
-            this.chkOc3.Properties.Caption = "checkEdit4";
-            this.chkOc3.Size = new System.Drawing.Size(146, 32);
-            this.chkOc3.TabIndex = 7;
+            this.chkOc17.Location = new System.Drawing.Point(255, 157);
+            this.chkOc17.Name = "chkOc17";
+            this.chkOc17.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc17.Properties.Appearance.Options.UseFont = true;
+            this.chkOc17.Properties.Caption = "checkEdit19";
+            this.chkOc17.Size = new System.Drawing.Size(146, 32);
+            this.chkOc17.TabIndex = 21;
             // 
-            // chkOc7
+            // chkOc16
             // 
-            this.chkOc7.Location = new System.Drawing.Point(755, 43);
-            this.chkOc7.Name = "chkOc7";
-            this.chkOc7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc7.Properties.Appearance.Options.UseFont = true;
-            this.chkOc7.Properties.Caption = "checkEdit5";
-            this.chkOc7.Size = new System.Drawing.Size(146, 32);
-            this.chkOc7.TabIndex = 11;
-            // 
-            // chkOc6
-            // 
-            this.chkOc6.Location = new System.Drawing.Point(505, 43);
-            this.chkOc6.Name = "chkOc6";
-            this.chkOc6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc6.Properties.Appearance.Options.UseFont = true;
-            this.chkOc6.Properties.Caption = "checkEdit6";
-            this.chkOc6.Size = new System.Drawing.Size(146, 32);
-            this.chkOc6.TabIndex = 10;
-            // 
-            // chkOc5
-            // 
-            this.chkOc5.Location = new System.Drawing.Point(255, 43);
-            this.chkOc5.Name = "chkOc5";
-            this.chkOc5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc5.Properties.Appearance.Options.UseFont = true;
-            this.chkOc5.Properties.Caption = "checkEdit7";
-            this.chkOc5.Size = new System.Drawing.Size(146, 32);
-            this.chkOc5.TabIndex = 9;
-            // 
-            // chkOc4
-            // 
-            this.chkOc4.Location = new System.Drawing.Point(5, 43);
-            this.chkOc4.Name = "chkOc4";
-            this.chkOc4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc4.Properties.Appearance.Options.UseFont = true;
-            this.chkOc4.Properties.Caption = "checkEdit8";
-            this.chkOc4.Size = new System.Drawing.Size(146, 32);
-            this.chkOc4.TabIndex = 8;
-            // 
-            // chkOc11
-            // 
-            this.chkOc11.Location = new System.Drawing.Point(755, 81);
-            this.chkOc11.Name = "chkOc11";
-            this.chkOc11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc11.Properties.Appearance.Options.UseFont = true;
-            this.chkOc11.Properties.Caption = "checkEdit9";
-            this.chkOc11.Size = new System.Drawing.Size(146, 32);
-            this.chkOc11.TabIndex = 15;
-            // 
-            // chkOc10
-            // 
-            this.chkOc10.Location = new System.Drawing.Point(505, 81);
-            this.chkOc10.Name = "chkOc10";
-            this.chkOc10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc10.Properties.Appearance.Options.UseFont = true;
-            this.chkOc10.Properties.Caption = "checkEdit10";
-            this.chkOc10.Size = new System.Drawing.Size(146, 32);
-            this.chkOc10.TabIndex = 14;
-            // 
-            // chkOc9
-            // 
-            this.chkOc9.Location = new System.Drawing.Point(255, 81);
-            this.chkOc9.Name = "chkOc9";
-            this.chkOc9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc9.Properties.Appearance.Options.UseFont = true;
-            this.chkOc9.Properties.Caption = "checkEdit11";
-            this.chkOc9.Size = new System.Drawing.Size(146, 32);
-            this.chkOc9.TabIndex = 13;
-            // 
-            // chkOc8
-            // 
-            this.chkOc8.Location = new System.Drawing.Point(5, 81);
-            this.chkOc8.Name = "chkOc8";
-            this.chkOc8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc8.Properties.Appearance.Options.UseFont = true;
-            this.chkOc8.Properties.Caption = "checkEdit12";
-            this.chkOc8.Size = new System.Drawing.Size(146, 32);
-            this.chkOc8.TabIndex = 12;
+            this.chkOc16.Location = new System.Drawing.Point(5, 157);
+            this.chkOc16.Name = "chkOc16";
+            this.chkOc16.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc16.Properties.Appearance.Options.UseFont = true;
+            this.chkOc16.Properties.Caption = "checkEdit20";
+            this.chkOc16.Size = new System.Drawing.Size(146, 32);
+            this.chkOc16.TabIndex = 20;
             // 
             // chkOc15
             // 
@@ -290,45 +234,115 @@
             this.chkOc12.Size = new System.Drawing.Size(146, 32);
             this.chkOc12.TabIndex = 16;
             // 
-            // chkOc19
+            // chkOc11
             // 
-            this.chkOc19.Location = new System.Drawing.Point(755, 157);
-            this.chkOc19.Name = "chkOc19";
-            this.chkOc19.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc19.Properties.Appearance.Options.UseFont = true;
-            this.chkOc19.Properties.Caption = "checkEdit17";
-            this.chkOc19.Size = new System.Drawing.Size(146, 32);
-            this.chkOc19.TabIndex = 23;
+            this.chkOc11.Location = new System.Drawing.Point(755, 81);
+            this.chkOc11.Name = "chkOc11";
+            this.chkOc11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc11.Properties.Appearance.Options.UseFont = true;
+            this.chkOc11.Properties.Caption = "checkEdit9";
+            this.chkOc11.Size = new System.Drawing.Size(146, 32);
+            this.chkOc11.TabIndex = 15;
             // 
-            // chkOc18
+            // chkOc10
             // 
-            this.chkOc18.Location = new System.Drawing.Point(505, 157);
-            this.chkOc18.Name = "chkOc18";
-            this.chkOc18.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc18.Properties.Appearance.Options.UseFont = true;
-            this.chkOc18.Properties.Caption = "checkEdit18";
-            this.chkOc18.Size = new System.Drawing.Size(146, 32);
-            this.chkOc18.TabIndex = 22;
+            this.chkOc10.Location = new System.Drawing.Point(505, 81);
+            this.chkOc10.Name = "chkOc10";
+            this.chkOc10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc10.Properties.Appearance.Options.UseFont = true;
+            this.chkOc10.Properties.Caption = "checkEdit10";
+            this.chkOc10.Size = new System.Drawing.Size(146, 32);
+            this.chkOc10.TabIndex = 14;
             // 
-            // chkOc17
+            // chkOc9
             // 
-            this.chkOc17.Location = new System.Drawing.Point(255, 157);
-            this.chkOc17.Name = "chkOc17";
-            this.chkOc17.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc17.Properties.Appearance.Options.UseFont = true;
-            this.chkOc17.Properties.Caption = "checkEdit19";
-            this.chkOc17.Size = new System.Drawing.Size(146, 32);
-            this.chkOc17.TabIndex = 21;
+            this.chkOc9.Location = new System.Drawing.Point(255, 81);
+            this.chkOc9.Name = "chkOc9";
+            this.chkOc9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc9.Properties.Appearance.Options.UseFont = true;
+            this.chkOc9.Properties.Caption = "checkEdit11";
+            this.chkOc9.Size = new System.Drawing.Size(146, 32);
+            this.chkOc9.TabIndex = 13;
             // 
-            // chkOc16
+            // chkOc8
             // 
-            this.chkOc16.Location = new System.Drawing.Point(5, 157);
-            this.chkOc16.Name = "chkOc16";
-            this.chkOc16.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOc16.Properties.Appearance.Options.UseFont = true;
-            this.chkOc16.Properties.Caption = "checkEdit20";
-            this.chkOc16.Size = new System.Drawing.Size(146, 32);
-            this.chkOc16.TabIndex = 20;
+            this.chkOc8.Location = new System.Drawing.Point(5, 81);
+            this.chkOc8.Name = "chkOc8";
+            this.chkOc8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc8.Properties.Appearance.Options.UseFont = true;
+            this.chkOc8.Properties.Caption = "checkEdit12";
+            this.chkOc8.Size = new System.Drawing.Size(146, 32);
+            this.chkOc8.TabIndex = 12;
+            // 
+            // chkOc7
+            // 
+            this.chkOc7.Location = new System.Drawing.Point(755, 43);
+            this.chkOc7.Name = "chkOc7";
+            this.chkOc7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc7.Properties.Appearance.Options.UseFont = true;
+            this.chkOc7.Properties.Caption = "checkEdit5";
+            this.chkOc7.Size = new System.Drawing.Size(146, 32);
+            this.chkOc7.TabIndex = 11;
+            // 
+            // chkOc6
+            // 
+            this.chkOc6.Location = new System.Drawing.Point(505, 43);
+            this.chkOc6.Name = "chkOc6";
+            this.chkOc6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc6.Properties.Appearance.Options.UseFont = true;
+            this.chkOc6.Properties.Caption = "checkEdit6";
+            this.chkOc6.Size = new System.Drawing.Size(146, 32);
+            this.chkOc6.TabIndex = 10;
+            // 
+            // chkOc5
+            // 
+            this.chkOc5.Location = new System.Drawing.Point(255, 43);
+            this.chkOc5.Name = "chkOc5";
+            this.chkOc5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc5.Properties.Appearance.Options.UseFont = true;
+            this.chkOc5.Properties.Caption = "checkEdit7";
+            this.chkOc5.Size = new System.Drawing.Size(146, 32);
+            this.chkOc5.TabIndex = 9;
+            // 
+            // chkOc4
+            // 
+            this.chkOc4.Location = new System.Drawing.Point(5, 43);
+            this.chkOc4.Name = "chkOc4";
+            this.chkOc4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc4.Properties.Appearance.Options.UseFont = true;
+            this.chkOc4.Properties.Caption = "checkEdit8";
+            this.chkOc4.Size = new System.Drawing.Size(146, 32);
+            this.chkOc4.TabIndex = 8;
+            // 
+            // chkOc3
+            // 
+            this.chkOc3.Location = new System.Drawing.Point(755, 5);
+            this.chkOc3.Name = "chkOc3";
+            this.chkOc3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc3.Properties.Appearance.Options.UseFont = true;
+            this.chkOc3.Properties.Caption = "checkEdit4";
+            this.chkOc3.Size = new System.Drawing.Size(146, 32);
+            this.chkOc3.TabIndex = 7;
+            // 
+            // chkOc2
+            // 
+            this.chkOc2.Location = new System.Drawing.Point(505, 5);
+            this.chkOc2.Name = "chkOc2";
+            this.chkOc2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc2.Properties.Appearance.Options.UseFont = true;
+            this.chkOc2.Properties.Caption = "checkEdit3";
+            this.chkOc2.Size = new System.Drawing.Size(146, 32);
+            this.chkOc2.TabIndex = 6;
+            // 
+            // chkOc1
+            // 
+            this.chkOc1.Location = new System.Drawing.Point(255, 5);
+            this.chkOc1.Name = "chkOc1";
+            this.chkOc1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkOc1.Properties.Appearance.Options.UseFont = true;
+            this.chkOc1.Properties.Caption = "checkEdit2";
+            this.chkOc1.Size = new System.Drawing.Size(146, 32);
+            this.chkOc1.TabIndex = 5;
             // 
             // FrmTAOtherChoice
             // 
@@ -347,25 +361,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkOc0.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkOc12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc19.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc18.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc17.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkOc16.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc15.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkOc1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
