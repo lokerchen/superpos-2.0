@@ -529,8 +529,11 @@
             // btnDel
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDel.Appearance.BackColor = System.Drawing.Color.Blue;
             this.btnDel.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Appearance.Options.UseBackColor = true;
             this.btnDel.Appearance.Options.UseFont = true;
+            this.btnDel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnDel.Location = new System.Drawing.Point(142, 176);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(60, 45);
@@ -541,8 +544,11 @@
             // btnPoint
             // 
             this.btnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPoint.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPoint.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPoint.Appearance.Options.UseBackColor = true;
             this.btnPoint.Appearance.Options.UseFont = true;
+            this.btnPoint.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnPoint.Location = new System.Drawing.Point(72, 176);
             this.btnPoint.Name = "btnPoint";
             this.btnPoint.Size = new System.Drawing.Size(60, 45);
@@ -552,8 +558,11 @@
             // btn0
             // 
             this.btn0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn0.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn0.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn0.Appearance.Options.UseBackColor = true;
             this.btn0.Appearance.Options.UseFont = true;
+            this.btn0.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn0.Location = new System.Drawing.Point(7, 176);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(60, 45);
@@ -587,8 +596,11 @@
             // btn9
             // 
             this.btn9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn9.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn9.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn9.Appearance.Options.UseBackColor = true;
             this.btn9.Appearance.Options.UseFont = true;
+            this.btn9.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn9.Location = new System.Drawing.Point(142, 125);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(60, 45);
@@ -598,8 +610,11 @@
             // btn8
             // 
             this.btn8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn8.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn8.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn8.Appearance.Options.UseBackColor = true;
             this.btn8.Appearance.Options.UseFont = true;
+            this.btn8.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn8.Location = new System.Drawing.Point(72, 125);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(60, 45);
@@ -609,8 +624,11 @@
             // btn7
             // 
             this.btn7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn7.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.Appearance.Options.UseBackColor = true;
             this.btn7.Appearance.Options.UseFont = true;
+            this.btn7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn7.Location = new System.Drawing.Point(7, 125);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(60, 45);
@@ -620,8 +638,11 @@
             // btn6
             // 
             this.btn6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn6.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.Appearance.Options.UseBackColor = true;
             this.btn6.Appearance.Options.UseFont = true;
+            this.btn6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn6.Location = new System.Drawing.Point(142, 70);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(60, 45);
@@ -631,8 +652,11 @@
             // btn5
             // 
             this.btn5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn5.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.Appearance.Options.UseBackColor = true;
             this.btn5.Appearance.Options.UseFont = true;
+            this.btn5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn5.Location = new System.Drawing.Point(72, 70);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(60, 45);
@@ -642,8 +666,11 @@
             // btn4
             // 
             this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn4.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.Appearance.Options.UseBackColor = true;
             this.btn4.Appearance.Options.UseFont = true;
+            this.btn4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn4.Location = new System.Drawing.Point(7, 70);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(60, 45);
@@ -653,8 +680,11 @@
             // btn3
             // 
             this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn3.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3.Appearance.Options.UseBackColor = true;
             this.btn3.Appearance.Options.UseFont = true;
+            this.btn3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn3.Location = new System.Drawing.Point(142, 15);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(60, 45);
@@ -664,8 +694,11 @@
             // btn2
             // 
             this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn2.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.Appearance.Options.UseBackColor = true;
             this.btn2.Appearance.Options.UseFont = true;
+            this.btn2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn2.Location = new System.Drawing.Point(72, 15);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(60, 45);
@@ -675,8 +708,11 @@
             // btn1
             // 
             this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn1.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Appearance.Options.UseBackColor = true;
             this.btn1.Appearance.Options.UseFont = true;
+            this.btn1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btn1.Location = new System.Drawing.Point(7, 15);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(60, 45);
@@ -977,6 +1013,9 @@
             // 
             // btnPrtAll
             // 
+            this.btnPrtAll.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPrtAll.Appearance.Options.UseBackColor = true;
+            this.btnPrtAll.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnPrtAll.Location = new System.Drawing.Point(45, 517);
             this.btnPrtAll.Name = "btnPrtAll";
             this.btnPrtAll.Size = new System.Drawing.Size(151, 48);
@@ -986,6 +1025,9 @@
             // 
             // btnPrtAllReceipt
             // 
+            this.btnPrtAllReceipt.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPrtAllReceipt.Appearance.Options.UseBackColor = true;
+            this.btnPrtAllReceipt.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnPrtAllReceipt.Location = new System.Drawing.Point(245, 517);
             this.btnPrtAllReceipt.Name = "btnPrtAllReceipt";
             this.btnPrtAllReceipt.Size = new System.Drawing.Size(151, 48);
@@ -995,6 +1037,9 @@
             // 
             // btnPrtBillOnly
             // 
+            this.btnPrtBillOnly.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPrtBillOnly.Appearance.Options.UseBackColor = true;
+            this.btnPrtBillOnly.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnPrtBillOnly.Location = new System.Drawing.Point(440, 517);
             this.btnPrtBillOnly.Name = "btnPrtBillOnly";
             this.btnPrtBillOnly.Size = new System.Drawing.Size(151, 48);
@@ -1004,6 +1049,9 @@
             // 
             // btnPrtKitOnly
             // 
+            this.btnPrtKitOnly.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPrtKitOnly.Appearance.Options.UseBackColor = true;
+            this.btnPrtKitOnly.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnPrtKitOnly.Location = new System.Drawing.Point(633, 517);
             this.btnPrtKitOnly.Name = "btnPrtKitOnly";
             this.btnPrtKitOnly.Size = new System.Drawing.Size(151, 48);
@@ -1013,6 +1061,9 @@
             // 
             // btnExit
             // 
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnExit.Appearance.Options.UseBackColor = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnExit.Location = new System.Drawing.Point(822, 517);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(151, 48);
