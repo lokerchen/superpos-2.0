@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnMs4 = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnMs3 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMs2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMs1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMs0 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnMs4 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -52,10 +52,26 @@
             this.panelControl1.Size = new System.Drawing.Size(158, 384);
             this.panelControl1.TabIndex = 1;
             // 
+            // btnMs4
+            // 
+            this.btnMs4.Appearance.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMs4.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMs4.Appearance.Options.UseBackColor = true;
+            this.btnMs4.Appearance.Options.UseFont = true;
+            this.btnMs4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnMs4.Location = new System.Drawing.Point(5, 257);
+            this.btnMs4.Name = "btnMs4";
+            this.btnMs4.Size = new System.Drawing.Size(148, 57);
+            this.btnMs4.TabIndex = 5;
+            this.btnMs4.Text = "5";
+            // 
             // btnExit
             // 
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.Olive;
             this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Appearance.Options.UseBackColor = true;
             this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnExit.Location = new System.Drawing.Point(5, 320);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(148, 57);
@@ -65,8 +81,11 @@
             // 
             // btnMs3
             // 
+            this.btnMs3.Appearance.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnMs3.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMs3.Appearance.Options.UseBackColor = true;
             this.btnMs3.Appearance.Options.UseFont = true;
+            this.btnMs3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnMs3.Location = new System.Drawing.Point(5, 194);
             this.btnMs3.Name = "btnMs3";
             this.btnMs3.Size = new System.Drawing.Size(148, 57);
@@ -75,8 +94,11 @@
             // 
             // btnMs2
             // 
+            this.btnMs2.Appearance.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnMs2.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMs2.Appearance.Options.UseBackColor = true;
             this.btnMs2.Appearance.Options.UseFont = true;
+            this.btnMs2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnMs2.Location = new System.Drawing.Point(5, 131);
             this.btnMs2.Name = "btnMs2";
             this.btnMs2.Size = new System.Drawing.Size(148, 57);
@@ -85,8 +107,11 @@
             // 
             // btnMs1
             // 
+            this.btnMs1.Appearance.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnMs1.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMs1.Appearance.Options.UseBackColor = true;
             this.btnMs1.Appearance.Options.UseFont = true;
+            this.btnMs1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnMs1.Location = new System.Drawing.Point(5, 68);
             this.btnMs1.Name = "btnMs1";
             this.btnMs1.Size = new System.Drawing.Size(148, 57);
@@ -95,23 +120,16 @@
             // 
             // btnMs0
             // 
+            this.btnMs0.Appearance.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnMs0.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMs0.Appearance.Options.UseBackColor = true;
             this.btnMs0.Appearance.Options.UseFont = true;
+            this.btnMs0.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnMs0.Location = new System.Drawing.Point(5, 5);
             this.btnMs0.Name = "btnMs0";
             this.btnMs0.Size = new System.Drawing.Size(148, 57);
             this.btnMs0.TabIndex = 0;
             this.btnMs0.Text = "1";
-            // 
-            // btnMs4
-            // 
-            this.btnMs4.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMs4.Appearance.Options.UseFont = true;
-            this.btnMs4.Location = new System.Drawing.Point(5, 257);
-            this.btnMs4.Name = "btnMs4";
-            this.btnMs4.Size = new System.Drawing.Size(148, 57);
-            this.btnMs4.TabIndex = 5;
-            this.btnMs4.Text = "5";
             // 
             // FrmTaMenuSelect
             // 
