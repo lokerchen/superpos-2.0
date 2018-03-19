@@ -73,5 +73,11 @@ namespace SuperPOS.UI
             FrmTaMain frmTaMain = new FrmTaMain(usrID);
             frmTaMain.ShowDialog();
         }
+
+        private void btnShowOrder_Click(object sender, EventArgs e)
+        {
+            FrmTaMain frmTaMain = new FrmTaMain(usrID);
+            frmTaMain.ShowDialog();
+        }
     }
 }
