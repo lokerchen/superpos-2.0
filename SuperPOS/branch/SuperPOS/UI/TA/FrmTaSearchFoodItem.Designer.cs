@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKeyWord = new System.Windows.Forms.TextBox();
-            this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
+            this.txtKeyWord = new System.Windows.Forms.TextBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
@@ -48,15 +48,33 @@
             this.panelControl1.Size = new System.Drawing.Size(303, 154);
             this.panelControl1.TabIndex = 0;
             // 
-            // labelControl1
+            // btnExit
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl1.Location = new System.Drawing.Point(16, 8);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(221, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Please key in a key word";
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.Olive;
+            this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Appearance.Options.UseBackColor = true;
+            this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnExit.Location = new System.Drawing.Point(170, 88);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(104, 52);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // BtnOK
+            // 
+            this.BtnOK.Appearance.BackColor = System.Drawing.Color.Blue;
+            this.BtnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOK.Appearance.Options.UseBackColor = true;
+            this.BtnOK.Appearance.Options.UseFont = true;
+            this.BtnOK.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.BtnOK.Location = new System.Drawing.Point(31, 88);
+            this.BtnOK.Name = "BtnOK";
+            this.BtnOK.Size = new System.Drawing.Size(104, 52);
+            this.BtnOK.TabIndex = 2;
+            this.BtnOK.Text = "OK";
+            this.BtnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
             // txtKeyWord
             // 
@@ -66,27 +84,15 @@
             this.txtKeyWord.Size = new System.Drawing.Size(271, 35);
             this.txtKeyWord.TabIndex = 1;
             // 
-            // BtnOK
+            // labelControl1
             // 
-            this.BtnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOK.Appearance.Options.UseFont = true;
-            this.BtnOK.Location = new System.Drawing.Point(31, 88);
-            this.BtnOK.Name = "BtnOK";
-            this.BtnOK.Size = new System.Drawing.Size(104, 52);
-            this.BtnOK.TabIndex = 2;
-            this.BtnOK.Text = "OK";
-            this.BtnOK.Click += new System.EventHandler(this.BtnOK_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Appearance.Options.UseFont = true;
-            this.btnExit.Location = new System.Drawing.Point(170, 88);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(104, 52);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl1.Location = new System.Drawing.Point(16, 8);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(221, 24);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Please key in a key word";
             // 
             // FrmTaSearchFoodItem
             // 
