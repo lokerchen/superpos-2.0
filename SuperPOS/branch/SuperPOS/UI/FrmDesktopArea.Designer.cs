@@ -109,6 +109,7 @@
             this.btnShowOrder.Size = new System.Drawing.Size(190, 80);
             this.btnShowOrder.TabIndex = 8;
             this.btnShowOrder.Text = "Show Order";
+            this.btnShowOrder.Click += new System.EventHandler(this.btnShowOrder_Click);
             // 
             // lblSession
             // 
