@@ -401,6 +401,9 @@
             // 
             // panelControl6
             // 
+            this.panelControl6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelControl6.Appearance.Options.UseBackColor = true;
+            this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl6.Controls.Add(this.labelControl17);
             this.panelControl6.Controls.Add(this.labelControl16);
             this.panelControl6.Location = new System.Drawing.Point(5, 6);
@@ -410,7 +413,7 @@
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(13, 35);
+            this.labelControl17.Location = new System.Drawing.Point(11, 33);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(135, 18);
             this.labelControl17.TabIndex = 1;
@@ -419,7 +422,7 @@
             // labelControl16
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(20, 5);
+            this.labelControl16.Location = new System.Drawing.Point(18, 3);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(121, 24);
             this.labelControl16.TabIndex = 0;
@@ -642,7 +645,9 @@
             this.txtTelNum.Location = new System.Drawing.Point(5, 48);
             this.txtTelNum.Name = "txtTelNum";
             this.txtTelNum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelNum.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
             this.txtTelNum.Properties.Appearance.Options.UseFont = true;
+            this.txtTelNum.Properties.Appearance.Options.UseForeColor = true;
             this.txtTelNum.Size = new System.Drawing.Size(206, 40);
             this.txtTelNum.TabIndex = 0;
             // 
