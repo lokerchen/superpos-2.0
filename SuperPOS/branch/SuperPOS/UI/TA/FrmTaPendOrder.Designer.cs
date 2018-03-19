@@ -55,6 +55,7 @@
             this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTaPendOrder)).BeginInit();
@@ -232,40 +233,41 @@
             // 
             this.btnPrtKit.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPrtKit.Appearance.Options.UseFont = true;
-            this.btnPrtKit.Location = new System.Drawing.Point(9, 113);
+            this.btnPrtKit.Location = new System.Drawing.Point(993, 125);
             this.btnPrtKit.Name = "btnPrtKit";
             this.btnPrtKit.Size = new System.Drawing.Size(184, 48);
             this.btnPrtKit.TabIndex = 43;
             this.btnPrtKit.Text = "Print Kitchen";
+            this.btnPrtKit.Visible = false;
             this.btnPrtKit.Click += new System.EventHandler(this.btnPrtKit_Click);
             // 
             // btnPrtBill
             // 
             this.btnPrtBill.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPrtBill.Appearance.Options.UseFont = true;
-            this.btnPrtBill.Location = new System.Drawing.Point(9, 59);
+            this.btnPrtBill.Location = new System.Drawing.Point(993, 71);
             this.btnPrtBill.Name = "btnPrtBill";
             this.btnPrtBill.Size = new System.Drawing.Size(184, 48);
             this.btnPrtBill.TabIndex = 42;
             this.btnPrtBill.Text = "Print Bill";
+            this.btnPrtBill.Visible = false;
             this.btnPrtBill.Click += new System.EventHandler(this.btnPrtBill_Click);
             // 
             // btnPrtReceipt
             // 
             this.btnPrtReceipt.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnPrtReceipt.Appearance.Options.UseFont = true;
-            this.btnPrtReceipt.Location = new System.Drawing.Point(9, 5);
+            this.btnPrtReceipt.Location = new System.Drawing.Point(993, 17);
             this.btnPrtReceipt.Name = "btnPrtReceipt";
             this.btnPrtReceipt.Size = new System.Drawing.Size(184, 48);
             this.btnPrtReceipt.TabIndex = 41;
             this.btnPrtReceipt.Text = "Print Receipt";
+            this.btnPrtReceipt.Visible = false;
             this.btnPrtReceipt.Click += new System.EventHandler(this.btnPrtReceipt_Click);
             // 
             // panelControl2
             // 
-            this.panelControl2.Controls.Add(this.btnPrtKit);
-            this.panelControl2.Controls.Add(this.btnPrtReceipt);
-            this.panelControl2.Controls.Add(this.btnPrtBill);
+            this.panelControl2.Controls.Add(this.simpleButton1);
             this.panelControl2.Location = new System.Drawing.Point(771, 12);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(200, 168);
@@ -273,8 +275,13 @@
             // 
             // btnDelivery
             // 
+            this.btnDelivery.Appearance.BackColor = System.Drawing.Color.Red;
             this.btnDelivery.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.btnDelivery.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnDelivery.Appearance.Options.UseBackColor = true;
             this.btnDelivery.Appearance.Options.UseFont = true;
+            this.btnDelivery.Appearance.Options.UseForeColor = true;
+            this.btnDelivery.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnDelivery.Location = new System.Drawing.Point(4, 5);
             this.btnDelivery.Name = "btnDelivery";
             this.btnDelivery.Size = new System.Drawing.Size(186, 48);
@@ -284,8 +291,13 @@
             // 
             // btnCollection
             // 
+            this.btnCollection.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnCollection.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.btnCollection.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnCollection.Appearance.Options.UseBackColor = true;
             this.btnCollection.Appearance.Options.UseFont = true;
+            this.btnCollection.Appearance.Options.UseForeColor = true;
+            this.btnCollection.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnCollection.Location = new System.Drawing.Point(4, 59);
             this.btnCollection.Name = "btnCollection";
             this.btnCollection.Size = new System.Drawing.Size(186, 48);
@@ -295,8 +307,13 @@
             // 
             // btnShop
             // 
+            this.btnShop.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnShop.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.btnShop.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnShop.Appearance.Options.UseBackColor = true;
             this.btnShop.Appearance.Options.UseFont = true;
+            this.btnShop.Appearance.Options.UseForeColor = true;
+            this.btnShop.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnShop.Location = new System.Drawing.Point(4, 113);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(186, 48);
@@ -306,8 +323,13 @@
             // 
             // btnAll
             // 
+            this.btnAll.Appearance.BackColor = System.Drawing.Color.Green;
             this.btnAll.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.btnAll.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnAll.Appearance.Options.UseBackColor = true;
             this.btnAll.Appearance.Options.UseFont = true;
+            this.btnAll.Appearance.Options.UseForeColor = true;
+            this.btnAll.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnAll.Location = new System.Drawing.Point(5, 167);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(185, 48);
@@ -317,8 +339,13 @@
             // 
             // btnPay
             // 
+            this.btnPay.Appearance.BackColor = System.Drawing.Color.Blue;
             this.btnPay.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnPay.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Appearance.Options.UseBackColor = true;
             this.btnPay.Appearance.Options.UseFont = true;
+            this.btnPay.Appearance.Options.UseForeColor = true;
+            this.btnPay.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnPay.Location = new System.Drawing.Point(5, 223);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(189, 48);
@@ -328,8 +355,13 @@
             // 
             // btnExit
             // 
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.Olive;
             this.btnExit.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.btnExit.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Appearance.Options.UseBackColor = true;
             this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.Appearance.Options.UseForeColor = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnExit.Location = new System.Drawing.Point(5, 277);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(184, 48);
@@ -350,13 +382,31 @@
             this.panelControl3.Size = new System.Drawing.Size(201, 330);
             this.panelControl3.TabIndex = 49;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton1.Location = new System.Drawing.Point(9, 61);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(184, 48);
+            this.simpleButton1.TabIndex = 50;
+            this.simpleButton1.Text = "OPEN";
+            // 
             // FrmTaPendOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 522);
+            this.ClientSize = new System.Drawing.Size(977, 522);
+            this.Controls.Add(this.btnPrtKit);
             this.Controls.Add(this.panelControl3);
+            this.Controls.Add(this.btnPrtReceipt);
             this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.btnPrtBill);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaPendOrder";
@@ -406,5 +456,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn CustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerPhone;
         private DevExpress.XtraGrid.Columns.GridColumn DriverName;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
