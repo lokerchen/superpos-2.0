@@ -577,6 +577,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperPOS.Domain\SuperPOS.Domain.csproj">
