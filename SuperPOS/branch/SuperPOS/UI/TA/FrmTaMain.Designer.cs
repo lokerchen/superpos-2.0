@@ -57,9 +57,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.lblType = new DevExpress.XtraEditors.LabelControl();
-            this.lblCheck = new DevExpress.XtraEditors.LabelControl();
             this.btnChange = new DevExpress.XtraEditors.SimpleButton();
             this.btnPay = new DevExpress.XtraEditors.SimpleButton();
             this.btnKeypad = new DevExpress.XtraEditors.SimpleButton();
@@ -70,6 +67,9 @@
             this.btnUp = new DevExpress.XtraEditors.SimpleButton();
             this.btnHome = new DevExpress.XtraEditors.SimpleButton();
             this.btnAppend = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.lblType = new DevExpress.XtraEditors.LabelControl();
+            this.lblCheck = new DevExpress.XtraEditors.LabelControl();
             this.btnPendOrder = new DevExpress.XtraEditors.SimpleButton();
             this.btnCid = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -94,12 +94,12 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOrderType = new DevExpress.XtraEditors.SimpleButton();
             this.btnLanguage = new DevExpress.XtraEditors.SimpleButton();
             this.btnSaveOrder = new DevExpress.XtraEditors.SimpleButton();
             this.btnMcLeft = new DevExpress.XtraEditors.SimpleButton();
             this.btnMenu = new DevExpress.XtraEditors.SimpleButton();
             this.btnMcRight = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOrderType = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnMc41 = new DevExpress.XtraEditors.SimpleButton();
             this.btnMc40 = new DevExpress.XtraEditors.SimpleButton();
@@ -146,6 +146,7 @@
             this.btnSearchMeal = new DevExpress.XtraEditors.SimpleButton();
             this.btnCustInfo = new DevExpress.XtraEditors.SimpleButton();
             this.btnIngredMode = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -452,38 +453,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Name:";
             // 
-            // panelControl6
-            // 
-            this.panelControl6.Controls.Add(this.lblType);
-            this.panelControl6.Controls.Add(this.lblCheck);
-            this.panelControl6.Location = new System.Drawing.Point(414, 267);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(390, 40);
-            this.panelControl6.TabIndex = 31;
-            this.panelControl6.Visible = false;
-            // 
-            // lblType
-            // 
-            this.lblType.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.Location = new System.Drawing.Point(5, 5);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(63, 30);
-            this.lblType.TabIndex = 6;
-            this.lblType.Text = "SHOP";
-            this.lblType.Visible = false;
-            // 
-            // lblCheck
-            // 
-            this.lblCheck.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheck.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblCheck.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCheck.Location = new System.Drawing.Point(273, 5);
-            this.lblCheck.Name = "lblCheck";
-            this.lblCheck.Size = new System.Drawing.Size(112, 30);
-            this.lblCheck.TabIndex = 7;
-            this.lblCheck.Text = "001";
-            this.lblCheck.Visible = false;
-            // 
             // btnChange
             // 
             this.btnChange.Appearance.BackColor = System.Drawing.Color.Red;
@@ -653,6 +622,38 @@
             this.btnAppend.TabIndex = 19;
             this.btnAppend.Text = "+/-";
             this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Controls.Add(this.lblType);
+            this.panelControl6.Controls.Add(this.lblCheck);
+            this.panelControl6.Location = new System.Drawing.Point(414, 267);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(390, 40);
+            this.panelControl6.TabIndex = 31;
+            this.panelControl6.Visible = false;
+            // 
+            // lblType
+            // 
+            this.lblType.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Location = new System.Drawing.Point(5, 5);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(63, 30);
+            this.lblType.TabIndex = 6;
+            this.lblType.Text = "SHOP";
+            this.lblType.Visible = false;
+            // 
+            // lblCheck
+            // 
+            this.lblCheck.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheck.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblCheck.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCheck.Location = new System.Drawing.Point(273, 5);
+            this.lblCheck.Name = "lblCheck";
+            this.lblCheck.Size = new System.Drawing.Size(112, 30);
+            this.lblCheck.TabIndex = 7;
+            this.lblCheck.Text = "001";
+            this.lblCheck.Visible = false;
             // 
             // btnPendOrder
             // 
@@ -993,6 +994,7 @@
             // 
             // panelControl5
             // 
+            this.panelControl5.Controls.Add(this.simpleButton1);
             this.panelControl5.Controls.Add(this.btnCancel);
             this.panelControl5.Controls.Add(this.btnLanguage);
             this.panelControl5.Controls.Add(this.btnSaveOrder);
@@ -1023,25 +1025,6 @@
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnOrderType
-            // 
-            this.btnOrderType.Appearance.BackColor = System.Drawing.Color.Gray;
-            this.btnOrderType.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderType.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnOrderType.Appearance.Options.UseBackColor = true;
-            this.btnOrderType.Appearance.Options.UseFont = true;
-            this.btnOrderType.Appearance.Options.UseForeColor = true;
-            this.btnOrderType.Appearance.Options.UseTextOptions = true;
-            this.btnOrderType.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.btnOrderType.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnOrderType.Location = new System.Drawing.Point(828, 272);
-            this.btnOrderType.Name = "btnOrderType";
-            this.btnOrderType.Size = new System.Drawing.Size(111, 42);
-            this.btnOrderType.TabIndex = 26;
-            this.btnOrderType.Text = "Order Type";
-            this.btnOrderType.Visible = false;
-            this.btnOrderType.Click += new System.EventHandler(this.btnOrderType_Click);
             // 
             // btnLanguage
             // 
@@ -1132,6 +1115,25 @@
             this.btnMcRight.TabIndex = 18;
             this.btnMcRight.Text = ">>";
             this.btnMcRight.Click += new System.EventHandler(this.btnMcRight_Click);
+            // 
+            // btnOrderType
+            // 
+            this.btnOrderType.Appearance.BackColor = System.Drawing.Color.Gray;
+            this.btnOrderType.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderType.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnOrderType.Appearance.Options.UseBackColor = true;
+            this.btnOrderType.Appearance.Options.UseFont = true;
+            this.btnOrderType.Appearance.Options.UseForeColor = true;
+            this.btnOrderType.Appearance.Options.UseTextOptions = true;
+            this.btnOrderType.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.btnOrderType.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnOrderType.Location = new System.Drawing.Point(828, 272);
+            this.btnOrderType.Name = "btnOrderType";
+            this.btnOrderType.Size = new System.Drawing.Size(111, 42);
+            this.btnOrderType.TabIndex = 26;
+            this.btnOrderType.Text = "Order Type";
+            this.btnOrderType.Visible = false;
+            this.btnOrderType.Click += new System.EventHandler(this.btnOrderType_Click);
             // 
             // panelControl3
             // 
@@ -1814,6 +1816,23 @@
             this.btnIngredMode.Visible = false;
             this.btnIngredMode.Click += new System.EventHandler(this.btnIngredMode_Click);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Red;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Appearance.Options.UseTextOptions = true;
+            this.simpleButton1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton1.Location = new System.Drawing.Point(7, 299);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(111, 42);
+            this.simpleButton1.TabIndex = 29;
+            this.simpleButton1.Text = "Eat In";
+            // 
             // FrmTaMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1970,5 +1989,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
