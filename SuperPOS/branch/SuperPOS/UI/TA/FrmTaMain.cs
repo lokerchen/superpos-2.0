@@ -43,6 +43,9 @@ namespace SuperPOS.UI.TA
 
         private readonly EntityControl _control = new EntityControl();
 
+        //会员ID
+        private int CustID = 0;
+
         //是否为Ingred Mode
         private bool isIngredMode = false;
         //Ingred Mode 返回值
@@ -79,11 +82,12 @@ namespace SuperPOS.UI.TA
             usrID = id;
         }
 
-        public FrmTaMain(string cId, int id)
+        public FrmTaMain(string cId, int id, int cusId)
         {
             InitializeComponent();
             checkID = cId;
             usrID = id;
+            CustID = cusId;
         }
 
         #region 事件
@@ -202,6 +206,8 @@ namespace SuperPOS.UI.TA
             }
             //加载TreeList
             //BindData();
+
+            GetCustInfo(CustID);
 
             asfc.controllInitializeSize(this);
 
@@ -1632,6 +1638,37 @@ namespace SuperPOS.UI.TA
         private void btnChange_Click(object sender, EventArgs e)
         {
             treeListOrder_DoubleClick(sender, e);
+        }
+
+        private void GetCustInfo(int cID)
+        {
+            if (cID <= 0)
+            {
+                lblName.Text = "";
+                lblPhone.Text = "";
+                lblAddress.Text = "";
+                lblPostcode.Text = "";
+                lblDistance.Text = "";
+                lblDiliveryFee.Text = "";
+            }
+            else
+            {
+                new SystemData().GetTaCustomer();
+
+                var lstCust = CommonData.TaCustomer.Where(s => s.ID == cID);
+
+                if (lstCust.Any())
+                {
+                    TaCustomerInfo taCustomerInfo = lstCust.FirstOrDefault();
+
+                    lblName.Text = taCustomerInfo.cusName;
+                    lblPhone.Text = taCustomerInfo.cusPhone;
+                    lblAddress.Text = taCustomerInfo.cusAddr;
+                    lblPostcode.Text = taCustomerInfo.cusPostcode;
+                    lblDistance.Text = taCustomerInfo.cusDistance;
+                    lblDiliveryFee.Text = taCustomerInfo.cusDelCharge;
+                }
+            }
         }
     }
 }
