@@ -330,7 +330,7 @@ namespace SuperPOS.UI.TA
         private void gvTaPendOrder_DoubleClick(object sender, EventArgs e)
         {
             Hide();
-            FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID);
+            FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID, checkCustID);
             frmTaMain.ShowDialog();
         }
 
@@ -395,7 +395,7 @@ namespace SuperPOS.UI.TA
         private void btnOpen_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID);
+            FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID, checkCustID);
             frmTaMain.ShowDialog();
         }
     }
