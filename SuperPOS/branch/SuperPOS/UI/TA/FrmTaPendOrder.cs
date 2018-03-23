@@ -391,5 +391,12 @@ namespace SuperPOS.UI.TA
             lueDriver.ItemIndex = 0;
         }
         #endregion
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTaMain frmTaMain = new FrmTaMain(checkCode, usrID);
+            frmTaMain.ShowDialog();
+        }
     }
 }

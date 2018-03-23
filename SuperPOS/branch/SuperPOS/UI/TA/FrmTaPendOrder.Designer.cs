@@ -47,7 +47,7 @@
             this.btnPrtKit = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrtBill = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrtReceipt = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelivery = new DevExpress.XtraEditors.SimpleButton();
             this.btnCollection = new DevExpress.XtraEditors.SimpleButton();
             this.btnShop = new DevExpress.XtraEditors.SimpleButton();
@@ -58,8 +58,8 @@
             this.lueDriver = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnAssignDriver = new DevExpress.XtraEditors.SimpleButton();
             this.btnShowAll = new DevExpress.XtraEditors.SimpleButton();
             this.btnShowAssigned = new DevExpress.XtraEditors.SimpleButton();
@@ -275,20 +275,21 @@
             this.btnPrtReceipt.Visible = false;
             this.btnPrtReceipt.Click += new System.EventHandler(this.btnPrtReceipt_Click);
             // 
-            // simpleButton1
+            // btnOpen
             // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton1.Location = new System.Drawing.Point(5, 29);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(184, 48);
-            this.simpleButton1.TabIndex = 50;
-            this.simpleButton1.Text = "OPEN";
+            this.btnOpen.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnOpen.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnOpen.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnOpen.Appearance.Options.UseBackColor = true;
+            this.btnOpen.Appearance.Options.UseFont = true;
+            this.btnOpen.Appearance.Options.UseForeColor = true;
+            this.btnOpen.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnOpen.Location = new System.Drawing.Point(5, 29);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(184, 48);
+            this.btnOpen.TabIndex = 50;
+            this.btnOpen.Text = "OPEN";
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnDelivery
             // 
@@ -389,7 +390,7 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.simpleButton1);
+            this.panelControl3.Controls.Add(this.btnOpen);
             this.panelControl3.Controls.Add(this.btnPay);
             this.panelControl3.Controls.Add(this.btnExit);
             this.panelControl3.Location = new System.Drawing.Point(770, 12);
@@ -431,15 +432,6 @@
             this.panelControl4.Size = new System.Drawing.Size(752, 60);
             this.panelControl4.TabIndex = 50;
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Location = new System.Drawing.Point(30, 17);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(67, 28);
-            this.labelControl2.TabIndex = 47;
-            this.labelControl2.Text = "Total:";
-            // 
             // txtTotal
             // 
             this.txtTotal.EditValue = "0.00";
@@ -452,6 +444,15 @@
             this.txtTotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtTotal.Size = new System.Drawing.Size(100, 34);
             this.txtTotal.TabIndex = 48;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Location = new System.Drawing.Point(30, 17);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(67, 28);
+            this.labelControl2.TabIndex = 47;
+            this.labelControl2.Text = "Total:";
             // 
             // btnAssignDriver
             // 
@@ -578,7 +579,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn CustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerPhone;
         private DevExpress.XtraGrid.Columns.GridColumn DriverName;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnOpen;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LookUpEdit lueDriver;
         private DevExpress.XtraEditors.PanelControl panelControl4;
