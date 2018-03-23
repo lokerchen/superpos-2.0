@@ -146,7 +146,7 @@
             this.btnSearchMeal = new DevExpress.XtraEditors.SimpleButton();
             this.btnCustInfo = new DevExpress.XtraEditors.SimpleButton();
             this.btnIngredMode = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEatIn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.treeListOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -994,7 +994,7 @@
             // 
             // panelControl5
             // 
-            this.panelControl5.Controls.Add(this.simpleButton1);
+            this.panelControl5.Controls.Add(this.btnEatIn);
             this.panelControl5.Controls.Add(this.btnCancel);
             this.panelControl5.Controls.Add(this.btnLanguage);
             this.panelControl5.Controls.Add(this.btnSaveOrder);
@@ -1816,22 +1816,22 @@
             this.btnIngredMode.Visible = false;
             this.btnIngredMode.Click += new System.EventHandler(this.btnIngredMode_Click);
             // 
-            // simpleButton1
+            // btnEatIn
             // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Red;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.Appearance.Options.UseTextOptions = true;
-            this.simpleButton1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton1.Location = new System.Drawing.Point(7, 299);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(111, 42);
-            this.simpleButton1.TabIndex = 29;
-            this.simpleButton1.Text = "Eat In";
+            this.btnEatIn.Appearance.BackColor = System.Drawing.Color.Red;
+            this.btnEatIn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEatIn.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnEatIn.Appearance.Options.UseBackColor = true;
+            this.btnEatIn.Appearance.Options.UseFont = true;
+            this.btnEatIn.Appearance.Options.UseForeColor = true;
+            this.btnEatIn.Appearance.Options.UseTextOptions = true;
+            this.btnEatIn.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.btnEatIn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnEatIn.Location = new System.Drawing.Point(7, 299);
+            this.btnEatIn.Name = "btnEatIn";
+            this.btnEatIn.Size = new System.Drawing.Size(111, 42);
+            this.btnEatIn.TabIndex = 29;
+            this.btnEatIn.Text = "Eat In";
             // 
             // FrmTaMain
             // 
@@ -1989,6 +1989,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnEatIn;
     }
 }
