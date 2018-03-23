@@ -54,6 +54,7 @@ namespace SuperPOS.UI.TA
         //DriverName
         private string checkDriverName;
 
+        private readonly EntityControl _control = new EntityControl();
 
         private AutoSizeFormClass asfc = new AutoSizeFormClass();
 
@@ -68,7 +69,7 @@ namespace SuperPOS.UI.TA
             usrID = uID;
         }
 
-        private void GetBindData(string orderType)
+        private void GetBindData(string orderType, int iDriver)
         {
             var lstDb = from check in CommonData.TaCheckOrder
                 join cust in CommonData.TaCustomer
@@ -98,8 +99,27 @@ namespace SuperPOS.UI.TA
                     DriverName = driver.DriverName,
                 };
 
-            gridControlTaPendOrder.DataSource = !string.IsNullOrEmpty(orderType) ? lstDb.Where(s => s.PayOrderType.Equals(orderType)).ToList() : lstDb.ToList();
+            var lstTmp = lstDb;
+
+            switch (iDriver)
+            {
+                case 1:
+                    lstTmp = lstDb.Where(s => !string.IsNullOrEmpty(s.DriverName));
+                    break;
+                case 2:
+                    lstTmp = lstDb.Where(s => string.IsNullOrEmpty(s.DriverName));
+                    break;
+                default:
+                    lstTmp = lstDb;
+                    break;
+            }
+
+            gridControlTaPendOrder.DataSource = !string.IsNullOrEmpty(orderType) 
+                                                ? lstTmp.Where(s => s.PayOrderType.Equals(orderType) && string.IsNullOrEmpty(s.DriverName)).ToList() 
+                                                : lstTmp.ToList();
             gvTaPendOrder.FocusedRowHandle = gvTaPendOrder.RowCount - 1;
+
+            txtTotal.Text = lstTmp.Sum(s => Convert.ToDecimal(s.TotalAmount)).ToString();
         }
 
         private void FrmTaPendOrder_Load(object sender, EventArgs e)
@@ -110,7 +130,9 @@ namespace SuperPOS.UI.TA
             systemData.GetUsrBase();
             systemData.GetTaOrderItem();
 
-            GetBindData("");
+            GetBindData("", 0);
+
+            BinLueDriver();
 
             asfc.controllInitializeSize(this);
         }
@@ -166,28 +188,28 @@ namespace SuperPOS.UI.TA
 
             if (frmTaPayment.ShowDialog() == DialogResult.OK)
             {
-                if (frmTaPayment.returnPaid) GetBindData("");
+                if (frmTaPayment.returnPaid) GetBindData("", 0);
             }
         }
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
-            GetBindData(PubComm.ORDER_TYPE_DELIVERY);
+            GetBindData(PubComm.ORDER_TYPE_DELIVERY, 0);
         }
 
         private void btnCollection_Click(object sender, EventArgs e)
         {
-            GetBindData(PubComm.ORDER_TYPE_COLLECTION);
+            GetBindData(PubComm.ORDER_TYPE_COLLECTION, 0);
         }
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            GetBindData(PubComm.ORDER_TYPE_SHOP);
+            GetBindData(PubComm.ORDER_TYPE_SHOP, 0);
         }
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-            GetBindData("");
+            GetBindData("", 0);
         }
 
         #region 设置打印相关信息
@@ -316,5 +338,58 @@ namespace SuperPOS.UI.TA
         {
             asfc.controlAutoSize(this);
         }
+
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            GetBindData("", 0);
+        }
+
+        private void btnShowAssigned_Click(object sender, EventArgs e)
+        {
+            GetBindData("", 1);
+        }
+
+        private void btnShowUnAssigned_Click(object sender, EventArgs e)
+        {
+            GetBindData("", 2);
+        }
+
+        private void btnAssignDriver_Click(object sender, EventArgs e)
+        {
+            if (gvTaPendOrder.FocusedRowHandle <= 0) return;
+
+            new SystemData().GetTaCheckOrder();
+            var lstRec = CommonData.TaCheckOrder.Where(s => s.ID == Convert.ToInt32(gvTaPendOrder.GetRowCellValue(gvTaPendOrder.FocusedRowHandle, "ID").ToString()));
+
+            if (lstRec.Any())
+            {
+                TaCheckOrderInfo taCheckOrderInfo = lstRec.FirstOrDefault();
+
+                taCheckOrderInfo.DriverID = Convert.ToInt32(lueDriver.EditValue);
+                
+                _control.UpdateEntity(taCheckOrderInfo);
+            }
+
+            GetBindData("", 0);
+        }
+        #region 绑定Driver
+
+        private void BinLueDriver()
+        {
+            new SystemData().GetTaDriver();
+
+            var lstDriver = from td in CommonData.TaDriver
+                             select new
+                             {
+                                 driverID = td.ID,
+                                 driverName = td.DriverName
+                             };
+            lueDriver.Properties.DataSource = lstDriver.ToList();
+            lueDriver.Properties.DisplayMember = "driverName";
+            lueDriver.Properties.ValueMember = "driverID";
+
+            lueDriver.ItemIndex = 0;
+        }
+        #endregion
     }
 }
